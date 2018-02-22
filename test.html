@@ -89,10 +89,10 @@ var map = L.map('map', {
 		attribution: cartodbAttribution
 	}).addTo(map);
 
-	var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+/*	var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
 		attribution: cartodbAttribution,
 		pane: 'labels'
-	}).addTo(map);
+	}).addTo(map);*/
       $.getJSON("map.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
    geojson = L.geoJson(data).addTo(map);
