@@ -1,6 +1,11 @@
+.WebContainer{
+    width: 100%;
+    height: auto;
+}
+
     #map { height: 100%;
           }
-        
+
         .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -37,7 +42,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-      
+
 svg { stroke-width: npx }
 
 .tab {
@@ -76,12 +81,12 @@ svg { stroke-width: npx }
 }
 body{
     margin: 0px;
-    
-    
+
+
 }
 
 h1 {
-       
+
 		/*rgba(25, 157, 210, 0.55)*/
 		 font-family: 'Centaur';
 		text-shadow: 2px 2px;
@@ -97,32 +102,32 @@ h1 {
 		text-align:center;
 		background-color: rgba(218,241,252,0.91);
         font-size: 45px;
-		
+
 		/*color:rgba(255,204,51,0.91);*/
-		
+
 		-webkit-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
 	-moz-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
    -ms-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
    -o-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
 		text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-		
+
   background: -webkit-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
   background: -o-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
   background: -moz-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
   background: radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
 		/*rgba(218,241,252,0.91);*/
-		
-		
+
+
  /* background:none;
  background: radial-gradient(rgba(255, 204, 102, 0.89), yellow, rgba(72,192,235,1.00));*/
 		/*margin-top:0.6em;*/
-		
+
 		margin-top:0em;
 		/*margin-bottom:0em;*/
       }
 
 h2 {
-       
+
 		/*rgba(25, 157, 210, 0.55)*/
     font-family: 'Centaur';}
 
