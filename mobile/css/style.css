@@ -1,15 +1,16 @@
-.WebContainer{
+/*.WebContainer{
     width: 100%;
     height: auto;
-}
+} */
 
-
+/*Styles the title to current look */
 .pageHeading{
   text-align: center;
   border-bottom: 1px solid black;
 
 }
 
+/*Setting the interactive maps dimensions */
     #map { height:70%;
           width: 100%;
           width: 100vw;
@@ -104,48 +105,49 @@ h2 {
 
 p{ font-family: 'Centaur';}
 
+/*Popup modal styling */
 .countryModal{
   display:none;          /* Hidden by default */
   position: fixed;      /*Keeps the modal in the same place */
-  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
-  /* padding-top: 100px;
-  padding-left: 10%;
-  padding-bottom: 100%; */
-  z-index: 99999;           /* Sits it on top of the page */
+  border: 1px solid black;  /*Created a border for the modal */
+  z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
   height: 100%;         /* Full height */
   width: 100%;          /* Full width */
   overflow:auto;        /* Enables scroll if/when needed */
   background-color: rgba(0,0,0,0.9);
 }
 
+/*Styling for the content in the modal */
 .country-modal-content{
-  background-color: white;
-  margin: 10%, auto;
-  border: 1px solid black;
+  background-color: white;  /*Sets background to white */
+  margin: 10%, auto;        /* */
+  border: 1px solid black;  /* Border for the content */
   padding: 20px;
-  width: 100%;
-  height: 100%;
+  width: 100%;              /* Sets the width to full width */
+  height: 100%;             /* Sets the height to full size*/
 
 
   /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.5); */
     }
 
+/*Styling for the Close button on the modal */
 .country-close{
-  float:right;
-  color: #FF0000;
-  font-size: 50px;
+  float:right;      /*Sets the button to the right */
+  color: #FF0000;   /*Button colour to red */
+  font-size: 50px;  /*Close button size to 50px- Alter in the media screen!!! */
 }
 
+/*Styling for when the the user is hovering over the close button */
 .country-close:hover, .country-close:focus{
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
+/*The div that contains the content of the external API*/
 .externalDataDisplay{
   display: inline-block;
   border: 1px solid black;
@@ -153,6 +155,7 @@ p{ font-family: 'Centaur';}
   height:15%;
 }
 
+/*The div that will contain the image retrieved from the API */
 .extImg{
   display: inline-block;
   position:absolute;
@@ -160,6 +163,7 @@ p{ font-family: 'Centaur';}
   height: 14%;
 }
 
+/*The styling of the image*/
 .flagImage{
   display: inline-block;
   position: absolute;
@@ -169,22 +173,27 @@ p{ font-family: 'Centaur';}
 
 }
 
+/*The div that will contain the text information retrieved from the API*/
 .restAPI{
   display: inline-block;
   text-align: center;
   float:right;
   width: 50%;
   height: 100%;
-
 }
 
+/*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
+  /*Default value of the font size */
   font-size: 1em;
 }
 
+/*The div that contains the information retrieved from the server */
 .internalDataDisplay{
   display: inline-block;
+  /*Workaround for the borders of the externalDataDisplay & internalDataDisplay from clashing*/
   border-top: 0.25px solid black;
+  /*Styling for the rest of the border*/
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
@@ -192,41 +201,48 @@ p{ font-family: 'Centaur';}
   height: 75%;
 }
 
+/*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
   border-bottom: 1px solid black;
 }
 
+/*Styling for the interactive images in the modal*/
 #banA{
   width: 50%;
   height: 100%;
 }
 
+/*The div that contains the first two interactive images*/
 .top-Display{
   width: 100%;
   height: 45%;
 }
 
+/*The div that contains the last two interactive images*/
 .middle-Display{
   width:100%;
   height: 45%;
 }
 
-.topLeft{
+/*Forces the first image to the left of the div*/
+.leftAlign{
   float:left;
 }
 
-.topRight{
+/*Forces the second image to the right of the div*/
+.rightAlign{
   float:right;
 }
 
+/*
 .bottom-left{
   float:left;
 }
 
 .bottom-right{
   float: right;
-}
+} */
 
 .bottom-Display{
   width: 100%;
