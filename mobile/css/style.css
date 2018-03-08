@@ -189,7 +189,7 @@ p{ font-family: 'Centaur';}
 }
 
 /*The div that contains the information retrieved from the server */
-.internalDataDisplay{
+.internalDataDisplay {
   display: inline-block;
   /*Workaround for the borders of the externalDataDisplay & internalDataDisplay from clashing*/
   border-top: 0.25px solid black;
@@ -201,16 +201,22 @@ p{ font-family: 'Centaur';}
   height: 75%;
 }
 
+/*Sets the max size one of the images can be in terms of the div*/
+.internalDataDisplay img{
+  width: 50%;
+  height: 100%;
+}
+
+.serverContent{
+  width: 100%;
+  height: 90%;
+  display: none;
+}
+
 /*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
   border-bottom: 1px solid black;
-}
-
-/*Styling for the interactive images in the modal*/
-#banA{
-  width: 50%;
-  height: 100%;
 }
 
 /*The div that contains the first two interactive images*/
@@ -235,19 +241,19 @@ p{ font-family: 'Centaur';}
   float:right;
 }
 
-/*
-.bottom-left{
-  float:left;
-}
-
-.bottom-right{
-  float: right;
-} */
-
+/*The div that contains the return button*/
 .bottom-Display{
   width: 100%;
 }
 
+.popReturn{
+  display: none;
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+/*Styling for the return button*/
 .returnBtn{
   display: inline;
   float: none;
@@ -256,22 +262,25 @@ p{ font-family: 'Centaur';}
 }
 
 /* Must be at the end of the file */
+/*The following media screens will check the users' device width and will alter certain values accordingly*/
+/*Screen width of an IPad Pro (Widest mobile screen that will use the site)*/
 @media screen and (max-width: 1366px){
+  /*Alters the size of the text retrieved from the API*/
   h4{
     font-size: 3em;
   }
 }
 
 @media screen and (max-width: 1100px){
+  /*Alters the size of the text retrieved from the API*/
   h4{
     font-size: 2em;
   }
 }
 
 @media screen and (max-width: 800px){
+  /*Alters the size of the text retrieved from the API*/
   h4{
     font-size: 1em;
   }
 }
-=======
->>>>>>> 7834c54903acc9777187a9aabb70561c7f5e921a

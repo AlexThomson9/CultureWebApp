@@ -7,6 +7,23 @@ var closeBtn = document.getElementsByClassName('country-close')[0];
 //Get modal content
 var modalContent = document.getElementsByClassName('country-modal-content')[0];
 
+var hideTop = document.getElementsByClassName('top-display')[0];
+var hideMiddle = document.getElementsByClassName('middle-display')[0];
+var serverContent = document.getElementsByClassName('serverContent')[0];
+var returnToMapButton = document.getElementsByClassName('returnBtn')[0];
+var returnToPopupMenu = document.getElementsByClassName('popReturn')[0];
+
+
+$('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
+
+  hideTop.style.display = "none";
+  hideMiddle.style.display = "none";
+  returnToMapButton.style.display = "none";
+
+  returnToPopupMenu.style.display = "block";
+  serverContent.style.display = "block";
+
+});
 
 
 //Listen for open click
@@ -25,13 +42,24 @@ function openModal(){
    };
 }
 
-//Function to close modal
-function closeModal(){
-  modal.style.display = "none";
-}
-
-
 function renderHTML(data){
   var htmlString = "this is a test";
   modalContent.insertAdjacentHTML('beforeend', htmlString);
   }
+
+returnToPopupMenu.addEventListener('click', closeInfo);
+returnToMapButton.addEventListener('click', closeModal);
+
+function closeInfo(){
+  returnToPopupMenu.style.display = "none";
+  serverContent.style.display = "none";
+
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+  returnToMapButton.style.display = "block";
+}
+
+//Function to close modal
+function closeModal(){
+  modal.style.display = "none";
+}
