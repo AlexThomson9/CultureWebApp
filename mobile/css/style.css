@@ -6,6 +6,7 @@
 .pageHeading{
   text-align: center;
   border-bottom: 1px solid black;
+  
 }
 
     #map { height:70%;
@@ -147,15 +148,33 @@ p{ font-family: 'Centaur';}
   height:15%;
 }
 
+.extImg{
+  display: inline-block;
+  position:absolute;
+  width: 45%;
+  height: 14%;
+}
+
 .flagImage{
+  display: inline-block;
   position: absolute;
-  height: 100px;
-  width: 75px;
+  float:left;
+  height: 100%;
+  width: 100%;
 
 }
 
 .restAPI{
+  display: inline-block;
+  text-align: center;
   float:right;
+  width: 50%;
+  height: 100%;
+
+}
+
+.restName, .restCurrency, .restLanguage{
+  font-size: 1em;
 }
 
 .internalDataDisplay{
@@ -166,10 +185,70 @@ p{ font-family: 'Centaur';}
   border-bottom: 1px solid black;
   width: 100%;
   height: 75%;
-
 }
 
 #countryTitle {
   text-align: center;
   border-bottom: 1px solid black;
+}
+
+#banA{
+  width: 50%;
+
+}
+
+.top-Display{
+  width: 100%;
+  height: 45%;
+}
+
+.middle-Display{
+  width:100%;
+  height: 45%;
+}
+
+.topLeft{
+  float:left;
+}
+
+.topRight{
+  float:right;
+}
+
+.bottom-left{
+  float:left;
+}
+
+.bottom-right{
+  float: right;
+}
+
+.bottom-Display{
+  width: 100%;
+}
+
+.returnBtn{
+  display: inline;
+  float: none;
+  width: 90%;
+  text-align: center;
+}
+
+/* Must be at the end of the file */
+@media screen and (max-width: 1366px){
+  h4{
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  h4{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 800px){
+  h4{
+    font-size: 1em;
+  }
 }

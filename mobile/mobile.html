@@ -23,6 +23,7 @@
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
   <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+
 </head>
 
 <body>
@@ -326,15 +327,29 @@ console.log(items);*/
     <div class="country-modal-content">
       <h1 id="countryTitle"> Culture! </h1>
       <div class="externalDataDisplay">
-        <img class="flagImage" src=http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png></img>
+        <div class="extImg">
+          <img class="flagImage" src=https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg></img>
+        </div>
         <div class="restAPI">
-          <p class="restName"> Country Name entered here <br></p>
-          <p class="restLanguage"> Country Language display here <br></p>
-          <p class="restCurrency">Currency entered here </p>
+          <h4 class="restName">Country Name: UK USA  <br></h4>
+          <h4 class="restLanguage">Language: ENG GER <br></h4>
+          <h4 class="restCurrency">Currency: £$ </h4>
         </div>
       </div>
       <div class="internalDataDisplay">
-        <p> Hello World </p>
+        <div class="top-Display">
+          <img id="banA"  class="topLeft" src ="https://freeclipartimage.com//storage/upload/border-clip-art/border-clip-art-5.jpg"</img>
+          <img id="banA" class="topRight" src ="https://freeclipartimage.com//storage/upload/border-clip-art/border-clip-art-5.jpg"</img>
+        </div>
+        <div class="middle-Display">
+          <img id="banA" class="bottom-left" src ="https://freeclipartimage.com//storage/upload/border-clip-art/border-clip-art-5.jpg"</img>
+          <img id="banA" class="bottom-right" src ="https://freeclipartimage.com//storage/upload/border-clip-art/border-clip-art-5.jpg"</img>
+        </div>
+        <div class="bottom-Display">
+          <button name="returnFunction" class="returnBtn">Return</button>
+        </div>
+
+
       </div>
     </div>
 
