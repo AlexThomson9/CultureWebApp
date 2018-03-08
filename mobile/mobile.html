@@ -19,6 +19,7 @@
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
   <link href='https://fonts.googleapis.com/css?family=Centaur' rel='stylesheet'>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+
   <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
@@ -27,11 +28,14 @@
 </head>
 
 <body>
+
+
+  <p>This is the mobile version </p>
+        <div id="myModal" class="modal" hidden>
+
    <h1 class="pageHeading">Culture!</h1>
 
-    <p>This is the mobile version </p>
 
-  <div id="myModal" class="modal" hidden>
 
   <!-- Modal content -->
   <div class="modal-content">
@@ -110,7 +114,9 @@ var map = L.map('map', {
 
           geojson.eachLayer(function (layer) {
 		layer.bindPopup(layer.feature.properties.Country + '<button type="button" id="btn" onclick="modal()">Click Me!</button>');
-        layer.bindPopup(layer.feature.properties.Country + '<div class="tab"> <button class="tablinks" onclick="openCity(event, "London")" id="defaultopen">London</button>'+
+       /* layer.bindPopup(layer.feature.properties.Country + '<div class="tab"> <button class="tablinks" onclick="openCity(event, "London")" id="defaultopen">London</button>'+
+
+
                                                                         '<button class="tablinks" onclick="openCity(event, "Paris")">Paris</button>'  +
                                                                          '<button class="tablinks" onclick="openCity(event, "Tokyo")">Tokyo</button>' +
                                                                         '</div>' +
@@ -127,7 +133,8 @@ var map = L.map('map', {
                                                                         '<div id="Tokyo" class="tabcontent">'+
                                                                           '<h3>Tokyo</h3>'+
                                                                           '<p>Tokyo is the capital of Japan.</p>'+
-                                                                        '</div> ');
+                                                                        '</div> ');*/
+
 
 
 
@@ -317,6 +324,7 @@ console.log(items);*/
 
 </script>
 
+
 <section id="countryInfoTesting">
   <button type="button" id="modalBtn">Modal</button>
   <div id="infoModal" class="countryModal">
@@ -357,6 +365,7 @@ console.log(items);*/
 </section>
 
 <script src="js/countryModal.js"></script>
+
     </body>
 
 </html>

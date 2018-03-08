@@ -3,6 +3,7 @@
     height: auto;
 }
 
+
 .pageHeading{
   text-align: center;
   border-bottom: 1px solid black;
@@ -19,8 +20,10 @@
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+
+    width: 80%; /* Full width */
+    height: 80%; /* Full height */
+
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -91,6 +94,7 @@ body{
 
 
 }
+
 
 h2 {
 
@@ -192,6 +196,7 @@ p{ font-family: 'Centaur';}
   border-bottom: 1px solid black;
 }
 
+<<<<<<< HEAD
 #banA{
   width: 50%;
 
@@ -252,3 +257,5 @@ p{ font-family: 'Centaur';}
     font-size: 1em;
   }
 }
+=======
+>>>>>>> 7834c54903acc9777187a9aabb70561c7f5e921a
