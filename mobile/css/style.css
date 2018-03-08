@@ -7,7 +7,7 @@
 .pageHeading{
   text-align: center;
   border-bottom: 1px solid black;
-  
+
 }
 
     #map { height:70%;
@@ -196,10 +196,9 @@ p{ font-family: 'Centaur';}
   border-bottom: 1px solid black;
 }
 
-<<<<<<< HEAD
 #banA{
   width: 50%;
-
+  height: 50%;
 }
 
 .top-Display{
