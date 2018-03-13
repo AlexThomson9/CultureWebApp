@@ -11,6 +11,8 @@
 
     #map { height:70%;
           width: 100%;
+        z-index: -1;
+        position: absolute;
           }
 
         .modal {
@@ -177,4 +179,21 @@ p{ font-family: 'Centaur';}
   text-align: center;
   border-bottom: 1px solid black;
 }
+#TitleBar {
+    width: 100%;
+    height: 8%;
+    background-color: "#D46A6A";
+    display: inline-block;
+    
+    
+}
+#TitleBar-Title {
+    float: left
+    
+}
+#Link-Reg {
+    
+    float:right;
+}
+
 

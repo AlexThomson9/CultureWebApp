@@ -19,28 +19,63 @@ var map = L.map('map', {
 		attribution: cartodbAttribution
 	}).addTo(map);
 
-/*	var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+	/*var positronLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
 		attribution: cartodbAttribution,
 		pane: 'labels'
 	}).addTo(map);*/
-      $.getJSON("map.geojson",function(data){
+
+    	geojson = L.geoJson(world).addTo(map);
+
+	geojson.eachLayer(function (layer) {
+		layer.bindPopup('<div id="Popup"><h4 id="title"> Country: ' + layer.feature.properties.name + '</h4>'+
+                       
+'<div id="Popup"> <h3>Upload Information</h3><p id="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tellus ut suscipit malesuada. '+
+'</p><form >'+
+'<div class="rTable">'+
+'<div class="rTableRow">'+
+'<div class="rTableHead"><strong>Customs:</strong></div>'+
+'<div class="rTableCell"><a href="#"id="Customs">Update Customs</a></div>'+
+'</div>'+
+'<section class="Customs-Hide">'+
+'<button type="button" class="Submit">Submit</button>'+
+'</section>'+
+'<div class="rTableRow">'+
+'<div class="rTableHead"><strong>Gestures:</strong></div>'+
+'<div class="rTableCell"><a href="#" id="Gestures">Update Gestures</a></div>'+
+'</div>'+
+'<section class="Gestures-Hide">'+
+'<button type="button" class="Submit">Submit</button>'+
+'</section>'+
+'<div class="rTableRow">'+
+'<div class="rTableHead"><strong>Cultural Differences:</strong></div>'+
+'<div class="rTableCell"><a href="#" id="Cultures">Update Culture</a></div'+
+'<section class="Cultures-Hide">'+
+'<button type="button" class="Submit">Submit</button>'+
+'</section>'+
+'</div>'+
+'<div class="rTableRow">'+
+'<div class="rTableHead"><strong>Laws:</strong></div>'+
+'<div class="rTableCell"><a href="#" id="Laws">Update Laws</a></div>'+
+'<section class="Laws-Hide">'+
+'<button type="button" class="Submit">Submit</button>'+
+'</section>'+
+'</div>'+
+'</div>'+
+'</form>'+
+'</div>'
+                       );
+	});
+    /*  $.getJSON("map.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
    geojson = L.geoJson(data).addTo(map);
    geojson.setStyle({
     fillOpacity: 1,
     color: "#D46A6A",
     weight: 1
-    ,noWrap: true
-});
+});*/
+    
           
-          
-          var layerGroup = L.geoJSON(data, {
-  onEachFeature: function (feature, layer) {
-    layer.bindPopup(feature.properties.Country+'<p>name: '+feature.properties.Country+'</p>');
-      
-      
-  }
-}).addTo(map);
+
 
         /*  geojson.eachLayer(function (layer) {
 		layer.bindPopup(layer.feature.properties.Country + '<button type="button" id="btn">Click Me!</button>');
@@ -88,7 +123,7 @@ var map = L.map('map', {
 
 
 	//});
-  });
+ 
 
       $('#btn').click(function(){
           
@@ -99,7 +134,9 @@ var map = L.map('map', {
     //Some code
 });
 
-    $.getJSON('world.geo.json-master/world.geo.json-master/countries.geo.json', function (geojson) { // load file
+
+
+   /* $.getJSON('world.geo.json-master/world.geo.json-master/countries.geo.json', function (geojson) { // load file
     L.geoJson(geojson, { // initialize layer with data
         style: function (feature) { // Style option
             return {
@@ -109,8 +146,13 @@ var map = L.map('map', {
             }
         }
     }).addTo(map); // Add layer to map
+        
+        geojson.eachLayer(function (layer) {
+		layer.bindPopup(layer.feature.properties.name);
+	});
 });
-
+*/
+	
 
     function style(feature) {
     return {
@@ -176,16 +218,71 @@ var map = L.map('map', {
        //map.setView(c_cords, 8);
       //  map.fitBounds(maxBounds);
     }
+
+
+
   //  geojson = L.geoJson({style: style}).addTo(map);
 	// geojson = L.geoJson(euCountries).addTo(map);
 
 	map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
 
+$(function(){
+            console.log('Jquery is working');
+   
+var test = 0;
+$(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function(){
+var mme = $("#title").text();
+    var country = mme.split(" ");
+    var ctry = country[2];
+	var id = $(this).attr('id');
+    console.log(mme);
+    console.log(country);
+    console.log(ctry);
+	$("."+id).html("add more");
+        
+  test++;
+  $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>rem</a></div>");
+ if($("."+id+"-Hide").find(".Submit").length){
+ console.log("button exists");
+ } else {
+    $("."+id+"-Hide").append("<button type='button' class='Submit'>Submit</button>");
+ }
 
-$(document).on("click, .leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
-    console.log('i work');
-    var test = feature.properties.Country;
-    console.log(test);
-    
-    
 });
+$(document).on('click', ".Customs-Hide, .Gestures-Hide, .Cultures-Hide, .Laws-Hide",function(evt){
+	if($(evt.target).is('.Textarea')) {
+        //event handling code
+  }else if($(evt.target).is('#minus')){
+   $(this).find('textarea').last().remove();
+   $(this).find('a').last().remove();
+   if($(this).find('textarea').length == 0){
+   		$(this).find('button').last().remove();
+   }
+   //alert($(this).find('textarea').length);
+   } else if(($(evt.target).is('.Submit'))){  
+   var numItems = $(this).find('textarea').length;
+   //alert(numItems);
+   
+   $(this).find('textarea').each(function(){
+    //This variable is the Content for the textarea
+   var Textarea = $(this).val();
+   var Class_Name_Raw = $(this).closest('section').attr('class');
+   var Class_Name_Array = Class_Name_Raw.split("-");
+   var Class_Name = Class_Name_Array[0];
+   console.log("Textarea value is " + Textarea);
+   console.log("Section Identifier is " + Class_Name);
+   
+   
+   });
+   
+    $(this).find('textarea, a, button').each(function(){
+   $(this).remove();
+   
+   });
+   
+  
+   
+   }
+   
+  });
+  });
