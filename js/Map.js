@@ -36,11 +36,23 @@ var map = L.map('map', {
           
           var layerGroup = L.geoJSON(data, {
   onEachFeature: function (feature, layer) {
-    layer.bindPopup(feature.properties.Country+'<p>name: '+feature.properties.Country+'</p>');
+    layer.bindPopup(feature.properties.Country);
       
       
   }
 }).addTo(map);
+          
+          
+$(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
+    var ctry = $(".leaflet-popup-content").text();
+    console.log(ctry);
+     $(".leaflet-popup-content").remove();
+    console.log('i work');
+    var test = feature.properties.Country;
+    console.log(test);
+    
+    
+});
 
         /*  geojson.eachLayer(function (layer) {
 		layer.bindPopup(layer.feature.properties.Country + '<button type="button" id="btn">Click Me!</button>');
@@ -182,10 +194,3 @@ var map = L.map('map', {
 	map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
 
 
-$(document).on("click, .leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
-    console.log('i work');
-    var test = feature.properties.Country;
-    console.log(test);
-    
-    
-});

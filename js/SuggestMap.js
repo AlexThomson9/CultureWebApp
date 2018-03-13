@@ -34,8 +34,8 @@ geojson.eachLayer(function (layer)
 {
     layer.bindPopup(
     '<div id="Popup"><h4 id="title"> Country: ' + layer.feature.properties.name + '</h4>'+ 
-    '<div id="Popup"> <h3>Upload Information</h3><p id="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tellus ut suscipit malesuada. '+
-    '</p><form >'+
+    '<h3>Upload Information</h3><p id="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tellus ut suscipit malesuada. '+
+    '</p>'+
     '<div class="rTable">'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Customs:</strong></div>'+
@@ -53,8 +53,8 @@ geojson.eachLayer(function (layer)
     '</section>'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Cultural Differences:</strong></div>'+
-    '<div class="rTableCell"><a href="#" id="Cultures">Update Culture</a></div'+
-    '<section class="Cultures-Hide">'+
+    '<div class="rTableCell"><a href="#" id="Cultures">Update Culture</a></div>'+
+    '<section class="Cultures-Hide" >'+
     '<button type="button" class="Submit">Submit</button>'+
     '</section>'+
     '</div>'+
@@ -66,7 +66,6 @@ geojson.eachLayer(function (layer)
     '</section>'+
     '</div>'+
     '</div>'+
-    '</form>'+
     '</div>'
     );
 });
@@ -188,10 +187,10 @@ $(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
     console.log(mme);
     console.log(country);
     console.log(ctry);
+    console.log("."+id+"-Hide");
 	$("."+id).html("add more");
     test++;
     $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>rem</a></div>");
-    
     if($("."+id+"-Hide").find(".Submit").length)
     {
     console.log("button exists");
