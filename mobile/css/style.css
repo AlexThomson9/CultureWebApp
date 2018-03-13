@@ -13,12 +13,12 @@
 /*Setting the interactive maps dimensions */
     #map { height:70%;
           width: 100%;
-<<<<<<< HEAD
+
         z-index: -1;
         position: absolute;
-=======
+
           width: 100vw;
->>>>>>> a65b7c667e37ce61ca150941a5519a58ef4ac9f9
+
           }
 
         .modal {
@@ -255,15 +255,15 @@ p{ font-family: 'Centaur';}
     height: 8%;
     background-color: "#D46A6A";
     display: inline-block;
-    
-    
+
+
 }
 #TitleBar-Title {
     float: left
-    
+
 }
 #Link-Reg {
-    
+
     float:right;
 }
 
