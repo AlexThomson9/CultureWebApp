@@ -110,8 +110,7 @@ layer.bindPopup(layer.feature.properties.name);
 */
 function style(feature) 
 {
-    return 
-    {
+    return{
         fillColor: '#D46A6A',
         weight: 2,
         opacity: 1,
