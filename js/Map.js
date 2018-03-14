@@ -7,7 +7,9 @@ L.latLng(84.32308710686083, 186.4687478542328)
 );
 var map = L.map('map', {
   minZoom: 2.6,
-  'maxBounds': maxiBounds
+  'maxBounds': maxiBounds,
+    zoomControl:false,
+    attributionControl: false
 }).fitBounds(maxiBounds);
 	map.createPane('labels');
 	// This pane is above markers but below popups
@@ -48,8 +50,8 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     console.log(ctry);
      $(".leaflet-popup-content").remove();
     console.log('i work');
-    var test = feature.properties.Country;
-    console.log(test);
+   // var test = feature.properties.Country;
+    //console.log(test);
     
     
 });
@@ -179,9 +181,17 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
                   );
                   console.log(c_cords);
             }
+            map.setZoom(3.55);
+            
+            var delayInMilliseconds = 250; //1 second
+
+            setTimeout(function() 
+            {
             map.panTo(c_cords);
             delete c_cords;
-            map.setZoom(3.4);
+            }, delayInMilliseconds);
+          
+            
         }
       //  map.panTo(new L.LatLng( 39.639537564366684, -99.84374999999999,));
       //  map.setZoom(8);
