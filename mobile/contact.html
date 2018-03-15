@@ -127,9 +127,9 @@ img {
 <body>
 <div class="topnav"> 
 34   <a class="active" href="mobile.html">Home</a> 
-35   <a href="#news">News</a> 
-36   <a href="#contact">Contact</a> 
-37   <a href="#about">About</a> 
+35   <a href="#">News</a> 
+36   <a href="contact.html">Contact</a> 
+37   <a href="#">About</a> 
 38 </div> 
 
 
@@ -144,15 +144,18 @@ img {
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <label for="country">Country</label>
+    <label for="country">Issue</label>
     <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+      <option value="australia">Incorrect information</option>
+      <option value="canada">Add information - Law</option>
+      <option value="usa">Add information - Culture</option>
+ <option value="o">Add information - Customs</option>
+ <option value="a">Add information - Gestures</option>
+ <option value="e">Map Error</option>
     </select>
 
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Specify country and issue.." style="height:200px"></textarea>
 
     <input type="submit" value="Submit">
   </form>
