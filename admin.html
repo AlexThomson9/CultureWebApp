@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="topnav">
-      <a href="mobile.html" class="active">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
@@ -24,18 +24,23 @@
       </div>
       <select class="actionRequired" name="infoUpdate">
         <!--These are examples, when database is implemented, js will fill this with values -->
+        <option value="default">Please select from the options below</option>
         <option value="germany">Germany</option>
         <option value="russia">Russia</option>
         <option value="britain">Britain</option>
       </select>
     </section>
-    <section id="mainContent">
-      <nav>
-        <button>Customs</button>
-        <button>Gestures</button>
-        <button>Culture</button>
-        <button>Laws</button>
-      </nav>
+
+    <section class="mainContent">
+      <div class="navDiv">
+        <nav class="optionNav">
+          <button>Customs</button>
+          <button>Gestures</button>
+          <button>Culture</button>
+          <button>Laws</button>
+        </nav>
+      </div>
+      <p>Hello</p>
     </section>
   </body>
 </html>

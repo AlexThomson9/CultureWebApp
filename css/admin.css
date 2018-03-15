@@ -34,3 +34,16 @@
   color: white;
 }
 /* Style the Nav Bar End */
+
+
+.mainContent {
+  text-align: center;
+  border: 1px solid black;
+  margin: 5% auto; /* 15% from the top and centered */
+
+}
+
+.optionNav {
+  float: left;
+  padding-bottom: 5px;
+}
