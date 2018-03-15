@@ -34,17 +34,17 @@ var map = L.map('map', {
     weight: 1
     ,noWrap: true
 });
-          
-          
+
+
           var layerGroup = L.geoJSON(data, {
   onEachFeature: function (feature, layer) {
     layer.bindPopup(feature.properties.Country);
-      
-      
+
+
   }
 }).addTo(map);
-          
-          
+
+
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     var ctry = $(".leaflet-popup-content").text();
     console.log(ctry);
@@ -55,52 +55,34 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     //openModal();
    // var test = feature.properties.Country;
     //console.log(test);
-    
-    
+
+
 });
 
         /*  geojson.eachLayer(function (layer) {
 		layer.bindPopup(layer.feature.properties.Country + '<button type="button" id="btn">Click Me!</button>');
-        
+
             var popup = layer.getPopup();
             var content = popup.getContent();
               console.log(content);
-              
 
-              
+
+
     /*  $.ajax({
-          
+
           url:"https://restcountries.eu/rest/v2/name/" + test,
           dataType:'json',
           success: function(result){
             $("#div1").html(result);
         }
-          
-          
-          
-        
-          
-          
+
+
+
+
+
+
       });
             */  
-      /*  layer.bindPopup(layer.feature.properties.Country + '<div class="tab"> <button class="tablinks" onclick="openCity(event, "London")" id="defaultopen">London</button>'+
-                                                                        '<button class="tablinks" onclick="openCity(event, "Paris")">Paris</button>'  +
-                                                                         '<button class="tablinks" onclick="openCity(event, "Tokyo")">Tokyo</button>' +
-                                                                        '</div>' +
-                                                                       '<div id="London" class="tabcontent">'+
-                                                                         ' <h3>London</h3>'+
-                                                                          '<p>London is the capital city of England.</p>'+
-                                                                        '</div>'+
-
-                                                                        '<div id="Paris" class="tabcontent">'+
-                                                                          '<h3>Paris</h3>'+
-                                                                         ' <p>Paris is the capital of France.</p> '+
-                                                                       ' </div>'+
-
-                                                                        '<div id="Tokyo" class="tabcontent">'+
-                                                                          '<h3>Tokyo</h3>'+
-                                                                          '<p>Tokyo is the capital of Japan.</p>'+
-                                                                        '</div> ');*/
 
 
 
@@ -108,11 +90,11 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
   });
 
       $('#btn').click(function(){
-          
+
        var value = $('.leaflet-popup-content').val();
           console.log(value);
-          
-          
+
+
     //Some code
 });
 
@@ -185,16 +167,16 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
                   console.log(c_cords);
             }
             map.setZoom(3.55);
-            
+
             var delayInMilliseconds = 1000; //1 second
 
-            setTimeout(function() 
+            setTimeout(function()
             {
             map.panTo(c_cords);
             delete c_cords;
             }, delayInMilliseconds);
-          
-            
+
+
         }
       //  map.panTo(new L.LatLng( 39.639537564366684, -99.84374999999999,));
       //  map.setZoom(8);
@@ -203,7 +185,3 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     }
   //  geojson = L.geoJson({style: style}).addTo(map);
 	// geojson = L.geoJson(euCountries).addTo(map);
-
-
-
-
