@@ -1,0 +1,36 @@
+/* Style the Nav Bar Start */
+.topnav {
+  overflow: hidden;
+  background-color: #020003;
+}
+
+.topnav h1{
+  float:left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Centaur';
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    font-family: 'Centaur';
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #020003;
+}
+
+.topnav a.active {
+  background-color: #020003;
+  color: white;
+}
+/* Style the Nav Bar End */
