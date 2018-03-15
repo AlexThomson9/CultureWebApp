@@ -21,10 +21,22 @@ body{
 }
 
 h1{
-  margin:0
+  margin:20px 0 0;
+  text-align: center;
+  font-size: 100px;
+   -webkit-text-fill-color: black;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #7DF9FF;
+   text-shadow: 0 0 8px #FFFFFF;
+}
+
+h2{
+  margin:0;
   padding:0 0 20px;
   text-align: center;
   font-size: 22px;
+  color:#7DF9FF;
+
 }
 
 .login-box p{
@@ -54,8 +66,8 @@ h1{
   border: none;
   outline: none;
   height:40px;
-  background: #1c8adb;
-  color: #fff;
+  background: #7DF9FF;
+  color: #000;
   font-size: 18px;
   border-radius: 20px;
 }
@@ -64,4 +76,17 @@ h1{
   cursor: pointer;
   background: #39dc79;
   color: #000;
+}
+
+.login-box a
+{
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+
+}
+
+.login-box a:hover
+{
+  color: #39dc79;
 }
