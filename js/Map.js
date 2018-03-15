@@ -48,8 +48,11 @@ var map = L.map('map', {
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     var ctry = $(".leaflet-popup-content").text();
     console.log(ctry);
+    $('#Country').text(ctry);
+   // alert($('#Country').text());
      $(".leaflet-popup-content").remove();
     console.log('i work');
+    //openModal();
    // var test = feature.properties.Country;
     //console.log(test);
     
@@ -142,7 +145,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     style: 'https://openmaptiles.github.io/osm-bright-gl-style/style-cdn.json'
 }).addTo(map);
 
-
+	map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
 
 
     function getContinent(){
@@ -183,7 +186,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             }
             map.setZoom(3.55);
             
-            var delayInMilliseconds = 250; //1 second
+            var delayInMilliseconds = 1000; //1 second
 
             setTimeout(function() 
             {
@@ -201,6 +204,6 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
   //  geojson = L.geoJson({style: style}).addTo(map);
 	// geojson = L.geoJson(euCountries).addTo(map);
 
-	map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
+
 
 
