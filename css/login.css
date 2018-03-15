@@ -23,8 +23,9 @@ body{
 h1{
   margin:20px 0 0;
   text-align: center;
-  font-size: 100px;
-   -webkit-text-fill-color: black;
+  font-family: "Centaur";
+  font-size: 120px;
+   -webkit-text-fill-color: #020003;
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #7DF9FF;
    text-shadow: 0 0 8px #FFFFFF;
@@ -35,7 +36,7 @@ h2{
   padding:0 0 20px;
   text-align: center;
   font-size: 22px;
-  color:#7DF9FF;
+  color:#fff;
 
 }
 
@@ -83,6 +84,7 @@ h2{
   text-decoration: none;
   font-size: 18px;
   color: white;
+  font-style: italic;
 
 }
 
