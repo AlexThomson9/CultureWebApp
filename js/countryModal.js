@@ -28,7 +28,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 });
 
-if (countrySelected != NULL){
+if (countrySelected.length > 0){
   function openModal();
 }
 //Listen for open click
