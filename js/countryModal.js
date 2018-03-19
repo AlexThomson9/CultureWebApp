@@ -30,7 +30,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 if (countrySelected.length > 0){
   function openModal()
-}
+};
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
 //Listen for close click
