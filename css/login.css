@@ -6,10 +6,10 @@ body{
      background-size:100% 100vh;
    font-family: sans-serif;
 }
-
+ 
 .login-box{
     width: 320px;
-    height: 420px;
+  /*  height: 420px; don't need this*/
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     top: 50%;
