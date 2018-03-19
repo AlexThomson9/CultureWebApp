@@ -30,31 +30,65 @@
         <h1>Updated Information:</h1>
       </div>
       <div class="actionRequired">
-        <select name="infoUpdate">
+        <select id="infoUpdate">
           <!--These are examples, when database is implemented, js will fill this with values -->
           <option value="default">Please select from the options below</option>
-          <option value="germany">Germany</option>
-          <option value="russia">Russia</option>
-          <option value="britain">Britain</option>
+          <option value="Germany">Germany</option>
+          <option value="Russia">Russia</option>
+          <option value="Britain">Britain</option>
         </select>
       </div>
     </section>
 
-      <div class="contentContainer">
-          <nav class="optionNav">
-            <button>Customs</button>
-            <button>Gestures</button>
-            <button>Culture</button>
-            <button>Laws</button>
-          </nav>
-          <textarea class="textArea" rows="4" cols="50">
-            This will display the text retrieved from the database
-          </textarea>
-          <div class="buttonDiv">
-            <button id="submitBtn">Submit</button>
-            <button id="cancelBtn">Cancel</button>
-          </div>
-      </div>
+  <div class="contentContainer">
+
+    <div class="tab">
+        <button class="tablinks" onclick="category(event, 'Customs')">Customs</button>
+        <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
+        <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
+        <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
+    </div>
+
+    <div id="CountryTitle">
+
+    </div>
+
+
+
+    <div id="Customs" class="tabcontent">
+        <textarea class="textArea">
+          This will display the Customs text retrieved from the database
+        </textarea>
+    </div>
+
+    <div id="Gestures" class="tabcontent">
+        <textarea class="textArea">
+          This will display the Gestures text retrieved from the database
+        </textarea>
+    </div>
+
+    <div id="Culture" class="tabcontent">
+        <textarea class="textArea">
+          This will display the Culture text retrieved from the database
+        </textarea>
+    </div>
+
+    <div id="Laws" class="tabcontent">
+        <textarea class="textArea">
+          This will display the Laws text retrieved from the database
+        </textarea>
+    </div>
+
+    <div class="submitBut">
+      <button id="submitBtn">Submit</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+
+
+  </div>
+
+  <script src="js/admin.js"></script>
+
 
   </body>
 </html>
