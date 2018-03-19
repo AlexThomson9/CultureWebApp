@@ -174,12 +174,6 @@ p{
     display: none;
 }
 
-#modalBtn{
-  width: 100%;
-  height: 60%;
-}
-
-
 /*Popup modal styling */
 .countryModal{
   display:none;          /* Hidden by default */
