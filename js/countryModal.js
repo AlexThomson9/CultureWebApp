@@ -28,9 +28,17 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 });
 
-if (countrySelected.length > 0){
-  openModal()
-}
+$(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
+    var ctry = $(".leaflet-popup-content").text();
+    console.log(ctry);
+    $('#Country').text(ctry);
+   // alert($('#Country').text());
+     $(".leaflet-popup-content").remove();
+    console.log('i work');
+    openModal(ctry);
+   // var test = feature.properties.Country;
+    //console.log(test);
+});
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
 //Listen for close click
@@ -67,5 +75,5 @@ function closeInfo(){
 //Function to close modal
 function closeModal(){
   modal.style.display = "none";
-  countrySelected.text = "";
+  countrySelected.text = ;
 }
