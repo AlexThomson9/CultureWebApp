@@ -1,7 +1,7 @@
 // Get modal element
 var modal = document.getElementById('infoModal');
 //Get open modal button
-var modalBtn = document.getElementById('modalBtn');
+//var modalBtn = document.getElementById('modalBtn'); - For testing purposes
 //Get close button
 var closeBtn = document.getElementsByClassName('country-close')[0];
 //Get modal content
@@ -25,9 +25,21 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 });
 
+$(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
+    var ctry = $(".leaflet-popup-content").text();
+    console.log(ctry);
+    $('#Country').text(ctry);
+   // alert($('#Country').text());
+     $(".leaflet-popup-content").remove();
+    console.log('i work');
+    openModal(ctry);
+   // var test = feature.properties.Country;
+    //console.log(test);
+});
+
 
 //Listen for open click
-modalBtn.addEventListener('click', openModal);
+//modalBtn.addEventListener('click', openModal); - For testing the modal
 //Listen for close click
 closeBtn.addEventListener('click', closeModal);
 
