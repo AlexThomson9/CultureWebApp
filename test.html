@@ -50,6 +50,56 @@
                     <a href="#">Contact</a>
             </div>
         </div>
+
+        <div id="banana">
+        <!--Section that contains the popup modal, that activates when you click on a country on the map-->
+        <section id="countryInfoTesting">
+          <button type="button" id="modalBtn">Modal</button>
+          <!--The Popup Modal-->
+          <div id="infoModal" class="countryModal">
+            <!--The Close button on the modal-->
+            <div class="closeFunction">
+              <span class="country-close">&times;</span>
+            </div>
+            <!-- Modal content -->
+            <div class="country-modal-content">
+              <!--Modal Title-->
+              <h1 id="countryTitle"> Culture! </h1>
+              <!--This div will contain the information retrieved from the restCountries API-->
+              <div class="externalDataDisplay">
+                <!--The country image retrieved from the API-->
+                <div class="extImg">
+                  <img class="flagImage" src=https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg></img>
+                </div>
+                <!--The information retrieved from the API-->
+                <div class="restAPI">
+                  <h4 class="restName">Country Name: UK USA  <br></h4>
+                  <h4 class="restLanguage">Language: ENG GER <br></h4>
+                  <h4 class="restCurrency">Currency: £$ </h4>
+                </div>
+              </div>
+              <!--This div contains the information retrieved from the server about the selected country-->
+              <div class="internalDataDisplay">
+                <div class="serverContent">
+                  <p> Internal data will be displayed here </p>
+                </div>
+                <!--Splitting the sections up so that they can be displayed in sets of 2-->
+                <div class="top-Display">
+                
+                </div>
+                <div class="middle-Display" >
+
+                </div>
+                <!--The modal footer-->
+                <div class="bottom-Display">
+                  <button name="popupReturn" class="popReturn">Back To Menu</button>
+                  <button name="returnFunction" class="returnBtn">Back To Map</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
         <div class="WebContainer">
             <div id="myModal" class="modal" hidden>
               <!-- Modal content -->
@@ -59,6 +109,7 @@
               </div>
             </div>
         </div>
+
         <div id="Map-Footer">
             <p> © Copyright 2018 RGU Project Culture </p>
         </div>
@@ -67,5 +118,6 @@
          <!-- --->
             <script type="text/javascript" src="http://leafletjs.com/examples/map-panes/eu-countries.js"></script>
             <script type="text/javascript" src="js/Map.js"></script>
+            <script src="js/countryModal.js"></script>
     </body>
 </html>

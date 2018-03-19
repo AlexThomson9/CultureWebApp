@@ -80,45 +80,6 @@ body{
 
 }
 
-h1 {
-
-		/*rgba(25, 157, 210, 0.55)*/
-		 font-family: 'Centaur';
-		 text-shadow: 2px 2px;
-		 -o-border-radius:2em;
-		 -ms-border-radius:2em;
-		 -moz-border-radius:2em;
-		 -webkit-border-radius:2em;
-		 border-radius:2em;
-		 -webkit-text-align:center;
-	   -moz-text-align:center;
-     -ms-text-align:center;
-     -o-text-align:center;
-		 text-align:center;
-		 background-color: rgba(218,241,252,0.91);
-     font-size: 45px;
-		/*color:rgba(255,204,51,0.91);*/
-		-webkit-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-	  -moz-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-    -ms-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-    -o-text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-		text-shadow:4px 4px 4px rgba(255, 69, 0, 0.89);
-
-    background: -webkit-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
-    background: -o-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
-    background: -moz-radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
-    background: radial-gradient(rgba(255, 204, 102, 0.89), rgba(218,241,252,0.91), rgba(58, 132, 223, 0.75));
-		/*rgba(218,241,252,0.91);*/
-
-
- /* background:none;
- background: radial-gradient(rgba(255, 204, 102, 0.89), yellow, rgba(72,192,235,1.00));*/
-		/*margin-top:0.6em;*/
-
-		margin-top:0em;
-		/*margin-bottom:0em;*/
-}
-
 h2 {
 		/*rgba(25, 157, 210, 0.55)*/
     font-family: 'Centaur';
@@ -138,9 +99,9 @@ p{
          opacity: 0.9;
         color: white;
 }
-        
-        
-        
+
+
+
 #Map-Footer
 {
     width: 100%;
@@ -192,7 +153,7 @@ p{
     float: right;
     right: 0;
 }
-#TitleBar-Title 
+#TitleBar-Title
 {
     align-content: center;
     text-align: center;
@@ -200,7 +161,7 @@ p{
     padding-right:25%;
 
 }
-#Link-Reg 
+#Link-Reg
 {
     float: right;
 }
@@ -211,4 +172,136 @@ p{
 #Country
 {
     display: none;
+}
+
+#modalBtn{
+  width: 100%;
+  height: 60%;
+}
+
+
+/*Popup modal styling */
+.countryModal{
+  display:none;          /* Hidden by default */
+  position: fixed;      /*Keeps the modal in the same place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;  /*Created a border for the modal */
+  z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
+  height: 70%;         /* Full height */
+  width: 50%;          /* Full width */
+  overflow:auto;        /* Enables scroll if/when needed */
+  background-color: rgba(0,0,0,0.9);
+}
+
+/*Styling for the content in the modal */
+.country-modal-content{
+  background-color: white;  /*Sets background to white */
+  margin: 10%, auto;        /* */
+  border: 1px solid black;  /* Border for the content */
+  padding: 20px;
+  width: 100%;              /* Sets the width to full width */
+  height: 100%;             /* Sets the height to full size*/
+
+
+  /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.5); */
+    }
+
+/*Styling for the Close button on the modal */
+.country-close{
+  float:right;      /*Sets the button to the right */
+  color: #FF0000;   /*Button colour to red */
+  font-size: 50px;  /*Close button size to 50px- Alter in the media screen!!! */
+}
+
+/*Styling for when the the user is hovering over the close button */
+.country-close:hover, .country-close:focus{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*The div that contains the first two interactive images*/
+.top-Display{
+  width: 100%;
+  height: 45%;
+}
+
+/*The div that contains the last two interactive images*/
+.middle-Display{
+  width:100%;
+  height: 45%;
+}
+/*The div that contains the content of the external API*/
+.externalDataDisplay{
+  display: inline-block;
+  border: 1px solid black;
+  width:100%;
+  height:25%;
+}
+
+
+/*The div that will contain the image retrieved from the API */
+.extImg{
+  display: inline-block;
+  position:absolute;
+  width: 45%;
+  height: 24%;
+}
+
+/*The styling of the image*/
+.flagImage{
+  display: inline-block;
+  position: absolute;
+  float:left;
+  height: 100%;
+  width: 100%;
+
+}
+
+/*The div that will contain the text information retrieved from the API*/
+.restAPI{
+  display: inline-block;
+  text-align: center;
+  float:right;
+  width: 50%;
+  height: 100%;
+}
+
+/*Sets the font-size of the text retrieved by the API */
+.restName, .restCurrency, .restLanguage{
+  /*Default value of the font size */
+  font-size: 1em;
+}
+
+/*The div that contains the information retrieved from the server */
+.internalDataDisplay {
+  display: inline-block;
+  /*Workaround for the borders of the externalDataDisplay & internalDataDisplay from clashing*/
+  border-top: 0.25px solid black;
+  /*Styling for the rest of the border*/
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 75%;
+}
+
+/*Sets the max size one of the images can be in terms of the div*/
+.internalDataDisplay img{
+  width: 50%;
+  height: 100%;
+}
+
+.serverContent{
+  width: 100%;
+  height: 90%;
+  display: none;
+}
+
+/*Styling for the title of the modal */
+#countryTitle {
+  text-align: center;
+  border-bottom: 1px solid black;
 }

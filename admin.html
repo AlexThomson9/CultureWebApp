@@ -11,16 +11,23 @@
     <link rel="stylesheet" href="css/admin.css" />
   </head>
   <body>
-    <div class="topnav">
-      <a href="index.html" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </div>
+    <section class="title">
+      <div id="TitleBar">
+          <div id="TitleBar-d1">
+              <h2 id="TitleBar-Title">Culture!</h2>
+          </div>
+
+          <div id="TitleBar-d2">
+                <a href="html/login.html">Login</a>
+                <a href="html/register.html">Register</a>
+                <a href="#">Contact</a>
+          </div>
+      </div>
+  </section>
 
     <section id="adminHeader">
       <div id="title">
-        <h1> Banana </h1>
+        <h1>Updated Information:</h1>
       </div>
       <div class="actionRequired">
         <select name="infoUpdate">
@@ -40,7 +47,13 @@
             <button>Culture</button>
             <button>Laws</button>
           </nav>
-        <p>SDFGHJK</p>
+          <textarea class="textArea" rows="4" cols="50">
+            This will display the text retrieved from the database
+          </textarea>
+          <div class="buttonDiv">
+            <button id="submitBtn">Submit</button>
+            <button id="cancelBtn">Cancel</button>
+          </div>
       </div>
 
   </body>

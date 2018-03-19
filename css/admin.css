@@ -13,43 +13,64 @@ html{
   height: 100%;
 }
 
-
-/* Style the Nav Bar Start */
-.topnav {
-  overflow: hidden;
-  background-color: #020003;
+#TitleBar {
+width: 100%;
+height: 8%;
+background-color:000004;
+/*#bfd9f2;*/
+display: inline-flex;
+    position: absolute;
+    z-index: 5000;
+     opacity: 0.9;
+    color: white;
 }
 
-.topnav h1{
-  float:left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: 'Centaur';
-}
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-    font-family: 'Centaur';
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: #020003;
-}
-
-.topnav a.active {
-  background-color: #020003;
+#title{
+  padding-bottom: 50px;
   color: white;
 }
-/* Style the Nav Bar End */
+
+#TitleBar a
+{
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 21px 16px;
+    float: right;
+}
+#TitleBar a:hover
+{
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFFFFF;
+    padding: 21px 16px;
+    text-decoration: underline;
+}
+
+#TitleBar-d1
+{
+    width: 50%;
+}
+
+#TitleBar-d2
+{
+    display: inline-flex;
+    text-align: right;
+    float: right;
+    right: 0;
+}
+#TitleBar-Title
+{
+    align-content: center;
+    text-align: center;
+    padding-left: 25%;
+    padding-right:25%;
+}
 
 .actionRequired{
   display: block;
@@ -61,11 +82,22 @@ html{
   border: 1px solid black;
   background-color: white;
   border-radius: 4px;
-  width: 80%;
+  width:50%;
   height: 50%;
   margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .optionNav{
   width: 100%;
+}
+
+.textArea{
+  width: 99%;
+  height: 80%;
+  text-align: left;
+}
+
+.adminHeader{
+  padding-top: 10px;
 }
