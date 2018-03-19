@@ -1,6 +1,3 @@
-//Get country selected
-var countrySelected = document.getElementById('country');
-
 // Get modal element
 var modal = document.getElementById('infoModal');
 //Get open modal button
