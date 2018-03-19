@@ -185,7 +185,7 @@ p{
   z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
   height: 70%;         /* Full height */
   width: 50%;          /* Full width */
-  overflow:auto;        /* Enables scroll if/when needed */
+  /**overflow:auto;     **/   /* Enables scroll if/when needed */
   background-color: rgba(0,0,0,0.9);
 }
 
