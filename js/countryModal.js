@@ -29,7 +29,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 });
 
 if (countrySelected.length > 0){
-  function openModal();
+  function openModal()
 }
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
