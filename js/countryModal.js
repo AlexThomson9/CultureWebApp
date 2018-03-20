@@ -13,7 +13,6 @@ var serverContent = document.getElementsByClassName('serverContent')[0];
 
 $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
   serverContent.style.display = "block";
-
 });
 
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
@@ -30,11 +29,11 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
 //Listen for close click
-//closeBtn.addEventListener('click', closeModal); For testing the modal
+closeBtn.addEventListener('click', closeModal); For testing the modal
 
 //Function to open modal
 function openModal(){
-  modal.style.display = "block";  
+  modal.style.display = "block";
   var countryRequest = new XMLHttpRequest();
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
   console.log(countryPicked);
