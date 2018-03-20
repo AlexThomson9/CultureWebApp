@@ -233,11 +233,12 @@ p{ font-family: 'Centaur';}
   height: 75%;
 }
 
-/*Sets the max size one of the images can be in terms of the div*/
+/*Sets the max size of the images can be in terms of the div*/
 .internalDataDisplay img{
   width: 50%;
   height: 100%;
 }
+
 
 .serverContent{
   width: 100%;

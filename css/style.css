@@ -9,9 +9,10 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto;   /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 /* Modal Content/Box */
@@ -29,6 +30,8 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    top: -10px;
+    right: -10px;
 }
 
 .close:hover,
@@ -174,6 +177,11 @@ p{
     display: none;
 }
 
+#modalBtn{
+  height: 50%;
+  width: 50%;
+}
+
 /*Popup modal styling */
 .countryModal{
   display:none;          /* Hidden by default */
@@ -183,20 +191,41 @@ p{
   transform: translate(-50%, -50%);
   border: 1px solid black;  /*Created a border for the modal */
   z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
-  height: 70%;         /* Full height */
-  width: 50%;          /* Full width */
-  overflow:auto;        /* Enables scroll if/when needed */
-  background-color: rgba(0,0,0,0.9);
+  height: 100%;         /* Full height */
+  width: 100%;          /* Full width */
+  overflow: auto;        /* Enables scroll if/when needed */
+  /*background-color: rgba(0,0,0,0.9); */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.tabs{
+  background-color: #555;
+   color: white;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 7px 8px;
+   font-size: 12px;
+   width: 25%;
+   top: -10px;
+}
+
+/* Change background color of buttons on hover */
+.tabs:hover {
+    background-color: #777;
 }
 
 /*Styling for the content in the modal */
 .country-modal-content{
+  padding-top: 5%;
   background-color: white;  /*Sets background to white */
-  margin: 10%, auto;        /* */
+  margin: 10 auto;        /* */
   border: 1px solid black;  /* Border for the content */
   padding: 20px;
-  width: 100%;              /* Sets the width to full width */
-  height: 100%;             /* Sets the height to full size*/
+  width: 80%;              /* Sets the width to full width */
+  height: 70%;             /* Sets the height to full size*/
 
 
   /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.5); */
@@ -207,6 +236,7 @@ p{
   float:right;      /*Sets the button to the right */
   color: #FF0000;   /*Button colour to red */
   font-size: 50px;  /*Close button size to 50px- Alter in the media screen!!! */
+
 }
 
 /*Styling for when the the user is hovering over the close button */
@@ -216,17 +246,12 @@ p{
   cursor: pointer;
 }
 
-/*The div that contains the first two interactive images*/
-.top-Display{
+/*The div that contains */
+.serverContent{
   width: 100%;
-  height: 45%;
+  height: 90%;
 }
 
-/*The div that contains the last two interactive images*/
-.middle-Display{
-  width:100%;
-  height: 45%;
-}
 /*The div that contains the content of the external API*/
 .externalDataDisplay{
   display: inline-block;
@@ -235,24 +260,37 @@ p{
   height:25%;
 }
 
+/*Sets the max size one of the images can be in terms of the div
+.externalDataDisplay img{
+  width: 50%;
+  height: 100%;
+} */
+
+.externalDataDisplay .restAPI{
+  width: 50%;
+  height: 100%;
+}
 
 /*The div that will contain the image retrieved from the API */
 .extImg{
   display: inline-block;
   position:absolute;
-  width: 45%;
-  height: 24%;
+  width: 37%;
 }
 
-/*The styling of the image*/
+.extImg img{
+  width: 90%;
+  height: 15.5%;
+}
+
+/*The styling of the image
 .flagImage{
   display: inline-block;
   position: absolute;
   float:left;
-  height: 100%;
+  height: 95%;
   width: 100%;
-
-}
+} */
 
 /*The div that will contain the text information retrieved from the API*/
 .restAPI{
@@ -260,13 +298,13 @@ p{
   text-align: center;
   float:right;
   width: 50%;
-  height: 100%;
+  height: 24%;
 }
 
 /*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
   /*Default value of the font size */
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 /*The div that contains the information retrieved from the server */
@@ -279,13 +317,7 @@ p{
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   width: 100%;
-  height: 75%;
-}
-
-/*Sets the max size one of the images can be in terms of the div*/
-.internalDataDisplay img{
-  width: 50%;
-  height: 100%;
+  height: 50%;
 }
 
 .serverContent{

@@ -7,20 +7,11 @@ var closeBtn = document.getElementsByClassName('country-close')[0];
 //Get modal content
 var modalContent = document.getElementsByClassName('country-modal-content')[0];
 
-var hideTop = document.getElementsByClassName('top-display')[0];
-var hideMiddle = document.getElementsByClassName('middle-display')[0];
 var serverContent = document.getElementsByClassName('serverContent')[0];
-var returnToMapButton = document.getElementsByClassName('returnBtn')[0];
-var returnToPopupMenu = document.getElementsByClassName('popReturn')[0];
 
+//var returnToMapButton = document.getElementsByClassName('returnBtn')[0]; For testing purposes
 
 $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
-
-  hideTop.style.display = "none";
-  hideMiddle.style.display = "none";
-  returnToMapButton.style.display = "none";
-
-  returnToPopupMenu.style.display = "block";
   serverContent.style.display = "block";
 
 });
@@ -39,13 +30,15 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
 //Listen for close click
-closeBtn.addEventListener('click', closeModal);
+//closeBtn.addEventListener('click', closeModal); For testing the modal
 
 //Function to open modal
 function openModal(){
-  modal.style.display = "block";
+  modal.style.display = "block";  
   var countryRequest = new XMLHttpRequest();
-  countryRequest.open('GET', 'https://restcountries.eu/rest/v2/name/France?fields=name;capital;languages;currencies;flag')
+  var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
+  console.log(countryPicked);
+  countryRequest.open('GET', countryPicked)
   countryRequest.onload = function(){
     var countryData = JSON.parse(countryRequest.responseText);
     renderHTML(countryData);
@@ -57,17 +50,7 @@ function renderHTML(data){
   modalContent.insertAdjacentHTML('beforeend', htmlString);
   }
 
-returnToPopupMenu.addEventListener('click', closeInfo);
-returnToMapButton.addEventListener('click', closeModal);
-
-function closeInfo(){
-  returnToPopupMenu.style.display = "none";
-  serverContent.style.display = "none";
-
-  hideTop.style.display = "block";
-  hideMiddle.style.display = "block";
-  returnToMapButton.style.display = "block";
-}
+//returnToMapButton.addEventListener('click', closeModal); for testing the modal
 
 //Function to close modal
 function closeModal(){

@@ -16,6 +16,12 @@
               <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
               <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
               <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+
+            <!--Bootstrap CDN that is used for the modals-->
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
             <!--Local Files both css and js --->
               <link rel="stylesheet" href="css/style.css" />
               <script src="js/mobile_check.js"></script>
@@ -64,6 +70,12 @@
             </div>
             <!-- Modal content -->
             <div class="country-modal-content">
+              <div class="contentButtons">
+                <button class="tabs" id="customsClick">Customs</button>
+                <button class="tabs" id="gesturesClick">Gestures</button>
+                <button class="tabs" id="cultureClick">Culture</button>
+                <button class="tabs" id="lawClick">Laws</button>
+              </div>
               <!--Modal Title-->
               <h1 id="countryTitle"> Culture! </h1>
               <!--This div will contain the information retrieved from the restCountries API-->
@@ -84,18 +96,7 @@
                 <div class="serverContent">
                   <p> Internal data will be displayed here </p>
                 </div>
-                <!--Splitting the sections up so that they can be displayed in sets of 2-->
-                <div class="top-Display">
-
-                </div>
-                <div class="middle-Display" >
-
-                </div>
-                <!--The modal footer-->
-                <div class="bottom-Display">
-                  <button name="popupReturn" class="popReturn">Back To Menu</button>
-                  <button name="returnFunction" class="returnBtn">Back To Map</button>
-                </div>
+              </div>          
               </div>
             </div>
           </div>
