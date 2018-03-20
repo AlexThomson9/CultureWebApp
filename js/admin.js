@@ -1,3 +1,4 @@
+document.getElementById("defaultOpen").click();
 
 function category(evt, category) {
     var i, tabcontent, tablinks;

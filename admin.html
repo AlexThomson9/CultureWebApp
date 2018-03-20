@@ -26,10 +26,7 @@
   </section>
 
     <section id="adminHeader">
-      <div id="title">
-        <h1>Updated Information:</h1>
-      </div>
-      <div class="actionRequired">
+      <div id="dropdown">
         <select id="infoUpdate">
           <!--These are examples, when database is implemented, js will fill this with values -->
           <option value="default">Please select from the options below</option>
@@ -43,14 +40,14 @@
   <div class="contentContainer">
 
     <div class="tab">
-        <button class="tablinks" onclick="category(event, 'Customs')">Customs</button>
+        <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
     </div>
 
     <div id="CountryTitle">
-
+        Country
     </div>
 
 
