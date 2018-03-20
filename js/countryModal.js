@@ -1,7 +1,7 @@
 // Get modal element
 var modal = document.getElementById('infoModal');
 //Get open modal button
-var modalBtn = document.getElementById('modalBtn');
+//var modalBtn = document.getElementById('modalBtn'); For testing modal functionality
 //Get close button
 var closeBtn = document.getElementsByClassName('country-close')[0];
 //Get modal content
@@ -27,7 +27,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     //console.log(test);
 });
 //Listen for open click
-modalBtn.addEventListener('click', openModal);
+//modalBtn.addEventListener('click', openModal); For testing purposes
 //Listen for close click
 closeBtn.addEventListener('click', closeModal);
 

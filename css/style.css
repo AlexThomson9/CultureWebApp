@@ -102,8 +102,6 @@ p{
         color: white;
 }
 
-
-
 #Map-Footer
 {
     width: 100%;
@@ -200,15 +198,15 @@ p{
 
 .tabs{
   background-color: #555;
-   color: white;
-   float: left;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   padding: 7px 8px;
-   font-size: 12px;
-   width: 25%;
-   top: -10px;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  font-size: 12px;
+  width: 25%;
+  top: -10px;
 }
 
 /* Change background color of buttons on hover */
