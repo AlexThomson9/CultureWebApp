@@ -8,8 +8,10 @@ L.latLng(84.32308710686083, 186.4687478542328)
 );
 var map = L.map('map', 
 {
-  minZoom: 2.6,
-  'maxBounds': maxiBounds
+    minZoom: 2.6,
+    'maxBounds': maxiBounds,
+    zoomControl:false,
+    attributionControl: false
 }).fitBounds(maxiBounds);
 
 map.createPane('labels');
@@ -160,9 +162,15 @@ function getContinent()
                   );
                   console.log(c_cords);
             }
+            map.setZoom(3.55);
+
+            var delayInMilliseconds = 1000; //1 second
+
+            setTimeout(function()
+            {
             map.panTo(c_cords);
             delete c_cords;
-            map.setZoom(3.4);
+            }, delayInMilliseconds);
         }
       //  map.panTo(new L.LatLng( 39.639537564366684, -99.84374999999999,));
       //  map.setZoom(8);
@@ -190,7 +198,8 @@ $(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
     console.log("."+id+"-Hide");
 	$("."+id).html("add more");
     test++;
-    $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>rem</a></div>");
+   $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>remove</a></div>");
+    //$("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><button type='button' id='minus' class='minus'>-</buttom></div>");
     if($("."+id+"-Hide").find(".Submit").length)
     {
     console.log("button exists");
@@ -236,6 +245,8 @@ $(document).on('click', ".Customs-Hide, .Gestures-Hide, .Cultures-Hide, .Laws-Hi
         {
         $(this).remove();
         });
+        $('#Popup').append("<h3>Submission Successful!</h3>")
+        
    
   
    

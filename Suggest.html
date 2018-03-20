@@ -9,7 +9,7 @@
   <meta name="author" content="Group 8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
+  
 
   <script src="js/mobile_check.js"></script>
 
@@ -32,7 +32,8 @@
     background-color: 
 #bfd9f2;
     display: inline-flex;  
-        position: relative;
+          position: absolute;
+        z-index: 5000;
 }
         #Map-Footer{
                 width: 100%;
@@ -40,7 +41,9 @@
     background-color: 
 #bfd9f2;
             text-align: center;
-             display: inline-block;  
+             display: inline-block; 
+            position: absolute;
+            bottom: 0;
         }
 
         
@@ -184,7 +187,23 @@
     
 }
         
+        #minus{
+            
+            
+            font-size: 16px;
+            text-align: center;
+            padding-left: 4px;
+        vertical-align: middle;
         
+        }
+        
+        #1{
+            line-height: inherit;
+            
+        }
+        
+        
+    
         .leaflet-popup-content-wrapper textarea{
   background-color: antiquewhite;
               border-radius: 5px;

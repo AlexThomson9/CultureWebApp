@@ -32,6 +32,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      $(".leaflet-popup-content").remove();
     console.log('i work');
     openModal(ctry);
+    $('.restName').html(ctry);
    // var test = feature.properties.Country;
     //console.log(test);
 });

@@ -26,6 +26,7 @@
               <link rel="stylesheet" href="css/style.css" />
               <script src="js/mobile_check.js"></script>
               <script src="js/cookies.js"></script>
+        <script src="js/image.js"></script>
             <!-- This is required to change the leaflet.css properties --->
                 <style>
                 .leaflet-popup.leaflet-zoom-animated
@@ -61,7 +62,7 @@
         <div id="modalDiv">
         <!--Section that contains the popup modal, that activates when you click on a country on the map-->
         <section id="countryInfoTesting">
-          <button type="button" id="modalBtn">Modal</button>
+
           <!--The Popup Modal-->
           <div id="infoModal" class="countryModal">
             <!--The Close button on the modal-->
@@ -82,7 +83,7 @@
               <div class="externalDataDisplay">
                 <!--The country image retrieved from the API-->
                 <div class="extImg">
-                  <img class="flagImage" src=https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg></img>
+                  <img class="flagImage" src=https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg>
                 </div>
                 <!--The information retrieved from the API-->
                 <div class="restAPI">
@@ -117,8 +118,7 @@
         </div>
         <div id="map"></div>
         <a id="Country"></a>
-         <!-- --->
-            <script type="text/javascript" src="http://leafletjs.com/examples/map-panes/eu-countries.js"></script>
+    <script type="text/javascript" src="http://leafletjs.com/examples/map-panes/eu-countries.js"></script>
             <script type="text/javascript" src="js/Map.js"></script>
             <script src="js/countryModal.js"></script>
     </body>

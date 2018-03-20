@@ -11,10 +11,10 @@
 }
 
 /*Setting the interactive maps dimensions */
-    #map { height:70%;
+    #map { height:100%;
           width: 100%;
 
-        z-index: -1;
+
         position: absolute;
 
           width: 100vw;

@@ -191,6 +191,7 @@ p{
   transform: translate(-50%, -50%);
   border: 1px solid black;  /*Created a border for the modal */
   z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
+<<<<<<< HEAD
   height: 100%;         /* Full height */
   width: 100%;          /* Full width */
   overflow: auto;        /* Enables scroll if/when needed */
@@ -215,6 +216,12 @@ p{
 /* Change background color of buttons on hover */
 .tabs:hover {
     background-color: #777;
+=======
+  height: 70%;         /* Full height */
+  width: 50%;          /* Full width */
+  /**overflow:auto;     **/   /* Enables scroll if/when needed */
+  background-color: rgba(0,0,0,0.9);
+>>>>>>> b070f7d7b47bb2540089d128d4238d69f5fc4176
 }
 
 /*Styling for the content in the modal */
