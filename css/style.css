@@ -220,6 +220,7 @@ p{
   background-color: white;  /*Sets background to white */
   margin: 10 auto;        /* */
   border: 1px solid black;  /* Border for the content */
+  overflow: auto;
   padding: 20px;
   width: 80%;              /* Sets the width to full width */
   height: 70%;             /* Sets the height to full size*/
