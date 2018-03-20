@@ -29,7 +29,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 //Listen for open click
 modalBtn.addEventListener('click', openModal);
 //Listen for close click
-closeBtn.addEventListener('click', closeModal); For testing the modal
+closeBtn.addEventListener('click', closeModal);
 
 //Function to open modal
 function openModal(){
