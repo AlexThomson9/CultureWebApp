@@ -14,7 +14,7 @@ $('#submitBtn').click(function () {
 
   //Checks if anything has been entered into the password field
   if (!$.trim($('#passField').val())) {
-          /If true message displayed to the user
+          //If true message displayed to the user
            alert("Please enter your password");
            noIssue = false;
       }
