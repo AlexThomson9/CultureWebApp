@@ -99,7 +99,7 @@ h2{
 /* Must be at the end of the file */
 /*The following media screens will check the users' device width and will alter certain values accordingly*/
 /*Screen width of an IPad Pro (Widest mobile screen that will use the site)*/
-@media screen and (max-width: 1100px){
+@media only screen and (max-device-width: 1100px) and (min-device-width: 751px){
 
   body{
     width: 100%;
@@ -181,16 +181,16 @@ h2{
 
 }
 
-@media screen and (max-width: 900px){
+@media only screen and (max-device-width: 750px) and (min-device-width: 400px){
   h2{
-    font-size: 5px;
+    font-size: 70px;
   }
 
 
   .login-box{
   width: 80%;
   height: 50%;
-  top: 50%;
+  top: 45%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -199,29 +199,29 @@ h2{
   }
 
   .login-box p{
-    font-size: 30px;
+    font-size: 45px;
   }
 
 
   .login-box input[type="text"], input[type="password"]
   {
     height: 60px;
-    font-size: 30px;
+    font-size: 45px;
   }
 
   .login-box input[type="submit"]
   {
     height:70px;
-    font-size: 45px;
+    font-size: 60px;
   }
 
   .login-box a
   {
-    font-size: 35px;
+    font-size: 45px;
   }
 }
 
-@media screen and (max-width: 800px){
+@media only screen and (max-width: 800px){
 
   h2{
     font-size: 50px;
