@@ -159,7 +159,7 @@ h2{
     font-size: 30px;
   }
 
-  .login-box .#submitBtn
+  .login-box #submitBtn
   {
     border: none;
     outline: none;
@@ -169,7 +169,7 @@ h2{
     font-size: 45px;
     border-radius: 20px;
   }
-  .login-box .#submitBtn:hover
+  .login-box #submitBtn:hover
   {
     cursor: pointer;
     background: #39dc79;
