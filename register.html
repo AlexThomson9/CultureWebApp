@@ -5,6 +5,7 @@
   <title id="header">Culture!</title>
   <link rel="stylesheet" type="text/css" href="css/login.css">
   <link href="https://fonts.googleapis.com/css/family=Centaur" rel="stylesheet">
+<<<<<<< HEAD
            <link rel="stylesheet" href="css/Head-Foot.css" />
       <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -26,6 +27,10 @@
         }
       
       </style>
+=======
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+>>>>>>> 70ac74b8917b4341cb85f8dbe7e3acbbdc95dd88
 </head>
 
 <body>
@@ -57,15 +62,15 @@
 
 <div class="login-box">
   <h2>Register</h2>
-    <form id="regForm">
+    <form id="regForm" method="POST">
       <p>Email Address</p>
-      <input type="text" name="email" placeholder="Enter E-mail" id="emailField">
+      <input type="text" name="email" placeholder="Enter E-mail" id="emailField" required>
       <p>Username</p>
-      <input type="text" name="username" placeholder="Choose Username" id="userField">
+      <input type="text" name="username" placeholder="Choose Username" id="userField" required>
       <p>Password</p>
-      <input type="password" name="password" placeholder="Choose Password" id="passField">
+      <input type="password" name="password" placeholder="Choose Password" id="passField" required>
 
-      <input type="submit" name="submit" value="Register" id="submitBtn">
+      <input type="button" name="submit" value="Register" id="submitBtn">
       <a href="login.html">Already registered? Log in!</a>
     </form>
 
