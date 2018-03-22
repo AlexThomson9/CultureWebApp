@@ -7,35 +7,52 @@
     <meta name="keywords" content="HTML, CSS, XML, JavaScript">
     <meta name="author" content="Group 8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/admin.css" />
+           <link rel="stylesheet" href="css/Head-Foot.css" />
+      <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/admin.css" />
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+        .navbar{
+            margin-bottom: 0px;
+            border: none;
+        }
+        .container-fluid{
+            background-color:#322f30;
+        }
+        #Continent{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+      
+      </style>
+  
   </head>
   <body>
-    <section class="title">
-      <div id="TitleBar">
-          <div id="TitleBar-d1">
-              <h2 id="TitleBar-Title">Culture!</h2>
-          </div>
-
-          <div id="TitleBar-d2">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <a href="contact.html">Contact</a>
-          </div>
-      </div>
-  </section>
-
-    <section id="adminHeader">
-      <div id="dropdown">
-        <select id="infoUpdate">
-          <!--These are examples, when database is implemented, js will fill this with values -->
-          <option value="default">Please select from the options below</option>
-          <option value="Germany">Germany</option>
-          <option value="Russia">Russia</option>
-          <option value="Britain">Britain</option>
-        </select>
-      </div>
-    </section>
+     <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar top-bar"></span>
+                  <span class="icon-bar middle-bar"></span>
+                  <span class="icon-bar bottom-bar"></span>
+                </button>
+            <a class="navbar-brand" href="#">Culture!</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="Suggest.html">Suggest</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
 
   <div class="contentContainer">
 
@@ -44,37 +61,47 @@
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
+
+        <div id="dropdown">
+          <select id="infoUpdate">
+            <!--These are examples, when database is implemented, js will fill this with values -->
+            <option value="default">Country</option>
+            <option value="Germany">Germany</option>
+            <option value="Russia">Russia</option>
+            <option value="Britain">Britain</option>
+          </select>
+        </div>
     </div>
 
     <div id="CountryTitle">
         Country
     </div>
 
+    <section id="adminHeader">
 
+    </section>
 
     <div id="Customs" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Customs text retrieved from the database
+        <textarea class="textArea">This will display the Customs text retrieved from the database
         </textarea>
     </div>
 
     <div id="Gestures" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Gestures text retrieved from the database
+        <textarea class="textArea">This will display the Gestures text retrieved from the database
         </textarea>
     </div>
 
     <div id="Culture" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Culture text retrieved from the database
+        <textarea class="textArea">This will display the Culture text retrieved from the database
         </textarea>
     </div>
 
     <div id="Laws" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Laws text retrieved from the database
+        <textarea class="textArea">This will display the Laws text retrieved from the database
         </textarea>
     </div>
+
+
 
   <div class="Buttons">
     <button id="submitBtn">Submit</button>
@@ -83,6 +110,27 @@
 
 
   </div>
+      
+         
   <script src="js/admin.js"></script>
   </body>
+     <div id="Map-Footer">
+
+            <br>
+      <h4 class="_14">Follow us on</h4>
+              <br>
+      <ul class="social-icons">
+          <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+      </ul>
+
+
+                  <br>
+              <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
+
+          </div>
 </html>

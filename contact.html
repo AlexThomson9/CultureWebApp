@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 
 <head>
-
+<!--Header-->
   <title id="header">Culture!</title>
+  <!--stylesheet-->
   <link rel="stylesheet" type"text/css" href="./css/login.css">
+  <!--google font-->
   <link href="https://fonts.googleapis.com/css/family=Centaur" rel="stylesheet">
-<style>
-    
-    
+  
+<!--style in html to avoid css conflicts-->
+  <style>
     #subject{
         width:100%;
-    }
-    
-    
-    
+        resize: none;
+            }
     </style>
 </head>
 
 <body>
 
 <h1>Culture!</h1>
-
+<!--login box-->
 <div class="login-box">
   <h2>Contact Us</h2>
     <form action="/action_page.php">
-    <label for="fname">First Name</label>
+    <label for="fname">First Name</label><!--first name entry-->
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
+    <label for="lname">Last Name</label><!--Second name entry-->
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
+<!--dropdown menu for list of issues-->
     <label for="country">Issue</label>
     <select id="country" name="country">
       <option value="australia">Incorrect information</option>
       <option value="canada">Add information - Law</option>
       <option value="usa">Add information - Culture</option>
- <option value="o">Add information - Customs</option>
- <option value="a">Add information - Gestures</option>
- <option value="e">Map Error</option>
+      <option value="o">Add information - Customs</option>
+      <option value="a">Add information - Gestures</option>
+      <option value="e">Map Error</option>
+      <option value="other">Other - Specify</option>
     </select>
 
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Specify country and issue.." style="height:200px"></textarea>
-
+<!--Submit button-->
     <input type="submit" value="Submit">
   </form>
 

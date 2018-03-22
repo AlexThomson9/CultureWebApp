@@ -35,46 +35,43 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 }).addTo(map);
         //load the map informtaion
 $.getJSON("map.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-   geojson = L.geoJson(data).addTo(map);
-   geojson.setStyle({
-    fillOpacity: 1,
-    color: "#D46A6A",
-    weight: 1
-    ,noWrap: true
-});
-//Bind the popup to just display the country, it doesnt actually popup but we use the value
-var layerGroup = L.geoJSON(data, {
-  onEachFeature: function (feature, layer) {
-    layer.bindPopup(feature.properties.Country);
-  }
-}).addTo(map);
-
-//Onlick for the leaflet marker
-$(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
-    //Get the text in the popup
-    var ctry = $(".leaflet-popup-content").text();
-    //Log for testing
-    console.log(ctry);
-    //Set the country tag to the country clicked
-    $('#Country').text(ctry);
-   // alert($('#Country').text());
-    //remove the popup for bugs 
-     $(".leaflet-popup-content").remove();
-    //log for testing
-    console.log('i work');
-});
-    /*  $.ajax({
-          url:"https://restcountries.eu/rest/v2/name/" + test,
-          dataType:'json',
-          success: function(result){
-            $("#div1").html(result);
-        }
-      });
-            */  
+        // add GeoJSON layer to the map once the file is loaded
+       geojson = L.geoJson(data).addTo(map);
+       geojson.setStyle({
+        fillOpacity: 1,
+        color: "#D46A6A",
+        weight: 1
+        ,noWrap: true
+        });
+        //Bind the popup to just display the country, it doesnt actually popup but we use the value
+        var layerGroup = L.geoJSON(data, {
+            onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.Country);
+          }
+        }).addTo(map);
+        //Onlick for the leaflet marker
+        $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
+            //Get the text in the popup
+            var ctry = $(".leaflet-popup-content").text();
+            //Log for testing
+            console.log(ctry);
+            //Set the country tag to the country clicked
+            $('#Country').text(ctry);
+           // alert($('#Country').text());
+            //remove the popup for bugs 
+             $(".leaflet-popup-content").remove();
+            //log for testing
+            console.log('i work');
+        });
+        /*  $.ajax({
+              url:"https://restcountries.eu/rest/v2/name/" + test,
+              dataType:'json',
+              success: function(result){
+                $("#div1").html(result);
+            }
+          });
+                */  
   });
-
-
     //Load the json for the countrries we want
     $.getJSON('world.geo.json-master/world.geo.json-master/countries.geo.json', function (geojson) { // load file
     L.geoJson(geojson, { // initialize layer with data
@@ -86,8 +83,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             }
         }
     }).addTo(map); // Add layer to map
-});
-
+    });
     //Function for setting the colours of the map
     function style(feature) {
     return {
@@ -106,8 +102,6 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 }).addTo(map);
     //set the view to the middle of the map
 	map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
-
-
     function getContinent()
 {
     //Get the selection index of the Continent from the dropdown
