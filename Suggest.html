@@ -1,89 +1,72 @@
 <html>
-
 <head>
-
   <title id="header">Culture!</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Page description">
-  <meta name="keywords" content="HTML, CSS, XML, JavaScript">
-  <meta name="author" content="Group 8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <!--Bootstrap CDN that is used for the modals-->
-              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/mobile_check.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/suggest.css" />
-              <link rel="stylesheet" href="css/Head-Foot.css" />
-     <!-- Jquery referenced--->
-              
-            <!-- Outside Sources all used for the map, the tiles and the functions--->
-              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-              <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
-              <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
-              <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
-    <style>
-.leaflet-popup-content-wrapper {
-background-color:#1C1904;
-color: antiquewhite;
-font-size: 15px;
-
-}
-.leaflet-popup-content-wrapper textarea{
-background-color: antiquewhite;
-border-radius: 5px;
-}
-
-.leaflet-popup-content-wrapper button{
-background-color: antiquewhite;
-border-radius: 5px;
-cursor: pointer;
-text-align: center;
-}
-
-
-.navbar{
-
-margin-bottom: 0px;
-border: none;
-
-}
-.container-fluid{
-background-color:#322f30;
-
-}
-#Continent{
-
-margin-top: 15px; 
-margin-left: 10px;
-}
-        
-        #Popup *{
-            -webkit-box-sizing: none;
-            box-sizing: none;
-            
-            
-        }
-                </style>
+      <meta charset="utf-8">
+      <meta name="description" content="Page description">
+      <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+      <meta name="author" content="Group 8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Jquery referenced--->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--Bootstrap CDN that is used for the modals-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/mobile_check.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/suggest.css" />
+        <link rel="stylesheet" href="css/Head-Foot.css" />
+        <!-- Outside Sources all used for the map, the tiles and the functions--->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+        <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+        <style>
+            .leaflet-popup-content-wrapper {
+                background-color:#1C1904;
+                color: antiquewhite;
+                font-size: 15px;
+            }
+            .leaflet-popup-content-wrapper textarea{
+                background-color: antiquewhite;
+                border-radius: 5px;
+            }
+            .leaflet-popup-content-wrapper button{
+                background-color: antiquewhite;
+                border-radius: 5px;
+                cursor: pointer;
+                text-align: center;
+            }
+            .navbar{
+                margin-bottom: 0px;
+                border: none;
+            }
+            .container-fluid{
+                background-color:#322f30;
+            }
+            #Continent{
+                margin-top: 15px; 
+                margin-left: 10px;
+            }     
+            #Popup *{
+                -webkit-box-sizing: none;
+                box-sizing: none;
+            }
+        </style>
 </head>
-
-<body>
-    
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Culture!</a>
-        
+<body>     
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar top-bar"></span>
+                  <span class="icon-bar middle-bar"></span>
+                  <span class="icon-bar bottom-bar"></span>
+                </button>
+            <a class="navbar-brand" href="#">Culture!</a>
                  <select id="Continent">
-                    <option value="select">Please select a continent</option>
+                     <option value="select">Please select a continent</option>
                     <option value="0" >Europe</option>
                     <option value="1" >North America</option>
                     <option value="2" >South America</option>
@@ -91,69 +74,45 @@ margin-left: 10px;
                     <option value="4" >Africa</option>
                     <option value="5" >Oceania</option>
                 </select>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-          <li><a href="#">Contact</a></li>
-            <li><a href="#">Admin</a></li>
-            <li><a href="#">Suggest</a></li>
-            
-     
-            
-        </ul>
-          
-                 
-     
-      </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-  </nav>
-  <div class="WebContainer">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Suggest</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+    <div class="WebContainer">
         <div id="myModal" class="modal" hidden>
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>
-
-
- </div>
-
-     <div id="map"></div>
-    
-<div id="Map-Footer">
-            
-          <br>
-    <h4 class="_14">Follow us on</h4>
-            <br>
-    <ul class="social-icons">
-        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-        <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
-    </ul>
-              
-            
-                <br>
-            <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
-                
+        <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
         </div>
-
-<script type="text/javascript" src="js/countries.geo.json"></script>
-<script type="text/javascript" src="js/SuggestMap.js"></script>
-
-    <script>
-    
-    
-    </script>
-
+    </div>
+    <div id="map"></div>
+    <div id="Map-Footer"> 
+        <br>
+        <h4 class="_14">Follow us on</h4>
+        <br>
+            <ul class="social-icons">
+                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        <br>
+            <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
+     </div>
+    <script type="text/javascript" src="js/countries.geo.json"></script>
+    <script type="text/javascript" src="js/SuggestMap.js"></script>
 </body>
-
 </html>
