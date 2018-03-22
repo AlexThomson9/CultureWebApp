@@ -18,6 +18,8 @@ body{
 html{
   height: 100%;
 }
+fname{}
+lname{}
 .login-box{
     width: 320px;
     background: rgba(0, 0, 0, 0.8);
@@ -193,7 +195,7 @@ h2{
 }
 
 @media only screen and (max-device-width: 750px) and (min-device-width: 300px){
-  body{
+  #body{
       margin: 0;
       padding: 0;
       background: white;
