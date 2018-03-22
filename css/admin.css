@@ -2,19 +2,36 @@
 body{
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+ 
+}
+#body{
+    
+    
+      height: 100%;
+  width: 100%;
+     margin: 0 auto;
   padding: 0;
   background: url(../images/background.jpg);
   background-repeat:no-repeat;
   background-size:100% 100vh;
   font-family: sans-serif;
+    
 }
 
 html{
   height: 100%;
 }
 
+<<<<<<< HEAD
 /* Sets style for the trasparent content container*/
+=======
+.actionRequired{
+  display: block;
+  padding-bottom: 1%;
+  padding-left: 10%;
+}
+
+>>>>>>> acb3e75eb9112ca382ebe158386bd58ca35873ff
 .contentContainer{
   border: 1px solid black;
   background-color: white;

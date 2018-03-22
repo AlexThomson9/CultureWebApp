@@ -1,4 +1,5 @@
-  <html>
+<!DOCTYPE html> 
+<html>
       <head>
         <title id="header">Culture!</title>
            <!-- Meta tags--->
@@ -112,7 +113,6 @@
           <div id="modalDiv">
           <!--Section that contains the popup modal, that activates when you click on a country on the map-->
           <section id="countryInfoTesting">
-
             <!--The Popup Modal-->
             <div id="infoModal" class="countryModal">
               <!--The Close button on the modal-->
@@ -121,6 +121,7 @@
               </div>
               <!-- Modal content -->
               <div class="country-modal-content">
+                <!--The tabs on the top of the modal for the user to select-->
                 <div class="contentButtons">
                   <button class="tabs" id="customsClick">Customs</button>
                   <button class="tabs" id="gesturesClick">Gestures</button>
@@ -129,7 +130,7 @@
                 </div>
                 <!--Modal Title-->
                 <h1 id="countryTitle"> Culture! </h1>
-                <!--This div will contain the information retrieved from the restCountries API-->
+                <!--This div sets the constaints for the content retrieved from the API-->
                 <div class="externalDataDisplay">
                   <!--The country image retrieved from the API-->
                   <div class="extImg">
@@ -142,8 +143,9 @@
                     <h4 class="restCurrency">Currency: £$ </h4>
                   </div>
                 </div>
-                <!--This div contains the information retrieved from the server about the selected country-->
+                <!--This div sets the constraints for the content retrieved from the server-->
                 <div class="internalDataDisplay">
+                  <!--Div that contains the retrieved content -->
                   <div class="serverContent">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
 
@@ -163,39 +165,35 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                       <span class="close">&times;</span>
-                      <p>Some text in the Modal..</p>
                 </div>
               </div>
           </div>
 
           <div id="map"></div>
 
-
-          <div id="Map-Footer">
-
+      <!--Page Footer -->
+       <div id="Map-Footer">
             <br>
-      <h4 class="_14">Follow us on</h4>
-              <br>
-      <ul class="social-icons">
-          <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-          <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-          <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
-          <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-          <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-          <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
-      </ul>
-
-
-                  <br>
-              <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
-
+            <h4 class="_14">Follow us on</h4>
+            <br>
+            <ul class="social-icons">
+              <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+              <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+            </ul>
+            <br>
+            <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
           </div>
 
+          <!--Used to tell the modal which country has been clicked on the map -->
           <a id="Country"></a>
 
-
-      <script type="text/javascript" src="http://leafletjs.com/examples/map-panes/eu-countries.js"></script>
-              <script type="text/javascript" src="js/Map.js"></script>
-              <script src="js/countryModal.js"></script>
+          <!--Scripts utilised by the page -->
+          <script type="text/javascript" src="http://leafletjs.com/examples/map-panes/eu-countries.js"></script>
+          <script type="text/javascript" src="js/Map.js"></script>
+          <script src="js/countryModal.js"></script>
       </body>
   </html>

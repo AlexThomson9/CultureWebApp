@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,6 +22,8 @@
     <!--Bootstrap CDN that is used for the modals-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <!--Required by the map -->
       <style>
         .leaflet-popup.leaflet-zoom-animated
         {
@@ -34,7 +37,7 @@
             background-color:#322f30;
         }
         #Continent{
-            margin-top: 15px; 
+            margin-top: 15px;
             margin-left: 10px;
         }
         </style>
@@ -84,7 +87,7 @@
     <div class="country-modal-content">
       <!--Modal Title-->
       <h1 id="countryTitle"> Culture! </h1>
-      <!--This div will contain the information retrieved from the restCountries API-->
+      <!--This div sets the constaints for the content retrieved from the API -->
       <div class="externalDataDisplay">
         <!--The country image retrieved from the API-->
         <div class="extImg">
@@ -97,12 +100,12 @@
           <h4 class="restCurrency">Currency: £$ </h4>
         </div>
       </div>
-      <!--This div contains the information retrieved from the server about the selected country-->
+      <!--This div sets the constraints for the content retrieved from the server-->
       <div class="internalDataDisplay">
         <div class="serverContent">
           <p> Internal data will be displayed here </p>
         </div>
-        <!--Splitting the sections up so that they can be displayed in sets of 2-->
+        <!--Splitting the sections up so that it fits the screen better-->
         <div class="top-Display">
           <img id="customsClick"  class="leftAlign"  src ="img/customs.jpeg">
           <img id="gesturesClick" class="rightAlign" src ="img/gestures.jpeg">

@@ -1,13 +1,27 @@
 /*Sets style for body of the page*/
 body{
-    margin: 0;
-    padding: 0;
-    background: url(../images/background.jpg);
-    background-repeat:no-repeat;
-     background-size:100% 100vh;
-   font-family: sans-serif;
+    height: 100%;
+    width: 100%;
 }
+<<<<<<< HEAD
 /*Sets style for login/register form container*/
+=======
+#body{
+      height: 100%;
+  width: 100%;
+
+     margin: 0 auto;
+  padding: 0;
+  background: url(../images/background.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 100vh;
+  font-family: sans-serif;
+    
+}
+html{
+  height: 100%;
+}
+>>>>>>> acb3e75eb9112ca382ebe158386bd58ca35873ff
 .login-box{
     width: 320px;
     background: rgba(0, 0, 0, 0.8);
@@ -22,7 +36,7 @@ body{
 
 /*Sets Title style*/
 h1{
-  margin:20px 0 0;
+  margin:0px;
   text-align: center;
   font-family: "Centaur";
   font-size: 120px;
