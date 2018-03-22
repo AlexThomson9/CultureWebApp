@@ -13,65 +13,7 @@ html{
   height: 100%;
 }
 
-#TitleBar {
-width: 100%;
-height: 8%;
-background-color:000004;
-/*#bfd9f2;*/
-display: inline-flex;
-    position: absolute;
-    z-index: 5000;
-     opacity: 0.9;
-    color: white;
-}
-
-#title{
-  padding-bottom: 50px;
-  color: white;
-}
-
-#TitleBar a
-{
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 21px 16px;
-    float: right;
-}
-#TitleBar a:hover
-{
-    font-size: 16px;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    background-color: #FFFFFF;
-    padding: 21px 16px;
-    text-decoration: underline;
-}
-
-#TitleBar-d1
-{
-    width: 50%;
-}
-
-#TitleBar-d2
-{
-    display: inline-flex;
-    text-align: right;
-    float: right;
-    right: 0;
-}
-#TitleBar-Title
-{
-    align-content: center;
-    text-align: center;
-    padding-left: 25%;
-    padding-right:25%;
-}
-
+#
 .actionRequired{
   display: block;
   padding-bottom: 1%;
@@ -107,7 +49,7 @@ display: inline-flex;
   background: rgba(0, 0, 0, 0.8);
   color: white;
   border: 1px solid white;
-  padding:2px;
+  padding:3px;
 }
 
 .adminHeader{
@@ -118,7 +60,8 @@ display: inline-flex;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #black;
-    width:100%;
+    width:50%;
+    margin-right: 20px;
 
 }
 
@@ -132,7 +75,7 @@ display: inline-flex;
     padding: 14px 16px;
     transition: 0.3s;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Change background color of buttons on hover */
@@ -173,29 +116,24 @@ display: inline-flex;
    background: transparent;
    font-size: 15px;
    font-weight: bold;
+   text-align: center;
    padding: 2px 10px;
-   width: 378px;
-   *width: 350px;
-   *background: #58B14C;
-   -webkit-appearance: none;
+   background-color: black;
+   width:175px;
 }
 
 #dropdown {
-   overflow:hidden;
-   width:350px;
-   -moz-border-radius: 9px 9px 9px 9px;
-   -webkit-border-radius: 9px 9px 9px 9px;
-   border-radius: 9px 9px 9px 9px;
+
    box-shadow: 1px 1px 11px #330033;
-   background: #000 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
-   top:26%;
-   left:15%;
+   top:6%;
+   right:-80px;
    position: absolute;
    transform: translate(-50%, -50%);
   opacity: 0.8;
 }
 
 .Buttons{
+    padding-top: 5px;
     text-align:center;
     padding-bottom:20px;
 }
