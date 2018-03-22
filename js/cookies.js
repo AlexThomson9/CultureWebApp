@@ -57,7 +57,10 @@ function checkCookies() {
         if (username != "" && country != "") {
             setCookie("username", username, 365);
             setCookie("country", country, 365);
-            setCookie("tutorial", "todo", 365);             
+            setCookie("tutorial", "todo", 365);
+            
+            alert("This is a short tutorial to explain you how I work, please read this to make sure you'll understand my behavior :)");
+        	setCookie("tutorial", "done", 365);               
         }           
     }
 }

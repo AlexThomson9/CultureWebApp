@@ -1,0 +1,84 @@
+#Link-Reg {
+    float: right;
+
+}
+#Continent{
+   
+          border-radius:4px;border:1px solid #AAAAAA;  
+            
+}
+  #Popup{
+}
+#Popup h3{
+  text-align:center;
+}
+
+#Popup section{
+  text-align:center;
+  display:none;
+}
+.Custom{
+  display:none;
+  text-align:center;
+}
+.Customm{
+  text-align:center;
+}
+.body textarea{
+  text-align:center;
+  border-radius: 5px;
+
+}
+
+.rTable {
+  	display: block;
+  	width: 100%;
+}
+.rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+  	clear: both;
+}
+.rTableHead, .rTableFoot{
+  	font-weight: bold;
+}
+.rTableCell, .rTableHead {
+  	float: left;
+  	height: 17px;
+  	overflow: hidden;
+  	padding: 2px 1.8%;
+  	width: 44%;
+}
+.rTable:after {
+  	visibility: hidden;
+  	display: block;
+  	font-size: 0;
+  	content: " ";
+  	clear: both;
+  	height: 0;
+}
+        a:link {
+    color: antiquewhite;
+}
+
+/* visited link */
+a:visited {
+    color: lightblue;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+        #minus{
+            
+            
+            font-size: 16px;
+            text-align: center;
+            padding-left: 4px;
+        vertical-align: middle;
+        
+        }
+        
+        #1{
+            line-height: inherit;
+            
+        }
