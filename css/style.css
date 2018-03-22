@@ -244,6 +244,7 @@ p{
 .serverContent{
   width: 100%;
   height: 90%;
+  text-align: justify;
   display: none;
 }
 

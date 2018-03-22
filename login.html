@@ -5,7 +5,8 @@
   <title id="header">Culture!</title>
   <link rel="stylesheet" type"text/css" href="./css/login.css">
   <link href="https://fonts.googleapis.com/css/family=Centaur" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -16,18 +17,16 @@
   <h2>Login</h2>
     <form>
       <p>Username</p>
-      <input type="text" name="username" placeholder="Enter Username">
+      <input type="text" name="username" placeholder="Enter Username" id="userField">
       <p>Password</p>
-      <input type="password" name="password" placeholder="Enter Password">
-      <input type="submit" name="submit" value="Login">
+      <input type="password" name="password" placeholder="Enter Password" id="passField">
+      <input type="submit" name="submit" value="Login" id="submitBtn">
       <a href="register.html">Create Account</a>
     </form>
 
 </div>
-
+<!--Validation script -->
+<script type="text/javascript" src="js/login.js"></script>
 </body>
-
-
-
 
 </html>
