@@ -2,9 +2,7 @@
 body{
     height: 100%;
     width: 100%;
-}s
-/*Sets style for login/register form container*/
-
+}
 #body{
       height: 100%;
   width: 100%;
@@ -15,7 +13,7 @@ body{
   background-repeat:no-repeat;
   background-size:100% 100vh;
   font-family: sans-serif;
-    
+
 }
 html{
   height: 100%;
