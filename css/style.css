@@ -320,8 +320,10 @@ p{
 }
 
 .serverContent{
-  width: 100%;
+  width: 50%;
   height: 90%;
+  margin-left: 475px;
+  text-align: justify;
   display: none;
 }
 
