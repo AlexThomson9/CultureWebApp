@@ -7,6 +7,11 @@ body{
    font-family: sans-serif;
 }
 
+/* fname and lname exclusively refering to the contact page*/
+#fname{}
+
+#lname{}
+
 .login-box{
     width: 320px;
   /*  height: 420px; don't need this*/
