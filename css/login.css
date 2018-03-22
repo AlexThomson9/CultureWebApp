@@ -181,7 +181,16 @@ h2{
 
 }
 
-@media only screen and (max-device-width: 750px) and (min-device-width: 400px){
+@media only screen and (max-device-width: 750px) and (min-device-width: 300px){
+  body{
+      margin: 0;
+      padding: 0;
+      background: white;
+      background-repeat:no-repeat;
+       background-size:100% 100vh;
+     font-family: sans-serif;
+  }
+
   h2{
     font-size: 70px;
   }
