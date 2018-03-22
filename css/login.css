@@ -1,12 +1,22 @@
 body{
-    margin: 0;
-    padding: 0;
-    background: url(../images/background.jpg);
-    background-repeat:no-repeat;
-     background-size:100% 100vh;
-   font-family: sans-serif;
+    height: 100%;
+    width: 100%;
 }
+#body{
+      height: 100%;
+  width: 100%;
 
+     margin: 0 auto;
+  padding: 0;
+  background: url(../images/background.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 100vh;
+  font-family: sans-serif;
+    
+}
+html{
+  height: 100%;
+}
 .login-box{
     width: 320px;
   /*  height: 420px; don't need this*/
@@ -21,7 +31,7 @@ body{
 }
 
 h1{
-  margin:20px 0 0;
+  margin:0px;
   text-align: center;
   font-family: "Centaur";
   font-size: 120px;

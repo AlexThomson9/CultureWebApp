@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/admin.css" />
            <link rel="stylesheet" href="css/Head-Foot.css" />
-      <link rel="stylesheet" href="css/style.css" />
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,9 +25,9 @@
             margin-top: 15px;
             margin-left: 10px;
         }
-      
+
       </style>
-  
+
   </head>
   <body>
      <nav class="navbar navbar-default">
@@ -54,6 +54,18 @@
         </div><!--/.container-fluid -->
     </nav>
 
+    <section id="adminHeader">
+      <div id="dropdown">
+        <select id="infoUpdate">
+          <!--These are examples, when database is implemented, js will fill this with values -->
+          <option value="default">Please select from the options below</option>
+          <option value="Germany">Germany</option>
+          <option value="Russia">Russia</option>
+          <option value="Britain">Britain</option>
+        </select>
+      </div>
+    </section>
+<div id="body">
   <div class="contentContainer">
 
     <div class="tab">
@@ -110,11 +122,8 @@
 
 
   </div>
-      
-         
-  <script src="js/admin.js"></script>
-  </body>
-     <div id="Map-Footer">
+    </div>
+           <div id="Map-Footer">
 
             <br>
       <h4 class="_14">Follow us on</h4>
@@ -133,4 +142,10 @@
               <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
 
           </div>
+
+  <script src="js/admin.js"></script>
+
+  </body>
+
+
 </html>
