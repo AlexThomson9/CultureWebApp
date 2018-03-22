@@ -1,5 +1,7 @@
+//Opens the customs tab by default
 document.getElementById("defaultOpen").click();
 
+//Change the content depending on selected tab (placeholder function)
 function category(evt, category) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -14,6 +16,7 @@ function category(evt, category) {
     evt.currentTarget.className += " active";
 }
 
+//Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
 
   console.log($(this).val());

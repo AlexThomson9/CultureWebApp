@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!--Style for the navigation bar-->
       <style>
         .navbar{
             margin-bottom: 0px;
@@ -30,6 +31,7 @@
 
   </head>
   <body>
+    <!--Navigation Bar-->
      <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -67,13 +69,14 @@
     </section>
 <div id="body">
   <div class="contentContainer">
-
+    <!-- Category select tabs-->
     <div class="tab">
         <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
 
+    <!--Dropdown country select-->
         <div id="dropdown">
           <select id="infoUpdate">
             <!--These are examples, when database is implemented, js will fill this with values -->
@@ -85,6 +88,7 @@
         </div>
     </div>
 
+    <!--Display the currently selected country-->
     <div id="CountryTitle">
         Country
     </div>
@@ -92,7 +96,7 @@
     <section id="adminHeader">
 
     </section>
-
+<!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
     <div id="Customs" class="tabcontent">
         <textarea class="textArea">This will display the Customs text retrieved from the database
         </textarea>
@@ -114,7 +118,7 @@
     </div>
 
 
-
+<!--Submit and Cancel buttons-->
   <div class="Buttons">
     <button id="submitBtn">Submit</button>
     <button id="cancelBtn">Cancel</button>
@@ -122,8 +126,16 @@
 
 
   </div>
+<<<<<<< HEAD
+
+<!--Page footer-->
+  <script src="js/admin.js"></script>
+  </body>
+     <div id="Map-Footer">
+=======
     </div>
            <div id="Map-Footer">
+>>>>>>> acb3e75eb9112ca382ebe158386bd58ca35873ff
 
             <br>
       <h4 class="_14">Follow us on</h4>
