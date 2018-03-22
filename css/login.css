@@ -18,8 +18,12 @@ body{
 html{
   height: 100%;
 }
-fname{}
-lname{}
+
+/* fname and lname exclusively refering to the contact page*/
+#fname{}
+
+#lname{}
+
 .login-box{
     width: 320px;
     background: rgba(0, 0, 0, 0.8);
