@@ -1,3 +1,4 @@
+/*Sets style for body of the page*/
 body{
     margin: 0;
     padding: 0;
@@ -6,10 +7,9 @@ body{
      background-size:100% 100vh;
    font-family: sans-serif;
 }
-
+/*Sets style for login/register form container*/
 .login-box{
     width: 320px;
-  /*  height: 420px; don't need this*/
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     top: 50%;
@@ -20,6 +20,7 @@ body{
     padding: 70px 30px;
 }
 
+/*Sets Title style*/
 h1{
   margin:20px 0 0;
   text-align: center;
@@ -30,7 +31,7 @@ h1{
    -webkit-text-stroke-color: #7DF9FF;
    text-shadow: 0 0 8px #FFFFFF;
 }
-
+/*Sets style for the text in login/register form*/
 h2{
   margin:0;
   padding:0 0 20px;
@@ -39,18 +40,18 @@ h2{
   color:#fff;
 
 }
-
+/*sets style for login*/
 .login-box p{
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
-
+/*Sets style for login/register box */
 .login-box input{
   width: 100%;
   margin-bottom: 20px;
 }
-
+/*Sets style for text and password inputs*/
 .login-box input[type="text"], input[type="password"]
 {
   border: none;
@@ -61,7 +62,7 @@ h2{
   color: #fff;
   font-size: 16px;
 }
-
+/*Sets style for submit buttons*/
 .login-box #submitBtn
 {
   border: none;
