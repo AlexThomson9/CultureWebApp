@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/admin.css" />
            <link rel="stylesheet" href="css/Head-Foot.css" />
-      <link rel="stylesheet" href="css/style.css" />
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,9 +25,9 @@
             margin-top: 15px;
             margin-left: 10px;
         }
-      
+
       </style>
-  
+
   </head>
   <body>
      <nav class="navbar navbar-default">
@@ -73,37 +73,47 @@
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
+
+        <div id="dropdown">
+          <select id="infoUpdate">
+            <!--These are examples, when database is implemented, js will fill this with values -->
+            <option value="default">Country</option>
+            <option value="Germany">Germany</option>
+            <option value="Russia">Russia</option>
+            <option value="Britain">Britain</option>
+          </select>
+        </div>
     </div>
 
     <div id="CountryTitle">
         Country
     </div>
 
+    <section id="adminHeader">
 
+    </section>
 
     <div id="Customs" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Customs text retrieved from the database
+        <textarea class="textArea">This will display the Customs text retrieved from the database
         </textarea>
     </div>
 
     <div id="Gestures" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Gestures text retrieved from the database
+        <textarea class="textArea">This will display the Gestures text retrieved from the database
         </textarea>
     </div>
 
     <div id="Culture" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Culture text retrieved from the database
+        <textarea class="textArea">This will display the Culture text retrieved from the database
         </textarea>
     </div>
 
     <div id="Laws" class="tabcontent">
-        <textarea class="textArea">
-          This will display the Laws text retrieved from the database
+        <textarea class="textArea">This will display the Laws text retrieved from the database
         </textarea>
     </div>
+
+
 
   <div class="Buttons">
     <button id="submitBtn">Submit</button>
@@ -132,10 +142,10 @@
               <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
 
           </div>
-         
+
   <script src="js/admin.js"></script>
-        
+
   </body>
-  
+
 
 </html>
