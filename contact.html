@@ -5,7 +5,7 @@
   <title id="header">Culture!</title>
   <link rel="stylesheet" type="text/css" href="css/login.css">
   <link href="https://fonts.googleapis.com/css/family=Centaur" rel="stylesheet">
-<<<<<<< HEAD
+
            <link rel="stylesheet" href="css/Head-Foot.css" />
       <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,7 +14,23 @@
 
   <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
       <style>
-        .navbar{
+          #Map-Footer{
+              width:100%;
+              height:auto;
+              background-color:#322f30;
+              text-align:center;
+              display:inline-block;
+              position:fixed;
+              color:white;
+          }
+          
+          #subject{
+              height:200px;
+              width:100%;
+              resize:none;
+          }
+          
+          .navbar{
             margin-bottom: 0px;
             border: none;
         }
@@ -25,12 +41,13 @@
             margin-top: 15px;
             margin-left: 10px;
         }
+      
 
       </style>
-=======
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
->>>>>>> 70ac74b8917b4341cb85f8dbe7e3acbbdc95dd88
+
 </head>
 
 <body>
@@ -61,12 +78,12 @@
 <h1>Culture!</h1>
 
 <div class="login-box">
-  <h2>Register</h2>
+  <h2>Contact Us</h2>
     <form id="regForm" method="POST">
       <p>First Name</p>
-      <input type="text" name="fname" placeholder="Firstname" id="fname" required>
+      <input type="text" name="fname" placeholder="First Name" id="fname" required>
       <p>Last Name</p>
-      <input type="text" name="lanme" placeholder="Choose Username" id="fname" required>
+      <input type="text" name="lanme" placeholder="Last Name" id="fname" required>
 
       <!--dropdown menu for list of issues-->
           <label for="country">Issue</label>
@@ -79,9 +96,9 @@
             <option value="e">Map Error</option>
             <option value="other">Other - Specify</option>
           </select>
+<textarea id="subject" name="subject" placeholder="Specify country and issue.." style="height:200px"></textarea>
 
-
-      <input type="button" name="submit" value="Register" id="submitBtn">
+      <input type="button" name="submit" value="Submit" id="submitBtn">
       <a href="login.html">Already registered? Log in!</a>
     </form>
 
