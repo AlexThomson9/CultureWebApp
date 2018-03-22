@@ -62,7 +62,7 @@ h2{
   font-size: 16px;
 }
 
-.login-box input[type="submit"]
+.login-box #submitBtn
 {
   border: none;
   outline: none;
@@ -73,7 +73,7 @@ h2{
   border-radius: 20px;
 }
 
-.login-box input[type="submit"]:hover
+.login-box #submitBtn:hover
 {
   cursor: pointer;
   background: #39dc79;
@@ -148,7 +148,7 @@ h2{
     font-size: 30px;
   }
 
-  .login-box input[type="submit"]
+  .login-box .#submitBtn
   {
     border: none;
     outline: none;
@@ -158,7 +158,7 @@ h2{
     font-size: 45px;
     border-radius: 20px;
   }
-  .login-box input[type="submit"]:hover
+  .login-box .#submitBtn:hover
   {
     cursor: pointer;
     background: #39dc79;
@@ -218,7 +218,7 @@ h2{
     font-size: 45px;
   }
 
-  .login-box input[type="submit"]
+  .login-box .#submitBtn
   {
     height:70px;
     font-size: 60px;
