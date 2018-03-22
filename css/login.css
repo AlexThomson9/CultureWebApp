@@ -14,10 +14,18 @@ body{
   background-size:100% 100vh;
   font-family: sans-serif;
 
+<<<<<<< HEAD
 }
 html{
   height: 100%;
 }
+=======
+/* fname and lname exclusively refering to the contact page*/
+#fname{}
+
+#lname{}
+
+>>>>>>> e68a68d1dbd534ce5c43b6c7742bc0ddfd91217c
 .login-box{
     width: 320px;
     background: rgba(0, 0, 0, 0.8);
