@@ -2,10 +2,9 @@
 body{
     height: 100%;
     width: 100%;
-}
-<<<<<<< HEAD
+}s
 /*Sets style for login/register form container*/
-=======
+
 #body{
       height: 100%;
   width: 100%;
@@ -21,7 +20,6 @@ body{
 html{
   height: 100%;
 }
->>>>>>> acb3e75eb9112ca382ebe158386bd58ca35873ff
 .login-box{
     width: 320px;
     background: rgba(0, 0, 0, 0.8);
