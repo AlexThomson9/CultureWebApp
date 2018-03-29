@@ -32,10 +32,9 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      $.ajax({
            url:countryPicked,
            dataType:'json',
-           success: function(data){
-             var jsonObj = data;
+           success: function(result){
              //In here loop through JSON file to display info
-             $(".restName").html = jsonObj.name;
+             $(".restName").innerHtml = result[0].capital;
 
              console.log(result);
          }
@@ -54,6 +53,7 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(ctry){
   //Displays modal on the screen
   modal.style.display = "block";
+
    };
 
 
