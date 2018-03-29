@@ -49,6 +49,14 @@ function openModal(ctry){
     var countryData = JSON.parse(countryRequest.responseText);
     console.log(countryData);
     renderHTML(countryData);
+
+    $.ajax({
+          url:countryPicked,
+          dataType:'json',
+          success: function(result){
+            $(".restAPI").html(result);
+        }
+      });
    };
 }
 
