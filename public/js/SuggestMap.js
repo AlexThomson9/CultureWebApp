@@ -9,18 +9,18 @@ L.latLng(-80.83930574607542, -166.5000021457672),
 //Southeast
 L.latLng(84.32308710686083, 186.4687478542328)
 );
-//define the map , and set the options 
-var map = L.map('map', 
+//define the map , and set the options
+var map = L.map('map',
 {
     //Minimum Zoom so that they can not zoom out to far which would distort the map
     minZoom: 2.6,
-    //Set maxbounds to the maxbounds value created above 
+    //Set maxbounds to the maxbounds value created above
     'maxBounds': maxiBounds,
     //No zoom buttons on the map, so it looks a bit more professional
     zoomControl:false,
     //No attributes on the map , so the leaflet information in the bottom right
     attributionControl: false
-    //Fit the maxbounds to the map 
+    //Fit the maxbounds to the map
 }).fitBounds(maxiBounds);
 //create a pane for the labels
 map.createPane('labels');
@@ -30,7 +30,7 @@ map.getPane('labels').style.zIndex = 650;
 map.getPane('labels').style.pointerEvents = 'none';
 //Get the relevent map information
 var cartodbAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
-var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', 
+var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
 {
     attribution: cartodbAttribution
 }).addTo(map);
@@ -39,13 +39,13 @@ geojson = L.geoJson(world).addTo(map);
 //Log for testing purposes
 console.log("hello");
 //for each layer make the function below
-geojson.eachLayer(function (layer) 
+geojson.eachLayer(function (layer)
 {
     //Log for testing
     console.log("test");
     //Bind popup upon the clicking of a tile, then feed the country name from the properties layer for use later
     layer.bindPopup(
-    '<div id="Popup"><h4 id="title"> Country: ' + layer.feature.properties.name + '</h4>'+ 
+    '<div id="Popup"><h4 id="title"> Country: ' + layer.feature.properties.name + '</h4>'+
     '<h3>Upload Information</h3><p id="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tellus ut suscipit malesuada. '+
     '</p>'+
     '<div class="rTable">'+
@@ -81,8 +81,8 @@ geojson.eachLayer(function (layer)
     '</div>'
     );
 });
- //This is a function to create the map pane colour   
-function style(feature) 
+ //This is a function to create the map pane colour
+function style(feature)
 {
     return{
         //set the colour, weight and opactity of the colour
@@ -162,112 +162,3 @@ function getContinent()
 
 //Set the Original Map view to the centre of the map
 map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
-//Jquery function test
-$(function()
-{
-    //ensure that it is functioning properly
-    console.log('Jquery is working');
-    //Set test vairbale to 0;
-    var test = 0;
-//Have to use document.on instead of other method becuase the html is dynamically loaded into the page
-//set Onclick for the four options available then run the function
-$(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
-{
-    //get the Full text from the title in the popup
-    var mme = $("#title").text();
-    //Set country to mme split the title part from it
-    var country = mme.split(" ");
-    //set crty to the text gotten above
-    var ctry = country[2];
-    //set variable id to the id of the
-	var id = $(this).attr('id');
-    //Log all the variables to the console to check they are working
-    console.log(mme);
-    console.log(country);
-    console.log(ctry);
-    console.log("."+id+"-Hide");
-	$("."+id).html("add more");
-    //count the test variable so each one has a id
-    test++;
-    //show the hidden element for each option selected
-   $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>remove</a></div>");
-    //$("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><button type='button' id='minus' class='minus'>-</buttom></div>");
-    //For handling the button removal interaction and adding the button if it was removed
-    if($("."+id+"-Hide").find(".Submit").length)
-    {
-    //testing 
-    console.log("button exists");
-    }
-    else 
-    {
-    $("."+id+"-Hide").append("<button type='button' class='Submit'>Submit</button>");
-    }
-
-});
-//On click function for the textarea/submit/removal of the textarea
-$(document).on('click', ".Customs-Hide, .Gestures-Hide, .Cultures-Hide, .Laws-Hide",function(evt)
-{
-    //If target is textarea then do nothing because otherwise clicking the textarea will delete stuff
-    if($(evt.target).is('.Textarea')) 
-    {
-        //event handling code
-    }
-    //if the target is the remove link
-    else if($(evt.target).is('#minus'))
-    {
-        //remove the last textarea and the remove link
-        $(this).find('textarea').last().remove();
-        $(this).find('a').last().remove();
-        //if its the last textarea then also remove the button
-        if($(this).find('textarea').length == 0)
-        {
-   		$(this).find('button').last().remove();
-        }
-    } 
-    //if the target is submit and the textarea is not null
-    else if(($(evt.target).is('.Submit')) && $(this).find('textarea').val() != "")
-    {  
-        //get the number of textareas for testing
-        var numItems = $(this).find('textarea').length;
-        //alert(numItems);
-        //Basically a for loop for each textarea to loop through them all
-        $(this).find('textarea').each(function()
-        {
-            //This variable is the Content for the textarea
-           var Textarea = $(this).val();
-            //get the closest class name for the textarea
-           var Class_Name_Raw = $(this).closest('section').attr('class');
-            //split the name to get the parent class
-           var Class_Name_Array = Class_Name_Raw.split("-");
-            //set the class name to the parent classs
-           var Class_Name = Class_Name_Array[0];
-            //log content for testing
-           console.log("Textarea value is " + Textarea);
-           console.log("Section Identifier is " + Class_Name);        
-        });
-        //then remove each feature after submissios
-        $(this).find('textarea, a, button').each(function()
-        {
-        $(this).remove();
-        });
-        //User feedback to show them theat the submission was successful
-        $('#Popup').append("<h3>Submission Successful!</h3>");
-        //set the var to 2 sectons
-            var delayInMilliseconds = 2000; //1 second
-            //set the timeout to run the function
-            setTimeout(function()
-            {
-            //remove the submission successful as it only needs to be there for a little bit
-            $('#Popup').find("h3").remove();
-            //set the timeout to use the 2 second's defined previously
-            }, delayInMilliseconds);
-   } 
-   //else if textarea is null
-   else if($(this).find('textarea').val() == "")
-   {
-       //alert("textarea can not be a null value");
-       //User feedback to ensure that empty textareas are not submitted
-       $(this).find('textarea').attr("placeholder", "Input must not be null");
-   }
-});
-});
