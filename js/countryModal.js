@@ -26,6 +26,18 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
    // alert($('#Country').text());
 
      $(".leaflet-popup-content").remove();
+
+    var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
+     
+     $.ajax({
+           url:countryPicked,
+           dataType:'json',
+           success: function(result){
+             $(".restAPI").html(result);
+
+             console.log(result);
+         }
+       });
     //Calll for openModal function
     openModal(ctry);
    // var test = feature.properties.Country;
@@ -49,16 +61,6 @@ function openModal(ctry){
     var countryData = JSON.parse(countryRequest.responseText);
     console.log(countryData);
     renderHTML(countryData);
-
-    $.ajax({
-          url:countryPicked,
-          dataType:'json',
-          success: function(result){
-            $(".restAPI").html(result);
-
-            console.log(result);
-        }
-      });
    };
 }
 
