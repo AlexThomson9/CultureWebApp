@@ -28,12 +28,13 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      $(".leaflet-popup-content").remove();
 
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
-     
+
      $.ajax({
            url:countryPicked,
            dataType:'json',
            success: function(result){
-             $(".restAPI").html(result);
+             //In here loop through JSON file to display info
+             $(".restName").innerHtml = result[0].name;
 
              console.log(result);
          }
@@ -52,22 +53,9 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(ctry){
   //Displays modal on the screen
   modal.style.display = "block";
-  //Only started will be done when Front end is done
-  var countryRequest = new XMLHttpRequest();
-  var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
-  console.log(countryPicked);
-  countryRequest.open('GET', countryPicked)
-  countryRequest.onload = function(){
-    var countryData = JSON.parse(countryRequest.responseText);
-    console.log(countryData);
-    renderHTML(countryData);
+
    };
 }
-
-function renderHTML(data){
-  var htmlString = "this is a test";
-  modalContent.insertAdjacentHTML('beforeend', htmlString);
-  }
 
 //returnToMapButton.addEventListener('click', closeModal); for testing the modal
 
