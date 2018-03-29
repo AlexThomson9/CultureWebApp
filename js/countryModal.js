@@ -36,7 +36,8 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
              //In here loop through JSON file to display info
              $(".restName").empty().append(result[0].name);
              $(".restLanguage").empty().append(result[0].languages[0].name);
-             $(".restCurrency").empty().append(result[0].currencies[0]);             
+             $(".restCurrency").empty().append(result[0].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
+
              console.log(result[0].capital);
          }
        });
