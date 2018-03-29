@@ -9,8 +9,6 @@ var modalContent = document.getElementsByClassName('country-modal-content')[0];
 
 var serverContent = document.getElementsByClassName('serverContent')[0];
 
-//Variable that stores the country name
-var ctry = "";
 //When one of the tabs are clicked, the following occurs
 //When the backend is implemented, more will done here
 $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
@@ -42,6 +40,7 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(){
   //Displays modal on the screen
   modal.style.display = "block";
+  var countryName = ctry;
   //Only started will be done when Front end is done
   var countryRequest = new XMLHttpRequest();
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
