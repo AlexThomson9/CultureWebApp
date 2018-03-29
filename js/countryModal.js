@@ -45,6 +45,7 @@ function openModal(){
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
   console.log(countryPicked);
   countryRequest.open('GET', countryPicked)
+  console.log(countryRequest);
   countryRequest.onload = function(){
     var countryData = JSON.parse(countryRequest.responseText);
     renderHTML(countryData);
