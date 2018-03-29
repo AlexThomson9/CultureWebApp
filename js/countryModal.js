@@ -34,8 +34,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
            dataType:'json',
            success: function(result){
              //In here loop through JSON file to display info
-             $(".restName").innerHtml = result[0].capital;
-
+             $(".restName").append(result[0].capital);             
              console.log(result[0].capital);
          }
        });
