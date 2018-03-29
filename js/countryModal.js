@@ -37,7 +37,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 closeBtn.addEventListener('click', closeModal);
 
 //Function to open modal
-function openModal(){
+function openModal(ctry){
   //Displays modal on the screen
   modal.style.display = "block";
   var countryName = ctry;
