@@ -37,7 +37,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
              $(".restName").empty().append(result[0].name);
              $(".restLanguage").empty().append(result[0].languages[0].name);
              $(".restCurrency").empty().append(result[0].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
-             $(".flagImage").empty().append(result[0].flag);
+             $(".flagImage").empty().attr("src").append(result[0].flag);
              console.log(result[0].capital);
          }
        });
