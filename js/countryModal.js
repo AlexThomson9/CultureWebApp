@@ -40,15 +40,14 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(ctry){
   //Displays modal on the screen
   modal.style.display = "block";
-  var countryName = ctry;
   //Only started will be done when Front end is done
   var countryRequest = new XMLHttpRequest();
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
   console.log(countryPicked);
   countryRequest.open('GET', countryPicked)
-  console.log(countryRequest);
   countryRequest.onload = function(){
     var countryData = JSON.parse(countryRequest.responseText);
+    console.log(countryData);
     renderHTML(countryData);
    };
 }
