@@ -32,9 +32,10 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      $.ajax({
            url:countryPicked,
            dataType:'json',
-           success: function(result){
+           success: function(data){
+             var jsonObj = data;
              //In here loop through JSON file to display info
-             $(".restName").innerHtml = result[0].name;
+             $(".restName").html = jsonObj.name;
 
              console.log(result);
          }
