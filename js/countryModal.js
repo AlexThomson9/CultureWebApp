@@ -53,9 +53,8 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(ctry){
   //Displays modal on the screen
   modal.style.display = "block";
-
    };
-}
+
 
 //returnToMapButton.addEventListener('click', closeModal); for testing the modal
 
