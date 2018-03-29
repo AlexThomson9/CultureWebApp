@@ -55,6 +55,8 @@ function openModal(ctry){
           dataType:'json',
           success: function(result){
             $(".restAPI").html(result);
+
+            console.log(result);
         }
       });
    };
