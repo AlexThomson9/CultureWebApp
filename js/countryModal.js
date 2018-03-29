@@ -9,6 +9,8 @@ var modalContent = document.getElementsByClassName('country-modal-content')[0];
 
 var serverContent = document.getElementsByClassName('serverContent')[0];
 
+//Variable that stores the country name
+var ctry = "";
 //When one of the tabs are clicked, the following occurs
 //When the backend is implemented, more will done here
 $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
