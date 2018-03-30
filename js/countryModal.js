@@ -25,10 +25,10 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     $('#Country').text(ctry);
    // alert($('#Country').text());
 
-    //$(".leaflet-popup-content").remove();
+    $(".leaflet-popup-content").remove();
 
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
-
+    delete ctry;
      $.ajax({
            url:countryPicked,
            dataType:'json',
