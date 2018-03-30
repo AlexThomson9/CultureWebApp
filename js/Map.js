@@ -8,18 +8,18 @@ L.latLng(-80.83930574607542, -166.5000021457672),
 //Southeast
 L.latLng(84.32308710686083, 186.4687478542328)
 );
-//define the map , and set the options 
-var map = L.map('map', 
+//define the map , and set the options
+var map = L.map('map',
 {
     //Minimum Zoom so that they can not zoom out to far which would distort the map
     minZoom: 2.6,
-    //Set maxbounds to the maxbounds value created above 
+    //Set maxbounds to the maxbounds value created above
     'maxBounds': maxiBounds,
     //No zoom buttons on the map, so it looks a bit more professional
     zoomControl:false,
     //No attributes on the map , so the leaflet information in the bottom right
     attributionControl: false
-    //Fit the maxbounds to the map 
+    //Fit the maxbounds to the map
 }).fitBounds(maxiBounds);
 //create a pane for the labels
 map.createPane('labels');
@@ -29,7 +29,7 @@ map.getPane('labels').style.zIndex = 650;
 map.getPane('labels').style.pointerEvents = 'none';
 //Get the relevent map information
 var cartodbAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
-var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', 
+var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
 {
     attribution: cartodbAttribution
 }).addTo(map);
@@ -50,19 +50,7 @@ $.getJSON("map.geojson",function(data){
           }
         }).addTo(map);
         //Onlick for the leaflet marker
-        $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
-            //Get the text in the popup
-            var ctry = $(".leaflet-popup-content").text();
-            //Log for testing
-            console.log(ctry);
-            //Set the country tag to the country clicked
-            $('#Country').text(ctry);
-           // alert($('#Country').text());
-            //remove the popup for bugs 
-             $(".leaflet-popup-content").remove();
-            //log for testing
-            console.log('i work');
-        });
+    
         /*  $.ajax({
               url:"https://restcountries.eu/rest/v2/name/" + test,
               dataType:'json',
@@ -70,7 +58,7 @@ $.getJSON("map.geojson",function(data){
                 $("#div1").html(result);
             }
           });
-                */  
+                */
   });
     //Load the json for the countrries we want
     $.getJSON('world.geo.json-master/world.geo.json-master/countries.geo.json', function (geojson) { // load file
@@ -160,5 +148,3 @@ $.getJSON("map.geojson",function(data){
             }, delayInMilliseconds);
         }
     }
-
-
