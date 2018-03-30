@@ -28,7 +28,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     $(".leaflet-popup-content").remove();
 
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
-    delete ctry;
+
      $.ajax({
            url:countryPicked,
            dataType:'json',
@@ -63,5 +63,7 @@ function openModal(ctry){
 
 //Function to close modal
 function closeModal(){
+  delete ctry;
   modal.style.display = "none";
+
 }
