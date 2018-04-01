@@ -55,16 +55,16 @@ app.post('/savefile', function(req, res){
 	console.log(req.body);
   var body ="";
 	//res.send(req.body);
-  filePath = 'map.geojson';
+  filePath = '/public/map.geojson';
     //req.on('newData', function(newData) {
         //body += req.body;
         console.log("wot");
     //});
 
    //req.on('end', function (){
-  console.log(body);
+  console.log(req.body.newData);
 
-        fs.appendFile(filePath, "test", function(err) {
+        fs.appendFile(filePath, req.body , function(err) {
           //  res.end();
             console.log("plswork");
             if (err) throw err;
