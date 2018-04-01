@@ -55,13 +55,13 @@ app.post('/savefile', function(req, res){
 	console.log(req.body);
   var body ="";
 	//res.send(req.body);
-  filePath = '/map.geojson';
+  filePath = '/countries.json';
     //req.on('newData', function(newData) {
         //body += req.body;
         console.log("wot");
     //});
 
-   req.on('end', function (){
+   //req.on('end', function (){
   console.log(body);
 
         fs.appendFile(filePath, req.body, function(err) {
@@ -70,6 +70,6 @@ app.post('/savefile', function(req, res){
             if (err) throw err;
  console.log('Saved!');
         });
-    });
+//    });
 
   });
