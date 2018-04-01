@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/star_wars_quotes";
+const link = "mongodb://localhost:27017/star_wars_quotes";
 const express = require('express');
 var url = require('url');
 var fs = require('fs');
@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser());
 var db;
-MongoClient.connect(url, function(err, database){
+MongoClient.connect(link, function(err, database){
  if(err) throw err;
  db = database;
  app.listen(8080);
