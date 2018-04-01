@@ -54,7 +54,7 @@ $('#madeup').click(function(){
                               data.features.push(newMovie);
 
                               jQuery.post("/savefile", {
-                                  newData: JSON.stringify(newMovie)
+                                  FeatureCollection: JSON.stringify(newMovie)
                               }, function(res){
                                   // response could contain the url of the newly saved file
                                   console.log(res);

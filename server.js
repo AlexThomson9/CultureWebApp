@@ -55,26 +55,26 @@ app.post('/savefile', function(req, res){
 	console.log(req.body);
   var body ="";
 	//res.send(req.body);
-  filePath = 'public/map.geojson';
+  filePath = 'public/map2.geojson';
     //req.on('newData', function(newData) {
         //body += req.body;
         console.log("wot");
     //});
 
    //req.on('end', function (){
-  console.log(req.body.newData);
+  console.log(req.body);
 
-        fs.appendFile(filePath, req.body.newData , function(err) {
+        fs.appendFile(filePath, req.body , function(err) {
           //  res.end();
             console.log("plswork");
             if (err) throw err;
  console.log('Saved!');
         });
 
-        fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
+      /*  fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
     if (err) {
         return console.error(err);
-    }
+    }*/
 });
 //    });
 
