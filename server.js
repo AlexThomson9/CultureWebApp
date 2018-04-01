@@ -62,9 +62,11 @@ app.post('/savefile', function(req, res){
     //});
 
   //  req.on('end', function (){
-        fs.appendFile(filePath, body, function() {
+        fs.appendFile(filePath, body, function(err) {
             res.end();
             console.log("plswork");
+            if (err) throw err;
+ console.log('Saved!');
         });
 //    });
 
