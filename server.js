@@ -57,11 +57,13 @@ app.post('/savefile', function(req, res){
   filePath = __dirname + '/public/map.geojson';
     req.on('data', function(data) {
         body += data;
+        console.log("wot");
     });
 
     req.on('end', function (){
         fs.appendFile(filePath, body, function() {
             respond.end();
+            console.log("plswork");
         });
     });
 
