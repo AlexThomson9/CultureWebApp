@@ -1,8 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/star_wars_quotes";
-const express = require('express'),
-fs = require('fs')
-   url = require('url');
+const express = require('express');
+var fs = require('fs');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(express.static('public'));
