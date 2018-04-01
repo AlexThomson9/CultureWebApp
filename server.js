@@ -70,6 +70,12 @@ app.post('/savefile', function(req, res){
             if (err) throw err;
  console.log('Saved!');
         });
+
+        fs.writeFile(filePath, req.body.newData[0],  {'flag':'a'},  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+});
 //    });
 
   });
