@@ -57,7 +57,7 @@ app.post('/savefile', function(req, res){
 	//res.send(req.body);
   filePath = '/map.geojson';
     //req.on('newData', function(newData) {
-        body += req.body;
+        //body += req.body;
         console.log("wot");
     //});
 
@@ -65,7 +65,7 @@ app.post('/savefile', function(req, res){
   console.log(body);
 
         fs.appendFile(filePath, req.body, function(err) {
-            res.end();
+          //  res.end();
             console.log("plswork");
             if (err) throw err;
  console.log('Saved!');
