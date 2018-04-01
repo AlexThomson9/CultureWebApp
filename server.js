@@ -62,6 +62,7 @@ app.post('/savefile', function(req, res){
     //});
 
   //  req.on('end', function (){
+  console.log(body);
         fs.appendFile(filePath, body, function(err) {
             res.end();
             console.log("plswork");
