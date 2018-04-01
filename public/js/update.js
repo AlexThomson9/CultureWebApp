@@ -55,8 +55,9 @@ $('#madeup').click(function(){
                               var newData = JSON.stringify(data);
                               jQuery.post("/savefile", {
                                   newData: newData
-                              }, function(response){
+                              }, function(res){
                                   // response could contain the url of the newly saved file
+                                  console.log(res);
                               })
 
                             });
