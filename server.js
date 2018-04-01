@@ -61,7 +61,7 @@ app.post('/savefile', function(req, res){
         console.log("wot");
     //});
 
-  //  req.on('end', function (){
+   req.on('end', function (){
   console.log(body);
 
         fs.appendFile(filePath, req.body, function(err) {
@@ -70,6 +70,6 @@ app.post('/savefile', function(req, res){
             if (err) throw err;
  console.log('Saved!');
         });
-//    });
+    });
 
   });
