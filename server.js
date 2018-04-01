@@ -64,18 +64,18 @@ app.post('/savefile', function(req, res){
    //req.on('end', function (){
   console.log(req.body);
 
-        fs.appendFile(filePath, req.body , function(err) {
+        /*fs.appendFile(filePath, req.body , function(err) {
           //  res.end();
             console.log("plswork");
             if (err) throw err;
  console.log('Saved!');
-        });
+});*/
 
-      /*  fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
+        fs.writeFile(filePath, req.body,  {'flag':'a'},  function(err) {
     if (err) {
         return console.error(err);
     }
-});*/
+});
 //    });
 
   });
