@@ -56,7 +56,7 @@ app.post('/savefile', function(req, res){
   var body ="";
 	//res.send(req.body);
   filePath = '/public/map.geojson';
-    req.on('data', function(newData) {
+    req.on('newData', function(newData) {
         body += newData;
         console.log("wot");
     });
