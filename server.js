@@ -47,3 +47,22 @@ app.post('/suggest', function(req, res){
   res.redirect('/')
   })
 });
+
+
+app.post('/savefile', function(req, res){
+	console.log(req.body);
+  var body ="";
+	//res.send(req.body);
+  filePath = __dirname + '/public/map.geojson';
+    request.on('data', function(data) {
+        body += data;
+    });
+
+    request.on('end', function (){
+        fs.appendFile(filePath, body, function() {
+            respond.end();
+        });
+    });
+
+  })
+});
