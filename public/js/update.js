@@ -52,9 +52,9 @@ $('#madeup').click(function(){
 
                               // add a new movie to the set
                               data.features.push(newMovie);
-                              var newData = JSON.stringify(newMovie);
+
                               jQuery.post("/savefile", {
-                                  newData: newData
+                                  newData: JSON.stringify(newMovie)
                               }, function(res){
                                   // response could contain the url of the newly saved file
                                   console.log(res);
