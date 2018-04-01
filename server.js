@@ -74,8 +74,8 @@ app.post('/savefile', function(req, res){
       /*  fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
     if (err) {
         return console.error(err);
-    }*/
-});
+    }
+});*/
 //    });
 
   });
