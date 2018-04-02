@@ -43,11 +43,12 @@ $.ajax({
      console.log('error', errorThrown);
    }
 
-   $.each(data.data, function(k, v) {
-    /// do stuff
-    console.log(k, v);
-});
+
       });
+      $.each(data.data, function(k, v) {
+       /// do stuff
+       console.log(k, v);
+   });
     console.log(response);
 
     if(response != ""){
