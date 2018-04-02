@@ -40,6 +40,9 @@ $.ajax({
       $.each(data, function(k, v) {
 /// do stuff k number , v = data
 console.log(k, v);
+
+var array = v;
+console.log(array);
 });
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
