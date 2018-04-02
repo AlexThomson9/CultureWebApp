@@ -56,7 +56,7 @@ array.push(v);
       });
       console.log(array);
 
-      $.each(array, function(Integer index, Object value) {
+      $.each(array, function(index, value) {
 
             console.log(index, value);
 
