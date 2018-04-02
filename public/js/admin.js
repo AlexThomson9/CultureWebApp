@@ -42,6 +42,11 @@ $.ajax({
     error: function (XMLHttpRequest, textStatus, errorThrown) {
      console.log('error', errorThrown);
    }
+
+   $.each(data.data, function(k, v) {
+    /// do stuff
+    console.log(k, v);
+});
       });
     console.log(response);
 
