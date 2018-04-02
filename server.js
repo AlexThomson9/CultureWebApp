@@ -51,7 +51,7 @@ app.post('/suggest', function(req, res){
 });
 app.post('/savefile', function(req, res){
 	console.log(req.body);
-  db.collection('MapInfo').save(req.body.newData, function(err, result) {
+  db.collection('MapInfo').save(req.body.NewData, function(err, result) {
   if (err) throw err;
   console.log('saved to database')
   res.redirect('/')
