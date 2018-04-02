@@ -56,9 +56,9 @@ array.push(v);
       });
       console.log(array);
 
-      $.each(array, function(k, v) {
+      $.each(array, function(Integer index, Object value) {
 
-            console.log(k, v);
+            console.log(index, value);
 
             if(v.Country == "Russia"){
 
