@@ -55,3 +55,14 @@ array.push(v);
 
       });
       console.log(array);
+
+      $.each(array, function(k, v) {
+
+            console.log(k, v);
+
+            if(v.Country == "Russia"){
+
+              console.log("pls");
+            }
+
+      });
