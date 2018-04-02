@@ -30,6 +30,7 @@ $('#infoUpdate').change(function(){
 
 });
  var Suggestions = 0;
+ var array = {};
 $.ajax({
       type: "GET",
       contentType: "application/json",
@@ -42,9 +43,10 @@ $.ajax({
 console.log(k, v);
 Suggestions++;
 console.log(Suggestions);
-var array = v;
-console.log(array);
+array.Suggestion = v;
+
 });
+
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
      console.log('error', errorThrown);
@@ -52,3 +54,4 @@ console.log(array);
 
 
       });
+      console.log(array);
