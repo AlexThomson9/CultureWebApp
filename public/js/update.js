@@ -63,6 +63,24 @@ $('#madeup').click(function(){
                             });
 
 
+                            $.getJSON("/mapinfo",function(data){
+                                    // add GeoJSON layer to the map once the file is loaded
+                                   geojson = L.geoJson(data).addTo(map);
+                                   geojson.setStyle({
+                                    fillOpacity: 1,
+                                    color: "#D46A6A",
+                                    weight: 1
+                                    ,noWrap: true
+                                    });
+                                    //Bind the popup to just display the country, it doesnt actually popup but we use the value
+                                    var layerGroup = L.geoJSON(data, {
+                                        onEachFeature: function (feature, layer) {
+                                        layer.bindPopup(feature.properties.Country);
+                                      }
+                                    }).addTo(map);
+                            });
+
+
 
                       }
               });
@@ -82,21 +100,5 @@ $('#madeup').click(function(){
 }
 
 
-$.getJSON("/mapinfo",function(data){
-        // add GeoJSON layer to the map once the file is loaded
-       geojson = L.geoJson(data).addTo(map);
-       geojson.setStyle({
-        fillOpacity: 1,
-        color: "#D46A6A",
-        weight: 1
-        ,noWrap: true
-        });
-        //Bind the popup to just display the country, it doesnt actually popup but we use the value
-        var layerGroup = L.geoJSON(data, {
-            onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.Country);
-          }
-        }).addTo(map);
-});
 
 });
