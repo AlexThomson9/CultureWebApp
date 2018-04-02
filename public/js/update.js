@@ -62,7 +62,7 @@ $('#madeup').click(function(){
 
                               $.ajax({
                                     type: "POST",
-                                    NewData: JSON.stringify(newMovie),
+                                    data: JSON.stringify(newMovie),
                                     contentType: "application/json",
                                     url: "/savefile"
                                     });
