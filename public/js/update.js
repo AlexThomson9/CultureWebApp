@@ -98,3 +98,5 @@ $.getJSON("/mapinfo",function(data){
           }
         }).addTo(map);
 });
+
+});
