@@ -29,7 +29,7 @@ $('#infoUpdate').change(function(){
   });
 
 });
-
+ var Suggestions = 0;
 $.ajax({
       type: "GET",
       contentType: "application/json",
@@ -40,7 +40,8 @@ $.ajax({
       $.each(data, function(k, v) {
 /// do stuff k number , v = data
 console.log(k, v);
-
+Suggestions++;
+console.log(Suggestions);
 var array = v;
 console.log(array);
 });
