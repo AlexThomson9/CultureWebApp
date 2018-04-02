@@ -18,15 +18,7 @@ MongoClient.connect(link, function(err, database){
 app.get('/all', function(req, res) {
  db.collection('suggest').find().toArray(function(err, result) {
  if (err) throw err;
- var output = "<h1>All the quotes</h1>";
- for (var i = 0; i < result.length; i++) {
- output += "<div>"
- output += "<h3>" + result[i].Country + "</h3>"
- output += "<p>" + result[i].Identifier + "</p>"
-  output += "<p>" + result[i].Suggestion + "</p>"
- output += "</div>"
- }
- res.send(output);
+res.jsonp(result);
  });
 });
 

@@ -29,3 +29,26 @@ $('#infoUpdate').change(function(){
   });
 
 });
+
+$.ajax({
+      type: "GET",
+      data: JSON.stringify(Country),
+      contentType: "application/json",
+      url: "/suggest",
+      success: function (data) {
+      console.log('success', data);
+      response = data;
+    },
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+     console.log('error', errorThrown);
+   }
+      });
+    console.log(response);
+
+    if(response != ""){
+
+      console.log("wot");
+    }else if (response == ""){
+
+
+    }
