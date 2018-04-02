@@ -51,7 +51,7 @@ app.post('/suggest', function(req, res){
 });
 
 
-app.post('/savefile', function(req, res){
+/*app.post('/savefile', function(req, res){
 	console.log(req.body);
   var body ="";
 	//res.send(req.body);
@@ -62,20 +62,24 @@ app.post('/savefile', function(req, res){
     //});
 
    //req.on('end', function (){
-  console.log(req.body);
+  console.log(req.body.newData);
 
-        /*fs.appendFile(filePath, req.body , function(err) {
-          //  res.end();
-            console.log("plswork");
-            if (err) throw err;
- console.log('Saved!');
-});*/
 
-        fs.writeFile(filePath, req.body,  {'flag':'a'},  function(err) {
+        fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
     if (err) {
         return console.error(err);
     }
 });
 //    });
 
+  });
+*/
+
+  app.get('/mapinfo', function (req, res) {
+  db.collection('MapInfo').find().toArray(function(err,result){
+     if(result)
+     {
+        res.jsonp(result);
+        console.log(result);
+     }
   });
