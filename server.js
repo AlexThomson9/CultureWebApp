@@ -49,7 +49,16 @@ app.post('/suggest', function(req, res){
   res.redirect('/')
   })
 });
+app.post('/savefile', function(req, res){
+	console.log(req.body);
+  db.collection('MapInfo').save(req.body.newData, function(err, result) {
+  if (err) throw err;
+  console.log('saved to database')
+  res.redirect('/')
+});
 
+        console.log("wot");
+    });
 
 /*app.post('/savefile', function(req, res){
 	console.log(req.body);
