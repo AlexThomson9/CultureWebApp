@@ -37,6 +37,10 @@ $.ajax({
       success: function (data) {
       console.log('success', data);
       response = data;
+      $.each(data, function(k, v) {
+/// do stuff k number , v = data
+console.log(k, v);
+});
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
      console.log('error', errorThrown);
@@ -44,16 +48,3 @@ $.ajax({
 
 
       });
-      $.each(data.data, function(k, v) {
-       /// do stuff
-       console.log(k, v);
-   });
-    console.log(response);
-
-    if(response != ""){
-
-      console.log("wot");
-    }else if (response == ""){
-
-
-    }
