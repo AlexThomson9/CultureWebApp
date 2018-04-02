@@ -32,9 +32,8 @@ $('#infoUpdate').change(function(){
 
 $.ajax({
       type: "GET",
-      data: JSON.stringify(Country),
       contentType: "application/json",
-      url: "/suggest",
+      url: "/all",
       success: function (data) {
       console.log('success', data);
       response = data;
