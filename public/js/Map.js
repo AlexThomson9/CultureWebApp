@@ -34,7 +34,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     attribution: cartodbAttribution
 }).addTo(map);
         //load the map informtaion
-$.getJSON("map.geojson",function(data){
+$.getJSON("/mapinfo",function(data){
         // add GeoJSON layer to the map once the file is loaded
        geojson = L.geoJson(data).addTo(map);
        geojson.setStyle({
