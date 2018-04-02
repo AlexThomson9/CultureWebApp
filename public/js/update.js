@@ -51,7 +51,7 @@ $('#madeup').click(function(){
                               "Country":country},"geometry":{"type":"Point","coordinates":[c_lat,c_lon]}};
 
                               // add a new movie to the set
-                              data.features.push(newMovie);
+                            //  data.features.push(newMovie);
 
                             /*  jQuery.post("/savefile", {
                                   NewData: JSON.stringify(newMovie)
@@ -59,6 +59,9 @@ $('#madeup').click(function(){
                                   // response could contain the url of the newly saved file
                                   console.log(res);
                               })*/
+
+                            
+
 
                               $.ajax({
                                     type: "POST",
