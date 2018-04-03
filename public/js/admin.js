@@ -29,18 +29,15 @@ $('#infoUpdate').change(function(){
 
     $.ajax({
           type: "POST",
+          data: JSON.stringify(countrySelected),
           contentType: "application/json",
           url: "/Suggestion",
-          data: JSON.stringify(countrySelected),
           success: function (data) {
           console.log('success', data);
           response = data;
           $.each(data, function(k, v) {
     /// do stuff k number , v = data
     console.log(k, v);
-    Suggestions++;
-    console.log(Suggestions);
-    array.push(v);
 
     });
 
