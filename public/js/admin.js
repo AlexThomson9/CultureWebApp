@@ -25,7 +25,7 @@ $('#infoUpdate').change(function(){
 
   $(this).each(function(){
 
-    $('#CountryTitle').text(countrySelected));
+    $('#CountryTitle').text(countrySelected);
 
     $.ajax({
           type: "GET",
