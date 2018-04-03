@@ -63,9 +63,10 @@ array.push(v);
             console.log('success', data);
             response = data;
             $.each(data, function (i, item) {
+              console.log(i, item);
       $('#infoUpdate').append($('<option>', {
           value: item.value,
-          text : item.text 
+          text : item.text
       }));
   });
 
