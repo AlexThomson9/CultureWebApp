@@ -51,6 +51,24 @@ console.log(JSON.stringify(countrySel));
 
 
           });
+
+            var countno = 0;
+
+            $('#back').click(function(){
+
+              countno--;
+
+
+            });
+             $('#next').click(function(){
+
+                countno++;
+
+
+              });
+
+              $('.textArea').text(suggest_array[countno]);
+
   });
 
 console.log(suggest_array);
