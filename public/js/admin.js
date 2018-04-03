@@ -1,5 +1,5 @@
 //Opens the customs tab by default
-document.getElementById("defaultOpen").click();
+//document.getElementById("defaultOpen").click();
 
 //Change the content depending on selected tab (placeholder function)
 function category(evt, category) {
