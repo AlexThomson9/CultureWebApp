@@ -79,13 +79,9 @@ array.push(v);
             });
       console.log(array);
 
-      $.each(array, function(index, value) {
-            alert(value);
-            console.log(index, value);
-
-            if(v.Country == "Russia"){
-
-              console.log("pls");
-            }
-
-      });
+      $('#infoUpdate option').each(function() {
+    if (this.selected)
+       console.log(this.selected);
+     else
+       alert('this is not');
+});
