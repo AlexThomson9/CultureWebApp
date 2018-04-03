@@ -66,7 +66,7 @@ console.log(JSON.stringify(countrySel));
 
 
               });
-
+                console.log(suggest_array[countno]);
               $('.textArea').text(suggest_array[countno]);
 
   });
