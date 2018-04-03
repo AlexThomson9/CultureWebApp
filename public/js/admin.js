@@ -27,7 +27,7 @@ console.log(JSON.stringify(countrySel));
   $(this).each(function(){
 
     $('#CountryTitle').text(countrySelected);
-
+var Sug_Count = 0;
     $.ajax({
           type: "POST",
           data: JSON.stringify(countrySel),
@@ -39,6 +39,7 @@ console.log(JSON.stringify(countrySel));
           $.each(data, function(k, v) {
     /// do stuff k number , v = data
     console.log(k, v);
+    Sug_Count++
 
     });
 
@@ -52,7 +53,7 @@ console.log(JSON.stringify(countrySel));
   });
 
 
-
+console.log(Sug_Count);
 });
  var Suggestions = 0;
  var array = [];
