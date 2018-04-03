@@ -19,14 +19,41 @@ function category(evt, category) {
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
 
-  console.log($(this).val());
+
+  var countrySelected = $(this).val();
+  console.log(countrySelected);
 
   $(this).each(function(){
 
-    $('#CountryTitle').text($(this).val());
+    $('#CountryTitle').text(countrySelected));
+
+    $.ajax({
+          type: "GET",
+          contentType: "application/json",
+          url: "/Suggestion",
+          data: countrySelected,
+          success: function (data) {
+          console.log('success', data);
+          response = data;
+          $.each(data, function(k, v) {
+    /// do stuff k number , v = data
+    console.log(k, v);
+    Suggestions++;
+    console.log(Suggestions);
+    array.push(v);
+
+    });
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+         console.log('error', errorThrown);
+       }
 
 
+          });
   });
+
+
 
 });
  var Suggestions = 0;
@@ -78,10 +105,3 @@ array.push(v);
 
             });
       console.log(array);
-
-      $('#infoUpdate option').each(function() {
-    if (this.selected)
-       console.log(this.selected);
-     else
-       alert('this is not');
-});

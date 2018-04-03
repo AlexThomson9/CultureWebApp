@@ -29,6 +29,14 @@ res.jsonp(result);
  });
 });
 
+
+app.get('/Suggestion', function(req, res) {
+ db.collection('suggest').find({Country:req.body}, function(err, result) {
+ if (err) throw err;
+res.jsonp(result);
+ });
+});
+
 /*app.post('/quotes', function (req, res) {
   console.log(req.body);
  db.collection('quotes').save(req.body, function(err, result) {
