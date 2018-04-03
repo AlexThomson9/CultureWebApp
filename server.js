@@ -23,7 +23,7 @@ res.jsonp(result);
 });
 
 app.get('/Countries', function(req, res) {
- db.collection('suggest').distinct('Country').toArray(function(err, result) {
+ db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
 res.jsonp(result);
  });
