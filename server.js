@@ -22,6 +22,13 @@ res.jsonp(result);
  });
 });
 
+app.get('/Countries', function(req, res) {
+ db.collection('suggest').distinct('Country').toArray(function(err, result) {
+ if (err) throw err;
+res.jsonp(result);
+ });
+});
+
 /*app.post('/quotes', function (req, res) {
   console.log(req.body);
  db.collection('quotes').save(req.body, function(err, result) {

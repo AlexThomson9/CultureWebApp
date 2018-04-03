@@ -54,10 +54,32 @@ array.push(v);
 
 
       });
+
+      $.ajax({
+            type: "GET",
+            contentType: "application/json",
+            url: "/Countries",
+            success: function (data) {
+            console.log('success', data);
+            response = data;
+            $.each(data, function (i, item) {
+      $('#infoUpdate').append($('<option>', {
+          value: item.value,
+          text : item.text 
+      }));
+  });
+
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+           console.log('error', errorThrown);
+         }
+
+
+            });
       console.log(array);
 
       $.each(array, function(index, value) {
-
+            alert(value);
             console.log(index, value);
 
             if(v.Country == "Russia"){
