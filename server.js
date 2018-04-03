@@ -30,7 +30,7 @@ res.jsonp(result);
 });
 
 
-app.get('/Suggestion', function(req, res) {
+app.post('/Suggestion', function(req, res) {
   console.log(JSON.stringify(req.body));
  db.collection('suggest').find({Country:req.body}, function(err, result) {
  if (err) throw err;

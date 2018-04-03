@@ -28,7 +28,7 @@ $('#infoUpdate').change(function(){
     $('#CountryTitle').text(countrySelected);
 
     $.ajax({
-          type: "GET",
+          type: "POST",
           data: JSON.stringify(countrySelected),
           contentType: "application/json",
           url: "/Suggestion",
