@@ -122,4 +122,4 @@ array.push(v);
 
             });
       console.log(array);
-      console.log(array[1]);
+      console.log(array[1].Country);
