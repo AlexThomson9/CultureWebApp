@@ -18,7 +18,7 @@ function category(evt, category) {
 
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
-var suggest_array = {};
+var suggest_array = [];
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
@@ -38,7 +38,7 @@ console.log(JSON.stringify(countrySel));
           $.each(data, function(k, v) {
     /// do stuff k number , v = data
     console.log(k, v);
-    suggest_array.suggest = v;
+    suggest_array.push(v);
 
 
 
@@ -65,7 +65,7 @@ console.log(JSON.stringify(countrySel));
                 countno++;
 
               });
-                console.log(suggest_array.suggest[countno]);
+                console.log(suggest_array[countno]);
               $('.textArea').text(suggest_array[countno]);
 
   });
@@ -122,3 +122,4 @@ array.push(v);
 
             });
       console.log(array);
+      console.log(array[0]);
