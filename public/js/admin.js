@@ -31,7 +31,7 @@ $('#infoUpdate').change(function(){
           type: "POST",
           contentType: "application/json",
           url: "/Suggestion",
-          data: countrySelected,
+          data: JSON.stringify(countrySelected),
           success: function (data) {
           console.log('success', data);
           response = data;
