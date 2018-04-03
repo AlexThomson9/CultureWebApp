@@ -18,7 +18,7 @@ function category(evt, category) {
 
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
-
+var Sug_Count = 0;
 
   var countrySelected = $(this).val();
   console.log(countrySelected);
@@ -27,7 +27,7 @@ console.log(JSON.stringify(countrySel));
   $(this).each(function(){
 
     $('#CountryTitle').text(countrySelected);
-var Sug_Count = 0;
+
     $.ajax({
           type: "POST",
           data: JSON.stringify(countrySel),
