@@ -32,7 +32,7 @@ res.jsonp(result);
 
 app.post('/Suggestion', function(req, res) {
   console.log(JSON.stringify(req.body));
- db.collection('suggest').find({"Country":req.body}, function(err, result) {
+ db.collection('suggest').find(req.body).toArray(, function(err, result) {
  if (err) throw err;
 res.jsonp(result);
  });
