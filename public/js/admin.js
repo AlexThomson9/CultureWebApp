@@ -53,6 +53,7 @@ console.log(JSON.stringify(countrySel));
           });
 
             var countno = 0;
+            countno.parseInt();
 
             $('#back').click(function(){
 
@@ -65,7 +66,7 @@ console.log(JSON.stringify(countrySel));
                 countno++;
 
               });
-                console.log(suggest_array);
+                console.log(suggest_array[countno]);
               $('.textArea').text(suggest_array[countno]);
 
   });
