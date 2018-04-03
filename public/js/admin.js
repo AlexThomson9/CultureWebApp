@@ -29,8 +29,7 @@ $('#infoUpdate').change(function(){
 
     $.ajax({
           type: "POST",
-          data: JSON.stringify(countrySelected),
-          contentType: "application/json",
+          data: countrySelected,
           url: "/Suggestion",
           success: function (data) {
           console.log('success', data);
