@@ -53,7 +53,6 @@ console.log(JSON.stringify(countrySel));
           });
 
             var countno = 0;
-            countno.parseInt();
 
             $('#back').click(function(){
 
