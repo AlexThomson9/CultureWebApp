@@ -122,4 +122,4 @@ array.push(v);
 
             });
       console.log(array);
-      console.log(array[0];
+      console.log(array[0]);
