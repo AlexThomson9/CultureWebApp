@@ -87,7 +87,8 @@ $.ajax({
 console.log(k, v);
 Suggestions++;
 console.log(Suggestions);
-array.push(v);
+var n = JSON.parse(v);
+array.push(n);
 
 });
 
