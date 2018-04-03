@@ -22,14 +22,16 @@ $('#infoUpdate').change(function(){
 
   var countrySelected = $(this).val();
   console.log(countrySelected);
-
+var countrySel = {"Country":countrySelected};
+console.log(JSON.stringify(countrySel));
   $(this).each(function(){
 
     $('#CountryTitle').text(countrySelected);
 
     $.ajax({
           type: "POST",
-          data: countrySelected,
+          data: JSON.stringify(countrySel),
+          contentType: "application/json",
           url: "/Suggestion",
           success: function (data) {
           console.log('success', data);
