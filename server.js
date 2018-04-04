@@ -34,6 +34,7 @@ app.post('/Suggestion', function(req, res) {
   console.log(JSON.stringify(req.body));
  db.collection('suggest').find(req.body).toArray(function(err, result) {
  if (err) throw err;
+console.log(result);
 res.jsonp(result);
  });
 });
