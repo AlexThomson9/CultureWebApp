@@ -34,6 +34,20 @@ console.log(JSON.stringify(countrySel));
           success: function (data) {
           console.log('success', data);
           response = data;
+          var countno = 0;
+          $('.textArea').text(data[countno]);
+          $('#back').click(function(){
+
+            countno--;
+            $('.textArea').text(data[countno]);
+
+          });
+           $('#next').click(function(){
+
+              countno++;
+              $('.textArea').text(data[countno]);
+            });
+              console.log(suggest_array);
           $.each(data, function(k, v) {
 
     /// do stuff k number , v = data
@@ -51,21 +65,8 @@ console.log(JSON.stringify(countrySel));
 
           });
 
-            var countno = 0;
-
-            $('#back').click(function(){
-
-              countno--;
 
 
-            });
-             $('#next').click(function(){
-
-                countno++;
-
-              });
-                console.log(suggest_array);
-            //  $('.textArea').text(suggest_array[countno]);
 
   });
 
