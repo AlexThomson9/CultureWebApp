@@ -38,7 +38,8 @@ console.log(JSON.stringify(countrySel));
           $.each(data, function(k, v) {
     /// do stuff k number , v = data
     console.log(k, v);
-    suggest_array.push(v);
+    suggest_array.number = k;
+    suggest_array.ctry = v;
 
 
 
@@ -65,7 +66,7 @@ console.log(JSON.stringify(countrySel));
                 countno++;
 
               });
-                console.log(suggest_array[countno]);
+                console.log(suggest_array);
               $('.textArea').text(suggest_array[countno]);
 
   });
