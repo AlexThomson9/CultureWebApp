@@ -26,7 +26,6 @@ console.log(JSON.stringify(countrySel));
   $(this).each(function(){
 
     $('#CountryTitle').text(countrySelected);
-var countr = 0;
     $.ajax({
           type: "POST",
           data: JSON.stringify(countrySel),
@@ -39,9 +38,8 @@ var countr = 0;
 
     /// do stuff k number , v = data
     console.log(k, v);
-    suggest_array.array[countr] = v;
-
-      countr++
+    suggest_array.array = [];
+    suggest_array.array[k] = v;
 
     });
 
