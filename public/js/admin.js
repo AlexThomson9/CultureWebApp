@@ -50,6 +50,7 @@ console.log(JSON.stringify(countrySel));
            $('#next').click(function(){
 
               countno++;
+              console.log(countno);
               //$('.textArea').text(data[countno]);
               console.log(data[countno].Country);
               console.log(data[countno].Identifier);
