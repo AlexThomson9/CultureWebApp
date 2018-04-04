@@ -36,18 +36,24 @@ console.log(JSON.stringify(countrySel));
           response = data;
           var countno = 0;
           $('.textArea').text(data[countno].Country);
+          console.log(data[countno].Country);
           console.log(data[countno].Identifier);
           console.log(data[countno].Suggestion);
           $('#back').click(function(){
 
             countno--;
-            $('.textArea').text(data);
-
+          //  $('.textArea').text(data);
+            console.log(data[countno].Country);
+            console.log(data[countno].Identifier);
+            console.log(data[countno].Suggestion);
           });
            $('#next').click(function(){
 
               countno++;
-              $('.textArea').text(data[countno]);
+              //$('.textArea').text(data[countno]);
+              console.log(data[countno].Country);
+              console.log(data[countno].Identifier);
+              console.log(data[countno].Suggestion);
             });
               console.log(suggest_array);
           $.each(data, function(k, v) {
