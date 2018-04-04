@@ -18,7 +18,7 @@ function category(evt, category) {
 
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
-var suggest_array = [];
+var suggest_array = {};
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
