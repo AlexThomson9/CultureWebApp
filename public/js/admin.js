@@ -39,7 +39,7 @@ console.log(JSON.stringify(countrySel));
           console.log(data[countno].Country);
           console.log(data[countno].Identifier);
           console.log(data[countno].Suggestion);
-          $('#back').click(function(){
+          $('#back').click(function(data){
 
             countno--;
           //  $('.textArea').text(data);
@@ -47,7 +47,7 @@ console.log(JSON.stringify(countrySel));
             console.log(data[countno].Identifier);
             console.log(data[countno].Suggestion);
           });
-           $('#next').click(function(){
+           $('#next').click(function(data){
 
               countno++;
               console.log(countno);
