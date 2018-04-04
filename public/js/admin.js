@@ -26,7 +26,7 @@ console.log(JSON.stringify(countrySel));
   $(this).each(function(){
 
     $('#CountryTitle').text(countrySelected);
-
+var countr = 0;
     $.ajax({
           type: "POST",
           data: JSON.stringify(countrySel),
@@ -36,12 +36,12 @@ console.log(JSON.stringify(countrySel));
           console.log('success', data);
           response = data;
           $.each(data, function(k, v) {
+
     /// do stuff k number , v = data
     console.log(k, v);
-    suggest_array.number = k;
-    suggest_array.ctry = v;
+    suggest_array.array[countr] = v;
 
-
+      countr++
 
     });
 
@@ -67,7 +67,7 @@ console.log(JSON.stringify(countrySel));
 
               });
                 console.log(suggest_array);
-              $('.textArea').text(suggest_array[countno]);
+            //  $('.textArea').text(suggest_array[countno]);
 
   });
 
