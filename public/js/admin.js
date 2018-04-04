@@ -35,7 +35,9 @@ console.log(JSON.stringify(countrySel));
           console.log('success', data);
           response = data;
           var countno = 0;
-          $('.textArea').text(data[countno]);
+          $('.textArea').text(data[countno].Country);
+          console.log(data[countno].Identifier);
+          console.log(data[countno].Suggestion);
           $('#back').click(function(){
 
             countno--;
