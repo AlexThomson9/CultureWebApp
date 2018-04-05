@@ -133,5 +133,5 @@ array.push(v);
 
 
             });
-      console.log(array);
-      console.log(array.length);
+      //console.log(array);
+      //console.log(array.length);
