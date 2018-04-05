@@ -18,7 +18,7 @@ function category(evt, category) {
 
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
-var testjson = {};
+var testjson = [];
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
@@ -69,8 +69,10 @@ console.log(JSON.stringify(countrySel));
     //suggest_array.array[k] = v;
     suggest_array.array.push(v);
 
+    testjson.push(v);
+
   });
-  console.log(suggest_array);
+  console.log(testjson);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
