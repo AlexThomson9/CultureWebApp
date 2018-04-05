@@ -34,33 +34,6 @@ console.log(JSON.stringify(countrySel));
           success: function (data) {
           console.log('success', data);
           //response = JSON.parse(data);
-          var countno = 0;
-          $('.textArea').text(data[countno].Country);
-          console.log(data[countno].Country);
-          console.log(data[countno].Identifier);
-          console.log(data[countno].Suggestion);
-          console.log(data[1]);
-          //console.log(response[0]);
-          $('#back').click(function(data){
-
-            countno--;
-          //  $('.textArea').text(data);
-            console.log(data[countno].Country);
-            console.log(data[countno].Identifier);
-            console.log(data[countno].Suggestion);
-          });
-          console.log(data[1]);
-           $('#next').click(function(){
-
-              countno++;
-              console.log(countno);
-              //$('.textArea').text(data[countno]);
-              console.log(data[1]);
-              console.log(data[countno].Country);
-              console.log(data[countno].Identifier);
-              console.log(data[countno].Suggestion);
-            //  console.log(response[1]);
-            });
           $.each(data, function(k, v) {
     var suggest_array = {};
     /// do stuff k number , v = data
@@ -74,6 +47,33 @@ console.log(JSON.stringify(countrySel));
   });
   console.log(testjson);
   console.log(testjson[1]);
+
+  var countno = 0;
+  $('.textArea').text(testjson[countno].Country);
+  console.log(testjson[countno].Country);
+  console.log(testjson[countno].Identifier);
+  console.log(testjson[countno].Suggestion);
+  //console.log(response[0]);
+  $('#back').click(function(){
+
+    countno--;
+  //  $('.textArea').text(data);
+    console.log(testjson[countno].Country);
+    console.log(testjson[countno].Identifier);
+    console.log(testjson[countno].Suggestion);
+  });
+  console.log(testjson[1]);
+   $('#next').click(function(){
+
+      countno++;
+      console.log(countno);
+      //$('.textArea').text(data[countno]);
+      console.log(testjson[1]);
+      console.log(testjson[countno].Country);
+      console.log(testjson[countno].Identifier);
+      console.log(testjson[countno].Suggestion);
+    //  console.log(response[1]);
+    });
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
