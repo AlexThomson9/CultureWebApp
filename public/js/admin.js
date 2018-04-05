@@ -31,16 +31,16 @@ console.log(JSON.stringify(countrySel));
           data: JSON.stringify(countrySel),
           contentType: "application/json",
           url: "/Suggestion",
-          success: function(data) {
+          success: function (data) {
           console.log('success', data);
-          response = JSON.parse(data);
+          //response = JSON.parse(data);
           var countno = 0;
           $('.textArea').text(data[countno].Country);
           console.log(data[countno].Country);
           console.log(data[countno].Identifier);
           console.log(data[countno].Suggestion);
           console.log(data[1]);
-          console.log(response[0]);
+          //console.log(response[0]);
           $('#back').click(function(data){
 
             countno--;
@@ -59,7 +59,7 @@ console.log(JSON.stringify(countrySel));
               console.log(data[countno].Country);
               console.log(data[countno].Identifier);
               console.log(data[countno].Suggestion);
-              console.log(response[1]);
+            //  console.log(response[1]);
             });
           $.each(data, function(k, v) {
     var suggest_array = {};
