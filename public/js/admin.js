@@ -60,14 +60,14 @@ console.log(JSON.stringify(countrySel));
               console.log(data[countno].Suggestion);
             });
               console.log(suggest_array);
-      /*    $.each(data, function(k, v) {
+          $.each(data, function(k, v) {
 
     /// do stuff k number , v = data
     console.log(k, v);
     suggest_array.array = [];
     suggest_array.array[k] = v;
 
-  });*/
+  });
 
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
