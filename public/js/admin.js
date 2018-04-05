@@ -73,6 +73,7 @@ console.log(JSON.stringify(countrySel));
 
   });
   console.log(testjson);
+  console.log(testjson[1]);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
