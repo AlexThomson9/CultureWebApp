@@ -19,7 +19,6 @@ function category(evt, category) {
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
 var suggest_array = {};
-var suggestionss;
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
@@ -68,8 +67,8 @@ console.log(JSON.stringify(countrySel));
     suggest_array.array = [];
     //suggest_array.array[k] = v;
     suggest_array.array.push(v);
-    suggestionss = JSON.stringify(suggest_array);
-
+    var suggestionss = JSON.stringify(suggest_array);
+    console.log(suggestionss);
   });
 
         },
@@ -84,8 +83,6 @@ console.log(JSON.stringify(countrySel));
 
 
   });
-
-console.log(suggestionss);
 
 });
 /* var Suggestions = 0;
