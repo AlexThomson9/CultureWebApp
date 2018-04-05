@@ -65,7 +65,7 @@ console.log(JSON.stringify(countrySel));
   //here
   var countno = 0;
   //$('.textArea').text(testjson[countno].Country);
-  console.log(testjson[countno].Country);
+  console.log(testjson[1]);
   console.log(testjson[countno].Identifier);
   console.log(testjson[countno].Suggestion);
   //console.log(response[0]);
