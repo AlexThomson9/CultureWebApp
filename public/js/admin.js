@@ -48,6 +48,35 @@ console.log(JSON.stringify(countrySel));
   console.log(testjson);
   console.log(testjson[1]);
 
+  //here
+  var countno = 0;
+  //$('.textArea').text(testjson[countno].Country);
+  console.log(testjson[1]);
+  console.log(testjson[countno].Identifier);
+  console.log(testjson[countno].Suggestion);
+  //console.log(response[0]);
+  $('#back').click(function(){
+
+    countno--;
+  //  $('.textArea').text(data);
+    console.log(testjson[countno].Country);
+    console.log(testjson[countno].Identifier);
+    console.log(testjson[countno].Suggestion);
+  });
+  console.log(testjson[1]);
+   $('#next').click(function(){
+
+      countno++;
+      console.log(countno);
+      console.log(testjson);
+      console.log(testjson.length);
+      //$('.textArea').text(data[countno]);
+      console.log(testjson[1]);
+      console.log(testjson[countno].Country);
+      console.log(testjson[countno].Identifier);
+      console.log(testjson[countno].Suggestion);
+    //  console.log(response[1]);
+    });
 
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -57,35 +86,7 @@ console.log(JSON.stringify(countrySel));
 
           });
 
-          //here
-          var countno = 0;
-          //$('.textArea').text(testjson[countno].Country);
-          console.log(testjson[1]);
-          console.log(testjson[countno].Identifier);
-          console.log(testjson[countno].Suggestion);
-          //console.log(response[0]);
-          $('#back').click(function(){
 
-            countno--;
-          //  $('.textArea').text(data);
-            console.log(testjson[countno].Country);
-            console.log(testjson[countno].Identifier);
-            console.log(testjson[countno].Suggestion);
-          });
-          console.log(testjson[1]);
-           $('#next').click(function(){
-
-              countno++;
-              console.log(countno);
-              console.log(testjson);
-              console.log(testjson.length);
-              //$('.textArea').text(data[countno]);
-              console.log(testjson[1]);
-              console.log(testjson[countno].Country);
-              console.log(testjson[countno].Identifier);
-              console.log(testjson[countno].Suggestion);
-            //  console.log(response[1]);
-            });
   });
 
 
