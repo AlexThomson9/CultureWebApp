@@ -48,7 +48,8 @@ console.log(JSON.stringify(countrySel));
             console.log(data[countno].Identifier);
             console.log(data[countno].Suggestion);
           });
-           $('#next').click(function(data){
+          console.log(data[1]);
+           $('#next').click(function(){
 
               countno++;
               console.log(countno);
