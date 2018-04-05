@@ -68,8 +68,7 @@ console.log(JSON.stringify(countrySel));
     suggest_array.array.push(v);
 
   });
-  var suggestionss = JSON.stringify(testjson);
-console.log(suggest_array);
+
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
@@ -78,7 +77,8 @@ console.log(suggest_array);
 
           });
 
-
+          var suggestionss = JSON.stringify(testjson);
+        console.log(suggest_array);
 
 
   });
