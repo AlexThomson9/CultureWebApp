@@ -70,7 +70,7 @@ console.log(JSON.stringify(countrySel));
 
   });
   var suggestionss = JSON.stringify(testjson);
-console.log(suggestionss);
+console.log(testjson);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
