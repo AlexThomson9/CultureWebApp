@@ -39,6 +39,7 @@ console.log(JSON.stringify(countrySel));
           console.log(data[countno].Country);
           console.log(data[countno].Identifier);
           console.log(data[countno].Suggestion);
+          console.log(data[1]);
           $('#back').click(function(data){
 
             countno--;
