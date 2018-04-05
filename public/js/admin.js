@@ -48,6 +48,21 @@ console.log(JSON.stringify(countrySel));
   console.log(testjson);
   console.log(testjson[1]);
 
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+         console.log('error', errorThrown);
+       }
+
+
+          });
+
+
+  });
+
+
+
+  //here
   var countno = 0;
   $('.textArea').text(testjson[countno].Country);
   console.log(testjson[countno].Country);
@@ -76,16 +91,6 @@ console.log(JSON.stringify(countrySel));
       console.log(testjson[countno].Suggestion);
     //  console.log(response[1]);
     });
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-         console.log('error', errorThrown);
-       }
-
-
-          });
-
-
-  });
 
 });
 /* var Suggestions = 0;
@@ -123,7 +128,7 @@ array.push(v);
             response = data;
             $.each(data, function (i, item) {
               console.log(i, item);
-      $('#infoUpdate').append($('<option>', {
+      $('#infoUpdate').prepend($('<option>', {
           value: item,
           text : item
       }));
