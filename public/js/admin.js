@@ -31,7 +31,7 @@ console.log(JSON.stringify(countrySel));
           data: JSON.stringify(countrySel),
           contentType: "application/json",
           url: "/Suggestion",
-          success: function getarray (data) {
+          success: function(data) {
           console.log('success', data);
           response = data;
           var countno = 0;
@@ -68,7 +68,6 @@ console.log(JSON.stringify(countrySel));
     suggest_array.array.push(v);
 
   });
-  return suggest_array;
   var suggestionss = JSON.stringify(testjson);
 console.log(suggest_array);
         },
