@@ -82,7 +82,7 @@ console.log(JSON.stringify(countrySel));
 
   });
 
-//console.log(suggest_array);
+console.log(suggest_array);
 
 });
 /* var Suggestions = 0;
