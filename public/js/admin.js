@@ -32,15 +32,15 @@ console.log(JSON.stringify(countrySel));
           contentType: "application/json",
           url: "/Suggestion",
           success: function(data) {
-            data = JSON.parse(data);
           console.log('success', data);
-          response = data;
+          response = JSON.parse(data);
           var countno = 0;
           $('.textArea').text(data[countno].Country);
           console.log(data[countno].Country);
           console.log(data[countno].Identifier);
           console.log(data[countno].Suggestion);
           console.log(data[1]);
+          console.log(response[0]);
           $('#back').click(function(data){
 
             countno--;
@@ -59,6 +59,7 @@ console.log(JSON.stringify(countrySel));
               console.log(data[countno].Country);
               console.log(data[countno].Identifier);
               console.log(data[countno].Suggestion);
+              console.log(response[1]);
             });
           $.each(data, function(k, v) {
     var suggest_array = {};
@@ -70,7 +71,6 @@ console.log(JSON.stringify(countrySel));
 
   });
   console.log(suggest_array);
-    testjson = suggest_array;
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
          console.log('error', errorThrown);
@@ -78,10 +78,6 @@ console.log(JSON.stringify(countrySel));
 
 
           });
-
-          var suggestionss = JSON.stringify(testjson);
-
-        console.log(testjson);
 
 
   });
