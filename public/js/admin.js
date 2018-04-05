@@ -18,7 +18,7 @@ function category(evt, category) {
 
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
-var suggest_array = {};
+
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
@@ -59,9 +59,8 @@ console.log(JSON.stringify(countrySel));
               console.log(data[countno].Identifier);
               console.log(data[countno].Suggestion);
             });
-              console.log(suggest_array);
           $.each(data, function(k, v) {
-
+var suggest_array = {};
     /// do stuff k number , v = data
     console.log(k, v);
     suggest_array.array = [];
