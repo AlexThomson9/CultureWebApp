@@ -32,6 +32,7 @@ console.log(JSON.stringify(countrySel));
           contentType: "application/json",
           url: "/Suggestion",
           success: function(data) {
+            data = JSON.parse(data);
           console.log('success', data);
           response = data;
           var countno = 0;
