@@ -43,23 +43,50 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
-   $.ajax({
-         url:countryPicked,
-         dataType:'json',
-         success: function(result){
-           //In here loop through JSON file to display info
-           $(".restName").empty().append(result[0].name);
-           $(".restLanguage").empty().append(result[0].languages[0].name);
-           $(".restCurrency").empty().append(result[0].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
-           $(".flagImage").attr("src", result[0].flag);
-           console.log(result[0].capital);
-       }
-     });
-  //Calll for openModal function
-  openModal(ctry);
- // var test = feature.properties.Country;
-  //console.log(test);
-});
+  $.ajax({
+          url:countryPicked,
+          dataType:'json',
+          success: function(result, data){
+
+          /*if(ctry == "India"){
+            $(".restName").empty().append(result[1].name);
+            $(".restLanguage").empty().append(result[1].languages[0].name);
+            $(".restCurrency").empty().append(result[1].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
+            $(".flagImage").attr("src", result[1].flag);
+            console.log(result[1].capital);
+          }else{
+            //In here loop through JSON file to display info
+            $(".restName").empty().append(result[0].name);
+            $(".restLanguage").empty().append(result[0].languages[0].name);
+            $(".restCurrency").empty().append(result[0].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
+            $(".flagImage").attr("src", result[0].flag);
+            console.log(result[0].capital);
+          }*/
+          var c = 0 ;
+          if(ctry =="India"){
+             c++
+          }
+          console.log(c);
+          $(".restName").empty().append(result[c].name);
+          $(".restLanguage").empty().append(result[c].languages[0].name);
+          $(".restCurrency").empty().append(result[c].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
+          $(".flagImage").attr("src", result[c].flag);
+          console.log(result[c].capital);
+          //Calll for openModal function
+          var delayInMilliseconds = 100; //1 second
+          //set the timeout to run the function
+          setTimeout(function()
+          {
+          //remove the submission successful as it only needs to be there for a little bit
+            openModal(ctry);
+          //set the timeout to use the 2 second's defined previously
+          }, delayInMilliseconds);
+        },
+          error: function (data)
+        {
+          alert("Something went wrong, Please Try Again!");
+        }
+      });
 
 //Listen for open click
 //modalBtn.addEventListener('click', openModal); - For testing the modal
@@ -68,7 +95,7 @@ closeBtn.addEventListener('click', closeModal);
 
 //Function to open modal
 function openModal(ctry){
-  modal.style.display = "block";  
+  modal.style.display = "block";
 }
 
 
