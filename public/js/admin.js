@@ -17,6 +17,7 @@
 }
 */
 //Displays the country picked on the dropdown
+  var countno = 0;
 $('#infoUpdate').change(function(){
 
 
@@ -54,7 +55,7 @@ setTimeout(function()
   console.log(testjson[1]);
 
   //here
-  var countno = 0;
+
   var c_length = testjson.length;
   //$('.textArea').text(testjson[countno].Country);
   $('#Suggest_Number').text(c_length);
