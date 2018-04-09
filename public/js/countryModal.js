@@ -34,20 +34,6 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             dataType:'json',
             success: function(result, data){
 
-            /*if(ctry == "India"){
-              $(".restName").empty().append(result[1].name);
-              $(".restLanguage").empty().append(result[1].languages[0].name);
-              $(".restCurrency").empty().append(result[1].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
-              $(".flagImage").attr("src", result[1].flag);
-              console.log(result[1].capital);
-            }else{
-              //In here loop through JSON file to display info
-              $(".restName").empty().append(result[0].name);
-              $(".restLanguage").empty().append(result[0].languages[0].name);
-              $(".restCurrency").empty().append(result[0].currencies[0].name, result[0].currencies[0].code, result[0].currencies[0].symbol);
-              $(".flagImage").attr("src", result[0].flag);
-              console.log(result[0].capital);
-            }*/
             var c = 0 ;
             if(ctry =="India"){
                c++
@@ -73,6 +59,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             alert("Something went wrong, Please Try Again!");
           }
         });
+      });
 //Listen for open click
 //modalBtn.addEventListener('click', openModal); For testing purposes
 //Listen for close click
@@ -92,4 +79,4 @@ function openModal(ctry){
 function closeModal(){
   delete ctry;
   modal.style.display = "none";
-};
+}
