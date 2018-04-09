@@ -200,6 +200,11 @@ p{
 
 }
 
+.flagImage{
+  float: left;
+}
+
+
 /*The div that will contain the text information retrieved from the API*/
 .restAPI{
   display: inline-block;
