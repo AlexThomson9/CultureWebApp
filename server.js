@@ -48,6 +48,29 @@ res.jsonp(result);
  })
 })*/
 
+app.post('/delete', function(req, res) {
+ db.collection('suggest').deleteOne(req.body, function(err, result) {
+ if (err) throw err;
+ res.redirect('/');
+ });
+});
+
+app.post('/verified', function(req, res) {
+  db.collection('suggest').find(req.body).toArray(function(err, result) {
+  if (err) throw err;
+ console.log(result);
+  db.collection('Country_Info').save(result, function(err, result){
+    if (err) throw err;
+    console.log('saved to database')
+    res.redirect('/')
+  });
+  });
+ db.collection('suggest').deleteOne(req.body, function(err, result) {
+ if (err) throw err;
+ res.redirect('/');
+ });
+});
+
 
 app.post('/suggest', function(req, res){
 	console.log('body: ' + JSON.stringify(req.body));

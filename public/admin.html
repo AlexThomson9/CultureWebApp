@@ -34,6 +34,9 @@
             margin-top: 15px;
             margin-left: 10px;
         }
+        #country_id{
+          display: none;
+        }
       </style>
 
   </head>
@@ -91,23 +94,16 @@
     </section>
 <!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
     <div id="Customs">
+      <input id="Identifier" type = "text" />
         <textarea class="textArea">This will display the Customs text retrieved from the database
         </textarea>
+
+        <input id="Author" type = "text" />
+
+        <input id="country_id" type="text" />
     </div>
 
-    <div id="Gestures" class="tabcontent">
-        <textarea class="textArea">This will display the Gestures text retrieved from the database
-        </textarea>
-    </div>
 
-    <div id="Culture" class="tabcontent">
-        <textarea class="textArea">This will display the Culture text retrieved from the database
-        </textarea>
-    </div>
-
-    <div id="Laws" class="tabcontent">
-        <textarea class="textArea">This will display the Laws text retrieved from the database
-        </textarea>
     </div>
 
 

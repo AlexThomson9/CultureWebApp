@@ -2,7 +2,7 @@
 //document.getElementById("defaultOpen").click();
 
 //Change the content depending on selected tab (placeholder function)
-function category(evt, category) {
+/*function category(evt, category) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -15,7 +15,7 @@ function category(evt, category) {
     document.getElementById(category).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
+*/
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
 var testjson = [];
@@ -50,14 +50,22 @@ console.log(JSON.stringify(countrySel));
 
   //here
   var countno = 0;
+  var c_length = testjson.length;
   //$('.textArea').text(testjson[countno].Country);
   console.log(testjson[1]);
   console.log(testjson[countno].Identifier);
   console.log(testjson[countno].Suggestion);
+  $('#Identifier').text(testjson[countno].Identifier);
+  $('.textArea').text(testjson[countno].Suggestion);
   //console.log(response[0]);
   $('#back').click(function(){
 
     countno--;
+    if(countno <0){
+
+
+      countno = 0;
+    }
   //  $('.textArea').text(data);
     console.log(testjson[countno].Country);
     console.log(testjson[countno].Identifier);
@@ -67,6 +75,11 @@ console.log(JSON.stringify(countrySel));
    $('#next').click(function(){
 
       countno++;
+      if(countno > c_length){
+
+          countno = c_length;
+
+      }
       console.log(countno);
       console.log(testjson);
       console.log(testjson.length);
@@ -144,3 +157,36 @@ array.push(v);
             });
       //console.log(array);
       //console.log(array.length);
+
+
+
+      $('#Accept').click(function(){
+        var c_id = $('#country_id').val();
+        var c_verified = {"_id":c_id};
+        $.ajax({
+              type: "POST",
+              data: JSON.stringify(c_verified),
+              contentType: "application/json",
+              url: "/verified",
+              success: function (data) {
+              console.log('success', data);},
+              error: function (XMLHttpRequest, textStatus, errorThrown) {
+               console.log('error', errorThrown);
+             }
+              });
+      });
+      $('#Reject').click(function(){
+        var c_id = $('#country_id').val();
+        var c_delete = {"_id":c_id};
+        $.ajax({
+              type: "POST",
+              data: JSON.stringify(c_delete),
+              contentType: "application/json",
+              url: "/remove",
+              success: function (data) {
+              console.log('success', data);},
+              error: function (XMLHttpRequest, textStatus, errorThrown) {
+               console.log('error', errorThrown);
+             }
+              });
+      });
