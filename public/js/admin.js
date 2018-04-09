@@ -31,6 +31,7 @@ var delayInMilliseconds = 100; //1 second
 setTimeout(function()
 {
   $(this).each(function(){
+    testjson = [];
 
     $('#CountryTitle').text(countrySelected);
     $.ajax({
