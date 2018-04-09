@@ -63,6 +63,7 @@ setTimeout(function()
   console.log(testjson[countno].Suggestion);
   $('#Identifier').text(testjson[countno].Identifier);
   $('.textArea').text(testjson[countno].Suggestion);
+  console.log(testjson.length);
   //console.log(response[0]);
   $('#back').click(function(){
 
@@ -90,7 +91,7 @@ setTimeout(function()
 
   });
   console.log(testjson[1]);
-   $('#next').click(function(){
+   $('#next').click(function(testjson) {
 
       countno++;
       if(countno > c_length){
