@@ -201,7 +201,8 @@ p{
 }
 
 .flagImage{
-  float: left;
+  display: block;
+  position: relative;
 }
 
 
