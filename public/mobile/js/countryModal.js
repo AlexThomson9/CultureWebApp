@@ -67,21 +67,11 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 closeBtn.addEventListener('click', closeModal);
 
 //Function to open modal
-function openModal(){
-  modal.style.display = "block";
-  var countryRequest = new XMLHttpRequest();
-  countryRequest.open('GET', 'https://restcountries.eu/rest/v2/name/France?fields=name;capital;languages;currencies;flag')
-  countryRequest.onload = function(){
-    var countryData = JSON.parse(countryRequest.responseText);
-    renderHTML(countryData);
-   };
+function openModal(ctry){
+  modal.style.display = "block";  
 }
 
-//Currently not finished - will get back to once Front end is done
-function renderHTML(data){
-  var htmlString = "this is a test";
-  modalContent.insertAdjacentHTML('beforeend', htmlString);
-  }
+
 
 //The event listeners that check when the button has been clicked
 returnToPopupMenu.addEventListener('click', closeInfo);
