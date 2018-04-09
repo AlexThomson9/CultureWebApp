@@ -103,6 +103,16 @@ function closeInfo(){
 
 //Function to close modal
 function closeModal(){
+  //Deletes the name of the country that was selected
   delete ctry;
+
+  //This is done in the event that the user closes the modal instead
+  //of returning to the popup menu
+  returnToPopupMenu.style.display = "none";
+  serverContent.style.display = "none";
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+  returnToMapButton.style.display = "block";
+
   modal.style.display = "none";
 }
