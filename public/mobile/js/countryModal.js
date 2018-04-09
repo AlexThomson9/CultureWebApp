@@ -39,8 +39,6 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
   $('#Country').text(ctry);
  // alert($('#Country').text());
 
-  $(".leaflet-popup-content").remove();
-
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
   $.ajax({
@@ -105,7 +103,6 @@ function closeInfo(){
 
 //Function to close modal
 function closeModal(){
-  ctry = "";
   delete ctry;
   modal.style.display = "none";
 }
