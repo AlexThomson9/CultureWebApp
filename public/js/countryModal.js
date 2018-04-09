@@ -69,7 +69,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
              //remove the submission successful as it only needs to be there for a little bit
                openModal(ctry);
              //set the timeout to use the 2 second's defined previously
-           }, delayInMilliseconds);
+             }, delayInMilliseconds);
          },
          error: function (data)
   {

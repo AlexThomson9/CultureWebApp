@@ -52,6 +52,7 @@ console.log(JSON.stringify(countrySel));
   var countno = 0;
   var c_length = testjson.length;
   //$('.textArea').text(testjson[countno].Country);
+  $('#Suggest_Number').text(c_length);
   console.log(testjson[1]);
   console.log(testjson[countno].Identifier);
   console.log(testjson[countno].Suggestion);
@@ -70,6 +71,18 @@ console.log(JSON.stringify(countrySel));
     console.log(testjson[countno].Country);
     console.log(testjson[countno].Identifier);
     console.log(testjson[countno].Suggestion);
+    $('#Identifier').empty();
+    $('.textArea').empty();
+    var delayInMilliseconds = 100; //1 second
+    //set the timeout to run the function
+    setTimeout(function()
+    {
+    //remove the submission successful as it only needs to be there for a little bit
+    $('#Identifier').text(testjson[countno].Identifier);
+    $('.textArea').text(testjson[countno].Suggestion);
+    //set the timeout to use the 2 second's defined previously
+    }, delayInMilliseconds);
+
   });
   console.log(testjson[1]);
    $('#next').click(function(){
@@ -88,6 +101,18 @@ console.log(JSON.stringify(countrySel));
       console.log(testjson[countno].Country);
       console.log(testjson[countno].Identifier);
       console.log(testjson[countno].Suggestion);
+      $('#Identifier').empty();
+      $('.textArea').empty();
+      var delayInMilliseconds = 100; //1 second
+      //set the timeout to run the function
+      setTimeout(function()
+      {
+      //remove the submission successful as it only needs to be there for a little bit
+      $('#Identifier').text(testjson[countno].Identifier);
+      $('.textArea').text(testjson[countno].Suggestion);
+      //set the timeout to use the 2 second's defined previously
+      }, delayInMilliseconds);
+
     //  console.log(response[1]);
     });
 
