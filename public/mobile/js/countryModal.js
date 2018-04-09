@@ -87,6 +87,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
           alert("Something went wrong, Please Try Again!");
         }
       });
+    });
 
 //Listen for open click
 //modalBtn.addEventListener('click', openModal); - For testing the modal
