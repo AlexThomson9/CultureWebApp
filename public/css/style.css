@@ -197,14 +197,10 @@ p{
 .extImg img{
   width: 90%;
   height: 15.5%;
-
-}
-
-.flagImage{
   display: block;
   position: relative;
-}
 
+}
 
 /*The div that will contain the text information retrieved from the API*/
 .restAPI{
