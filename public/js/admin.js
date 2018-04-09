@@ -86,7 +86,7 @@ setTimeout(function()
 });
 
 $('#back').click(function(){
-
+  var c_length = testjson.length;
   countno--;
   if(countno <0){
 
@@ -112,7 +112,7 @@ $('#back').click(function(){
 });
 //console.log(testjson[1]);
  $('#next').click(function() {
-
+  var c_length = testjson.length;
     countno++;
     if(countno > c_length){
 
