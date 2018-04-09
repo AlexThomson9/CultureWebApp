@@ -19,12 +19,17 @@
 //Displays the country picked on the dropdown
 $('#infoUpdate').change(function(){
 
+  var testjson = [];
   var countrySelected = $(this).val();
   console.log(countrySelected);
 var countrySel = {"Country":countrySelected};
 console.log(JSON.stringify(countrySel));
+var delayInMilliseconds = 100; //1 second
+//set the timeout to run the function
+setTimeout(function()
+{
   $(this).each(function(){
-var testjson = [];
+
     $('#CountryTitle').text(countrySelected);
     $.ajax({
           type: "POST",
@@ -126,7 +131,7 @@ var testjson = [];
 
 
   });
-
+}, delayInMilliseconds);
 
 
 
