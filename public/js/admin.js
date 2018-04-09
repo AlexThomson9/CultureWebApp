@@ -207,7 +207,7 @@ array.push(v);
               type: "POST",
               data: JSON.stringify(c_delete),
               contentType: "application/json",
-              url: "/remove",
+              url: "/delete",
               success: function (data) {
               console.log('success', data);},
               error: function (XMLHttpRequest, textStatus, errorThrown) {

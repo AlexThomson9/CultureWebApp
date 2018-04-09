@@ -42,6 +42,7 @@ html{
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
+  color: white;
 }
 
 /*Sets style for the text imput area*/

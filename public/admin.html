@@ -69,7 +69,7 @@
 <div id="body">
   <div class="contentContainer">
     <!-- Category select tabs-->
-    <div class="tab">
+
       <!--  <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
@@ -82,7 +82,7 @@
           <option value="select">Please select a continent</option>
           </select>
         </div>
-    </div>
+
 
     <!--Display the currently selected country-->
     <div id="CountryTitle">
@@ -94,13 +94,19 @@
     </section>
 <!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
     <div id="Customs">
+      <p>
+      Number of Suggestions for this Country:
       <p id="Suggest_Number"></p>
+      </p>
       <br />
+      <p>
+      Identifier for Suggestion:
       <p id="Identifier"></p>
+      </p>
       <br />
-        <textarea class="textArea">This will display the Customs text retrieved from the database
-        </textarea>
-<br />
+      <textarea class="textArea">This will display the Customs text retrieved from the database
+      </textarea>
+      <br />
         <p id="Author"></p>
 
         <input id="country_id" type="text" />
@@ -110,9 +116,9 @@
 
 <!--Submit and Cancel buttons-->
   <div class="Buttons">
+    <a id="back">back</a>
     <button id="Accept">Approve</button>
     <button id="Reject">Reject</button>
-    <a id="back">back</a>
     <a id="next">next</a>
   </div>
 
