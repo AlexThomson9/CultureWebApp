@@ -38,7 +38,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
   //Sets the hidden tag to the name of the country for the modal to use
   $('#Country').text(ctry);
  // alert($('#Country').text());
-
+  map.closePopup();
   var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
   $.ajax({
