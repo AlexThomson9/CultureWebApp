@@ -18,6 +18,7 @@
 */
 //Displays the country picked on the dropdown
   var countno = 0;
+    var testjson = [];
 $('#infoUpdate').change(function(){
 
 
@@ -30,7 +31,7 @@ var delayInMilliseconds = 100; //1 second
 setTimeout(function()
 {
   $(this).each(function(){
-    var testjson = [];
+
     $('#CountryTitle').text(countrySelected);
     $.ajax({
           type: "POST",
