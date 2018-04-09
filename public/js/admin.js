@@ -91,7 +91,7 @@ setTimeout(function()
 
   });
   console.log(testjson[1]);
-   $('#next').click(function(testjson) {
+   $('#next').click(function() {
 
       countno++;
       if(countno > c_length){
