@@ -109,7 +109,7 @@ $('#back').click(function(){
   }, delayInMilliseconds);
 
 });
-console.log(testjson[1]);
+//console.log(testjson[1]);
  $('#next').click(function() {
 
     countno++;
