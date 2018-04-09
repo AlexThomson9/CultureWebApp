@@ -1,0 +1,106 @@
+
+
+
+
+var united kingdom, y;
+
+united kingdom = {"customs":["Lunchtime is usually between 13:00 – 15:30 and dinner is rarely served before 21:00.",
+                    "Do not get involved in discussions about regionalism.",
+                    "Do not call a Catalan Spanish.",
+                    "Do not expect to see Flamenco everywhere.",
+                    "Don’t expect to see a bullfight in Barcelona or the Canary Islands. ",
+                    "Do not wander the city streets wearing only swimsuit.",
+                    "Don’t wear the wrong things.",
+                    "Don’t ignore local markets.",
+                    "Don’t drink your hot chocolate.",
+                    "Don’t pass the salt shaker from hand to hand. According to Spanish tradition, it brings bad luck.",
+                    "Don’t plan anything important on Tuesday 13.",
+                    ""
+				    ],
+                    
+                 
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+                    
+			"laws":["MP’s are not allowed to wear armour in parliament. ",
+			"It is illegal to keep a pigsty in front of your house (Unless duly hidden).",
+			"It is illegal to erect a washing line across any street.  ",
+			"It is illegal to sing any profane or obscene song or ballad in any street.",
+			"It is illegal to wilfully and wantonly disturb people by ringing their doorbells or knocking at their doors.",
+			"It is illegal to order or permit any servant to stand on the sill of any window to clean or paint it.",
+			"It is an offence for the keeper of a place of public resort to permit drunkenness in the house.",
+			"The Easter Act 1928 provides that, in the United Kingdom, the Channel Islands and the Isle of Man, Easter Day shall be a fixed day in each year, viz. the first Sunday after the second Saturday in April.",
+			"Under the Metropolitan Police Act 1839 no person (other than persons acting in obedience to lawful authority) is to discharge any cannon or other firearm of greater calibre than a common fowling-piece within 300 yards of any dwelling house to the annoyance of any inhabitant thereof. Maximum penalty: £200 fine.",
+			"An employer cannot give a (subjective) bad reference as this may constitute libel. ",
+			"The Metropolitan Streets Act 1867 prohibits the driving or conducting of any cattle through any street between the hours of 10.00 in the morning and 7.00 in the evening",
+			"It is illegal to eat Mute Swan unless you’re the Queen of Great Britain",
+			"It is illegal to use a television in Britain without a license.",
+			"It is an offense to be intoxicated (drunk) and in charge of a cow in Scotland.",
+			"Under the terms of the Protection of Wrecks Order 2003: A person shall not enter the hull of the Titanic without permission from the Secretary of State.",
+			"Under the terms of the Polish Potatoes (Notification) in England Order – 2004: No person shall, in the course of business, import into England potatoes which he knows to be or has reasonable cause to suspect to be Polish potatoes.",
+			"It is an offense to activate your burglar alarm and leave the property if you haven’t nominated a key-holder who can access your house to switch off your siren should it go off.",
+			"Under the terms of a bye-law it is illegal to “Jump” the queue in the tube ticket hall.",
+			"All beached whales and sturgeons must be offered to the reigning monarch.",
+			"A horn should not be sounded when stationary on a road at anytime, other than at times of danger due to another vehicle on or near the road. ",
+			"In London, it is illegal for a person (knowingly) with the plague to flag down a taxi or try and ride on a bus.",
+			"A person shall be guilty of an offence if he uses for trade an automatic rail-weighbridge to which there is affixed a disqualification sticker.",
+			"It is illegal for a cab in the City of London to carry rabid dogs or corpses.",
+			"It is illegal to avoid telling the tax man anything you do not want him to know, but legal not to tell him information you do not mind him knowing.",
+			"It is illegal under the terms of the Prohibition and Inspections Act of 1998 to cause a nuclear explosion.",
+			"Asking a stranger for parking change is illegal",
+			"Dressing up as an Soldier for a fancy dress party could land you three months in jail. The law states it is an offence to "impersonate the holder of a certificate of service or discharge".",
+			"Failing to carry a spare dog poo bag"
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = united kingdom.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = united kingdom.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = united kingdom.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;

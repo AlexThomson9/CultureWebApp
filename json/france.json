@@ -1,0 +1,71 @@
+var france, y;
+
+france = {"customs":["",
+                    ""
+                   
+				    ],
+                    
+           
+                    
+			"laws":["  It is illegal to carry live snails on a French high-speed train, unless they have a ticket",
+                    "It is illegal to fly over or land flying saucers in the southern French town of Chateauneuf-du-Pape",
+                    "Illegal to kiss whilst train is at the platform",
+                    "It is illegal to have unlimited, self-service ketchup in French school cafeterias",
+                    "French law requires that 40 percent of the music played on private radio stations must be of French origin",
+                    "Pig owners can't call their cochons Napoleon",
+                    "A mayoral decree in the tiny northern French village of Lhéraule obliges a minimum level of politeness in the Town Hall",
+					"It is illegal to drink any alcohol at work, except wine, beer, cider, pear cider and a fermented honey drink called hydromel.",
+                    "It is legal to marry a dead person",
+                    "It’s legal for French parents to prevent their adult children from getting married",
+                    "French law allows you to be divorced if you smoke too much or are too interested in football",
+                    "A woman needs permission from the police to dress like a man",
+                    "Bins and ashtrays are lethal weapons in Paris",
+					"it’s illegal to take photos of police officers or police vehicles, even if they are in the background.",
+                    "Unless a woman is holding the reigns of a horse or riding a bike, she is not allowed to wear pants",
+                    "You cannot wear swim trunks or board shorts in public pools",
+                    "In ads for products that contain salt or sugar, it’s mandatory to include that you should exercise and eat at least 5 fruits and vegetables a day",
+                    "In France, if an athlete doesn’t play for the national team he/she can be banned from playing for his/her club.",
+                    "In France, drivers are legally required to carry a portable Breathalyzer in their vehicle.",
+					""
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = france.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = france.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = france.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;

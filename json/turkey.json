@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>turkey Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var turkey, y;
+
+turkey = {"customs":["",
+                    ""
+                   
+				    ],
+                    
+           
+
+			"laws":["In Turkey, it is illegal to become a pilot if you’re older than 80.",
+					"Stealing unripe olives is illegal",
+					"Its against the law to fall in love with a neighbors son, daughter, wife, servant, or any of his animals.",
+					"All married woman must get their husbands permission if they wish to have a job",
+					"All married woman must live where their husband resides",
+					"All married woman must forfeit all jointly held assets upon divorce"
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = turkey.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = turkey.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = turkey.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>

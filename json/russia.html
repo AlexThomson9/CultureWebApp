@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>russia Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var russia, y;
+
+russia = {"customs":["There is no word for "fun" in Russian.",
+					"There is no word for "privacy" in Russian.",
+                    "You can find McDonalds McShrimp only in Russia.",
+					"Moscow's uber-rich sometimes drive in ambulances so they can go around traffic.",
+                    "Recently, some Russian restaurants have stopped using the word "borscht" — instead opting to say "beet root soup" — because the word "borscht" is Ukrainian.",
+					"Before heading out on a journey, they say "Присядем на дорожку," which means "let's sit down for the road."",
+                    "One odd Russian superstition is to avoid whistling indoors.",
+					"Legend has it that Russians chose Christianity over Islam back in 988 AD in part because they didn't want to give up alcohol.",
+                    "Russians celebrate Christmas on Jan. 7 because they follow the Julian calendar. As a result, New Year's precedes Christmas for them.",
+					"Russians like NYE so much they celebrate it twice: "Old New Year's" takes place Jan. 13-14.",
+					"It's bad luck to return to your house after you already left.",
+					"In Russia, there are 1,159 women for every 1,000 men.",
+                    "Russians don't put eyes on smileys when typing.",
+					"One super-popular Russian meal — called "holodets" — contains meat suspended in salted gelatin.",
+                    "Russians use the same word to say "get healthier" and "get fatter."",
+					"75% of Russian territory is located in Asia.",
+                    "Russians hang their rugs on walls.",
+					"Russian doesn't need a subject and a verb to complete a sentence.",
+                    "Russians pick mushrooms for fun.",
+					"Russians eat their pancakes with sour cream and caviar."
+                    
+                   
+				    ],
+                    
+           
+		  
+
+
+
+
+
+		   
+                    
+			"laws":[" a law came into force that bans the use of profanity in theaters, film and other cultural events. Offenders will face fines.",
+                    "Russian bloggers are forbidden to use profanity. Offenders will face fines.",
+                    "President Barack Obama is banned from entering Chechnya.",
+                    "Russia enacted an anti-gay law, which purportedly was to prevent distribution of “non-traditional sexual relationships” ideas among minors.",
+					"It is illegal to drive a dirty car in the city of Chelyabinsk. Driving a dirty car can get you fined up to 2000 rubles (about $62).",
+                    "Sale, import and production of lace panties is prohibited."
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = russia.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = russia.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = russia.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>
