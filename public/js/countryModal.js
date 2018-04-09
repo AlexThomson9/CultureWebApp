@@ -92,5 +92,4 @@ function openModal(ctry){
 function closeModal(){
   delete ctry;
   modal.style.display = "none";
-
 }
