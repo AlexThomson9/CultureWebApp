@@ -197,13 +197,14 @@ p{
 .extImg img{
   width: 90%;
   height: 15.5%;
-  float: left;
+
 }
 
 /*The div that will contain the text information retrieved from the API*/
 .restAPI{
   display: inline-block;
   text-align: center;
+  float:right;
   width: 50%;
   height: 24%;
 }
@@ -211,7 +212,6 @@ p{
 /*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
   /*Default value of the font size */
-  float:right;
   font-size: 0.9em;
 }
 
