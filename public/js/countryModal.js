@@ -19,6 +19,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     //Sets variable to the name of the country clicked on
     var ctry = $(".leaflet-popup-content").text();
+    var testArray = [];
     //Test to check it works
     console.log(ctry);
     //Sets the hidden tag to the name of the country for the modal to use
@@ -33,7 +34,17 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      url: "/country",
      success: function(result){
        console.log(result);
+       $.each(result, function(k, v) {
+       var suggest_array = {};
+       /// do stuff k number , v = data
+       console.log(k, v);
+       suggest_array.array = [];
+       //suggest_array.array[k] = v;
+       suggest_array.array.push(v);
+
+       testArray.push(v);
      }
+     console.log(testArray);
     });
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
