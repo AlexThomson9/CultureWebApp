@@ -22,9 +22,20 @@
         .container-fluid{
             background-color:#322f30;
         }
+        .navbar-default .navbar-brand{
+
+          color: white;
+        }
+        .navbar-default .navbar-nav>li>a{
+
+          color: white;
+        }
         #Continent{
             margin-top: 15px;
             margin-left: 10px;
+        }
+        #country_id{
+          display: none;
         }
       </style>
 
@@ -58,23 +69,20 @@
 <div id="body">
   <div class="contentContainer">
     <!-- Category select tabs-->
-    <div class="tab">
-        <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
+
+      <!--  <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
         <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
-
+-->
     <!--Dropdown country select-->
         <div id="dropdown">
           <select id="infoUpdate">
             <!--These are examples, when database is implemented, js will fill this with values -->
-            <option value="default">Country</option>
-            <option value="Germany">Germany</option>
-            <option value="Russia">Russia</option>
-            <option value="Britain">Britain</option>
+          <option value="select">Please select a continent</option>
           </select>
         </div>
-    </div>
+
 
     <!--Display the currently selected country-->
     <div id="CountryTitle">
@@ -85,31 +93,33 @@
 
     </section>
 <!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
-    <div id="Customs" class="tabcontent">
-        <textarea class="textArea">This will display the Customs text retrieved from the database
-        </textarea>
+    <div id="Customs">
+      <p>
+      Number of Suggestions for this Country:
+      <p id="Suggest_Number"></p>
+      </p>
+      <br />
+      <p>
+      Identifier for Suggestion:
+      <p id="Identifier"></p>
+      </p>
+      <br />
+      <textarea class="textArea">This will display the Customs text retrieved from the database
+      </textarea>
+      <br />
+        <p id="Author"></p>
+
+        <input id="country_id" type="text" />
     </div>
 
-    <div id="Gestures" class="tabcontent">
-        <textarea class="textArea">This will display the Gestures text retrieved from the database
-        </textarea>
-    </div>
-
-    <div id="Culture" class="tabcontent">
-        <textarea class="textArea">This will display the Culture text retrieved from the database
-        </textarea>
-    </div>
-
-    <div id="Laws" class="tabcontent">
-        <textarea class="textArea">This will display the Laws text retrieved from the database
-        </textarea>
-    </div>
 
 
 <!--Submit and Cancel buttons-->
   <div class="Buttons">
-    <button id="submitBtn">Submit</button>
-    <button id="cancelBtn">Cancel</button>
+    <a id="back">back</a>
+    <button id="Accept">Approve</button>
+    <button id="Reject">Reject</button>
+    <a id="next">next</a>
   </div>
 
 

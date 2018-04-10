@@ -112,10 +112,51 @@ h2{
 }
 
 
+#Subject-Text{
+      height:200px;
+      width:100%;
+      resize:none;
+      background: transparent;
+  }
+  #dropdown-menu{
+
+    padding-bottom:5px;
+    color: white;
+
+  }
+  #dropdown-menu select{
+
+      padding: 2px 2px 2px 2px;
+      background:#322f30;
+      color: white;
+      width: 100%;
+  }
+  #Ctry-Issue{
+    color: white;
+    background: #322f30;
+    border: none;
+    cursor: cell;
+
+
+  }
+  #Country-Issue{
+    padding-bottom: 5px;
+
+
+  }
+  #button-padding{
+
+    padding-top: 10px;
+  }
+  #Continent{
+      margin-top: 15px;
+      margin-left: 10px;
+  }
 
 /* Must be at the end of the file */
 /*The following media screens will check the users' device width and will alter certain values accordingly*/
 /*Screen width of an IPad Pro (Widest mobile screen that will use the site)*/
+
 @media only screen and (max-device-width: 1100px) and (min-device-width: 751px){
 
   body{
@@ -153,6 +194,8 @@ h2{
     width: 100%;
     margin-bottom: 20px;
   }
+
+
 
   .login-box input[type="text"], input[type="password"]
   {
@@ -202,48 +245,50 @@ h2{
   #body{
       margin: 0;
       padding: 0;
-      background: white;
+      background: #322f30;
       background-repeat:no-repeat;
        background-size:100% 100vh;
      font-family: sans-serif;
   }
 
+
   h2{
-    font-size: 70px;
+    font-size:40px;
   }
 
 
   .login-box{
   width: 80%;
-  height: 50%;
+  height: auto;
   top: 45%;
   left: 50%;
-  position: absolute;
+  position: relative;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 70px 30px;
+  padding: 70px 30px ;
+  background: none;
   }
 
   .login-box p{
-    font-size: 45px;
+    font-size: 22px;
   }
 
 
   .login-box input[type="text"], input[type="password"]
   {
-    height: 60px;
-    font-size: 45px;
+    height: 30px;
+    font-size: 22px;
   }
 
   .login-box #submitBtn
   {
-    height:70px;
-    font-size: 60px;
+    height:30px;
+    font-size: 22px;
   }
 
   .login-box a
   {
-    font-size: 45px;
+    font-size: 22px;
   }
 }
 
