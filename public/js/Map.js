@@ -70,6 +70,7 @@ $.getJSON("map.geojson",function(data){
         weight: 1
         ,noWrap: true
       });
+      console.log(geojson);
 
 
 
