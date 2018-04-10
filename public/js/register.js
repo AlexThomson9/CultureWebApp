@@ -26,11 +26,15 @@ $('#submitBtn').click(function(){
           {
           //remove the submission successful as it only needs to be there for a little bit
           $('.login-box').find("h3").remove();
+          window.location.replace("login.html");
           //set the timeout to use the 2 second's defined previously
         }, delayInMilliseconds);
+        form.reset();
 
 
 
-  form.reset();
+
+
+
 
 });
