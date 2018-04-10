@@ -48,6 +48,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
        testArray.push(v);
      });
 console.log(testArray[0]);
+serverContent.style.display = "block";
 $(".serverContent").empty().append(testArray[0].customs);
     }
   });
