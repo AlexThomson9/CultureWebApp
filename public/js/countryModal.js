@@ -48,11 +48,12 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
        testArray.push(v);
      });
 console.log(testArray[0]);
+$(".serverContent").empty().append(testArray[0].customs);
     }
   });
     console.log(testArray);
     console.log(testArray[0]);
-    $(".serverContent").empty().append(testArray.customs);
+
 
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';

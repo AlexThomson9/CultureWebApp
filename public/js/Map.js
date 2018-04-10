@@ -50,7 +50,7 @@ $.getJSON("map.geojson",function(data){
           }
         }).addTo(map);
         //Onlick for the leaflet marker
-    
+
         /*  $.ajax({
               url:"https://restcountries.eu/rest/v2/name/" + test,
               dataType:'json',
