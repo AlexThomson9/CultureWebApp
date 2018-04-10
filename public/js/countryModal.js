@@ -44,9 +44,10 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
        testArray.push(v);
      });
-     console.log(testArray);
+
     }
   });
+    console.log(testArray);
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
