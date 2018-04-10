@@ -34,21 +34,21 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     attribution: cartodbAttribution
 }).addTo(map);
         //load the map informtaion
-$.getJSON("map.geojson",function(data){
+//$.getJSON("map.geojson",function(data){
 
   $.getJSON("/mapinfo",function(data2){
 
     console.log(data2);
         // add GeoJSON layer to the map once the file is loaded
-       geojson = L.geoJson(data).addTo(map);
+    //   geojson = L.geoJson(data).addTo(map);
        geojson2 = L.geoJson(data2).addTo(map);
        console.log(geojson2);
-       geojson.setStyle({
+      /* geojson.setStyle({
         fillOpacity: 1,
         color: "#D46A6A",
         weight: 1
         ,noWrap: true
-        });
+      });*/
         geojson2.setStyle({
          fillOpacity: 1,
          color: "#D46A6A",
@@ -70,7 +70,7 @@ $.getJSON("map.geojson",function(data){
         }).addTo(map);
       });
 
-  });
+  //});
 
 
 
