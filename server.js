@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const link = "mongodb://localhost:27017/star_wars_quotes";
+const link = "mongodb://localhost:27017/Country_Info"
 const express = require('express');
 const url = require('url');
 const fs = require('fs');
