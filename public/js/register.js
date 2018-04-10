@@ -18,7 +18,7 @@ $('#submitBtn').click(function(){
 
 
 
-  $('#login-box').preend("<h3>Registration Successful!</h3>");
+  $('#login-box').append("<h3>Registration Successful!</h3>");
       //set the var to 2 sectons
           var delayInMilliseconds = 2000; //2 second
           //set the timeout to run the function
