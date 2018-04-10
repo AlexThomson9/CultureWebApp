@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>greece Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var greece, y;
+
+
+
+greece = {"customs":["Grandmother never moves out",
+                    "The colour blue wards off evil",
+					"When marrying the man has to ask for the hand of the woman from her father and close family, while the two families give presents to bride and groom. The couple exchanges wedding rings that are worn on the left hand. After the wedding, these rings will be worn on the right hand. The engagement period may last for years.",
+					"Clean Monday or Lent Monday is the first day of the Lent (Saracosti) during which families go for a picnic in the countryside and fly kites.",
+					"It is believed that spitting chases the devil and the misfortune away.",
+					"If someone sees black cat, this is supposed to be bad luck for the rest of the day.",
+					"If a glass or mirror breaks, it is believed to be bad luck for seven years.",
+					"Unlike the western belief, in Greece the unlucky day is Tuesday the 13th"
+                   
+				    ],
+                    
+					
+
+
+					
+			"laws":"couponing is illegal",
+					"No one is allowed to play electronic games.",
+					"Not voting is illegal"
+					
+					
+                  ],
+                  
+                  
+                  
+
+                  
+                  
+            "gestures":["Dont wave with a open palm instead greet with a closed palm",
+                    "When two people say the same thing together at the same time, they immediately say piase kokkino (touch red) one to another and both have to touch any red item they can find around them."
+                 
+                  ]
+         };
+         
+
+
+y = greece.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = greece.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = greece.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>

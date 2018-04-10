@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>thailand Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var thailand, y;
+
+thailand = {"customs":["It is actually considered rude to rip the present open there and then in front of the giver. A Thai person is more likely to wait until you have left to open the gift. This is part of  the “grengjai” custom",
+						"Overnight visitors to a Thai home were requested to ask permission from the phra phum (spirit ghost of the land) to stay in the house. The visitor would then be asked to thank the ghost when they left.",
+						"Raising your voice is unacceptable in Thailand and considered an act of losing control.",
+						"Shoes must be taken off upon entering someone’s home. Even if you get a “mai pen rai” (no problem/it’s okay), still take them off.",
+						"Don't touch anyone on the head unless you want trouble. ",
+						"If you need to point (indicate) someone out, instead of extending your finger, bend your hand downwards with your fingers leaning toward the floor and your palm facing upward.",
+						"In Thailand the inviter pays for the meal. In cases where it is unclear who the inviter was, the superior will usually pay.",
+						"Ducking Down When Walking Between Two People It is a polite gesture of respect to acknowledge the interruption. The same applies if you walk past a person and block out their vision for a split second."
+                   
+				    ],
+                   
+					
+			"laws":["It’s illegal to leave the house without your underwear on.",
+					"It’s a crime to step on any Thai currency.",
+					"It’s a punishable offence to throw (used) chewing gum on the pavement.",
+					"You mustn’t drive a car shirtless.",
+					"It’s a criminal offence to be critical of the king or other members of the Thai royal family.",
+					"You need to carry your passport with you at all times.",
+					"You need a permit to take certain items out of the country."
+					
+					
+                  ],
+                  
+                  
+                 
+
+                  
+                  
+            "gestures":["The wai, or pressing your palms together at chest or nose level and bowing your head slightly, is a gesture that you will encounter almost immediately upon arrival in Thailand. An integral part of Thai etiquette, it denotes respect (or reverence when performed in front of a Buddha image), and can be used to express a hello, thank you, or goodbye.",
+						"Most buildings boast spirit houses or altars, where offerings of food and garlands are made to appease the spirits inhabiting the land. Avoid touching such displays as some Thais can be highly superstitious, fearing disruption of harmonious balance. "
+                 
+                  ]
+         };
+         
+
+
+y = thailand.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = thailand.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = thailand.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>

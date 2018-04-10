@@ -1,0 +1,54 @@
+
+
+var macau, y;
+
+macau = {"customs":["Macau's urban culture emphasizes family integrity, lineage solidarity, reserved public behavior toward the powerful, and respect for parents and elder persons (filial piety, or xiao ).",
+                    ""
+                   
+				    ],
+                    
+			"laws":["",
+                    ""
+					
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = macau.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = macau.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = macau.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;

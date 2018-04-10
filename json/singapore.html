@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>singapore Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var singapore, y;
+
+singapore = {"customs":["",
+						""
+						
+                   
+				    ],
+	
+			"laws":["Chewing gum is banned in Singapore",
+					"Annoying someone with a musical instrument in a public place",
+					"Flying a kite that interferes with public traffic",
+					"If you’re caught singing or uttering songs that have either obscene lyrics or obscene “ballads” in any public place, you’ll face a punishment of imprisonment for up to three months, a fine, or both.",
+					"spitting can get you a fine of up to $1,000. ",
+					"Distribution of "obscene" materials ",
+					"Connecting to another user's Wi-Fi can be fined a whopping $10,000, up to three years in jail, or both.",
+					"Forgetting to flush the toilet you're looking at a fine of around $150.",
+					"Wandering around your house nude with any open curtains can land you a fine of $2,000, imprisonment for three months, or both.",
+					"feeding the birds here will cost you $500.",
+					"Urinating in a public elevator",
+					"Littering",
+					"In Singapore, vandalism can get you both arrested and caned.",
+					"Penalties for drug possession in Singapore range from fines as high as $20,000 to 10 years in prison. In certain cases, if the amount of the drug is high enough, the punishment can even be a death penalty.",
+					"The punishment for gay sex in Singapore is a two-year jail term.",
+					"In Singapore, jaywalking is defined as crossing the road within 50 meters (164 feet) of a crossing zone. Jaywalkers can receive a $20 fine on the spot, a fine of up to $1,000, or three months of jail time. The punishment doubles to a fine of up to $2,000 and six months in jail if you’re caught jaywalking twice.",
+					"Drunk and disorderly conduct is a serious crime in Singapore.",
+					"You can’t bring vaporisers, like e-cigarettes, e-pipes, e-cigars, and refills into the country. These items are likely to be confiscated, and you could be fined or sent to prison.",
+					"Penalties for overstaying your visa include fines, imprisonment, corporal punishment (caning) and deportation depending on the length of overstay."
+                    ""
+					
+					
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["",
+						""
+						
+                 
+                  ]
+         };
+         
+
+
+y = singapore.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = singapore.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = singapore.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>

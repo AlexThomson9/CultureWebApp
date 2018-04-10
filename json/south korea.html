@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>south korea Json Doc as html</p>
+
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+
+
+
+var south korea, y;
+
+south korea = {"customs":["avoid embarrassment of yourself or of others. ",
+							"if you dress in a brazen way and the circles you are moving in are not dressing in the same way it will be frowned upon.",
+							"It is a custom to take off your shoes in houses and in many traditional Korean restaurants so make sure you are aware of this convention.",
+							"Swastikas are commonly seen in Buddhist temples. This is a religious symbol to the Koreans and does not represent Nazism or anti-Semitism.",
+							"Koreans in general have strong nationalistic views and as with most countries it is advisable not to bring up any historical events make negative comments about anything culturally in Korea.",
+							"When dining with Koreans, the oldest always eats first. ",
+							"Remember never to pour your own drink, but do pour for others.",
+							"if you notice the slurping of noodles this is actually expected. It shows that you enjoy the food and you are appreciating the cooking.",
+							"Money if given as a gift is placed in paper or an envelope.",
+							"if you are out dining and giving tips in restaurants, it is polite to place the money inside the folded bill and hand it into the waiter’s hands quietly, rather than leaving it on the table as you may do elsewhere.",
+							"When addressing a Korean, use his/her title along with her/his family name unless you’ve been invited to do otherwise. If there is no title, use Mr/Mrs/Miss with the family name.",
+							"The decision making process in Korea is done collectively and therefore may take more time than you may be used to. You will need to be patient."
+                   
+				    ],
+                    
+			"laws":["",
+                    ""
+					
+                  ],
+                  
+                  
+                  
+                  
+                  
+            "gestures":["It is common that when meeting a Korean business person initially you will be introduced by somebody rather than introducing yourself.",
+                    ""
+                 
+                  ]
+         };
+         
+
+
+y = south korea.laws;
+
+
+var text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo3").innerHTML = text;
+
+
+y = south korea.customs;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo2").innerHTML = text;
+
+
+
+y = south korea.gestures;
+text = "";
+for (i = 0; i < y.length; i++) { 
+    text += y[i] + "<br>";
+console.log(text);
+}
+document.getElementById("demo4").innerHTML = text;
+
+</script>
+
+</body>
+</html>
