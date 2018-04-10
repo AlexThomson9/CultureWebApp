@@ -21,7 +21,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     //Sets variable to the name of the country clicked on
     var ctry = $(".leaflet-popup-content").text();
-    testArray.empty();
+    testArray = [];
     //Test to check it works
     console.log(ctry);
     //Sets the hidden tag to the name of the country for the modal to use
