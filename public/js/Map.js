@@ -38,9 +38,9 @@ $.getJSON("map.geojson",function(data){
   console.log(data);
   $.getJSON("/mapinfo",function(data2){
     delete data2[0]._id;
-    delete data2[1];
-    delete data2[2];
-    delete data2[3];
+    delete data2[1]._id;
+    delete data2[2]._id;
+    delete data2[3]._id;
 
     var mapinfo = {}
     mapinfo.type = "FeatureCollection";
