@@ -41,7 +41,7 @@ $.getJSON("map.geojson",function(data){
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
 
-    var mapinfos = JSON.stringify(mapinfo);
+    var mapinfos = JSON.parse(mapinfo);
     console.log(mapinfos);
         // add GeoJSON layer to the map once the file is loaded
     //   geojson = L.geoJson(data).addTo(map);
