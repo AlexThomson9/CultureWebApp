@@ -42,6 +42,7 @@ $.getJSON("map.geojson",function(data){
         // add GeoJSON layer to the map once the file is loaded
        geojson = L.geoJson(data).addTo(map);
        geojson2 = L.geoJson(data2).addTo(map);
+       console.log(geojson2);
        geojson.setStyle({
         fillOpacity: 1,
         color: "#D46A6A",
@@ -57,11 +58,11 @@ $.getJSON("map.geojson",function(data){
 
 
         //Bind the popup to just display the country, it doesnt actually popup but we use the value
-        var layerGroup = L.geoJSON(data, {
+      /*  var layerGroup = L.geoJSON(data, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
-        }).addTo(map);
+        }).addTo(map);*/
         var layerGroup2 = L.geoJSON(data2, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
