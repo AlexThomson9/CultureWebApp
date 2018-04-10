@@ -42,7 +42,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
   //  data2[0].geometry.coordinates[0].toString().replaceAll("\"", "");
   console.log(  data2[0].geometry.coordinates[0] + "" +   data2[0].geometry.coordinates[1]);
 
-    var mapinfo = {}
+    var mapinfo = {};
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
     console.log(mapinfo);
