@@ -41,12 +41,10 @@ $.getJSON("map.geojson",function(data){
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
     console.log(mapinfo);
-    var mapinfos = JSON.parse(mapinfo);
 
-    console.log(mapinfos);
         // add GeoJSON layer to the map once the file is loaded
     //   geojson = L.geoJson(data).addTo(map);
-       geojson = L.geoJson(mapinfos).addTo(map);
+       geojson = L.geoJson(mapinfo).addTo(map);
        console.log(geojson);
       /* geojson.setStyle({
         fillOpacity: 1,
@@ -68,7 +66,7 @@ $.getJSON("map.geojson",function(data){
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);*/
-        var layerGroup = L.geoJSON(mapinfos, {
+        var layerGroup = L.geoJSON(mapinfo, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
