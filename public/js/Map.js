@@ -34,7 +34,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     attribution: cartodbAttribution
 }).addTo(map);
         //load the map informtaion
-//$.getJSON("map.geojson",function(data){
+$.getJSON("map.geojson",function(data){
 //  console.log(data);
   $.getJSON("/mapinfo",function(data2){
     delete data2[0]._id;
@@ -48,7 +48,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     console.log(mapinfo);
 
         // add GeoJSON layer to the map once the file is loaded
-    //   geojson = L.geoJson(data).addTo(map);
+
        geojson = L.geoJson(mapinfo).addTo(map);
        geojson.setStyle({
         fillOpacity: 1,
@@ -62,26 +62,26 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);
-      });
 
-      /* geojson.setStyle({
+        geojson = L.geoJson(data).addTo(map);
+       geojson.setStyle({
         fillOpacity: 1,
         color: "#D46A6A",
         weight: 1
         ,noWrap: true
-      });*/
+      });
 
 
 
         //Bind the popup to just display the country, it doesnt actually popup but we use the value
-      /*  var layerGroup = L.geoJSON(data, {
+        var layerGroup = L.geoJSON(data, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
-        }).addTo(map);*/
+        }).addTo(map);
+});
 
-
-  //});
+  });
 
 
 
