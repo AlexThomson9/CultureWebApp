@@ -18,14 +18,14 @@ $('#submitBtn').click(function(){
 
 
 
-  $('#login-box').append("<h3>Registration Successful!</h3>");
+  $('.login-box').append("<h3>Registration Successful!</h3>");
       //set the var to 2 sectons
-          var delayInMilliseconds = 2000; //2 second
+          var delayInMilliseconds = 5000; //2 second
           //set the timeout to run the function
           setTimeout(function()
           {
           //remove the submission successful as it only needs to be there for a little bit
-          $('#login-box').find("h3").remove();
+          $('.login-box').find("h3").remove();
           //set the timeout to use the 2 second's defined previously
         }, delayInMilliseconds);
 
