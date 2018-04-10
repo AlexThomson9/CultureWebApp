@@ -46,7 +46,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
        testArray.push(v);
      });
-
+console.log(testArray[0]);
     }
   });
     console.log(testArray);
