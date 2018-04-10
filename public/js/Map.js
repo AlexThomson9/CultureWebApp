@@ -56,13 +56,14 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
         weight: 1
         ,noWrap: true
         });
+         console.log(geojson);
         var layerGroup = L.geoJSON(mapinfo, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);
       });
-       console.log(geojson);
+
       /* geojson.setStyle({
         fillOpacity: 1,
         color: "#D46A6A",
