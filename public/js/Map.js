@@ -34,8 +34,8 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     attribution: cartodbAttribution
 }).addTo(map);
         //load the map informtaion
-$.getJSON("map.geojson",function(data){
-  console.log(data);
+//$.getJSON("map.geojson",function(data){
+//  console.log(data);
   $.getJSON("/mapinfo",function(data2){
     delete data2[0]._id;
     delete data2[1]._id;
@@ -78,7 +78,7 @@ $.getJSON("map.geojson",function(data){
         }).addTo(map);
       });
 
-  });
+  //});
 
 
 
