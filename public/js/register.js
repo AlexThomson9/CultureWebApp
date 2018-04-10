@@ -2,6 +2,7 @@
 $('#submitBtn').click(function(){
 
   var obj = {};
+  var form = document.getElementById("regForm");
 
   obj.email = $('#emailField').val();
   obj.username = $('#userField').val();
@@ -13,5 +14,8 @@ $('#submitBtn').click(function(){
         contentType: "application/json",
         url: "/register"
         });
+
+
+  form.reset();
 
 });
