@@ -30,9 +30,9 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      type: "POST",
      data: JSON.stringify(country),
      contentType: "application/json",
-     url: "/country"
+     url: "/country",
      success: function(result){
-       console.log(result);       
+       console.log(result);
      }
     });
     map.closePopup();
