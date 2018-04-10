@@ -9,6 +9,8 @@ var modalContent = document.getElementsByClassName('country-modal-content')[0];
 
 var serverContent = document.getElementsByClassName('serverContent')[0];
 
+var testArray = [];
+
 //When one of the tabs are clicked, the following occurs
 //When the backend is implemented, more will done here
 $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(event){
@@ -19,7 +21,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     //Sets variable to the name of the country clicked on
     var ctry = $(".leaflet-popup-content").text();
-    var testArray = [];
+    testArray.empty();
     //Test to check it works
     console.log(ctry);
     //Sets the hidden tag to the name of the country for the modal to use
@@ -48,6 +50,10 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     }
   });
     console.log(testArray);
+    $(".serverContent").empty().append(result.customs);
+
+
+    console.log(result[c].capital);
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
