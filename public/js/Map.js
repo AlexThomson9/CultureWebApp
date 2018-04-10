@@ -46,6 +46,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
     console.log(mapinfo);
+    console.log(JSON.parse(mapinfo));
 
         // add GeoJSON layer to the map once the file is loaded
     //   geojson = L.geoJson(data).addTo(map);
