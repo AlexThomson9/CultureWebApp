@@ -41,6 +41,7 @@ $.getJSON("map.geojson",function(data){
     delete data2[1]._id;
     delete data2[2]._id;
     delete data2[3]._id;
+    data2[0].geometry.coordinates[0].toString().replaceAll("\"", "");
 
     var mapinfo = {}
     mapinfo.type = "FeatureCollection";
