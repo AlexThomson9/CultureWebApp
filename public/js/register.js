@@ -1,5 +1,17 @@
-//On click function when the submit button is clicked
-$('#submitBtn').click(function () {
-  //When backend is being done, the validation for checking entry will be moved into
-  $(location).attr('href', 'test.html')
+
+$('#submitBtn').click(function(){
+
+  var obj = {};
+
+  obj.email = $('#emailField').val();
+  obj.username = $('#userField').val();
+  obj.password = $('#passField').val();
+
+  $.ajax({
+        type: "POST",
+        data: JSON.stringify(obj),
+        contentType: "application/json",
+        url: "/register"
+        });
+
 });

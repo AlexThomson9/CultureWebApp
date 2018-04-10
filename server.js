@@ -125,3 +125,11 @@ app.post('/savefile', function(req, res){
      }
   });
 });
+
+app.post('/register', function(req, res){
+  db.collection('userdetails').save(req.body, function(err, result) {
+  if (err) throw err;
+  console.log('saved to database')
+  res.redirect('/')
+  })
+});
