@@ -17,6 +17,25 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
   serverContent.style.display = "block";
 });
 
+$('#customsClick').click(function(event){
+  serverContent.style.display = "block";
+  $('.serverContent').empty().append(testArray[0].customs);
+});
+
+$('#gesturesClick').click(function(event){
+  serverContent.style.display = "block";
+  $('.serverContent').empty().append(testArray[0].gestures);
+});
+
+$('#cultureClick').click(function(event){
+  serverContent.style.display = "block";
+  $('.serverContent').empty().append(testArray[0].traditions);
+});
+
+$('#lawClick').click(function(event){
+  serverContent.style.display = "block";
+  $('.serverContent').empty().append(testArray[0].laws);
+});
 //When the user clicks on a country on the map the following occurs
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
     //Sets variable to the name of the country clicked on
