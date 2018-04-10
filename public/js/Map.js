@@ -49,7 +49,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
         weight: 1
         ,noWrap: true
       });*/
-        geojson2.setStyle({
+        geojson.setStyle({
          fillOpacity: 1,
          color: "#D46A6A",
          weight: 1
