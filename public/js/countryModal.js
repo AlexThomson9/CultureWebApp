@@ -50,6 +50,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     }
   });
     console.log(testArray);
+    console.log(testArray[0]);
     $(".serverContent").empty().append(testArray[0]);
 
     map.closePopup();
