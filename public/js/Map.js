@@ -37,11 +37,15 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 $.getJSON("map.geojson",function(data){
   console.log(data);
   $.getJSON("/mapinfo",function(data2){
+    var mapinfo = {}
+    mapinfo.type = "FeatureCollection";
+    mapinfo.features = data2;
 
-    console.log(data2);
+    var mapinfos = JSON.stringify(mapinfo);
+    console.log(mapinfos);
         // add GeoJSON layer to the map once the file is loaded
     //   geojson = L.geoJson(data).addTo(map);
-       geojson = L.geoJson(data2).addTo(map);
+       geojson = L.geoJson(mapinfos).addTo(map);
        console.log(geojson);
       /* geojson.setStyle({
         fillOpacity: 1,
@@ -63,7 +67,7 @@ $.getJSON("map.geojson",function(data){
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);*/
-        var layerGroup = L.geoJSON(data2, {
+        var layerGroup = L.geoJSON(mapinfos, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
