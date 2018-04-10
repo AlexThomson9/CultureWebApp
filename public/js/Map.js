@@ -37,6 +37,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 $.getJSON("map.geojson",function(data){
   console.log(data);
   $.getJSON("/mapinfo",function(data2){
+    delete data2[0]._id;
     var mapinfo = {}
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
