@@ -43,7 +43,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
        suggest_array.array.push(v);
 
        testArray.push(v);
-     }
+     });
      console.log(testArray);
     });
     map.closePopup();
