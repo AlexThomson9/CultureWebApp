@@ -57,7 +57,7 @@ $.getJSON("map.geojson",function(data){
         ,noWrap: true
         });
          console.log(geojson);
-        var layerGroup = L.geoJSON(mapinfo, {
+        var layerGroup = L.geoJSON(data2, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
