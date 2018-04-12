@@ -47,8 +47,8 @@ testingarray = [];
       console.log(data2);
       $.each(data2, function(key, value){
         console.log(value);
-        /*console.log(value.properties.Country);
-        testingarray.push(value.properties.Country)*/
+        console.log(value.Country);
+        testingarray.push(value.Country)
 
 
 
