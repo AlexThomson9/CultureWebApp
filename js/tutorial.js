@@ -1,7 +1,13 @@
 $(function(){ 
 
-	var tutorial_step = 1;
+	var tutorial_step = 0;
 
+	if(tutorial_step == 0 || tutorial_step == null){
+		var defaultPopUp = createDefaultPopUp();
+
+		attachPopUpBy("div-tutorial", "class", defaultPopUp);
+	}
+	/*
 	var popUp = createTutotialPopUp("1st pop-up", tutorial_step);
 	attachPopUpBy("TitleBar-d3", "id", popUp);
 
@@ -15,31 +21,24 @@ $(function(){
 		switch(tutorial_step){
 			case 1:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 2:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 3:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 4:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 5:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 6:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 			case 7:
 				attachPopUpBy("", "class", popUp);
-				tutorial_step++;
 				break;
 		}
 
@@ -51,12 +50,12 @@ $(function(){
 		}
 		
 
-	});
+	});*/
 })
 
 function createTutotialPopUp(text, tutorial_step){
 
-	var popUp = "<div class=\"tutorial-popUp-sprite\">";
+	var popUp = "<div class=\"tutorial-popUp\">";
 
 	popUp += "<div class=\"tutorial-popUp-textAndButtons\">";
 
@@ -66,7 +65,7 @@ function createTutotialPopUp(text, tutorial_step){
 
 	popUp += "</div>";
 
-	popUp += "<div class=\"tutorial-popUp-img\">";
+	popUp += "<div class=\"tutorial-popUp-sprite-and-bubble\">";
 
 	if(tutorial_step == 0){
 		popUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"../images/sprite_1.png\">";
@@ -82,6 +81,14 @@ function createTutotialPopUp(text, tutorial_step){
 	popUp += "</div>";
 
 	return popUp;
+}
+
+function createDefaultPopUp(){
+	var defaultPopUp = "<div class=\"default-popUp-sprite\">";
+
+	defaultPopUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"img/sprite_1.png\"></div>";
+
+	return defaultPopUp
 }
 
 function attachPopUpBy(name, type, popUp){
