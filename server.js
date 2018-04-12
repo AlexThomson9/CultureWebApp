@@ -133,17 +133,8 @@ console.log(req.body);
 //'email':req.body.obj.email
   db.collection("userdetails").find({"username": req.body.username}).toArray(function(err, result) {
     if (err) throw err;
-      //if user found.
-      console.log(result[0].username);
-      console.log(result);
       res.jsonp(result);
-        if(req.body.username == result[0].username ){
-          console.log('Username already exists, username: ' + req.body.username);
-        }/*else if(req.body.email == email){
 
-
-          console.log("email takes");
-        }*/
 
     });
 
