@@ -89,7 +89,7 @@ $.getJSON("map.geojson",function(data){
         }).addTo(map);
 });
 
-//  });
+});
 
 
 
