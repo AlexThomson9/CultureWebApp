@@ -1,61 +1,115 @@
 $(function(){ 
 
 	var tutorial_step = 0;
+	var popUp;
+
+	var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
+	var text_step_2 = "Here's the Home page button, it will get where we are now.";
+	var text_step_3 = "Here's the Login button, where you can Log to your account.";
+	var text_step_4 = "Here's the Register button, it will allow to create an account.";
+	var text_step_5 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
+	var text_step_6 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
+	var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
+
+	var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
+	var text_step_9 = "";
+	var text_step_10 = "";
 
 	if(tutorial_step == 0 || tutorial_step == null){
 		var defaultPopUp = createDefaultPopUp();
 
 		attachPopUpBy("tutorial", "id", defaultPopUp);
+
+		$('#default_sprite').onClick(function(){
+			tutorial_step++;
+		});
+	}
+
+	else if(tutorial_step == 1){
+
+		defaultPopUp = $('#default_sprite').detach();
+
+		updateCssOfTutorialDiv(tutorial_step);
+
+		popUp = createTutotialPopUp(text_step_1, tutorial_step);
+
+		attachPopUpBy("turorial", "id", popUp);
+
+		$('#tutorial-popUp-gotItButton').onClick(function(){
+			tutorial_step++;
+		});
+	}
+
+	else{
+
+		if(tutorial_step == 2){
+			popUp = $('div-tuto-step_1').detach();
+
+			updateCssOfTutorialDiv(tutorial_step);
+
+			popUp = createTutotialPopUp(text_step_2, tutorial_step);
+
+			attachPopUpBy('tutorial', "id", popUp);
+		}
+
+		$('#tutorial-popUp-skipButton').onClick(function(){
+			popUp = $('.tutorial-popUp').detach();	
+		});
+
+		$('#tutorial-popUp-gotItButton').onClick(function(){
+			popUp = $('div-tuto-step_' + tutorial_step - 1).detach();
+
+			switch(tutorial_step){
+				case 2:
+
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 3:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 4:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 5:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 6:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 7:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 8:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 9:
+					attachPopUpBy("", "class", popUp);
+					break;
+				case 10:
+					attachPopUpBy("", "class", popUp);
+					break;
+			}
+
+			if(tutorial_step > 1 && tutorial_step < 11){
+				tutorial_step++;
+			}
+
+			else{
+				tutorial_step = 0;
+			}
+
+		});
 	}
 	/*
 	var popUp = createTutotialPopUp("1st pop-up", tutorial_step);
 	attachPopUpBy("TitleBar-d3", "id", popUp);
 
-	$('#tutorial-popUp-skipButton').onClick(function(){
-		popUp = $('.tutorial-popUp').detach();	
-	});
-
-	$('#tutorial-popUp-gotItButton').onClick(function(){
-		popUp = $('.tutorial-popUp').detach();
-
-		switch(tutorial_step){
-			case 1:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 2:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 3:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 4:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 5:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 6:
-				attachPopUpBy("", "class", popUp);
-				break;
-			case 7:
-				attachPopUpBy("", "class", popUp);
-				break;
-		}
-
-		if(tutorial_step >= 1 && tutorial_step < 8){
-			tutorial_step++;
-		}
-		else{
-			tutorial_step = 0;
-		}
-		
-
-	});*/
+	*/
 })
 
 function createTutotialPopUp(text, tutorial_step){
 
-	var popUp = "<div class=\"tutorial-popUp\">";
+	/*var popUp = "<div class=\"tutorial-popUp\">";
 
 	popUp += "<div class=\"tutorial-popUp-textAndButtons\">";
 
@@ -68,17 +122,28 @@ function createTutotialPopUp(text, tutorial_step){
 	popUp += "<div class=\"tutorial-popUp-sprite-and-bubble\">";
 
 	if(tutorial_step == 0){
-		popUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"../images/sprite_1.png\">";
-		popUp += "<img class=\"bubble\" id=\"bubble_1\" scr=\"../images/pop-up_bubble_1.png\">";
+		popUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\">";
+		popUp += "<img class=\"bubble\" id=\"bubble_1\" scr=\"images/pop-up_bubble_1.png\">";
 	}
 	else if (tutorial_step > 0 && tutorial_step < 8){
-		popUp += "<img class=\"sprite\" id=\"sprite_2\" src=\"../images/sprite_2.png\">";
-		popUp += "<img class=\"bubble\" id=\"bubble_2\" scr=\"../images/pop-up_bubble_2.png\">";
+		popUp += "<img class=\"sprite\" id=\"sprite_2\" src=\"images/sprite_2.png\" height=\"174\" width=\"171\">";
+		popUp += "<img class=\"bubble\" id=\"bubble_2\" scr=\"images/pop-up_bubble_2.png\">";
 	} 
 
 	popUp += "</div>";
 
 	popUp += "</div>";
+
+	return popUp;*/
+
+	var popUp;
+
+	if(tutorial_step == 1){
+		popUp += 
+	}
+	else{
+
+	}
 
 	return popUp;
 }
@@ -104,4 +169,39 @@ function attachPopUpBy(name, type, popUp){
 	}
 
 	$(obj).append(popUp);
+}
+
+function updateCssOfTutorialDiv(tutorial_step){
+	switch(tutorial_step){
+		case 1:
+			$('#tutorial').css({height: "200px", width: "200px", right: "", top: ""});
+			break;
+		case 2:
+			$('#tutorial').css();
+			break;
+		case 3:
+			$('#tutorial').css();
+			break;
+		case 4:
+			$('#tutorial').css();
+			break;
+		case 5:
+			$('#tutorial').css();
+			break;
+		case 6:
+			$('#tutorial').css();
+			break;
+		case 7:
+			$('#tutorial').css();
+			break;
+		case 8:
+			$('#tutorial').css();
+			break;
+		case 9:
+			$('#tutorial').css();
+			break;
+		case 10:
+			$('#tutorial').css();
+			break;
+	}
 }
