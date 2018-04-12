@@ -10,7 +10,7 @@ $('#submitBtn').click(function(){
   obj.username = $('#userField').val();
   obj.password = $('#passField').val();
 
-  userdetails.find({ 'username': username,'email':email }, function(err, user) {
+  db.collection('userdetails').find({ 'username': username,'email':email }, function(err, user) {
 
       if (err) {
 
