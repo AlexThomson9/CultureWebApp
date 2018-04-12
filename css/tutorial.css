@@ -1,4 +1,4 @@
-.div-tutorial{
+#tutorial{
 	height: 174px;
 	width : 171px;
 
@@ -13,5 +13,5 @@
 }
 
 #default_sprite{
-	z-index: 10;
+	z-index: 1;
 }

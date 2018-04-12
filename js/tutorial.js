@@ -5,7 +5,7 @@ $(function(){
 	if(tutorial_step == 0 || tutorial_step == null){
 		var defaultPopUp = createDefaultPopUp();
 
-		attachPopUpBy("div-tutorial", "class", defaultPopUp);
+		attachPopUpBy("tutorial", "id", defaultPopUp);
 	}
 	/*
 	var popUp = createTutotialPopUp("1st pop-up", tutorial_step);
