@@ -1,39 +1,58 @@
-<!DOCTYPE html>
 <html>
 <head>
 
   <title id="header">Culture!</title>
-
+  <link rel="stylesheet" type="text/css" href="css/login.css">
   <link href="https://fonts.googleapis.com/css/family=Centaur" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
+           <link rel="stylesheet" href="css/Head-Foot.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="./css/login.css">
-               <link rel="stylesheet" href="css/Head-Foot.css" />
-      <link rel="stylesheet" href="css/style.css" />
-          <style>
-        .navbar{
+
+  <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+      <style>
+
+          #subject{
+              height:200px;
+              width:100%;
+              resize:none;
+          }
+
+          .navbar{
             margin-bottom: 0px;
             border: none;
         }
         .container-fluid{
             background-color:#322f30;
         }
-              h1{
+        #Continent{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+             h1{
 
 
                   margin: 0;
                   margin-top: 0;
               }
+          .login-box{
+
+              padding-top: 5px;
+
+
+          }
 
 
       </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
 
-<!-- Navigation Bar-->
 <body>
      <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -47,38 +66,34 @@
             <a class="navbar-brand" href="index.html">Culture!</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" tabindex="1">Home</a></li>
-                    <li><a href="login.html" tabindex="2">Login</a></li>
-                    <li><a href="register.html" tabindex="3">Register</a></li>
-                    <li><a href="contact.html" tabindex="4">Contact</a></li>
-                    <li><a href="admin.html" tabindex="5">Admin</a></li>
-                    <li><a href="Suggest.html" tabindex="6">Suggest</a></li>
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"tabindex="1">Home</a></li>
+                    <li><a href="login.html"tabindex="2">Login</a></li>
+                    <li><a href="register.html"tabindex="3">Register</a></li>
+                    <li><a href="contact.html"tabindex="4">Contact</a></li>
+                    <li><a href="admin.html"tabindex="5">Admin</a></li>
+                    <li><a href="Suggest.html"tabindex="6">Suggest</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
-
 <div id="body">
 
 
-    <h1>Culture!</h1>
+<h1>Culture!</h1>
+<br>
 <div class="login-box">
-  <h2>Login</h2>
-    <form id="logForm" method="POST">
-      <p>Username</p>
-      <input type="text" name="username" placeholder="Enter Username" id="userField">
-      <p>Password</p>
-      <input type="password" name="password" placeholder="Enter Password" id="passField">
-      <input type="button" name="submit" value="Login" id="submitBtn">
-      <a href="register.html">Create Account</a>
-    </form>
+  <h2>Contact Us</h2>
+   
+   <h3>Your update has been sent, return to <a href="index.html">Home page?</a></h3>
 
 </div>
+
     </div>
 <!--Validation script -->
-<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
 </body>
+
    <div id="Map-Footer">
 
             <br>
@@ -98,4 +113,5 @@
               <h4 class="_14"> © Copyright 2018 RGU Project Culture </h4>
 
           </div>
+
 </html>
