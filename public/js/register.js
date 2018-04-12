@@ -29,14 +29,14 @@ $('#submitBtn').click(function(){
             err.status = 310;
             return done(err);
 
-        }
+        });
 
   $.ajax({
         type: "POST",
         data: JSON.stringify(obj),
         contentType: "application/json",
         url: "/register"
-});
+  });
 
 
 
