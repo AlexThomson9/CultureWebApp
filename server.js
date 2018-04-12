@@ -130,7 +130,8 @@ app.post('/savefile', function(req, res){
 
 app.post('/register', function(req, res){
 
-  db.collection("userdetails").find({ 'username': req.body.username,'email':req.body.email }, function(err, user) {
+//'email':req.body.obj.email
+  db.collection("userdetails").find({'username': req.body.obj.username}, function(err, user) {
 
       if (err) {
 
@@ -140,11 +141,11 @@ app.post('/register', function(req, res){
 
       //if user found.
       if (user.length!=0) {
-        if(user[0].username){
-          console.log('Username already exists, username: ' + username);
-           }else{
-              console.log('EMAIL already exists, email: ' + email);
-           }
+        if(user[0].req.body.obj.username){
+          console.log('Username already exists, username: ' + req.body.obj.username);
+        }//else{
+            //  console.log('EMAIL already exists, email: ' + email);
+          // }
           var err = new Error();
           err.status = 310;
           return done(err);
