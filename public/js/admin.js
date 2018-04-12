@@ -201,7 +201,7 @@ array.push(v);
 
       $('#Accept').click(function(){
         var c_id = $('#country_id').text();
-        var c_verified = {"_id":"Object_Id("+ c_id+ ")"};
+        var c_verified = {"_id":c_id};
         $.ajax({
               type: "POST",
               data: JSON.stringify(c_verified),
