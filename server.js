@@ -130,7 +130,7 @@ app.post('/savefile', function(req, res){
 
 app.post('/register', function(req, res){
 
-  db.collection("userdetails").find({ 'username': req.body.obj.username,'email':req.body.obj.email }, function(err, user) {
+  db.collection("userdetails").find({ 'username': req.body.username,'email':req.body.email }, function(err, user) {
 
       if (err) {
 
