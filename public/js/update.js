@@ -1,6 +1,7 @@
 $('#madeup').click(function(){
 
-//  $('#CountryTitle').val();
+//var Country =  $('#CountryTitle').val();
+var Country ="Mexico";
     var testingarray = [];
   $.getJSON("map.geojson",function(data){
   testingarray = [];
@@ -25,10 +26,18 @@ $('#madeup').click(function(){
 
         console.log(testingarray);
 
+        if($.inArray(Country, testingarray)){
+
+
+          console.log(wot);
+
+        }else{
+
+          console.log(not);
+        }
     });
 
   });
-  console.log(testingarray);
     var response = "";
   $.ajax({
         type: "GET",
