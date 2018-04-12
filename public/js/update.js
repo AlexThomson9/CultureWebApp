@@ -1,6 +1,21 @@
 $('#madeup').click(function(){
 
-    var country = "Mexico";//$('Country').text();
+    var country = "Mexico";//$('#CountryTitle').val();
+    $.getJSON("map.geojson",function(data){
+      var testingarray = [];
+      $.each(data.features, function(key, value){
+
+        testingarray[];
+        console.log(value);
+        testingarray.push(value)
+
+
+
+      });
+
+
+
+    });
     var response = "";
   $.ajax({
         type: "GET",
@@ -48,7 +63,7 @@ $('#madeup').click(function(){
                               console.log(data.features[1].properties.Country);
 
                               var newMovie = {"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"",
-                              "Country":country},"geometry":{"type":"Point","coordinates":[c_lat,c_lon]}};
+                              "Country":country},"geometry":{"type":"Point","coordinates":[c_lon,c_lat]}};
 
                               // add a new movie to the set
                             //  data.features.push(newMovie);
@@ -73,7 +88,7 @@ $('#madeup').click(function(){
                             });
 
 
-                            
+
 
 
 

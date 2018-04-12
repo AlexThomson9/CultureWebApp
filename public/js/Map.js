@@ -33,6 +33,18 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 {
     attribution: cartodbAttribution
 }).addTo(map);
+
+$.getJSON("map.geojson",function(data){
+  var testingarray = [];
+  $.each(data.features, function(key, value){
+
+    testingarray[];
+    console.log(value);
+    testingarray.push(value)
+
+
+
+  });
         //load the map informtaion
 //$.getJSON("map.geojson",function(data){
 //  console.log(data);
@@ -42,12 +54,12 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
   //  data2[0].geometry.coordinates[0].toString().replaceAll("\"", "");
   console.log(  data2[0].geometry.coordinates[0] + "" +   data2[0].geometry.coordinates[1]);
 
-  var lat = data2[0].geometry.coordinates[0];
+/*  var lat = data2[0].geometry.coordinates[0];
   var lon = data2[0].geometry.coordinates[1];
 
   data2[0].geometry.coordinates[0] = lon;
-  data2[0].geometry.coordinates[1] = lat;  
-
+  data2[0].geometry.coordinates[1] = lat;
+*/
     var mapinfo = {};
     mapinfo.type = "FeatureCollection";
     mapinfo.features = data2;
