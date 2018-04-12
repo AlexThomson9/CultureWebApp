@@ -1,7 +1,7 @@
 $('#madeup').click(function(){
 
 //var Country =  $('#CountryTitle').val();
-var Country ="Texas";
+var Country ="Mexico";
     var testingarray = [];
   $.getJSON("map.geojson",function(data){
   testingarray = [];
