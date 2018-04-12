@@ -62,11 +62,12 @@ app.post('/verified', function(req, res) {
   db.collection('Country_Info').save(result, function(err, result){
     if (err) throw err;
     console.log('saved to database')
+    db.collection('suggest').remove(req.body, function(err, result) {
+    if (err) throw err;
+    });
   });
   });
- db.collection('suggest').remove(req.body, function(err, result) {
- if (err) throw err;
- });
+
 });
 
 
