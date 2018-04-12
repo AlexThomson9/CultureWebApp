@@ -57,7 +57,7 @@ $.getJSON("map.geojson",function(data){
 
       console.log(testingarray);
 
-  }):
+  });
 
 });
         //load the map informtaion
