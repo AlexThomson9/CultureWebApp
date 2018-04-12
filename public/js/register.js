@@ -10,7 +10,6 @@ $('#submitBtn').click(function(){
   obj.username = $('#userField').val();
   obj.password = $('#passField').val();
 
-
   $.ajax({
         type: "POST",
         data: JSON.stringify(obj),
