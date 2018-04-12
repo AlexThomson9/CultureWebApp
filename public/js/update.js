@@ -26,7 +26,7 @@ var Country ="Texas";
 
         console.log(testingarray);
 console.log($.inArray(Country, testingarray));
-        if($.inArray(Country, testingarray)){
+        if($.inArray(Country, testingarray) != -1){
 
 
           console.log("wot");
