@@ -33,33 +33,7 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 {
     attribution: cartodbAttribution
 }).addTo(map);
-  var testingarray = [];
-$.getJSON("map.geojson",function(data){
-testingarray = [];
-    $.getJSON("/Country_Map",function(data2){
-      $.each(data.features, function(key, value){
-        console.log(value.properties.Country);
-        testingarray.push(value.properties.Country)
 
-
-
-      });
-      console.log(data2);
-      $.each(data2, function(key, value){
-        console.log(value);
-        console.log(value.Country);
-        testingarray.push(value.Country)
-
-
-
-      });
-
-
-      console.log(testingarray);
-
-  });
-
-});
         //load the map informtaion
 //$.getJSON("map.geojson",function(data){
 //  console.log(data);
