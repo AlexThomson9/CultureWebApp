@@ -18,12 +18,14 @@ $('#submitBtn').click(function(){
         success: function(data){
           if(username == data[0].username ){
             console.log('Username already exists, username: ' + username);
+            $('.login-box').append("<h5></h5>");
             $('.login-box').append('<h5>Username already exists, username: ' + username + "<h5>");
 
           }else{
+            $('.login-box').append("<h5></h5>");
             $('.login-box').append("<h5>Registration Successful, Now you will be redirected to the login page.</h5>");
                 //set the var to 2 sectons
-                    var delayInMilliseconds = 3000; //2 second
+                    var delayInMilliseconds = 2000; //2 second
                     //set the timeout to run the function
                     setTimeout(function()
                     {
