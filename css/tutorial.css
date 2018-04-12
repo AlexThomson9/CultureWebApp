@@ -5,8 +5,10 @@
 	position: fixed;
 	left: 1%;
 	bottom: 1%; 
+    
+    z-index: 4001;
 }
 
 #default_sprite{
-	z-index: 1;
+	
 }
