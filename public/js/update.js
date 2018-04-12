@@ -1,6 +1,7 @@
 $('#Accept').click(function(){
 
 var Country =  $('#CountryTitle').val();
+console.log(Country);
     var testingarray = [];
   $.getJSON("map.geojson",function(data){
   testingarray = [];
