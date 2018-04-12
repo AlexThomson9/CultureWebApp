@@ -19,28 +19,21 @@ $('#submitBtn').click(function(){
           if(username == data[0].username ){
             console.log('Username already exists, username: ' + username);
             $('.login-box').append('<h5>Username already exists, username: ' + username + "<h5>");
+
+          }else{
+            $('.login-box').append("<h5>Registration Successful, Now you will be redirected to the login page.</h5>");
+                //set the var to 2 sectons
+                    var delayInMilliseconds = 3000; //2 second
+                    //set the timeout to run the function
+                    setTimeout(function()
+                    {
+                    //remove the submission successful as it only needs to be there for a little bit
+                    $('.login-box').find("h5").remove();
+                    window.location.replace("login.html");
+                    //set the timeout to use the 2 second's defined previously
+                  }, delayInMilliseconds);
+                  form.reset();
           }
-
-
-
-
-
         }
   });
-
-
-
-
-  $('.login-box').append("<h5>Registration Successful, Now you will be redirected to the login page.</h5>");
-      //set the var to 2 sectons
-          var delayInMilliseconds = 3000; //2 second
-          //set the timeout to run the function
-          setTimeout(function()
-          {
-          //remove the submission successful as it only needs to be there for a little bit
-          $('.login-box').find("h5").remove();
-          window.location.replace("login.html");
-          //set the timeout to use the 2 second's defined previously
-        }, delayInMilliseconds);
-        form.reset();
 });

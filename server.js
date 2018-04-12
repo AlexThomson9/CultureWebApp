@@ -150,6 +150,5 @@ console.log(req.body);
   db.collection('userdetails').save(req.body, function(err, result) {
   if (err) throw err;
   console.log('saved to database')
-  res.redirect('/')
   })
 });
