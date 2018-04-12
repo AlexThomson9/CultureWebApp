@@ -3,6 +3,8 @@ $('#submitBtn').click(function(){
 
   var obj = {};
   var form = document.getElementById("regForm");
+  username = $('#userField').val();
+  email = $('#emailField').val();
 
   obj.email = $('#emailField').val();
   obj.username = $('#userField').val();
