@@ -86,7 +86,7 @@ function createTutotialPopUp(text, tutorial_step){
 function createDefaultPopUp(){
 	var defaultPopUp = "<div class=\"default-popUp-sprite\">";
 
-	defaultPopUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"images/sprite_1.png\"></div>";
+	defaultPopUp += "<img id=\"default_sprite\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\"></div>";
     
 	return defaultPopUp
 }
