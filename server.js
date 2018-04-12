@@ -51,7 +51,6 @@ res.jsonp(result);
 app.post('/delete', function(req, res) {
  db.collection('suggest').deleteOne(req.body, function(err, result) {
  if (err) throw err;
- res.redirect('/');
  });
 });
 
@@ -64,6 +63,7 @@ app.post('/verified', function(req, res) {
     console.log('saved to database')
     db.collection('suggest').deleteOne(req.body, function(err, result) {
     if (err) throw err;
+    console.log("delete ffs");
     });
   });
   });

@@ -66,6 +66,7 @@ setTimeout(function()
   console.log(testjson[countno].Suggestion);
   $('#Identifier').text(testjson[countno].Identifier);
   $('.textArea').text(testjson[countno].Suggestion);
+  $('#country_id').text(testjson[countno]._id);
   console.log(testjson.length);
   //console.log(response[0]);
 
@@ -108,6 +109,7 @@ $('#back').click(function(){
   //remove the submission successful as it only needs to be there for a little bit
   $('#Identifier').text(testjson[countno].Identifier);
   $('.textArea').text(testjson[countno].Suggestion);
+    $('#country_id').text(testjson[countno]._id);
   //set the timeout to use the 2 second's defined previously
   }, delayInMilliseconds);
 
@@ -138,6 +140,7 @@ $('#back').click(function(){
     //remove the submission successful as it only needs to be there for a little bit
     $('#Identifier').text(testjson[countno].Identifier);
     $('.textArea').text(testjson[countno].Suggestion);
+      $('#country_id').text(testjson[countno]._id);
     //set the timeout to use the 2 second's defined previously
     }, delayInMilliseconds);
 
@@ -197,7 +200,7 @@ array.push(v);
 
 
       $('#Accept').click(function(){
-        var c_id = $('#country_id').val();
+        var c_id = $('#country_id').text();
         var c_verified = {"_id":c_id};
         $.ajax({
               type: "POST",
@@ -212,7 +215,7 @@ array.push(v);
               });
       });
       $('#Reject').click(function(){
-        var c_id = $('#country_id').val();
+        var c_id = $('#country_id').text();
         var c_delete = {"_id":c_id};
         $.ajax({
               type: "POST",
