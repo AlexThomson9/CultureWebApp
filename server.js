@@ -131,7 +131,7 @@ app.post('/savefile', function(req, res){
 app.post('/register', function(req, res){
 console.log(req.body);
 //'email':req.body.obj.email
-  db.collection("userdetails").find({"username": req.body.obj.username}, function(err, user) {
+  db.collection("userdetails").find({"username": req.body.username}, function(err, user) {
 
       if (err) {
 
@@ -141,8 +141,8 @@ console.log(req.body);
 
       //if user found.
       if (user.length!=0) {
-        if(user[0].req.body.obj.username){
-          console.log('Username already exists, username: ' + req.body.obj.username);
+        if(user[0].req.body.username){
+          console.log('Username already exists, username: ' + req.body.username);
         }//else{
             //  console.log('EMAIL already exists, email: ' + email);
           // }
