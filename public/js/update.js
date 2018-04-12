@@ -1,21 +1,34 @@
 $('#madeup').click(function(){
 
-    var country = "Mexico";//$('#CountryTitle').val();
-    $.getJSON("map.geojson",function(data){
-      var testingarray = [];
-      $.each(data.features, function(key, value){
-
-        testingarray = [];
-        console.log(value);
-        testingarray.push(value)
-
-
-
-      });
+//  $('#CountryTitle').val();
+    var testingarray = [];
+  $.getJSON("map.geojson",function(data){
+  testingarray = [];
+      $.getJSON("/Country_Map",function(data2){
+        $.each(data.features, function(key, value){
+          console.log(value.properties.Country);
+          testingarray.push(value.properties.Country)
 
 
+
+        });
+        console.log(data2);
+        $.each(data2, function(key, value){
+          console.log(value);
+          console.log(value.Country);
+          testingarray.push(value.Country)
+
+
+
+        });
+
+
+        console.log(testingarray);
 
     });
+
+  });
+  console.log(testingarray);
     var response = "";
   $.ajax({
         type: "GET",
