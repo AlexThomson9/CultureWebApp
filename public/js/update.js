@@ -29,11 +29,11 @@ var Country ="Mexico";
         if($.inArray(Country, testingarray)){
 
 
-          console.log(wot);
+          console.log("wot");
 
         }else{
 
-          console.log(not);
+          console.log("not");
         }
     });
 
@@ -60,7 +60,7 @@ var Country ="Mexico";
         console.log("wot");
       }else if (response == ""){
 
-          var countryPicked = 'https://restcountries.eu/rest/v2/name/' + country+ '?fields=name;capital;';
+          var countryPicked = 'https://restcountries.eu/rest/v2/name/' + Country+ '?fields=name;capital;';
 
         $.ajax({
               url:countryPicked,
