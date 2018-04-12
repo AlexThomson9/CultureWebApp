@@ -38,8 +38,8 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 $.getJSON("map.geojson",function(data){
 //  console.log(data);
   $.getJSON("/mapinfo",function(data2){
-    delete data2[0]._id;
-    delete data2[1]._id;
+    //delete data2[0]._id;
+    //delete data2[1]._id;
   //  data2[0].geometry.coordinates[0].toString().replaceAll("\"", "");
   console.log(  data2[0].geometry.coordinates[0] + "" +   data2[0].geometry.coordinates[1]);
 
