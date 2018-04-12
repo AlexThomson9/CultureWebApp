@@ -131,7 +131,7 @@ app.post('/savefile', function(req, res){
 app.post('/register', function(req, res){
 console.log(req.body);
 //'email':req.body.obj.email
-  db.collection("userdetails").find({'username': req.body.obj.username}, function(err, user) {
+  db.collection("userdetails").find({"username": req.body.obj.username}, function(err, user) {
 
       if (err) {
 
