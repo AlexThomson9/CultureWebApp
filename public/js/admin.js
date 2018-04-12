@@ -216,7 +216,7 @@ array.push(v);
       });
       $('#Reject').click(function(){
         var c_id = $('#country_id').text();
-        var c_delete = {"_id":"Object_Id("+ c_id+ ")"};
+        var c_delete = {"_id":c_id};
         $.ajax({
               type: "POST",
               data: JSON.stringify(c_delete),
