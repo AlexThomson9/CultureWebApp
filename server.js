@@ -136,9 +136,9 @@ console.log(req.body);
       //if user found.
       console.log(result[0].username);
       console.log(result);
+      res.jsonp(result);
         if(req.body.username == result[0].username ){
           console.log('Username already exists, username: ' + req.body.username);
-          console.log(user);
         }/*else if(req.body.email == email){
 
 
