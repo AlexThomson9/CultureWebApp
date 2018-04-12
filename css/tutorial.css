@@ -7,11 +7,6 @@
 	bottom: 1%; 
 }
 
-.default-popUp-sprite{
-	height: 100%;
-	width: 100%;
-}
-
 #default_sprite{
 	z-index: 1;
 }
