@@ -16,8 +16,8 @@ $('#submitBtn').click(function(){
         contentType: "application/json",
         url: "/register",
         success: function(data){
-          if(username == result[0].username ){
-            console.log('Username already exists, username: ' + req.body.username);
+          if(username == data[0].username ){
+            console.log('Username already exists, username: ' + username);
           }/*else if(req.body.email == email){
 
 
