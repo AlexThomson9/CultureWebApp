@@ -132,15 +132,16 @@ app.post('/register', function(req, res){
 console.log(req.body);
 //'email':req.body.obj.email
   db.collection("userdetails").find({"username": req.body.username}, function(err, user) {
+    if err throw err;
       //if user found.
         if(req.body.username == user ){
           console.log('Username already exists, username: ' + req.body.username);
-        }//else{
-            //  console.log('EMAIL already exists, email: ' + email);
-          // }
-          var err = new Error();
-          err.status = 310;
-          return done(err);
+          console.log(user);
+        }else if(req.body.email == email){
+
+
+          console.log("email takes");
+        }
 
     });
 
