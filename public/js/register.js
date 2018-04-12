@@ -18,7 +18,8 @@ $('#submitBtn').click(function(){
         success: function(data){
           if(username == data[0].username ){
             console.log('Username already exists, username: ' + username);
-          }/*else if(req.body.email == email){
+            $('.login-box').append('<h5>Username already exists, username: ' + username + "<h5>");
+          }
 
 
 
