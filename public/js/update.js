@@ -28,7 +28,7 @@ var Country ="Mexico";
 console.log($.inArray(Country, testingarray));
         if($.inArray(Country, testingarray) != -1){
 
-
+          return;
           console.log("wot");
 
         }else{
@@ -78,14 +78,14 @@ console.log($.inArray(Country, testingarray));
                           var c_lat = cords[0].lat;
                           var c_lon = cords[0].lon;
                           console.log(c_lat + " " + c_lon);
-                          var marker = L.marker([c_lat,c_lon], { Country:country}).addTo(map);
+                          var marker = L.marker([c_lat,c_lon], { Country:Country}).addTo(map);
 
                           $.getJSON( "./map.geojson", function( data ) {
                               // now data is JSON converted to an object / array for you to use.
                               console.log(data.features[1].properties.Country);
 
                               var newMovie = {"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"",
-                              "Country":country},"geometry":{"type":"Point","coordinates":[c_lon,c_lat]}};
+                              "Country":Country},"geometry":{"type":"Point","coordinates":[c_lon,c_lat]}};
 
                               // add a new movie to the set
                             //  data.features.push(newMovie);
