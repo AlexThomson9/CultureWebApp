@@ -44,6 +44,7 @@ testingarray = [];
 
 
       });
+      console.log(data2);
       $.each(data2, function(key, value){
         console.log(value);
         /*console.log(value.properties.Country);
