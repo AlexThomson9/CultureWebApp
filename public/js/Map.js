@@ -45,6 +45,7 @@ $.getJSON("map.geojson",function(data){
 
 
   });
+});
         //load the map informtaion
 //$.getJSON("map.geojson",function(data){
 //  console.log(data);
