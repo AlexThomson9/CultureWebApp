@@ -32,28 +32,6 @@ console.log($.inArray(Country, testingarray));
 
         }else{
 
-          var response = "";
-        $.ajax({
-              type: "GET",
-              url: "/country",
-              data: JSON.stringify(Country),
-              contentType: "application/json",
-              url: "/suggest",
-              success: function (data) {
-              console.log('success', data);
-              response = data;
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-             console.log('error', errorThrown);
-           }
-              });
-            console.log(response);
-
-            if(response != ""){
-
-              console.log("wot");
-            }else if (response == ""){
-
                 var countryPicked = 'https://restcountries.eu/rest/v2/name/' + Country+ '?fields=name;capital;';
 
               $.ajax({
@@ -123,7 +101,7 @@ console.log($.inArray(Country, testingarray));
 
 
       });
-      }
+
 
 
         }
