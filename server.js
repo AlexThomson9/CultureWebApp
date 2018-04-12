@@ -137,11 +137,11 @@ console.log(req.body);
         if(req.body.username == user ){
           console.log('Username already exists, username: ' + req.body.username);
           console.log(user);
-        }else if(req.body.email == email){
+        }/*else if(req.body.email == email){
 
 
           console.log("email takes");
-        }
+        }*/
 
     });
 
