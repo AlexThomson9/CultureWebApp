@@ -134,8 +134,8 @@ console.log(req.body);
   db.collection("userdetails").find({"username": req.body.username}, function(err, result) {
     if (err) throw err;
       //if user found.
-      console.log(result);
-        if(req.body.username == result ){
+      console.log(result.username);
+        if(req.body.username == result.username ){
           console.log('Username already exists, username: ' + req.body.username);
           console.log(user);
         }/*else if(req.body.email == email){
