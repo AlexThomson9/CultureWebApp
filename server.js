@@ -51,10 +51,12 @@ res.jsonp(result);
 app.post('/delete', function(req, res) {
  db.collection('suggest').deleteOne(req.body, function(err, result) {
  if (err) throw err;
+ console.log("delete stuff");
  });
 });
 
 app.post('/verified', function(req, res) {
+  console.log(req.body);
   db.collection('suggest').find(req.body).toArray(function(err, result) {
   if (err) throw err;
  console.log(result);
