@@ -125,3 +125,10 @@ app.post('/savefile', function(req, res){
      }
   });
 });
+
+app.get('/Country_Map', function(req, res) {
+ db.collection('MapInfo').distinct('Country', function(err, result) {
+ if (err) throw err;
+res.jsonp(result);
+ });
+});
