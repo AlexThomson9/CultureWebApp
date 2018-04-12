@@ -39,6 +39,7 @@ $.getJSON("map.geojson",function(data){
   $.each(data.features, function(key, value){
 
     testingarray = [];
+    console.log(value.properties.Country);
     console.log(value);
     testingarray.push(value)
 

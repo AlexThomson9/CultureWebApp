@@ -5,7 +5,7 @@ $('#madeup').click(function(){
       var testingarray = [];
       $.each(data.features, function(key, value){
 
-        testingarray[];
+        testingarray = [];
         console.log(value);
         testingarray.push(value)
 
