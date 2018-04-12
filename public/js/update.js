@@ -51,7 +51,7 @@ console.log($.inArray(Country, testingarray));
                                 var c_lat = cords[0].lat;
                                 var c_lon = cords[0].lon;
                                 console.log(c_lat + " " + c_lon);
-                                var marker = L.marker([c_lat,c_lon], { Country:Country}).addTo(map);
+                            //    var marker = L.marker([c_lat,c_lon], { Country:Country}).addTo(map);
 
                                 $.getJSON( "./map.geojson", function( data ) {
                                     // now data is JSON converted to an object / array for you to use.
