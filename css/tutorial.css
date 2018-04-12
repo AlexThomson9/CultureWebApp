@@ -6,7 +6,7 @@
 	left: 1%;
 	bottom: 1%;
 
-	z-index: 10;
+	
 }
 
 .default-popUp-sprite{
@@ -14,3 +14,6 @@
 	width: 100%;
 }
 
+#default_sprite{
+	z-index: 10;
+}
