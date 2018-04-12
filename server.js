@@ -141,7 +141,7 @@ console.log(req.body);
 
       //if user found.
       if (user.length!=0) {
-        if(user[0].req.body.username){
+        if(req.body.username){
           console.log('Username already exists, username: ' + req.body.username);
         }//else{
             //  console.log('EMAIL already exists, email: ' + email);
