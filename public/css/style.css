@@ -209,7 +209,8 @@ p{
   font-size: 22px;
   font-weight: bold;
   padding-right: 20px;
-  padding-left: 20px
+  padding-left: 20px;
+  letter-spacing: 1px;
 }
 /*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
