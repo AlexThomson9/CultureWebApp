@@ -119,7 +119,7 @@ p{
 
 /*The styling for the tabs on the modal*/
 .tabs{
-  background-color: #555;
+  background-color: #322f30;
   color: white;
   float: left;
   border: none;
@@ -133,7 +133,8 @@ p{
 
 /* Change background color of the tabs when hovering over them */
 .tabs:hover {
-    background-color: #777;
+    background-color: white;
+    color: #322f30;
 }
 
 /*Styling for the content in the modal */
@@ -204,7 +205,15 @@ p{
   height: 100%;
   flex-flow: row wrap;
 }
+.restAPI p{
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
 
+
+
+
+}
 /*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
   /*Default value of the font size */
