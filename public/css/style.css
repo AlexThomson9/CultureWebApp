@@ -99,7 +99,7 @@ p{
 .countryModal{
   display:none;          /* Hidden by default */
   position: fixed;      /*Keeps the modal in the same place */
-  top: 57%;
+  top: 56.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;  /*Created a border for the modal */
@@ -201,11 +201,12 @@ p{
 
 /*The div that will contain the text information retrieved from the API*/
 .restAPI{
-  display: inline-flex;
+  display: flex;
   text-align: center;
   float:right;
   width: 50%;
   height: 24%;
+  flex-flow: row wrap;
 }
 
 /*Sets the font-size of the text retrieved by the API */
@@ -239,4 +240,10 @@ p{
 /*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
+}
+break{
+  flex-basis: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
 }
