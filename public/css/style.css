@@ -244,13 +244,13 @@ p{
   display: none;
   padding: 5px;
 }
-.internalDataDisplay::-webkit-scrollbar {
+.country-modal-content::-webkit-scrollbar {
     width: 15px;
 }
-.internalDataDisplay::-webkit-scrollbar-track {
+.country-modal-content::-webkit-scrollbar-track {
     background-color: #322f30;
 }
-.internalDataDisplay::-webkit-scrollbar-thumb {
+.country-modal-content::-webkit-scrollbar-thumb {
     background-color: #888181;
     border-radius: 5px;
 }
@@ -261,6 +261,12 @@ p{
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
+  letter-spacing: 1.5px;
+padding-bottom: 10px;
+}
+.contentButtons{
+
+  padding-top: 10px;
 }
 break{
   flex-basis: 100%;
