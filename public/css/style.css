@@ -182,7 +182,7 @@ p{
 
 /*Sets the constaints of the restAPI div*/
 .externalDataDisplay .restAPI{
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 
@@ -190,12 +190,12 @@ p{
 .extImg{
   display: inline-block;
   position:absolute;
-  width: 37%;
+  width: 40%;
 }
 
 /*Setting the image size within the extImg div*/
 .extImg img{
-  width: 90%;
+  width: 80%;
   height: 15.5%;
 }
 
@@ -240,6 +240,8 @@ p{
 /*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
 }
 break{
   flex-basis: 100%;
