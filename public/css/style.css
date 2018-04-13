@@ -191,7 +191,6 @@ p{
   display: inline-block;
   position:absolute;
   width: 37%;
-  border: 1px solid white;
 }
 
 /*Setting the image size within the extImg div*/
@@ -207,7 +206,6 @@ p{
   float:right;
   width: 50%;
   height: 24%;
-  border: 1px solid white;
 }
 
 /*Sets the font-size of the text retrieved by the API */
@@ -220,7 +218,7 @@ p{
 .internalDataDisplay {
   display: inline-block;
   /*Workaround for the borders of the externalDataDisplay & internalDataDisplay from clashing*/
-  border-top: 0.25px solid white;
+  border-top: 0.50px solid white;
   /*Styling for the rest of the border*/
  border-left: 1px solid white;
   border-right: 1px solid white;
