@@ -206,13 +206,9 @@ p{
   flex-flow: row wrap;
 }
 .restAPI p{
-  font-size: 1em;
+  font-size: 24px;
   font-weight: bold;
-  text-decoration: underline;
-
-
-
-
+  padding-right: 5px;
 }
 /*Sets the font-size of the text retrieved by the API */
 .restName, .restCurrency, .restLanguage{
