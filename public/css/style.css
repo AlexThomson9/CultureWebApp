@@ -99,7 +99,7 @@ p{
 .countryModal{
   display:none;          /* Hidden by default */
   position: fixed;      /*Keeps the modal in the same place */
-  top: 55%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;  /*Created a border for the modal */
@@ -239,5 +239,4 @@ p{
 /*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
-  border-bottom: 1px solid white;
 }
