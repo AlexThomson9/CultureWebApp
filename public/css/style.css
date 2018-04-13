@@ -181,10 +181,6 @@ p{
 }
 
 /*Sets the constaints of the restAPI div*/
-.externalDataDisplay .restAPI{
-  width: 60%;
-  height: 100%;
-}
 
 /*The div that will contain the image retrieved from the API */
 .extImg{
@@ -195,7 +191,7 @@ p{
 
 /*Setting the image size within the extImg div*/
 .extImg img{
-  width: 80%;
+/*  width: 80%;*/
   height: 15.5%;
 }
 
@@ -204,8 +200,8 @@ p{
   display: flex;
   text-align: center;
   float:right;
-  width: 50%;
-  height: 24%;
+  width: 60%;
+  height: 100%;
   flex-flow: row wrap;
 }
 
