@@ -194,6 +194,7 @@ p{
 .extImg img{
   width: 100%;
   height: 15.5%;
+  box-shadow: 0 0 8px 8px #322f30 inset;
 }
 
 /*The div that will contain the text information retrieved from the API*/
@@ -204,6 +205,7 @@ p{
   width: 60%;
   height: 100%;
   flex-flow: row wrap;
+  overflow: overlay;
 }
 .restAPI p{
   font-size: 22px;
