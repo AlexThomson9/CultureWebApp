@@ -99,7 +99,7 @@ p{
 .countryModal{
   display:none;          /* Hidden by default */
   position: fixed;      /*Keeps the modal in the same place */
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;  /*Created a border for the modal */
@@ -191,6 +191,7 @@ p{
   display: inline-block;
   position:absolute;
   width: 37%;
+  border: 1px solid white;
 }
 
 /*Setting the image size within the extImg div*/
@@ -206,6 +207,7 @@ p{
   float:right;
   width: 50%;
   height: 24%;
+  border: 1px solid white;
 }
 
 /*Sets the font-size of the text retrieved by the API */
