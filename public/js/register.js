@@ -3,7 +3,7 @@ $('#submitBtn').click(function(){
 
   var obj = {};
   var form = document.getElementById("regForm");
-  username = $('#userField').val();
+  user = $('#userField').val();
   email = $('#emailField').val();
 
   obj.email = $('#emailField').val();
@@ -16,10 +16,10 @@ $('#submitBtn').click(function(){
         contentType: "application/json",
         url: "/register",
         success: function(data){
-          if(username == data[0].username ){
-            console.log('Username already exists, username: ' + username);
+          if(user == data[0].username ){
+            console.log('Username already exists, username: ' + user);
             $('.login-box').find("h5").remove();
-            $('.login-box').append('<h5>Username already exists, username: ' + username + "<h5>");
+            $('.login-box').append('<h5>Username already exists, username: ' + user + "<h5>");
 
           }else{
             $('.login-box').find("h5").remove();
