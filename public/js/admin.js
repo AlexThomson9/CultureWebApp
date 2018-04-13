@@ -19,6 +19,7 @@
 //Displays the country picked on the dropdown
   var countno = 0;
     var testjson = [];
+    var Suggestion;
 $('#infoUpdate').change(function(){
 
 
@@ -179,6 +180,7 @@ array.push(v);
             success: function (data) {
             console.log('success', data);
             response = data;
+            Suggestion = data;
             $.each(data, function (i, item) {
               console.log(i, item);
       $('#infoUpdate').prepend($('<option>', {
@@ -194,6 +196,15 @@ array.push(v);
 
 
             });
+
+      console.log(Suggestion);
+
+      if(Suggestion == NULL){
+
+
+        $('#infoUpdate').hide();
+        $('.contentContainer').append("<h3>There are currently no Suggestions!</h3>");
+      }
       //console.log(array);
       //console.log(array.length);
 
@@ -213,6 +224,29 @@ array.push(v);
                console.log('error', errorThrown);
              }
               });
+
+              $('#Identifier').text("");
+              $('.textArea').text("";
+              $('#country_id').text("");
+
+              console.log(testjson.length);
+
+              if(testjson.length >1){
+                countno ++;
+                var delayInMilliseconds = 1000; //1 second
+                //set the timeout to run the function
+                setTimeout(function()
+                {
+                //remove the submission successful as it only needs to be there for a little bit
+                $('#Identifier').text(testjson[countno].Identifier);
+                $('.textArea').text(testjson[countno].Suggestion);
+                  $('#country_id').text(testjson[countno]._id);
+                //set the timeout to use the 2 second's defined previously
+                }, delayInMilliseconds);
+
+
+              }
+
       });
       $('#Reject').click(function(){
         var c_id = $('#country_id').text();
@@ -228,4 +262,28 @@ array.push(v);
                console.log('error', errorThrown);
              }
               });
+
+              $('#Identifier').text("");
+              $('.textArea').text("";
+              $('#country_id').text("");
+
+              console.log(testjson.length);
+
+              if(testjson.length >1){
+                countno ++;
+                var delayInMilliseconds = 1000; //1 second
+                //set the timeout to run the function
+                setTimeout(function()
+                {
+                //remove the submission successful as it only needs to be there for a little bit
+                $('#Identifier').text(testjson[countno].Identifier);
+                $('.textArea').text(testjson[countno].Suggestion);
+                  $('#country_id').text(testjson[countno]._id);
+                //set the timeout to use the 2 second's defined previously
+                }, delayInMilliseconds);
+
+
+              }
+
+
       });

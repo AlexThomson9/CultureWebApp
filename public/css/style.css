@@ -139,9 +139,10 @@ p{
 /*Styling for the content in the modal */
 .country-modal-content{
   padding-top: 5%;
-  background-color: white;  /*Sets background to white */
+  background-color: #322f30;  /*Sets background to white */
   margin: 10 auto;        /* */
-  border: 1px solid black;  /* Border for the content */
+  border: 1px solid white;  /* Border for the content */
+  border-radius: 12px
   overflow: auto;
   padding: 20px;
   width: 80%;              /* Sets the width to full width */
