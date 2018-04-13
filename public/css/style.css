@@ -244,13 +244,23 @@ p{
   display: none;
   padding: 5px;
 }
-.country-modal-content::-webkit-scrollbar {
+.internalDataDisplay::-webkit-scrollbar {
     width: 15px;
 }
-.country-modal-content::-webkit-scrollbar-track {
+.internalDataDisplay::-webkit-scrollbar-track {
     background-color: #322f30;
 }
-.country-modal-content::-webkit-scrollbar-thumb {
+.internalDataDisplay::-webkit-scrollbar-thumb {
+    background-color: #888181;
+    border-radius: 5px;
+}
+.restAPI::-webkit-scrollbar {
+    width: 15px;
+}
+.restAPI::-webkit-scrollbar-track {
+    background-color: #322f30;
+}
+.restAPI::-webkit-scrollbar-thumb {
     background-color: #888181;
     border-radius: 5px;
 }
