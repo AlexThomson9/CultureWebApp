@@ -17,7 +17,7 @@ $('#submitBtn').click(function(){
         url: "/register",
         success: function(data){
         console.log(user)
-          if(user == data.length > 0){
+          if(data.length > 0){
             console.log('Username already exists, username: ' + user);
             $('.login-box').find("h5").remove();
             $('.login-box').append('<h5>Username already exists, username: ' + user + "<h5>");
