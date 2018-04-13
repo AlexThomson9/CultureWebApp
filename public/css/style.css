@@ -186,12 +186,12 @@ p{
 .extImg{
   display: inline-block;
   position:absolute;
-  width: 40%;
+  width: 30%;
 }
 
 /*Setting the image size within the extImg div*/
 .extImg img{
-/*  width: 80%;*/
+  width: 100%;
   height: 15.5%;
 }
 
