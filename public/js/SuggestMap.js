@@ -51,28 +51,28 @@ geojson.eachLayer(function (layer)
     '<div class="rTable">'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Customs:</strong></div>'+
-    '<div class="rTableCell"><a href="#"id="Customs">Update Customs</a></div>'+
+    '<div class="rTableCell"><a href="#"id="Customs">Add Info</a></div>'+
     '</div>'+
     '<section class="Customs-Hide">'+
     '<button type="button" class="Submit">Submit</button>'+
     '</section>'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Gestures:</strong></div>'+
-    '<div class="rTableCell"><a href="#" id="Gestures">Update Gestures</a></div>'+
+    '<div class="rTableCell"><a href="#" id="Gestures">Add Info</a></div>'+
     '</div>'+
     '<section class="Gestures-Hide">'+
     '<button type="button" class="Submit">Submit</button>'+
     '</section>'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Cultural Differences:</strong></div>'+
-    '<div class="rTableCell"><a href="#" id="Cultures">Update Culture</a></div>'+
+    '<div class="rTableCell"><a href="#" id="Cultures">Add Info</a></div>'+
     '<section class="Cultures-Hide" >'+
     '<button type="button" class="Submit">Submit</button>'+
     '</section>'+
     '</div>'+
     '<div class="rTableRow">'+
     '<div class="rTableHead"><strong>Laws:</strong></div>'+
-    '<div class="rTableCell"><a href="#" id="Laws">Update Laws</a></div>'+
+    '<div class="rTableCell"><a href="#" id="Laws">Add Info</a></div>'+
     '<section class="Laws-Hide">'+
     '<button type="button" class="Submit">Submit</button>'+
     '</section>'+

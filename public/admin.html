@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Admin Page: Culture!</title>
     <meta charset="utf-8">
@@ -75,13 +75,6 @@
         <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
         <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
 -->
-    <!--Dropdown country select-->
-        <div id="dropdown">
-          <select id="infoUpdate">
-            <!--These are examples, when database is implemented, js will fill this with values -->
-          <option value="select">Please select a continent</option>
-          </select>
-        </div>
 
 
     <!--Display the currently selected country-->
@@ -89,11 +82,20 @@
         Country
     </div>
 
+
     <section id="adminHeader">
 
     </section>
 <!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
     <div id="Customs">
+      <!--Dropdown country select-->
+          <div id="dropdown">
+            <select id="infoUpdate">
+              <!--These are examples, when database is implemented, js will fill this with values -->
+            <option value="select">Country</option>
+            </select>
+          </div>
+          <br />
       <p>
       Number of Suggestions for this Country:
       <p id="Suggest_Number"></p>

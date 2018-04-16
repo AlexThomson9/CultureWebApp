@@ -226,7 +226,7 @@ array.push(v);
               });
 
               $('#Identifier').text("");
-              $('.textArea').text("";
+              $('.textArea').text("");
               $('#country_id').text("");
 
               console.log(testjson.length);
@@ -264,7 +264,7 @@ array.push(v);
               });
 
               $('#Identifier').text("");
-              $('.textArea').text("";
+              $('.textArea').text("");
               $('#country_id').text("");
 
               console.log(testjson.length);

@@ -26,7 +26,7 @@ $(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
     //count the test variable so each one has a id
     test++;
     //show the hidden element for each option selected
-   $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>remove</a></div>");
+   $("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><a href='#' id='minus' class='minus'>	&minus;</a></div>");
     //$("."+id+"-Hide").show("fast").prepend("<div id ="+test+"><textarea class='Textarea'></textarea><button type='button' id='minus' class='minus'>-</buttom></div>");
     //For handling the button removal interaction and adding the button if it was removed
     if($("."+id+"-Hide").find(".Submit").length)
