@@ -194,7 +194,7 @@ array.push(v);
 
 
     $('#infoUpdate').hide();
-    $('.contentContainer').append("<h3>There are currently no Suggestions!</h3>");
+    $('.contentContainer').prepend("<h3>There are currently no Suggestions!</h3>");
   }
 
           },
