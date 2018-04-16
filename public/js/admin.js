@@ -190,7 +190,7 @@ array.push(v);
   });
   console.log(Suggestion);
 
-  if(Suggestion == NULL){
+  if(Suggestion.length == 0){
 
 
     $('#infoUpdate').hide();
