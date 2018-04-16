@@ -188,6 +188,14 @@ array.push(v);
           text : item
       }));
   });
+  console.log(Suggestion);
+
+  if(Suggestion == NULL){
+
+
+    $('#infoUpdate').hide();
+    $('.contentContainer').append("<h3>There are currently no Suggestions!</h3>");
+  }
 
           },
           error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -197,14 +205,7 @@ array.push(v);
 
             });
 
-      console.log(Suggestion);
 
-      if(Suggestion == NULL){
-
-
-        $('#infoUpdate').hide();
-        $('.contentContainer').append("<h3>There are currently no Suggestions!</h3>");
-      }
       //console.log(array);
       //console.log(array.length);
 
