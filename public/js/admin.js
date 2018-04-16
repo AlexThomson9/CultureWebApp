@@ -220,6 +220,15 @@ array.push(v);
               contentType: "application/json",
               url: "/verified",
               success: function (data) {
+                $('#Customs').append("<h3>Record Approved Successfully!</h3>");
+                var delayInMilliseconds = 2000; //1 second
+                //set the timeout to run the function
+                setTimeout(function()
+                {
+                //remove the submission successful as it only needs to be there for a little bit
+                $('#Customs').find("h3").remove();
+                //set the timeout to use the 2 second's defined previously
+              }, delayInMilliseconds);
               console.log('success', data);},
               error: function (XMLHttpRequest, textStatus, errorThrown) {
                console.log('error', errorThrown);
@@ -258,6 +267,15 @@ array.push(v);
               contentType: "application/json",
               url: "/delete",
               success: function (data) {
+                $('#Customs').append("<h3>Record Deleted Successfully!</h3>");
+                var delayInMilliseconds = 2000; //1 second
+                //set the timeout to run the function
+                setTimeout(function()
+                {
+                //remove the submission successful as it only needs to be there for a little bit
+                $('#Customs').find("h3").remove();
+                //set the timeout to use the 2 second's defined previously
+              }, delayInMilliseconds);
               console.log('success', data);},
               error: function (XMLHttpRequest, textStatus, errorThrown) {
                console.log('error', errorThrown);
