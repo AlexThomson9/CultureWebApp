@@ -50,9 +50,8 @@ res.jsonp(result);
 
 app.post('/delete', function(req, res) {
   console.log(req.body._id);
-  var query = {"_id": "ObjectID("req.body._id")"};
-  console.log(query);
- db.collection('suggest').deleteOne(req.body, function(err, result) {
+//  console.log(query);
+ db.collection('suggest').deleteOne({_id: ObjectID(req.body._id)}, function(err, result) {
  if (err) throw err;
  console.log("delete stuff");
  res.jsonp("deleted");
