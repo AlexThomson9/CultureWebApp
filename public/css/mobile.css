@@ -139,11 +139,11 @@ p{ font-family: 'Centaur';}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;  /*Created a border for the modal */
+/*  border: 1px solid black; */ /*Created a border for the modal */
   z-index: 99999;           /* Sits it on top of the page, wouldn't normally set the index this high but had issues with the modal displaying over the map*/
   height: 100%;         /* Full height */
   width: 100%;          /* Full width */
-  overflow:auto;        /* Enables scroll if/when needed */
+  /*overflow:auto; */       /* Enables scroll if/when needed */
   background-color: #322f30;
 }
 
