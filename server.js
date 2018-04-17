@@ -32,6 +32,12 @@ app.get('/Suggest', function(req, res) {
 app.get('/Login', function(req, res) {
  res.render('pages/Login');
 });
+app.get('/Register', function(req, res) {
+ res.render('pages/Register');
+});
+app.get('/Contact', function(req, res) {
+ res.render('pages/Contact');
+});
 app.get('/Countries', function(req, res) {
  db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
