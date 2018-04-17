@@ -1,7 +1,7 @@
-$(function(){ 
+var tutorial_step = 0;
+var popUp;
 
-	var tutorial_step = 0;
-	var popUp;
+$(function(){ 
 
 	var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
 	var text_step_2 = "Here's the Home page button, it will get where we are now.";
@@ -59,44 +59,7 @@ $(function(){
 		$('#tutorial-popUp-gotItButton').onClick(function(){
 			popUp = $('div-tuto-step_' + tutorial_step - 1).detach();
 
-			switch(tutorial_step){
-				case 2:
-
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 3:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 4:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 5:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 6:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 7:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 8:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 9:
-					attachPopUpBy("", "class", popUp);
-					break;
-				case 10:
-					attachPopUpBy("", "class", popUp);
-					break;
-			}
-
-			if(tutorial_step > 1 && tutorial_step < 11){
-				tutorial_step++;
-			}
-
-			else{
-				tutorial_step = 0;
-			}
+			createPopUpBY(tutorial_step);
 
 		});
 	}
@@ -109,33 +72,38 @@ $(function(){
 
 function createTutotialPopUp(text, tutorial_step){
 
-	/*var popUp = "<div class=\"tutorial-popUp\">";
+	var popUp = "<div class=\"div-tuto-step_" + tutorial_step + "\">";s
 
-	popUp += "<div class=\"tutorial-popUp-textAndButtons\">";
+		popUp += "<div class=\"tutorial-popUp-textAndButtons\">";
 
-		popUp += "<p id=\"tutorial-popUp-text\">" + text + "</p>";
-		popUp += "<button id=\"tutorial-popUp-gotItButton\">Got It</button>";
-		popUp += "<a id=\"tutorial-popUp-skipButton\" href=\"#\" >Skip tutorial</a>";
+			popUp += "<p id=\"tutorial-popUp-text\">" + text + "</p>";
+			popUp += "<button id=\"tutorial-popUp-gotItButton\">Got It</button>";
+			popUp += "<a id=\"tutorial-popUp-skipButton\" href=\"#\" >Skip tutorial</a>";
+
+		popUp += "</div>";
+
+		popUp += "<div class=\"sprite\">"
+
+			if(tutorial_step % 2 == 1 ){
+				
+				popUp += "<img id=\"sprite_1\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\">";
+				popUp += "</div><div class=\"bubble\">"
+				popUp += "<img id=\"bubble_1\" scr=\"images/pop-up_bubble_1.png\">";
+			}
+
+			else {
+				popUp += "<img class=\"sprite\" id=\"sprite_2\" src=\"images/sprite_2.png\" height=\"209\" width=\"200\">";
+				popUp += "</div><div class=\"bubble\">"
+				popUp += "<img class=\"bubble\" id=\"bubble_2\" scr=\"images/pop-up_bubble_2.png\">";
+			}
+
+		popUp += "</div>";
 
 	popUp += "</div>";
 
-	popUp += "<div class=\"tutorial-popUp-sprite-and-bubble\">";
-
-	if(tutorial_step == 0){
-		popUp += "<img class=\"sprite\" id=\"sprite_1\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\">";
-		popUp += "<img class=\"bubble\" id=\"bubble_1\" scr=\"images/pop-up_bubble_1.png\">";
-	}
-	else if (tutorial_step > 0 && tutorial_step < 8){
-		popUp += "<img class=\"sprite\" id=\"sprite_2\" src=\"images/sprite_2.png\" height=\"174\" width=\"171\">";
-		popUp += "<img class=\"bubble\" id=\"bubble_2\" scr=\"images/pop-up_bubble_2.png\">";
-	} 
-
-	popUp += "</div>";
-
-	popUp += "</div>";
-
-	return popUp;*/
-
+	return popUp;
+	
+	/*
 	var popUp;
 
 	if(tutorial_step == 1){
@@ -145,7 +113,7 @@ function createTutotialPopUp(text, tutorial_step){
 
 	}
 
-	return popUp;
+	return popUp;*/
 }
 
 function createDefaultPopUp(){
@@ -174,7 +142,7 @@ function attachPopUpBy(name, type, popUp){
 function updateCssOfTutorialDiv(tutorial_step){
 	switch(tutorial_step){
 		case 1:
-			$('#tutorial').css({height: "200px", width: "200px", right: "", top: ""});
+			$('#tutorial').css({height: "385px", width: "373px", position: "fixed", left: "1%", bottom: "1%", z-index: "4001";});
 			break;
 		case 2:
 			$('#tutorial').css();
@@ -203,5 +171,47 @@ function updateCssOfTutorialDiv(tutorial_step){
 		case 10:
 			$('#tutorial').css();
 			break;
+	}
+}
+
+function createPopUpBY(current_step){
+
+	switch(current_step){
+		case 2:
+
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 3:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 4:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 5:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 6:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 7:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 8:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 9:
+			attachPopUpBy("", "class", popUp);
+			break;
+		case 10:
+			attachPopUpBy("", "class", popUp);
+			break;
+	}
+
+	if(tutorial_step > 1 && tutorial_step < 11){
+		tutorial_step++;
+	}
+
+	else{
+		tutorial_step = 0;
 	}
 }
