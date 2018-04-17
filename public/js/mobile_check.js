@@ -5,6 +5,6 @@ if(window.location.href == "http://flood-toyota-8080.codio.io/"){
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Redirects the user to the mobile version of the website
-  $(location).attr('href', 'mobile-index')
+  $(location).attr('href', 'Mobile-index')
 }
 }
