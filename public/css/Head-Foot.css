@@ -1,18 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-a {
+#Map-Footer a {
     text-decoration: none;
     color: #fff;
 }
-p > a:hover{
+#Map-Footer p > a:hover{
     color: #d9d9d9;
     text-decoration:  underline;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+#Map-Footer h6 {
     margin:  1% 0 1% 0;
 }
 ._12 {
@@ -22,7 +19,7 @@ h6 {
     font-size: 1.4em;
     align-content: center;
 }
-ul {
+#Map-Footer ul {
     padding:0;
     list-style: none;
 }
@@ -34,7 +31,7 @@ ul {
 .social-icon {
     color: #fff;
 }
-ul.social-icons {
+#Map-Footer ul.social-icons {
     margin-top: 10px;
     text-align: center;
 }
@@ -118,7 +115,7 @@ ul.social-icons {
 }
 .fa-google-plus:hover {
     background-color: #e25714;
-} 
+}
 
 
 
@@ -132,7 +129,7 @@ ul.social-icons {
     position:relative;
     color: white;
     bottom: 0;
-    
+
    /** z-index: 5000;*/
 }
 
@@ -140,4 +137,3 @@ ul.social-icons {
 {
     border-radius:4px;border:1px solid #AAAAAA;
 }
-

@@ -62,19 +62,7 @@
   	clear: both;
   	height: 0;
 }
-        a:link {
-    color: antiquewhite;
-}
 
-/* visited link */
-a:visited {
-    color: lightblue;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
         #minus{
 
 

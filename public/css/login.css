@@ -61,7 +61,7 @@ html{
 }
 
 /*Sets Title style*/
-h1{
+.login-page h1{
   margin:0px;
   text-align: center;
   font-family: "Centaur";
@@ -72,7 +72,7 @@ h1{
    text-shadow: 0 0 8px #FFFFFF;
 }
 /*Sets style for the text in login/register form*/
-h2{
+.login-page h2{
   margin:0;
   padding:0 0 20px;
   text-align: center;
