@@ -1,3 +1,8 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha3.min.js.map"></script>
+
+
 
 $('#submitBtn').click(function(){
 
@@ -6,10 +11,12 @@ $('#submitBtn').click(function(){
   user = $('#userField').val();
   email = $('#emailField').val();
   password = $('#passField').val();
+  var hash = CryptoJS.SHA3(password);
+
 
   obj.email = user;
   obj.username = email;
-  obj.password = password;
+  obj.password = hash;
 
   $.ajax({
         type: "POST",
