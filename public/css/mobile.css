@@ -149,13 +149,13 @@ p{ font-family: 'Centaur';}
 
 /*Styling for the content in the modal */
 .country-modal-content{
-  background-color: white;  /*Sets background to white */
+  background-color: #322f30;  /*Sets background to white */
   margin: 10%, auto;        /* */
   border: 1px solid black;  /* Border for the content */
   padding: 20px;
   width: 100%;              /* Sets the width to full width */
   height: 100%;             /* Sets the height to full size*/
-
+  color: white;
 
   /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.5); */
     }
@@ -177,17 +177,18 @@ p{ font-family: 'Centaur';}
 /*The div that contains the content of the external API*/
 .externalDataDisplay{
   display: inline-block;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width:100%;
   height:15%;
+      padding-bottom: 120px;
 }
 
 /*The div that will contain the image retrieved from the API */
 .extImg{
   display: inline-block;
   position:absolute;
-  width: 45%;
-  height: 14%;
+  width: 40%;
+  height: 13%;
 }
 
 /*The styling of the image*/
@@ -197,6 +198,7 @@ p{ font-family: 'Centaur';}
   float:left;
   height: 100%;
   width: 100%;
+border-radius: 20px;
 
 }
 
@@ -219,19 +221,22 @@ p{ font-family: 'Centaur';}
 .internalDataDisplay {
   display: inline-block;
   /*Workaround for the borders of the externalDataDisplay & internalDataDisplay from clashing*/
-  border-top: 0.25px solid black;
-  /*Styling for the rest of the border*/
+ /* border-top: 0.25px solid black;
+  /*Styling for the rest of the border
   border-left: 1px solid black;
   border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black;*/
   width: 100%;
   height: 75%;
 }
 
+
 /*Sets the max size one of the images can be in terms of the div*/
 .internalDataDisplay img{
   width: 50%;
-  height: 100%;
+     height: 70%;
+    border-radius: 50%;
+    padding-left: 5px;
 }
 
 .serverContent{
@@ -243,7 +248,7 @@ p{ font-family: 'Centaur';}
 /*Styling for the title of the modal */
 #countryTitle {
   text-align: center;
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
 }
 #TitleBar {
     width: 100%;
@@ -288,6 +293,8 @@ p{ font-family: 'Centaur';}
 /*The div that contains the return button*/
 .bottom-Display{
   width: 100%;
+    text-align: center;
+    padding-top: 5px;
 
 }
 
@@ -303,9 +310,12 @@ p{ font-family: 'Centaur';}
 .returnBtn{
   display: inline;
   float: none;
-  width: 100%;
+  width: 80%;
   height: 10%;
   text-align: center;
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
 }
 
 
