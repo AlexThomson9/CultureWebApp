@@ -1,0 +1,67 @@
+
+<html lang="en">
+<head>
+
+<% include ../partials/Suggest-head %>
+
+  <title id="header">Culture!</title>
+
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+
+  </header>
+  <section id="countryInfoTesting">
+  <!--The Popup Modal-->
+  <div id="infoModal" class="countryModal">
+  <!--The Close button on the modal-->
+  <div class="closeFunction">
+    <span class="country-close">&times;</span>
+  </div>
+  <!-- Modal content -->
+  <div class="country-modal-content">
+    <!--Modal Title-->
+    <h1 id="countryTitle"> Culture! </h1>
+    <!--This div sets the constaints for the content retrieved from the API -->
+    <div class="externalDataDisplay">
+      <!--The country image retrieved from the API-->
+      <div class="extImg">
+        <img class="flagImage" src=https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg>
+      </div>
+      <!--The information retrieved from the API-->
+      <div class="restAPI">
+        <h4 class="restName">  <br></h4>
+        <h4 class="restLanguage">Language: ENG GER <br></h4>
+        <h4 class="restCurrency">Currency: £$ </h4>
+      </div>
+    </div>
+    <!--This div sets the constraints for the content retrieved from the server-->
+    <div class="internalDataDisplay">
+      <div class="serverContent">
+        <p> Internal data will be displayed here </p>
+      </div>
+      <!--Splitting the sections up so that it fits the screen better-->
+      <div class="top-Display">
+        <img id="customsClick"  class="leftAlign"  src ="img/customs.jpeg">
+        <img id="gesturesClick" class="rightAlign" src ="img/gestures.jpeg">
+      </div>
+      <div class="middle-Display" >
+        <img id="cultureClick" class="leftAlign" src ="img/culture.jpeg">
+        <img id="lawClick" class="rightAlign" src ="img/law.jpeg">
+      </div>
+      <!--The modal footer-->
+      <div class="bottom-Display">
+        <button name="popupReturn" class="popReturn">Back To Menu</button>
+        <button name="returnFunction" class="returnBtn">Back To Map</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+    <footer>
+
+      <% include ../partials/Suggest-footer %>
+    </footer>
+</body>
+</html>
