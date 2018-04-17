@@ -41,8 +41,8 @@ app.get('/Contact', function(req, res) {
 app.get('/Admin', function(req, res) {
  res.render('pages/Admin');
 });
-app.get('/Mobile', function(req, res) {
- res.render('pages/Mobile');
+app.get('/mobile', function(req, res) {
+ res.render('pages/mobile');
 });
 app.get('/Countries', function(req, res) {
  db.collection('suggest').distinct('Country', function(err, result) {
