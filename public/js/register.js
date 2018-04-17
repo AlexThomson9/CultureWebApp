@@ -1,6 +1,3 @@
-var passwordHash = require('password-hash');
-
-
 
 $('#submitBtn').click(function(){
 
@@ -12,8 +9,8 @@ $('#submitBtn').click(function(){
 
   obj.email = user;
   obj.username = email;
-  obj.password = passwordHash.generate(password);
-  
+  obj.password = password;
+
   $.ajax({
         type: "POST",
         data: JSON.stringify(obj),
