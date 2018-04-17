@@ -23,6 +23,30 @@ html{
 #fname{}
 
 #lname{}
+  #contact-Button{
+
+    border: none;
+    outline: none;
+    height:auto;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+  /*  border-radius: 15px;*/
+
+    border-style: solid;
+    border-color: white;
+  }
+  #contact-Button:hover{
+
+    height:auto;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    transform: scale(1.2);;
+    transition: .3s;
+  }
 
 .login-box{
     width: 320px;

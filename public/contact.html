@@ -49,30 +49,7 @@
               top: 55%;
 
           }
-          #contact-Button{
-
-            border: none;
-            outline: none;
-            height:auto;
-            background: transparent;
-            color: white;
-            font-size: 18px;
-          /*  border-radius: 15px;*/
-
-            border-style: solid;
-            border-color: white;
-          }
-          #contact-Button:hover{
-
-            height:auto;
-            background: transparent;
-            color: white;
-            font-size: 18px;
-            text-decoration: underline;
-            font-weight: bold;
-            transform: scale(1.2);;
-            transition: .3s;
-          }
+          
 
 
 
@@ -155,28 +132,7 @@
 <!--Validation script -->
 <script type="text/javascript" src="js/register.js"></script>
 <script>
-$('#Ctry-Issue').click(function(){
 
-
-  $('#Country-Issue').append("<input type='text' placeholder='Country of issue' /> <a id='minus'>&#8722;</a>");
-
-
-
-
-
-});
-$(document).on('click', "#Country-Issue",function(evt){
-
-  if($(evt.target).is('#minus'))
-  {
-      //remove the last textarea and the remove link
-      $(this).find('input').last().remove();
-      $(this).find('a').last().remove();
-      //if its the last textarea then also remove the button
-
-  }
-
-});
 
 
 </script>

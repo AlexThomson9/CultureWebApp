@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title id="header">Culture!</title>
+  <% include ../partials/head %>
+</head>
+
+<!-- Navigation Bar-->
+<body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <div id="body">
+
+
+    <!--<h1>Culture!</h1>-->
+    <br>
+    <div class="login-box">
+      <h2>Contact Us</h2>
+        <form id="regForm" method="POST">
+          <p>Full Name</p>
+          <input type="text" name="FullName" placeholder="Full Name" required>
+          <p>E-Mail</p>
+          <input type="text" name="E-mail" placeholder="E-mail" required>
+
+          <!--dropdown menu for list of issues-->
+              <label for="country">Issue</label>
+              <div id = "dropdown-menu">
+              <select id="country">
+                <option value="">please select an issue</option>
+                <option value="australia">Incorrect information</option>
+                <option value="canada">Add information - Law</option>
+                <option value="usa">Add information - Culture</option>
+                <option value="o">Add information - Customs</option>
+                <option value="a">Add information - Gestures</option>
+                <option value="e">Map Error</option>
+                <option value="other">Other - Specify</option>
+              </select>
+    <br />
+
+              </div>
+              <div  id="Country-Issue">
+                  <button id="Ctry-Issue" type="button">Country of Issue</button>
+              </div>
+
+
+              <textarea id="Subject-Text" name="subject" placeholder="Please provide a description of the issue.."></textarea>
+              <div id = "button-padding">
+                      <input type="button" name="submit" value="Submit" id="contact-Button">
+              </div>
+        </form>
+
+    </div>
+
+        </div>
+
+<!--Validation script -->
+
+<footer>
+<% include ../partials/footer %>
+
+</footer>
+</body>
+
+</html>
