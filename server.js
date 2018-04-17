@@ -143,7 +143,7 @@ console.log(req.body);
   else{
     db.collection('userdetails').save(req.body, function(err, result) {
     if (err) throw err;
-    console.log('saved to database')
+    console.log('saved to database');
     })
   }
 
