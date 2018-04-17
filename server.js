@@ -15,6 +15,10 @@ MongoClient.connect(link, function(err, database){
  db = database;
  app.listen(8080);
 });
+app.set('view engine', 'ejs');
+app.get('/', function(req, res) {
+ res.render('pages/index');
+});
 
 app.get('/all', function(req, res) {
  db.collection('suggest').find().toArray(function(err, result) {
