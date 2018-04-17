@@ -135,11 +135,17 @@ console.log(req.body);
     if (err) throw err;
       res.jsonp(result);
       console.log(result);
+  });
 
-    });
+  if (result.length > 0){
+    console.log("username taken gadjee");
+  }
+  else{
+    db.collection('userdetails').save(req.body, function(err, result) {
+    if (err) throw err;
+    console.log('saved to database')
+    })
+  }
 
-  db.collection('userdetails').save(req.body, function(err, result) {
-  if (err) throw err;
-  console.log('saved to database')
-  })
+
 });
