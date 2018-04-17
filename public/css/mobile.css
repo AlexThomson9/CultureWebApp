@@ -271,13 +271,13 @@ border-radius: 20px;
 /*The div that contains the first two interactive images*/
 .top-Display{
   width: 100%;
-  height: 45%;
+  height: 40%;
 }
 
 /*The div that contains the last two interactive images*/
 .middle-Display{
   width:100%;
-  height: 45%;
+  height: 40%;
 }
 
 /*Forces the first image to the left of the div*/
