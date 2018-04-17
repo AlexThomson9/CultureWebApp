@@ -15,6 +15,7 @@ $('#submitBtn').click(function(){
         data: JSON.stringify(obj),
         contentType: "application/json",
         url: "/register",
+        
         success: function(data){
         console.log(user)
           if(data.length > 0){

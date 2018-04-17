@@ -130,7 +130,7 @@ app.post('/savefile', function(req, res){
 
 app.post('/register', function(req, res){
 console.log(req.body);
-  db.collection("userdetails").find({"username": req.body.username}).toArray(function(err, result) {
+  db.collection("userdetails").find({"username": req.body.username || "email": req.body.email}).toArray(function(err, result) {
     if (err) throw err;
       res.jsonp(result);
       console.log(result);
