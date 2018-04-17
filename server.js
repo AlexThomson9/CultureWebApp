@@ -17,7 +17,7 @@ MongoClient.connect(link, function(err, database){
 });
 app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
- res.render('pages/index');
+ res.render('pages/Index');
 });
 
 app.get('/all', function(req, res) {
