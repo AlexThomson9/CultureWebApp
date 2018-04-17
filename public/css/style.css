@@ -84,6 +84,7 @@ body{
 h2 {
 		/*rgba(25, 157, 210, 0.55)*/
     font-family: 'Centaur';
+    text-align: center;
 }
 
 p{
