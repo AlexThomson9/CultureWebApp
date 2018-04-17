@@ -1,2 +1,10 @@
 var my_image = new Image();
 my_image.src = '../images/background.jpg';
+var my_image_2 = new Image();
+my_image_2.src = '../images/culture.jpg';
+var my_image_3 = new Image();
+my_image_3.src = '../images/customs.jpg';
+var my_image_4 = new Image();
+my_image_4.src = '../images/gestures.jpg';
+var my_image_5 = new Image();
+my_image_5.src = '../images/law.jpg';
