@@ -1,3 +1,6 @@
+var passwordHash = require('password-hash');
+
+
 
 $('#submitBtn').click(function(){
 
@@ -5,17 +8,18 @@ $('#submitBtn').click(function(){
   var form = document.getElementById("regForm");
   user = $('#userField').val();
   email = $('#emailField').val();
+  password = $('#passField').val();
 
-  obj.email = $('#emailField').val();
-  obj.username = $('#userField').val();
-  obj.password = $('#passField').val();
-
+  obj.email = user;
+  obj.username = email;
+  obj.password = passwordHash.generate(password);
+  
   $.ajax({
         type: "POST",
         data: JSON.stringify(obj),
         contentType: "application/json",
         url: "/register",
-        
+
         success: function(data){
         console.log(user)
           if(data.length > 0){
