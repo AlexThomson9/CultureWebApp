@@ -26,7 +26,9 @@ app.get('/all', function(req, res) {
 res.jsonp(result);
  });
 });
-
+app.get('/Suggest', function(req, res) {
+ res.render('pages/Suggest');
+});
 app.get('/Countries', function(req, res) {
  db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
