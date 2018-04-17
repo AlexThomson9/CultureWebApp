@@ -310,7 +310,7 @@ border-radius: 20px;
 .returnBtn{
   display: inline;
   float: none;
-  width: 80%;
+  width: 100%;
   height: 10%;
   text-align: center;
     background-color: transparent;
@@ -342,4 +342,3 @@ border-radius: 20px;
     font-size: 1em;
   }
 }
- 
