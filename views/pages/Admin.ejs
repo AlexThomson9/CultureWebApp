@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title id="header">Culture!</title>
+  <% include ../partials/head %>
+</head>
+
+<!-- Navigation Bar-->
+<body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <div id="body">
+      <div class="contentContainer">
+        <!-- Category select tabs-->
+
+          <!--  <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
+            <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
+            <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
+            <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
+    -->
+
+
+        <!--Display the currently selected country-->
+        <div id="CountryTitle">
+            Country
+        </div>
+
+
+        <section id="adminHeader">
+
+        </section>
+    <!--Placeholder function, once fully implemented will display database output dependant on the tab and country selected.-->
+        <div id="Customs">
+          <!--Dropdown country select-->
+              <div id="dropdown">
+                <select id="infoUpdate">
+                  <!--These are examples, when database is implemented, js will fill this with values -->
+                <option value="select">Country</option>
+                </select>
+              </div>
+              <br />
+          <p>
+          Number of Suggestions for this Country:
+          <p id="Suggest_Number"></p>
+          </p>
+          <br />
+          <p>
+          Identifier for Suggestion:
+          <p id="Identifier"></p>
+          </p>
+          <br />
+          <textarea class="textArea">This will display the Customs text retrieved from the database
+          </textarea>
+          <br />
+            <p id="Author"></p>
+
+            <p id="country_id" type="text" >
+            </p>
+        </div>
+
+
+
+    <!--Submit and Cancel buttons-->
+      <div class="Buttons">
+        <a id="back">back</a>
+        <button id="Accept">Approve</button>
+        <button id="Reject">Reject</button>
+        <a id="next">next</a>
+      </div>
+
+
+      </div>
+        </div>
+<!--Validation script -->
+
+<footer>
+<% include ../partials/footer %>
+
+</footer>
+</body>
+
+</html>

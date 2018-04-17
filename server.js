@@ -38,6 +38,9 @@ app.get('/Register', function(req, res) {
 app.get('/Contact', function(req, res) {
  res.render('pages/Contact');
 });
+app.get('/Admin', function(req, res) {
+ res.render('pages/Admin');
+});
 app.get('/Countries', function(req, res) {
  db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
