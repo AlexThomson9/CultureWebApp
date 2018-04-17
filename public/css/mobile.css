@@ -144,7 +144,7 @@ p{ font-family: 'Centaur';}
   height: 100%;         /* Full height */
   width: 100%;          /* Full width */
   overflow:auto;        /* Enables scroll if/when needed */
-  background-color: rgba(0,0,0,0.9);
+  background-color: #322f30;
 }
 
 /*Styling for the content in the modal */
