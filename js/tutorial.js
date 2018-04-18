@@ -1,92 +1,88 @@
-//GLOBAL VARIABLES//
-
-var tutorial_step = 0;
-var popUp;
-
-var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
-var text_step_2 = "Here's the Home page button, it will get where we are now.";
-var text_step_3 = "Here's the Login button, where you can Log to your account.";
-var text_step_4 = "Here's the Register button, it will allow to create an account.";
-var text_step_5 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
-var text_step_6 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
-var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
-
-var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
-var text_step_9 = "";
-var text_step_10 = "";
-
 
 //FUNCTION WHICH IS CALLED AUTOMATICLY//
 $(function(){ 
 
-	if(tutorial_step == null){
-		tutorial_step = 0;
-	}
+	var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
+	var text_step_2 = "Here's the Home page button, it will get where we are now.";
+	var text_step_3 = "Here's the Login button, where you can Log to your account.";
+	var text_step_4 = "Here's the Register button, it will allow to create an account.";
+	var text_step_5 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
+	var text_step_6 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
+	var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
 
-	if(tutorial_step == 0){
+	var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
+	var text_step_9 = "";
+	var text_step_10 = "";
 
-		var defaultPopUp = createDefaultPopUp();
-		attachPopUpBy("tutorial", "id", defaultPopUp);
 
-		$('#default_sprite').click(function(){
-				console.log("previous var = " + tutorial_step);
-			tutorial_step++;
-				console.log("new var = " + tutorial_step);
-			$(this).detach();
-		});
-	}
+	var tutorial_current_step = 0;
+	var last_step = 0;
+	var popUp;
 
-	if(tutorial_step == 1){
-			console.log("here we are in step 1");
+	var defaultPopUp = createDefaultPopUp();
+	attachPopUpBy("tutorial", "id", defaultPopUp);
 
-		updateCssOfTutorialDiv(tutorial_step);
+	$('#default_sprite').click(function(){
+		tutorial_current_step++;
+		last_step = tutorial_current_step;
+		$(this).detach();
 
-		popUp = createTutotialPopUp(text_step_1, tutorial_step);
-		attachPopUpBy("turorial", "id", popUp);
-	}
+		createPopUpBY(tutorial_current_step);
+		attachPopUpBy("tutorial", "id", popUp);
 
-	else{
-		console.log("you are in the last else");
-	}
-/*
-	$('#tutorial-skipButton').addEventListener('click', function(){
-		tutorial_step = 0;	
-	});
+		do{			
 
-	$('#tutorial-gotItButton').addEventListener('click', function(){
-		detachPopUpBY(tutorial_step);
-		tutorial_step++;
+			if(last_step != tutorial_current_step){
+
+				detachPopUpBY(last_step);
+
+				last_step = tutorial_current_step;
+
+				createPopUpBY(tutorial_current_step);
+				attachPopUpBy("tutorial", "id", popUp);
+			}
+
+			$('#sprite_' + tutorial_current_step).click(function(){
+				$('div-tuto-step_' + tutorial_current_step).detach();
+				tutorial_current_step++;
+			});
+
+			$('#tutorial-skipButton').click(function(){
+				$('div-tuto-step_' + tutorial_current_step).detach();
+				tutorial_current_step = 0;
+			});
+
+		}while(tutorial_current_step != 0 && tutorial_current_step < 10);
 	});
 
 	//TitleBar-d3
-*/
 })
 
 function createTutotialPopUp(text, tutorial_current_step){
 
-	var popUp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";s
+	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";s
 
-		popUp += "<div class=\"tutorial-textAndButtons\">";
+		popUp_temp += "<div class=\"tutorial-textAndButtons\">";
 
-			popUp += "<p id=\"tutorial-text\">" + text + "</p>";
-			popUp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
+			popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
+			popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
 
-		popUp += "</div>";
+		popUp_temp += "</div>";
 
-		popUp += "<div class=\"sprite\">"
+		popUp_temp += "<div class=\"sprite\">"
 
 			if(tutorial_current_step == 1){
-				popUp += "<img id=\"sprite_1\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
+				popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
 			}
 			else {
-
+				popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_2_talking.png\" height=\"405\" width=\"307\"></div>";
 			}
 
-		popUp += "</div>";
+		popUp_temp += "</div>";
 
-	popUp += "</div>";
+	popUp_temp += "</div>";
 
-	return popUp;
+	return popUp_temp;
 }
 
 function createDefaultPopUp(){
@@ -113,6 +109,7 @@ function attachPopUpBy(name, type, popUp){
 }
 
 function detachPopUpBY(tutorial_current_step){
+	
 	popUp = $('div-tuto-step_' + tutorial_current_step).detach();
 }
 
@@ -153,33 +150,37 @@ function updateCssOfTutorialDiv(tutorial_current_step){
 
 function createPopUpBY(tutorial_current_step){
 
+	var local_popUp;
+
 	switch(tutorial_current_step){
 		case 2:
-			createTutotialPopUp(text_step_2, )
+			local_popUp = createTutotialPopUp(text_step_2, tutorial_current_step);
 			break;
 		case 3:
-			
+			local_popUp = createTutotialPopUp(text_step_3, tutorial_current_step);
 			break;
 		case 4:
-			
+			local_popUp = createTutotialPopUp(text_step_4, tutorial_current_step);
 			break;
 		case 5:
-			
+			local_popUp = createTutotialPopUp(text_step_5, tutorial_current_step);
 			break;
 		case 6:
-			
+			local_popUp = createTutotialPopUp(text_step_6, tutorial_current_step);
 			break;
 		case 7:
-			
+			local_popUp = createTutotialPopUp(text_step_7, tutorial_current_step);
 			break;
 		case 8:
-			
+			local_popUp = createTutotialPopUp(text_step_8, tutorial_current_step);
 			break;
 		case 9:
-			
+			local_popUp = createTutotialPopUp(text_step_9, tutorial_current_step);
 			break;
 		case 10:
-			
+			local_popUp = createTutotialPopUp(text_step_10, tutorial_current_step);
 			break;
 	}
+
+	return local_popUp;
 }

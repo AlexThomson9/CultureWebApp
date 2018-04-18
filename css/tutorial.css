@@ -9,11 +9,6 @@
     z-index: 4001;
 }
 
-.div-tuto-step_1{
-	height: 385px;
-	width : 373px;
-}
-
 #default_sprite{
 	height: 174px;
 	width : 171px;
@@ -22,4 +17,18 @@
 	left: 1%;
 	bottom: 1%;
 }
-	
+
+#tutorial-skipButton{
+	position: fixed;
+	left: 90%;
+	bottom: 1%;
+}
+
+#tutorial-text{
+
+}
+
+.div-tuto-step_1{
+	height: 385px;
+	width : 373px;
+}
