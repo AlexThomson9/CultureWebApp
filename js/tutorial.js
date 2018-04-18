@@ -30,17 +30,17 @@ $(function(){
 
 		$('#default_sprite').click(function(){
 			tutorial_step++;
-			console.log("you clicked the sprite");
 			$(this).detach();
 		});
 	}
 
 	else if(tutorial_step == 1){
-
+			console.log("here we are in step 1");
 		updateCssOfTutorialDiv(tutorial_step);
-
+			console.log("css has been update");
 		popUp = createTutotialPopUp(text_step_1, tutorial_step);
 		attachPopUpBy("turorial", "id", popUp);
+			console.log("popUp is attach");
 	}
 
 	else{
@@ -86,18 +86,6 @@ function createTutotialPopUp(text, tutorial_current_step){
 	popUp += "</div>";
 
 	return popUp;
-	
-	/*
-	var popUp;
-
-	if(tutorial_step == 1){
-		popUp += 
-	}
-	else{
-
-	}
-
-	return popUp;*/
 }
 
 function createDefaultPopUp(){
