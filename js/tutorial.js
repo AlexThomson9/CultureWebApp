@@ -29,22 +29,24 @@ $(function(){
 		attachPopUpBy("tutorial", "id", defaultPopUp);
 
 		$('#default_sprite').click(function(){
+				console.log("previous var = " + tutorial_step);
 			tutorial_step++;
+				console.log("new var = " + tutorial_step);
 			$(this).detach();
 		});
 	}
 
 	else if(tutorial_step == 1){
 			console.log("here we are in step 1");
+
 		updateCssOfTutorialDiv(tutorial_step);
-			console.log("css has been update");
+
 		popUp = createTutotialPopUp(text_step_1, tutorial_step);
 		attachPopUpBy("turorial", "id", popUp);
-			console.log("popUp is attach");
 	}
 
 	else{
-
+		console.log("you are in the last else");
 	}
 /*
 	$('#tutorial-skipButton').addEventListener('click', function(){
