@@ -28,10 +28,10 @@ $(function(){
 		var defaultPopUp = createDefaultPopUp();
 		attachPopUpBy("tutorial", "id", defaultPopUp);
 
-		$('#default_sprite').onClick(function(){
+		$('#default_sprite').addEventListener('click', function(){
 			tutorial_step++;
 			console.log("you clicked the sprite");
-			detachPopUpBY(tutorial_step);
+			$(this).detach();
 		});
 	}
 
@@ -41,36 +41,22 @@ $(function(){
 
 		popUp = createTutotialPopUp(text_step_1, tutorial_step);
 		attachPopUpBy("turorial", "id", popUp);
-
-		$('#tutorial-popUp-gotItButton').onClick(function(){
-			tutorial_step++;
-			detachPopUpBY(tutorial_step);
-		});
 	}
 
 	else{
 
-		updateCssOfTutorialDiv(tutorial_step);
-
-		createPopUpBY(tutorial_step);	
-		
-
-		$('#tutorial-skipButton').onClick(function(){
-			popUp = $('.tutorial-popUp').detach();	
-		});
-
-		$('#tutorial-gotItButton').onClick(function(){
-			popUp = $('div-tuto-step_' + tutorial_step - 1).detach();
-
-			createPopUpBY(tutorial_step);
-
-		});
 	}
-	/*
-	var popUp = createTutotialPopUp("1st pop-up", tutorial_step);
-	attachPopUpBy("TitleBar-d3", "id", popUp);
 
-	*/
+	$('#tutorial-skipButton').addEventListener('click', function(){
+		tutorial_step = 0;	
+	});
+
+	$('#tutorial-gotItButton').addEventListener('click', function(){
+		detachPopUpBY(tutorial_step);
+		tutorial_step++;
+	});
+
+	/*TitleBar-d3*/
 })
 
 function createTutotialPopUp(text, tutorial_current_step){
@@ -143,7 +129,7 @@ function detachPopUpBY(tutorial_current_step){
 function updateCssOfTutorialDiv(tutorial_current_step){
 	switch(tutorial_current_step){
 		case 1:
-			$('#tutorial').css({height: "385px", width: "373px", position: "fixed", left: "1%", bottom: "1%", z-index: "4001"});
+			$('#tutorial').css({height: "385px", width: "373px"});
 			break;
 		case 2:
 			$('#tutorial').css();
