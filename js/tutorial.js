@@ -28,7 +28,7 @@ $(function(){
 		var defaultPopUp = createDefaultPopUp();
 		attachPopUpBy("tutorial", "id", defaultPopUp);
 
-		$('#default_sprite').addEventListener('click', function(){
+		$('#default_sprite').click(function(){
 			tutorial_step++;
 			console.log("you clicked the sprite");
 			$(this).detach();
@@ -46,7 +46,7 @@ $(function(){
 	else{
 
 	}
-
+/*
 	$('#tutorial-skipButton').addEventListener('click', function(){
 		tutorial_step = 0;	
 	});
@@ -56,7 +56,8 @@ $(function(){
 		tutorial_step++;
 	});
 
-	/*TitleBar-d3*/
+	//TitleBar-d3
+*/
 })
 
 function createTutotialPopUp(text, tutorial_current_step){
