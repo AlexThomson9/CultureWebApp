@@ -19,7 +19,7 @@ var popUp;
 $(function(){ 
 
 	var defaultPopUp = createDefaultPopUp();
-	attachPopUpBy("tutorial", "id", defaultPopUp);
+	attachPopUp(popUp);
 
 	$('#default_sprite').click(function(){
 		tutorial_current_step++;
@@ -29,11 +29,11 @@ $(function(){
 		$('#tutorial').css('width', '100%');
 
 		popUp = createPopUpBy(tutorial_current_step);
-		attachPopUpBy("tutorial", "id", popUp);
+		attachPopUp(popUp);
 
 		$('#tutorial-skipButton').click(function(){
 
-			$(this).parent().detach();
+			detachPopUpBY(tutorial_current_step);
 			tutorial_current_step = 0;
 		});
 
@@ -71,20 +71,9 @@ function createDefaultPopUp(){
 	return defaultPopUp;
 }
 
-function attachPopUpBy(name, type, popUp){
-	var obj;
+function attachPopUp(popUp){
 
-	if(type == "class"){
-		obj = '.' + name;
-	}
-	else if(type == "id"){
-		obj = '#' + name;
-	}
-	else{
-		obj = name;
-	}
-
-	$(obj).append(popUp);
+	$('#tutorial').append(popUp);
 }
 
 function detachPopUpBy(tutorial_current_step){
@@ -186,12 +175,12 @@ function tutorial(tutorial_current_step){
 		last_step = tutorial_current_step;
 
 		popUp = createPopUpBy(tutorial_current_step);
-		attachPopUpBy("tutorial", "id", popUp);
+		attachPopUp(popUp);
 
 		//If skip button is clicked
 		$('#tutorial-skipButton').click(function(){
 
-			$(this).parent().detach();
+			detachPopUpBY(tutorial_current_step);
 			tutorial_current_step = 0;
 		});
 

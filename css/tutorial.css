@@ -22,6 +22,8 @@
 	position: fixed;
 	left: 90%;
 	bottom: 1%;
+
+	color: red;
 }
 
 #tutorial-text{
