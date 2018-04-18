@@ -8,8 +8,8 @@ var text_step_6 = "Here's the Suggest button, through it you will be allowed to 
 var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
 
 var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
-var text_step_9 = "";
-var text_step_10 = "";
+var text_step_9 = "Text 9";
+var text_step_10 = "Text 10";
 
 var tutorial_current_step;
 var last_step;
@@ -154,7 +154,7 @@ function tutorial(tutorial_current_step){
 				tutorial(tutorial_current_step);
 			}
 			else{
-				tutorial_current_step = 0;
+				defautPopUp();
 			}		
 		});
 	}
