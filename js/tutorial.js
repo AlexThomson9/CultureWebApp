@@ -28,7 +28,7 @@ $(function(){
 		$('#tutorial').css('height', '90%');
 		$('#tutorial').css('width', '100%');
 
-		createPopUpBY(tutorial_current_step);
+		popUp = createPopUpBY(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
 		tutorial(tutorial_current_step);
@@ -182,18 +182,20 @@ function tutorial(tutorial_current_step){
 		
 		last_step = tutorial_current_step;
 
-		createPopUpBY(tutorial_current_step);
+		popUp = createPopUpBY(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
+		//If skip button is clicked
 		$('#tutorial-skipButton').click(function(){
 
-			$('div-tuto-step_' + tutorial_current_step).detach();
+			$('#div-tuto-step_' + tutorial_current_step).detach();
 			tutorial_current_step = 0;
 		});
 
+		//If Got it button is clicked
 		$('#sprite_' + tutorial_current_step).click(function(){
 
-			$('div-tuto-step_' + tutorial_current_step).detach();
+			$('#div-tuto-step_' + tutorial_current_step).detach();
 			tutorial_current_step++;
 
 			if(tutorial_current_step < 10){
