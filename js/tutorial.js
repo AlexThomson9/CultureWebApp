@@ -20,20 +20,20 @@ $(function(){
 	defautPopUp();
 })
 
-//OTHER FUNCTIONS
+//OTHER FUNCTIONS//
 function attachPopUp(popUp){ $('#tutorial').append(popUp); }
 
 function detachPopUpBy(tutorial_current_step){ popUp = $('div-tuto-step_' + tutorial_current_step).detach(); }
 
 function detachAll(){ $('#tutorial').find('div').detach(); }
-
+//---------------//
 
 function createTutotialPopUp(text, tutorial_current_step){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
 
-	popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
-	popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
+	popUp_temp += "<p id=\"tutorial-text_" + tutorial_current_step + "\">" + text + "</p>";
+	popUp_temp += "<a id=\"tutorial-skipButton_" + tutorial_current_step + "\" href=\"#\" onclick=\"defautPopUp()\">Skip tutorial</a>";
 
 	if(tutorial_current_step == 1){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
@@ -148,16 +148,6 @@ function tutorial(tutorial_current_step){
 		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUp(popUp);
 
-		//If skip button is clicked
-		$('#tutorial-skipButton').click(function(){
-
-			console.log('you clicked skip');
-			detachAll();
-			tutorial_current_step = 0;
-
-			defautPopUp();
-		});
-
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 
@@ -180,6 +170,8 @@ function tutorial(tutorial_current_step){
 
 function defautPopUp(){
 
+	detachAll();
+
 	$('#tutorial').css('height', '174px');
 	$('#tutorial').css('width', '171px');
 
@@ -198,12 +190,6 @@ function defautPopUp(){
 
 		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUp(popUp);
-
-		$('#tutorial-skipButton').click(function(){
-			detachAll();
-			tutorial_current_step = 0;
-			defautPopUp();
-		});
 
 		$('#sprite_' + tutorial_current_step).click(function(){
 			last_step = tutorial_current_step;
