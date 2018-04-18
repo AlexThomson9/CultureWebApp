@@ -141,7 +141,7 @@ function attachPopUpBy(name, type, popUp){
 function updateCssOfTutorialDiv(tutorial_step){
 	switch(tutorial_step){
 		case 1:
-			$('#tutorial').css({height: "385px", width: "373px", position: "fixed", left: "1%", bottom: "1%", z-index: "4001";});
+			$('#tutorial').css({height: "385px", width: "373px", position: "fixed", left: "1%", bottom: "1%", z-index: "4001"});
 			break;
 		case 2:
 			$('#tutorial').css();
