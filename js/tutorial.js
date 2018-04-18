@@ -165,7 +165,12 @@ function tutorial(tutorial_current_step){
 	console.log("step " + tutorial_current_step);
 
 	if(tutorial_current_step == 0){
-		return;
+
+		$('#tutorial').css('height', '174px');
+		$('#tutorial').css('width', '171px');
+		
+		var defaultPopUp = createDefaultPopUp();
+		attachPopUp(defaultPopUp);
 	}
 
 	if(last_step != tutorial_current_step){
@@ -189,7 +194,7 @@ function tutorial(tutorial_current_step){
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 
-			$('#div-tuto-step_' + tutorial_current_step).detach();
+			detachPopUpBY(tutorial_current_step);
 			tutorial_current_step++;
 
 			if(tutorial_current_step < 10){
@@ -202,4 +207,33 @@ function tutorial(tutorial_current_step){
 	}
 
 	return;
+}
+
+function defautPopUp(){
+
+	var defaultPopUp = createDefaultPopUp();
+	attachPopUp(defaultPopUp);
+
+	$('#default_sprite').click(function(){
+		tutorial_current_step++;
+		$(this).detach();
+
+		$('#tutorial').css('height', '90%');
+		$('#tutorial').css('width', '100%');
+
+		popUp = createPopUpBy(tutorial_current_step);
+		attachPopUp(popUp);
+
+		$('#tutorial-skipButton').click(function(){
+
+			detachPopUpBY(tutorial_current_step);
+			tutorial_current_step = 0;
+		});
+
+		$('#sprite_' + tutorial_current_step).click(function(){
+			last_step = tutorial_current_step;
+			tutorial_current_step++;
+			tutorial(tutorial_current_step);
+		});
+	});
 }
