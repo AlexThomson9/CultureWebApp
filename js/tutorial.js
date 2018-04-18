@@ -134,9 +134,6 @@ function createPopUpBy(tutorial_current_step){
 function tutorial(tutorial_current_step){
 
 	if(tutorial_current_step == 0){
-
-		
-
 		defautPopUp();
 	}
 
@@ -154,6 +151,7 @@ function tutorial(tutorial_current_step){
 		//If skip button is clicked
 		$('#tutorial-skipButton').click(function(){
 
+			console.log('you clicked skip');
 			detachAll();
 			tutorial_current_step = 0;
 
@@ -162,6 +160,8 @@ function tutorial(tutorial_current_step){
 
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
+
+			console.log(tutorial_current_step);
 
 			detachPopUpBy(tutorial_current_step);
 			tutorial_current_step++;
