@@ -25,7 +25,8 @@ $(function(){
 		tutorial_current_step++;
 		$(this).detach();
 
-		$('#tutorial').css({'height', '90%', 'width', '100%'});
+		$('#tutorial').css('height', '90%');
+		$('#tutorial').css('width', '100%');
 
 		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUp(popUp);
