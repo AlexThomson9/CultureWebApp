@@ -179,7 +179,7 @@ function defautPopUp(){
 		$('#tutorial').css('width', '100%');
 
 		popUp = createPopUpBy();
-		attachPopUp();
+		attachPopUp(popUp);
 
 		$('#sprite_' + tutorial_current_step).click(function(){
 			last_step = tutorial_current_step;
