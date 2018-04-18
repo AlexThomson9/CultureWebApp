@@ -19,7 +19,7 @@ var popUp;
 $(function(){ 
 
 	var defaultPopUp = createDefaultPopUp();
-	attachPopUp(popUp);
+	attachPopUp(defaultPopUp);
 
 	$('#default_sprite').click(function(){
 		tutorial_current_step++;
