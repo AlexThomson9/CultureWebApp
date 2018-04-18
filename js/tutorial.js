@@ -11,40 +11,13 @@ var text_step_8 = "So there is the information panel, about the country you've s
 var text_step_9 = "";
 var text_step_10 = "";
 
-var tutorial_current_step = 0;
-var last_step = 0;
+var tutorial_current_step;
+var last_step;
 var popUp;
 
 //FUNCTION WHICH IS CALLED AUTOMATICLY//
 $(function(){ 
-
-	var defaultPopUp = createDefaultPopUp();
-	attachPopUp(defaultPopUp);
-
-	$('#default_sprite').click(function(){
-		tutorial_current_step++;
-		$(this).detach();
-
-		$('#tutorial').css('height', '90%');
-		$('#tutorial').css('width', '100%');
-
-		popUp = createPopUpBy(tutorial_current_step);
-		attachPopUp(popUp);
-
-		$('#tutorial-skipButton').click(function(){
-
-			detachPopUpBY(tutorial_current_step);
-			tutorial_current_step = 0;
-		});
-
-		$('#sprite_' + tutorial_current_step).click(function(){
-			last_step = tutorial_current_step;
-			tutorial_current_step++;
-			tutorial(tutorial_current_step);
-		});
-	});
-
-	//TitleBar-d3
+	defautPopUp();
 })
 
 function createTutotialPopUp(text, tutorial_current_step){
@@ -162,15 +135,12 @@ function createPopUpBy(tutorial_current_step){
 
 function tutorial(tutorial_current_step){
 
-	console.log("step " + tutorial_current_step);
-
 	if(tutorial_current_step == 0){
 
 		$('#tutorial').css('height', '174px');
 		$('#tutorial').css('width', '171px');
+
 		
-		var defaultPopUp = createDefaultPopUp();
-		attachPopUp(defaultPopUp);
 	}
 
 	if(last_step != tutorial_current_step){
@@ -194,7 +164,7 @@ function tutorial(tutorial_current_step){
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 
-			detachPopUpBY(tutorial_current_step);
+			detachPopUpBy(tutorial_current_step);
 			tutorial_current_step++;
 
 			if(tutorial_current_step < 10){
@@ -210,6 +180,9 @@ function tutorial(tutorial_current_step){
 }
 
 function defautPopUp(){
+
+	tutorial_current_step = 0;
+	last_step = 0;
 
 	var defaultPopUp = createDefaultPopUp();
 	attachPopUp(defaultPopUp);
