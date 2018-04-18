@@ -1,3 +1,5 @@
+//GLOBAL VARIABLES//
+
 var tutorial_step = 0;
 var popUp;
 
@@ -14,52 +16,50 @@ var text_step_9 = "";
 var text_step_10 = "";
 
 
-
+//FUNCTION WHICH IS CALLED AUTOMATICLY//
 $(function(){ 
 
-	if(tutorial_step == 0 || tutorial_step == null){
-		var defaultPopUp = createDefaultPopUp();
+	if(tutorial_step == null){
+		tutorial_step = 0;
+	}
 
+	if(tutorial_step == 0){
+
+		var defaultPopUp = createDefaultPopUp();
 		attachPopUpBy("tutorial", "id", defaultPopUp);
 
 		$('#default_sprite').onClick(function(){
 			tutorial_step++;
 			console.log("you clicked the sprite");
+			detachPopUpBY(tutorial_step);
 		});
 	}
 
 	else if(tutorial_step == 1){
 
-		defaultPopUp = $('#default_sprite').detach();
-
 		updateCssOfTutorialDiv(tutorial_step);
 
 		popUp = createTutotialPopUp(text_step_1, tutorial_step);
-
 		attachPopUpBy("turorial", "id", popUp);
 
 		$('#tutorial-popUp-gotItButton').onClick(function(){
 			tutorial_step++;
+			detachPopUpBY(tutorial_step);
 		});
 	}
 
 	else{
 
-		if(tutorial_step == 2){
-			popUp = $('div-tuto-step_1').detach();
+		updateCssOfTutorialDiv(tutorial_step);
 
-			updateCssOfTutorialDiv(tutorial_step);
+		createPopUpBY(tutorial_step);	
+		
 
-			popUp = createTutotialPopUp(text_step_2, tutorial_step);
-
-			attachPopUpBy('tutorial', "id", popUp);
-		}
-
-		$('#tutorial-popUp-skipButton').onClick(function(){
+		$('#tutorial-skipButton').onClick(function(){
 			popUp = $('.tutorial-popUp').detach();	
 		});
 
-		$('#tutorial-popUp-gotItButton').onClick(function(){
+		$('#tutorial-gotItButton').onClick(function(){
 			popUp = $('div-tuto-step_' + tutorial_step - 1).detach();
 
 			createPopUpBY(tutorial_step);
@@ -73,9 +73,9 @@ $(function(){
 	*/
 })
 
-function createTutotialPopUp(text, tutorial_step){
+function createTutotialPopUp(text, tutorial_current_step){
 
-	var popUp = "<div class=\"div-tuto-step_" + tutorial_step + "\">";s
+	var popUp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";s
 
 		popUp += "<div class=\"tutorial-textAndButtons\">";
 
@@ -87,11 +87,9 @@ function createTutotialPopUp(text, tutorial_step){
 
 		popUp += "<div class=\"sprite\">"
 
-			if(tutorial_step == 1 ){
-				
+			if(tutorial_current_step == 1){
 				popUp += "<img id=\"sprite_1\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
 			}
-
 			else {
 
 			}
@@ -138,8 +136,12 @@ function attachPopUpBy(name, type, popUp){
 	$(obj).append(popUp);
 }
 
-function updateCssOfTutorialDiv(tutorial_step){
-	switch(tutorial_step){
+function detachPopUpBY(tutorial_current_step){
+	popUp = $('div-tuto-step_' + tutorial_current_step).detach();
+}
+
+function updateCssOfTutorialDiv(tutorial_current_step){
+	switch(tutorial_current_step){
 		case 1:
 			$('#tutorial').css({height: "385px", width: "373px", position: "fixed", left: "1%", bottom: "1%", z-index: "4001"});
 			break;
@@ -173,44 +175,35 @@ function updateCssOfTutorialDiv(tutorial_step){
 	}
 }
 
-function createPopUpBY(current_step){
+function createPopUpBY(tutorial_current_step){
 
-	switch(current_step){
+	switch(tutorial_current_step){
 		case 2:
-
-			attachPopUpBy("", "class", popUp);
+			createTutotialPopUp(text_step_2, )
 			break;
 		case 3:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 4:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 5:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 6:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 7:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 8:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 9:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
 		case 10:
-			attachPopUpBy("", "class", popUp);
+			
 			break;
-	}
-
-	if(tutorial_step > 1 && tutorial_step < 11){
-		tutorial_step++;
-	}
-
-	else{
-		tutorial_step = 0;
 	}
 }
