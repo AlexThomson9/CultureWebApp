@@ -134,6 +134,9 @@ function createPopUpBy(tutorial_current_step){
 	var local_popUp;
 
 	switch(tutorial_current_step){
+		case 1:
+			local_popUp = createTutotialPopUp(text_step_1, tutorial_current_step);
+			break;
 		case 2:
 			local_popUp = createTutotialPopUp(text_step_2, tutorial_current_step);
 			break;
