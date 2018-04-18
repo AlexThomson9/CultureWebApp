@@ -38,6 +38,8 @@ $(function(){
 		});
 
 		$('#sprite_' + tutorial_current_step).click(function(){
+			last_step = tutorial_current_step;
+			tutorial_current_step++;
 			tutorial(tutorial_current_step);
 		});
 	});
