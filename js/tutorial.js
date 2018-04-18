@@ -171,7 +171,7 @@ function tutorial(tutorial_current_step){
 	if(last_step != tutorial_current_step){
 
 		if(last_step != 0){
-			detachPopUpBY(last_step);
+			detachPopUpBy(last_step);
 		}
 
 		last_step = tutorial_current_step;
