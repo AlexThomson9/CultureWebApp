@@ -28,10 +28,15 @@ $(function(){
 		$('#tutorial').css('height', '90%');
 		$('#tutorial').css('width', '100%');
 
-		popUp = createPopUpBY(tutorial_current_step);
+		console.log("current: " + tutorial_current_step);
+		console.log("last: " + last_step);
+
+		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
 		tutorial(tutorial_current_step);
+
+		console.log("finish");
 	});
 
 	//TitleBar-d3
@@ -87,7 +92,7 @@ function attachPopUpBy(name, type, popUp){
 	$(obj).append(popUp);
 }
 
-function detachPopUpBY(tutorial_current_step){
+function detachPopUpBy(tutorial_current_step){
 	
 	popUp = $('div-tuto-step_' + tutorial_current_step).detach();
 }
@@ -129,7 +134,7 @@ function updateCssOfTutorialDiv(tutorial_current_step){
 }
 */
 
-function createPopUpBY(tutorial_current_step){
+function createPopUpBy(tutorial_current_step){
 
 	var local_popUp;
 
@@ -182,7 +187,7 @@ function tutorial(tutorial_current_step){
 		
 		last_step = tutorial_current_step;
 
-		popUp = createPopUpBY(tutorial_current_step);
+		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
 		//If skip button is clicked
