@@ -33,4 +33,8 @@
 .div-tuto-step_1{
 	height: 385px;
 	width : 373px;
+
+	position: fixed;
+	left: 1%;
+	bottom: 1%;
 }

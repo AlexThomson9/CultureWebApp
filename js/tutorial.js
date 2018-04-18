@@ -20,6 +20,14 @@ $(function(){
 	defautPopUp();
 })
 
+//OTHER FUNCTIONS
+function attachPopUp(popUp){ $('#tutorial').append(popUp); }
+
+function detachPopUpBy(tutorial_current_step){ popUp = $('div-tuto-step_' + tutorial_current_step).detach(); }
+
+function detachAll(){ $('#tutorial').find('div').detach(); }
+
+
 function createTutotialPopUp(text, tutorial_current_step){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
@@ -46,21 +54,12 @@ function createDefaultPopUp(){
 	return defaultPopUp;
 }
 
-function attachPopUp(popUp){
-
-	$('#tutorial').append(popUp);
-}
-
-function detachPopUpBy(tutorial_current_step){
-	
-	popUp = $('div-tuto-step_' + tutorial_current_step).detach();
-}
-
-/*
 function updateCssOfTutorialDiv(tutorial_current_step){
 	switch(tutorial_current_step){
 		case 1:
-			$('#tutorial').css({height: "385px", width: "373px"});
+			$('#tutorial').css();
+			$('#tutorial-text').css();
+			$('.div-tuto-step_1').css();
 			break;
 		case 2:
 			$('#tutorial').css();
@@ -91,7 +90,6 @@ function updateCssOfTutorialDiv(tutorial_current_step){
 			break;
 	}
 }
-*/
 
 function createPopUpBy(tutorial_current_step){
 
@@ -137,8 +135,7 @@ function tutorial(tutorial_current_step){
 
 	if(tutorial_current_step == 0){
 
-		$('#tutorial').css('height', '174px');
-		$('#tutorial').css('width', '171px');
+		
 
 		defautPopUp();
 	}
@@ -157,8 +154,10 @@ function tutorial(tutorial_current_step){
 		//If skip button is clicked
 		$('#tutorial-skipButton').click(function(){
 
-			detachPopUpBY(tutorial_current_step);
+			detachAll();
 			tutorial_current_step = 0;
+
+			defautPopUp();
 		});
 
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
@@ -181,6 +180,9 @@ function tutorial(tutorial_current_step){
 
 function defautPopUp(){
 
+	$('#tutorial').css('height', '174px');
+	$('#tutorial').css('width', '171px');
+
 	tutorial_current_step = 0;
 	last_step = 0;
 
@@ -198,9 +200,9 @@ function defautPopUp(){
 		attachPopUp(popUp);
 
 		$('#tutorial-skipButton').click(function(){
-
-			detachPopUpBY(tutorial_current_step);
+			detachAll();
 			tutorial_current_step = 0;
+			defautPopUp();
 		});
 
 		$('#sprite_' + tutorial_current_step).click(function(){
@@ -210,3 +212,4 @@ function defautPopUp(){
 		});
 	});
 }
+
