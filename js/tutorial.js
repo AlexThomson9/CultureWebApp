@@ -6,16 +6,14 @@ var text_step_4 = "Here's the Register button, it will allow to create an accoun
 var text_step_5 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
 var text_step_6 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
 var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
-
 var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
 var text_step_9 = "Text 9";
-var text_step_10 = "Text 10";
 
 var tutorial_current_step;
 var last_step;
 var popUp;
+//---------------//
 
-//FUNCTION WHICH IS CALLED AUTOMATICLY//
 $(function(){ 
 	defautPopUp();
 })
@@ -23,12 +21,11 @@ $(function(){
 //OTHER FUNCTIONS//
 function attachPopUp(popUp){ $('#tutorial').append(popUp); }
 
-function detachPopUpBy(tutorial_current_step){ popUp = $('div-tuto-step_' + tutorial_current_step).detach(); }
-
 function detachAll(){ $('#tutorial').find('div').detach(); }
 //---------------//
 
-function createTutotialPopUp(text, tutorial_current_step){
+//Functions for creating the pop ups of the tutorial//
+function createTutotialPopUp(text){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
 
@@ -47,14 +44,49 @@ function createTutotialPopUp(text, tutorial_current_step){
 	return popUp_temp;
 }
 
-function createDefaultPopUp(){
-	
-	var defaultPopUp = "<img id=\"default_sprite\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\">";
-    
-	return defaultPopUp;
-}
+function createPopUpBy(){
 
-function updateCssOfTutorialDiv(tutorial_current_step){
+	var local_popUp;
+
+	switch(tutorial_current_step){
+		case 1:
+			local_popUp = createTutotialPopUp(text_step_1);
+			break;
+		case 2:
+			local_popUp = createTutotialPopUp(text_step_2);
+			break;
+		case 3:
+			local_popUp = createTutotialPopUp(text_step_3);
+			break;
+		case 4:
+			local_popUp = createTutotialPopUp(text_step_4);
+			break;
+		case 5:
+			local_popUp = createTutotialPopUp(text_step_5);
+			break;
+		case 6:
+			local_popUp = createTutotialPopUp(text_step_6);
+			break;
+		case 7:
+			local_popUp = createTutotialPopUp(text_step_7);
+			break;
+		case 8:
+			local_popUp = createTutotialPopUp(text_step_8);
+			break;
+		case 9:
+			local_popUp = createTutotialPopUp(text_step_9);
+			break;
+		case 10:
+			local_popUp = createTutotialPopUp(text_step_10);
+			break;
+	}
+
+	return local_popUp;
+}
+//-------------------------------------------------//
+
+//If the name isn't obvious enough, this function update de css of the div #tutorial for each step//
+function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
 		case 1:
 			$('#tutorial').css();
@@ -90,48 +122,10 @@ function updateCssOfTutorialDiv(tutorial_current_step){
 			break;
 	}
 }
+//------------------------------------------------------------------------------------------------//
 
-function createPopUpBy(tutorial_current_step){
-
-	var local_popUp;
-
-	switch(tutorial_current_step){
-		case 1:
-			local_popUp = createTutotialPopUp(text_step_1, tutorial_current_step);
-			break;
-		case 2:
-			local_popUp = createTutotialPopUp(text_step_2, tutorial_current_step);
-			break;
-		case 3:
-			local_popUp = createTutotialPopUp(text_step_3, tutorial_current_step);
-			break;
-		case 4:
-			local_popUp = createTutotialPopUp(text_step_4, tutorial_current_step);
-			break;
-		case 5:
-			local_popUp = createTutotialPopUp(text_step_5, tutorial_current_step);
-			break;
-		case 6:
-			local_popUp = createTutotialPopUp(text_step_6, tutorial_current_step);
-			break;
-		case 7:
-			local_popUp = createTutotialPopUp(text_step_7, tutorial_current_step);
-			break;
-		case 8:
-			local_popUp = createTutotialPopUp(text_step_8, tutorial_current_step);
-			break;
-		case 9:
-			local_popUp = createTutotialPopUp(text_step_9, tutorial_current_step);
-			break;
-		case 10:
-			local_popUp = createTutotialPopUp(text_step_10, tutorial_current_step);
-			break;
-	}
-
-	return local_popUp;
-}
-
-function tutorial(tutorial_current_step){
+//Recursive function which is making run the tutorial//
+function tutorial(){
 
 	detachAll();
 
@@ -143,7 +137,7 @@ function tutorial(tutorial_current_step){
 
 		last_step = tutorial_current_step;
 
-		popUp = createPopUpBy(tutorial_current_step);
+		popUp = createPopUpBy();
 		attachPopUp(popUp);
 
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
@@ -151,7 +145,7 @@ function tutorial(tutorial_current_step){
 			tutorial_current_step++;
 
 			if(tutorial_current_step < 10){
-				tutorial(tutorial_current_step);
+				tutorial();
 			}
 			else{
 				defautPopUp();
@@ -161,7 +155,9 @@ function tutorial(tutorial_current_step){
 
 	return;
 }
+//---------------------------------------------------//
 
+//Function for default pop up//
 function defautPopUp(){
 
 	detachAll();
@@ -182,14 +178,22 @@ function defautPopUp(){
 		$('#tutorial').css('height', '90%');
 		$('#tutorial').css('width', '100%');
 
-		popUp = createPopUpBy(tutorial_current_step);
-		attachPopUp(popUp);
+		popUp = createPopUpBy();
+		attachPopUp();
 
 		$('#sprite_' + tutorial_current_step).click(function(){
 			last_step = tutorial_current_step;
 			tutorial_current_step++;
-			tutorial(tutorial_current_step);
+			tutorial();
 		});
 	});
 }
+
+function createDefaultPopUp(){
+	
+	var defaultPopUp = "<img id=\"default_sprite\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\">";
+    
+	return defaultPopUp;
+}
+//--------------------------//
 
