@@ -36,7 +36,7 @@ $(function(){
 		});
 	}
 
-	else if(tutorial_step == 1){
+	if(tutorial_step == 1){
 			console.log("here we are in step 1");
 
 		updateCssOfTutorialDiv(tutorial_step);
@@ -69,7 +69,6 @@ function createTutotialPopUp(text, tutorial_current_step){
 		popUp += "<div class=\"tutorial-textAndButtons\">";
 
 			popUp += "<p id=\"tutorial-text\">" + text + "</p>";
-			popUp += "<button id=\"tutorial-gotItButton\">Got It</button>";
 			popUp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
 
 		popUp += "</div>";

@@ -1,10 +1,10 @@
 #tutorial{
-	height: 174px;
-	width : 171px;
+	height: 100%;
+	width : 100%;
 
 	position: fixed;
-	left: 1%;
-	bottom: 1%;
+	left: 0%;
+	bottom: 0%;
     
     z-index: 4001;
 }
@@ -13,3 +13,13 @@
 	height: 385px;
 	width : 373px;
 }
+
+#default_sprite{
+	height: 174px;
+	width : 171px;
+
+	position: fixed;
+	left: 1%;
+	bottom: 1%;
+}
+	
