@@ -47,7 +47,7 @@ $(function(){
 
 function createTutotialPopUp(text, tutorial_current_step){
 
-	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";s
+	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
 
 	popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
 	popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
