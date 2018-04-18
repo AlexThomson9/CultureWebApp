@@ -28,9 +28,6 @@ $(function(){
 		$('#tutorial').css('height', '90%');
 		$('#tutorial').css('width', '100%');
 
-		console.log("current: " + tutorial_current_step);
-		console.log("last: " + last_step);
-
 		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
@@ -181,10 +178,14 @@ function tutorial(tutorial_current_step){
 
 	if(last_step != tutorial_current_step){
 
+		console.log("good1");
+
 		if(last_step != 0){
 			detachPopUpBY(last_step);
 		}
 		
+		console.log("good2");
+
 		last_step = tutorial_current_step;
 
 		popUp = createPopUpBy(tutorial_current_step);
