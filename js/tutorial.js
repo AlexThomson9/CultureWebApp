@@ -140,7 +140,7 @@ function tutorial(tutorial_current_step){
 		$('#tutorial').css('height', '174px');
 		$('#tutorial').css('width', '171px');
 
-		
+		defautPopUp();
 	}
 
 	if(last_step != tutorial_current_step){
