@@ -168,6 +168,8 @@ function createPopUpBY(tutorial_current_step){
 
 function tutorial(tutorial_current_step){
 
+	console.log("step " + tutorial_current_step);
+
 	if(tutorial_current_step == 0){
 		return;
 	}
