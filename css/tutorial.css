@@ -14,8 +14,6 @@
 	width : 171px;
 
 	position: fixed;
-	left: 1%;
-	bottom: 1%;
 }
 
 #tutorial-skipButton{
@@ -23,18 +21,18 @@
 	left: 90%;
 	bottom: 1%;
 
-	color: red;
+	background-color: black;
 }
 
 #tutorial-text{
+	position: absolute;
 
+	color: red;
 }
 
 .div-tuto-step_1{
 	height: 385px;
 	width : 373px;
 
-	position: fixed;
-	left: 1%;
-	bottom: 1%;
+	position: relative;
 }

@@ -133,15 +133,13 @@ function createPopUpBy(tutorial_current_step){
 
 function tutorial(tutorial_current_step){
 
+	detachAll();
+
 	if(tutorial_current_step == 0){
 		defautPopUp();
 	}
 
-	if(last_step != tutorial_current_step){
-
-		if(last_step != 0){
-			detachPopUpBy(last_step);
-		}
+	else if(last_step != tutorial_current_step){
 
 		last_step = tutorial_current_step;
 
@@ -150,10 +148,6 @@ function tutorial(tutorial_current_step){
 
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
-
-			console.log(tutorial_current_step);
-
-			detachPopUpBy(tutorial_current_step);
 			tutorial_current_step++;
 
 			if(tutorial_current_step < 10){
