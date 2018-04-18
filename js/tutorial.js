@@ -31,9 +31,15 @@ $(function(){
 		popUp = createPopUpBy(tutorial_current_step);
 		attachPopUpBy("tutorial", "id", popUp);
 
-		tutorial(tutorial_current_step);
+		$('#tutorial-skipButton').click(function(){
 
-		console.log("finish");
+			$(this).parent().detach();
+			tutorial_current_step = 0;
+		});
+
+		$('#sprite_' + tutorial_current_step).click(function(){
+			tutorial(tutorial_current_step);
+		});
 	});
 
 	//TitleBar-d3
@@ -43,23 +49,15 @@ function createTutotialPopUp(text, tutorial_current_step){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";s
 
-		popUp_temp += "<div class=\"tutorial-textAndButtons\">";
+	popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
+	popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
 
-			popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
-			popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" >Skip tutorial</a>";
-
-		popUp_temp += "</div>";
-
-		popUp_temp += "<div class=\"sprite\">"
-
-			if(tutorial_current_step == 1){
-				popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
-			}
-			else {
-				popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_2_talking.png\" height=\"405\" width=\"307\"></div>";
-			}
-
-		popUp_temp += "</div>";
+	if(tutorial_current_step == 1){
+		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
+	}
+	else {
+		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_2_talking.png\" height=\"405\" width=\"307\"></div>";
+	}
 
 	popUp_temp += "</div>";
 
@@ -178,13 +176,9 @@ function tutorial(tutorial_current_step){
 
 	if(last_step != tutorial_current_step){
 
-		console.log("good1");
-
 		if(last_step != 0){
 			detachPopUpBY(last_step);
 		}
-		
-		console.log("good2");
 
 		last_step = tutorial_current_step;
 
@@ -194,11 +188,11 @@ function tutorial(tutorial_current_step){
 		//If skip button is clicked
 		$('#tutorial-skipButton').click(function(){
 
-			$('#div-tuto-step_' + tutorial_current_step).detach();
+			$(this).parent().detach();
 			tutorial_current_step = 0;
 		});
 
-		//If Got it button is clicked
+		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 
 			$('#div-tuto-step_' + tutorial_current_step).detach();
