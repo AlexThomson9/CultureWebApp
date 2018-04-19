@@ -79,21 +79,8 @@ $.getJSON("map.geojson",function(data){
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);
-<<<<<<< HEAD:public/js/Map.js
-        //Onlick for the leaflet marker
-
-        /*  $.ajax({
-              url:"https://restcountries.eu/rest/v2/name/" + test,
-              dataType:'json',
-              success: function(result){
-                $("#div1").html(result);
-            }
-          });
-                */
-=======
 });
 
->>>>>>> origin/Olek:public/js/Map.js
   });
 
 
