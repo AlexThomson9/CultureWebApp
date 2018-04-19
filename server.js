@@ -117,31 +117,6 @@ app.post('/savefile', function(req, res){
 
         console.log("wot");
     });
-
-/*app.post('/savefile', function(req, res){
-	console.log(req.body);
-  var body ="";
-	//res.send(req.body);
-  filePath = 'public/map.geojson';
-    //req.on('newData', function(newData) {
-        //body += req.body;
-        console.log("wot");
-    //});
-
-   //req.on('end', function (){
-  console.log(req.body.newData);
-
-
-        fs.writeFile(filePath, req.body.newData,  {'flag':'a'},  function(err) {
-    if (err) {
-        return console.error(err);
-    }
-});
-//    });
-
-  });
-*/
-
   app.get('/mapinfo', function (req, res) {
   db.collection('MapInfo').find().toArray(function(err,result){
      if(result)
@@ -151,7 +126,6 @@ app.post('/savefile', function(req, res){
      }
   });
 });
-
 app.get('/Country_Map', function(req, res) {
  db.collection('MapInfo').distinct('properties', function(err, result) {
  if (err) throw err;
