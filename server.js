@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const link = "mongodb://localhost:27017/star_wars_quotes";
+const link = "mongodb://localhost:27017/CultureWebApp"
 const express = require('express');
 const url = require('url');
 const fs = require('fs');
@@ -127,4 +127,43 @@ app.get('/Country_Map', function(req, res) {
  if (err) throw err;
 res.jsonp(result);
  });
+
+
+
+app.post('/register', function(req, res){
+console.log(req.body);
+//db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+  db.collection("userdetails").find( { $or: [ {"username": req.body.username},{"email": req.body.email}]}).toArray(function(err, result) {
+    if (err) throw err;
+      res.jsonp(result);
+      console.log(result);
+
+      if (result.length > 0){
+        console.log("username taken gadjee");
+      }
+      else{
+        db.collection('userdetails').save(req.body, function(err, result) {
+        if (err) throw err;
+        console.log('saved to database');
+        })
+      }
+
+  });
+});
+
+  app.post("/login", function(req, res){
+    console.log(req.body);
+    db.collection("userdetails").find( { $and: [ {"username": req.body.username},{"password": req.body.password}]}).toArray(function(err, result) {
+      if (err) throw err;
+        res.jsonp(result);
+        console.log(result);
+
+        if (result.length > 0){
+          console.log("logged in");
+        }
+        else{
+          console.log("log in unsuccesfull");
+        }
+        //squiggly boi
+  });
 });
