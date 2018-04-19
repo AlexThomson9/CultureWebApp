@@ -1,7 +1,3 @@
-
-
-
-
 $('#submitBtn').click(function(){
 
   var obj = {};
@@ -9,12 +5,11 @@ $('#submitBtn').click(function(){
   user = $('#userField').val();
   email = $('#emailField').val();
   password = $('#passField').val();
-  var hash = CryptoJS.SHA3(password);
 
 
   obj.email = user;
   obj.username = email;
-  obj.password = hash;
+  obj.password = password;
 
   $.ajax({
         type: "POST",
