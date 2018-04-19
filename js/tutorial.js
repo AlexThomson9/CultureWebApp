@@ -115,19 +115,19 @@ function updateCssOfTutorialDiv(){
 			break;
 
 		case 5:
-			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('left', '8%');
 			$('#tutorial-skipButton').css('bottom', '0%');
 
-			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('left', '8%');
 			$('#tutorial-text').css('bottom', '20%');
 			break;
 
 		case 6:
-			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('left', '8%');
 			$('#tutorial-skipButton').css('bottom', '0%');
 
-			$('#tutorial-text').css('left', '9%');
-			$('#tutorial-text').css('bottom', '20%');
+			$('#tutorial-text').css('left', '8%');
+			$('#tutorial-text').css('bottom', '15%');
 			break;
 
 		case 7:
