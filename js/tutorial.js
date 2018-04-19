@@ -107,26 +107,35 @@ function updateCssOfTutorialDiv(){
 			break;
 
 		case 4:
-			
+			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('bottom', '0%');
+
+			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('bottom', '20%');
 			break;
+
 		case 5:
-			
+			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('bottom', '0%');
+
+			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('bottom', '20%');
 			break;
+
 		case 6:
-			
+			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('bottom', '0%');
+
+			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('bottom', '20%');
 			break;
+
 		case 7:
-			
 			break;
 		case 8:
 			
 			break;
-		case 9:
-			
-			break;
-		case 10:
-			
-			break;
+
 	}
 }
 //------------------------------------------------------------------------------------------------//

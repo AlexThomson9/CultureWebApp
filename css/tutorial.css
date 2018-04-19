@@ -72,6 +72,7 @@
 	width : 373px;
 
 	position: relative;
+	left:64%;
 }
 
 .div-tuto-step_5{
@@ -79,6 +80,7 @@
 	width : 373px;
 
 	position: relative;
+	left:70%;
 }
 
 .div-tuto-step_6{
@@ -86,6 +88,7 @@
 	width : 373px;
 
 	position: relative;
+	left:76%;
 }
 
 .div-tuto-step_7{
@@ -102,9 +105,3 @@
 	position: relative;
 }
 
-.div-tuto-step_9{
-	height: 385px;
-	width : 373px;
-
-	position: relative;
-}
