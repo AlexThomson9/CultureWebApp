@@ -12,6 +12,9 @@
 #default_sprite{
 	height: 174px;
 	width : 171px;
+
+	left: 0%;
+	bottom: 50px;
 }
 
 #tutorial-skipButton{
