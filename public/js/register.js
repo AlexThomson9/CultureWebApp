@@ -37,6 +37,7 @@ $('#submitBtn').click(function(){
                     //set the timeout to use the 2 second's defined previously
                   }, delayInMilliseconds);
                   form.reset();
+                  //squiggly boi
           }
         }
   });
