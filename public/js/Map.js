@@ -35,20 +35,51 @@ var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/
 }).addTo(map);
         //load the map informtaion
 $.getJSON("map.geojson",function(data){
+//  console.log(data);
+  $.getJSON("/mapinfo",function(data2){
+    delete data2[0]._id;
+    delete data2[1]._id;
+  //  data2[0].geometry.coordinates[0].toString().replaceAll("\"", "");
+  console.log(  data2[0].geometry.coordinates[0] + "" +   data2[0].geometry.coordinates[1]);
+
+    var mapinfo = {};
+    mapinfo.type = "FeatureCollection";
+    mapinfo.features = data2;
+    console.log(mapinfo);
+
         // add GeoJSON layer to the map once the file is loaded
-       geojson = L.geoJson(data).addTo(map);
+
+       geojson = L.geoJson(mapinfo).addTo(map);
        geojson.setStyle({
         fillOpacity: 1,
         color: "#D46A6A",
         weight: 1
         ,noWrap: true
         });
+         console.log(geojson);
+        var layerGroup = L.geoJSON(mapinfo, {
+            onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.Country);
+          }
+        }).addTo(map);
+
+        geojson = L.geoJson(data).addTo(map);
+       geojson.setStyle({
+        fillOpacity: 1,
+        color: "#D46A6A",
+        weight: 1
+        ,noWrap: true
+      });
+
+
+
         //Bind the popup to just display the country, it doesnt actually popup but we use the value
         var layerGroup = L.geoJSON(data, {
             onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.Country);
           }
         }).addTo(map);
+<<<<<<< HEAD:public/js/Map.js
         //Onlick for the leaflet marker
 
         /*  $.ajax({
@@ -59,7 +90,14 @@ $.getJSON("map.geojson",function(data){
             }
           });
                 */
+=======
+});
+
+>>>>>>> origin/Olek:public/js/Map.js
   });
+
+
+
     //Load the json for the countrries we want
     $.getJSON('world.geo.json-master/world.geo.json-master/countries.geo.json', function (geojson) { // load file
     L.geoJson(geojson, { // initialize layer with data
