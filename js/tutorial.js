@@ -146,8 +146,8 @@ function updateCssOfTutorialDiv(){
 			break;
 
 		case 7:
-			$('#tutorial').css('height', '405px');
-			$('#tutorial').css('width', '307px');
+			$('#tutorial').css('height', '385px');
+			$('#tutorial').css('width', '373px');
 
 			$('#tutorial-text').css('bottom', '60%');
 
@@ -157,8 +157,8 @@ function updateCssOfTutorialDiv(){
 			break;
 
 		case 8:
-			$('#tutorial').css('height', '405px');
-			$('#tutorial').css('width', '307px');
+			$('#tutorial').css('height', '385px');
+			$('#tutorial').css('width', '373px');
 
 			//$('#tutorial-text').css('bottom', '75%');
 
