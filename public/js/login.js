@@ -1,5 +1,5 @@
 $('#submitBtn').click(function(){
-
+/*Why o why kill me now */
   var obj = {};
   var form = document.getElementById("regForm");
   user = $('#userField').val();

@@ -1,5 +1,5 @@
 $('#submitBtn').click(function(){
-
+/* Why me */
   var obj = {};
   var form = document.getElementById("logForm");
   user = $('#userField').val();
