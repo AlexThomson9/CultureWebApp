@@ -25,9 +25,9 @@ $('#submitBtn').click(function(){
 
 
 
-            localStorage.setItem("user_id", data._id);
-            localStorage.setItem("User_Permission", data.perm);
-            localStorage.setItem("username", data.username);
+            localStorage.setItem("user_id", data[0]._id);
+            localStorage.setItem("User_Permission", data[0].perm);
+            localStorage.setItem("username", data[0].username);
             console.log(localStorage.getItem("user_id"));
             console.log(localStorage.getItem("User_Permission"));
             console.log(localStorage.getItem("username"));
