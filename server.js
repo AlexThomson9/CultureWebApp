@@ -127,6 +127,7 @@ app.get('/Country_Map', function(req, res) {
  if (err) throw err;
 res.jsonp(result);
  });
+});
 
 
 
