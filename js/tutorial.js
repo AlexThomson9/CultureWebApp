@@ -5,8 +5,8 @@ var text_step_3 = "Here's the Home page button, it will get where we are now.";
 var text_step_4 = "Here's the Login button, where you can Log to your account.";
 var text_step_5 = "Here's the Register button, it will allow to create an account.";
 var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
-var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
-var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws...";
+var text_step_7 = "Now click on one of the marker on the map, an information window will appear. Click when you've done it.";
+var text_step_8 = "So there is the information panel about the country you've selected. You can choose between 4 rubrics, Customs, Gestures, Culture and Laws";
 
 var tutorial_current_step;
 var last_step;
@@ -34,7 +34,7 @@ function createTutotialPopUp(text){
 	if(tutorial_current_step == 1){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
 	}
-	else if(tutorial_current_step == 2){
+	else if(tutorial_current_step == 2 || tutorial_current_step == 7 || tutorial_current_step == 8){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_2_talking_2.png\" height=\"405\" width=\"307\"></div>";
 	}
 	else {
@@ -131,9 +131,16 @@ function updateCssOfTutorialDiv(){
 			break;
 
 		case 7:
+			$('#tutorial').css('height', '405px');
+			$('#tutorial').css('width', '307px');
+
+			$('#tutorial').css('z-index', '100000');
 			break;
 		case 8:
-			
+			$('#tutorial').css('height', '405px');
+			$('#tutorial').css('width', '307px');
+
+			$('#tutorial').css('z-index', '100000');
 			break;
 
 	}
