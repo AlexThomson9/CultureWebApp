@@ -29,8 +29,8 @@ function createTutotialPopUp(text){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
 
-	popUp_temp += "<p id=\"tutorial-text_" + tutorial_current_step + "\">" + text + "</p>";
-	popUp_temp += "<a id=\"tutorial-skipButton_" + tutorial_current_step + "\" href=\"#\" onclick=\"defautPopUp()\">Skip tutorial</a>";
+	popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
+	popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" onclick=\"defautPopUp()\">Skip tutorial</a>";
 
 	if(tutorial_current_step == 1){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
@@ -92,9 +92,12 @@ function createPopUpBy(){
 function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
 		case 1:
-			$('#tutorial').css();
+
 			$('#tutorial-text').css();
+			$('#tutorial-skipButton').css()
+
 			$('.div-tuto-step_1').css();
+
 			break;
 		case 2:
 			$('#tutorial').css();
