@@ -1,14 +1,14 @@
 $('#submitBtn').click(function(){
 
   var obj = {};
-  var form = document.getElementById("regForm");
+  var form = document.getElementById("logForm");
   user = $('#userField').val();
   email = $('#emailField').val();
   password = $('#passField').val();
 
 
-  obj.email = user;
-  obj.username = email;
+  obj.email = email;
+  obj.username = username;
   obj.password = password;
 
   $.ajax({
