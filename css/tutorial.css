@@ -26,7 +26,7 @@
 
 	font-style: italic;
 
-	z-index: 5000;
+	z-index: 42;
 }
 
 #tutorial-text{
@@ -38,7 +38,7 @@
 
 	font-size: 20px;
 
-	z-index: 5000;
+	z-index: 42;
 }
 
 .div-tuto-step_1{

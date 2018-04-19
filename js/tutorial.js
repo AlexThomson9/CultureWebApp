@@ -90,6 +90,18 @@ function createPopUpBy(){
 //If the name isn't obvious enough, this function update de css of the div #tutorial for each step//
 function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
+		case 0:
+			$('#tutorial').css('height', '174px');
+			$('#tutorial').css('width', '171px');
+
+			$('#tutorial').css('z-index', '4001');
+			break;
+
+		case 1:
+			$('#tutorial').css('height', '90%');
+			$('#tutorial').css('width', '100%');
+			break;
+
 		case 2:
 			$('#tutorial-skipButton').css('left', '9%');
 			$('#tutorial-skipButton').css('bottom', '0%');
@@ -134,11 +146,20 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial').css('height', '405px');
 			$('#tutorial').css('width', '307px');
 
+			$('#tutorial-text').css('bottom', '60%');
+
+			$('#tutorial-skipButton').css('left', '74%');
+
 			$('#tutorial').css('z-index', '100000');
 			break;
+
 		case 8:
 			$('#tutorial').css('height', '405px');
 			$('#tutorial').css('width', '307px');
+
+			$('#tutorial-text').css('bottom', '15%');
+
+			$('#tutorial-skipButton').css('left', '74%');
 
 			$('#tutorial').css('z-index', '100000');
 			break;
@@ -189,8 +210,7 @@ function defautPopUp(){
 
 	detachAll();
 
-	$('#tutorial').css('height', '174px');
-	$('#tutorial').css('width', '171px');
+	updateCssOfTutorialDiv();
 
 	tutorial_current_step = 0;
 	last_step = 0;
@@ -202,8 +222,7 @@ function defautPopUp(){
 		tutorial_current_step++;
 		$(this).detach();
 
-		$('#tutorial').css('height', '90%');
-		$('#tutorial').css('width', '100%');
+		updateCssOfTutorialDiv();
 
 		popUp = createPopUpBy();
 		attachPopUp(popUp);
