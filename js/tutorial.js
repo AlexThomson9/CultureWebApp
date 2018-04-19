@@ -1,6 +1,6 @@
 //GLOBAL VARIABLE//
 var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
-var text_step_2 = "Here youu can choose a continent, then the map will move on the part of the world you've selected.";
+var text_step_2 = "Here you can choose a continent, then the map will move on the part of the world you've selected.";
 var text_step_3 = "Here's the Home page button, it will get where we are now.";
 var text_step_4 = "Here's the Login button, where you can Log to your account.";
 var text_step_5 = "Here's the Register button, it will allow to create an account.";
@@ -91,17 +91,16 @@ function createPopUpBy(){
 //If the name isn't obvious enough, this function update de css of the div #tutorial for each step//
 function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
-		case 1:
-
-			$('#tutorial-text').css();
-			$('#tutorial-skipButton').css()
-
-			$('.div-tuto-step_1').css();
-
-			break;
 		case 2:
-			$('#tutorial').css();
+
+			$('#tutorial-skipButton').css('left', '55%');
+			$('#tutorial-skipButton').css('bottom', '0%');
+
+			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('bottom', '15%');
+
 			break;
+
 		case 3:
 			$('#tutorial').css();
 			break;
@@ -132,6 +131,8 @@ function updateCssOfTutorialDiv(){
 
 //Recursive function which is making run the tutorial//
 function tutorial(){
+
+	updateCssOfTutorialDiv();
 
 	detachAll();
 

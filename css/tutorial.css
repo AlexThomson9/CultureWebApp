@@ -14,7 +14,7 @@
 	width : 171px;
 
 	left: 0%;
-	bottom: 50px;
+	bottom: 0%;
 }
 
 #tutorial-skipButton{
@@ -30,6 +30,8 @@
 }
 
 #tutorial-text{
+	width: 249px;
+
 	position: absolute;
 	left: 30%;
 	bottom: 75%; /*60% to be on the middle of the bubble*/
@@ -45,7 +47,7 @@
 
 	position: fixed;
 	left: 0%;
-	bottom: 50px;
+	bottom: 0%;
 }
 
 .div-tuto-step_2{
@@ -53,6 +55,8 @@
 	width : 373px;
 
 	position: relative;
+	left: 15%;
+	top: 0%;
 }
 
 .div-tuto-step_3{
