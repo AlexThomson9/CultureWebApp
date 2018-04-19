@@ -15,24 +15,34 @@
 }
 
 #tutorial-skipButton{
-	position: fixed;
-	left: 90%;
-	bottom: 1%;
+	position: absolute;
+	left: 70%;
+	bottom: 48%;
 
-	background-color: black;
+	color: darkblue;
+
+	font-style: italic;
+
+	z-index: 5000;
 }
 
 #tutorial-text{
 	position: absolute;
+	left: 30%;
+	bottom: 75%; /*60% to be on the middle of the bubble*/
 
-	font-size: 14px;
+	font-size: 20px;
+
+	z-index: 5000;
 }
 
 .div-tuto-step_1{
 	height: 385px;
 	width : 373px;
 
-	position: relative;
+	position: fixed;
+	left: 0%;
+	bottom: 50px;
 }
 
 .div-tuto-step_2{
