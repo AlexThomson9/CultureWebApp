@@ -151,7 +151,7 @@ console.log(req.body);
 
   app.post("/login", function(req, res){
     console.log(req.body);
-    db.collection("userdetails").find( { $and: [ {"username": req.body.username},{"email": req.body.password}]}).toArray(function(err, result) {
+    db.collection("userdetails").find( { $and: [ {"username": req.body.username},{"password": req.body.password}]}).toArray(function(err, result) {
       if (err) throw err;
         res.jsonp(result);
         console.log(result);
