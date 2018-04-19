@@ -27,7 +27,7 @@ $('#submitBtn').click(function(){
             {
             //remove the submission successful as it only needs to be there for a little bit
             $('.login-box').find("h5").remove();
-            window.location.replace("/Index");
+            window.location.replace("/");
             //set the timeout to use the 2 second's defined previously
           }, delayInMilliseconds);
             if(typeof(Storage) != "undefined"){
