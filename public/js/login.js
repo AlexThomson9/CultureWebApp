@@ -17,7 +17,8 @@ $('#submitBtn').click(function(){
         url: "/login",
 
         success: function(data){
-        console.log(user)
+        console.log(user);
+        console.log(data);
           if(data.length > 0){
             $('.login-box').find("h5").remove();
             $('.login-box').append("<h5>Logging in..<h5>");
