@@ -2,7 +2,7 @@
 	height: 174px;
 	width : 171px;
 
-	position: relative;
+	position: fixed;
 	left: 0%;
 	bottom: 0%;
     
@@ -31,44 +31,62 @@
 .div-tuto-step_1{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_2{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_3{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_4{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_5{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_6{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_7{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_8{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
 
 .div-tuto-step_9{
 	height: 385px;
 	width : 373px;
+
+	position: relative;
 }
