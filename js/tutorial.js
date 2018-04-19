@@ -31,10 +31,10 @@ function createTutotialPopUp(text){
 	popUp_temp += "<p id=\"tutorial-text\">" + text + "</p>";
 	popUp_temp += "<a id=\"tutorial-skipButton\" href=\"#\" onclick=\"defautPopUp()\">Skip tutorial</a>";
 
-	if(tutorial_current_step == 1){
+	if(tutorial_current_step == 1 || tutorial_current_step == 7 || tutorial_current_step == 8){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_1_talking.png\" height=\"385\" width=\"373\"></div>";
 	}
-	else if(tutorial_current_step == 2 || tutorial_current_step == 7 || tutorial_current_step == 8){
+	else if(tutorial_current_step == 2 ){
 		popUp_temp += "<img id=\"sprite_" + tutorial_current_step + "\" src=\"images/sprite_2_talking_2.png\" height=\"405\" width=\"307\"></div>";
 	}
 	else {
