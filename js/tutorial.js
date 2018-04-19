@@ -94,6 +94,9 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial').css('height', '174px');
 			$('#tutorial').css('width', '171px');
 
+			$('#tutorial').css('left', '0%');
+			$('#tutorial').css('bottom', '0%');
+
 			$('#tutorial').css('z-index', '4001');
 			break;
 
@@ -157,7 +160,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial').css('height', '405px');
 			$('#tutorial').css('width', '307px');
 
-			$('#tutorial-text').css('bottom', '15%');
+			$('#tutorial-text').css('bottom', '75%');
 
 			$('#tutorial-skipButton').css('left', '74%');
 
