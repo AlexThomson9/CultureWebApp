@@ -21,6 +21,9 @@ $('#submitBtn').click(function(){
 
           if(data.length > 0){
             console.log(data);
+            localstorage.setItem("user_id", data._id);
+            localstorage.setItem("User_Permission", data.perm);
+            localstorage.setItem("username", data.username);
             $('.login-box').find("h5").remove();
             $('.login-box').append("<h5>Logging in..<h5>");
 
