@@ -147,6 +147,7 @@ console.log(req.body);
       }
 
   });
+});
 
   app.post("/login", function(req, res){
     console.log(req.body);
@@ -161,8 +162,5 @@ console.log(req.body);
         else{
           console.log("log in unsuccesfull");
         }
-
-
-
   });
 });
