@@ -21,12 +21,17 @@ $('#submitBtn').click(function(){
 
           if(data.length > 0){
             console.log(data);
+            if(typeof(Storage) != "undefined"){
+
+
+
             localStorage.setItem("user_id", data._id);
             localStorage.setItem("User_Permission", data.perm);
             localStorage.setItem("username", data.username);
             console.log(localStorage.getItem("user_id"));
             console.log(localStorage.getItem("User_Permission"));
             console.log(localStorage.getItem("username"));
+                }
             $('.login-box').find("h5").remove();
             $('.login-box').append("<h5>Logging in..<h5>");
 
