@@ -213,10 +213,10 @@ function defautPopUp(){
 
 	detachAll();
 
-	updateCssOfTutorialDiv();
-
 	tutorial_current_step = 0;
 	last_step = 0;
+
+	updateCssOfTutorialDiv();
 
 	var defaultPopUp = createDefaultPopUp();
 	attachPopUp(defaultPopUp);
