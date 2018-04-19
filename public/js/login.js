@@ -7,7 +7,7 @@ $('#submitBtn').click(function(){
 
 
 
-  obj.username = username;
+  obj.username = user;
   obj.password = password;
 
   $.ajax({
