@@ -20,12 +20,7 @@ app.get('/', function(req, res) {
  res.render('pages/Index');
 });
 
-app.get('/all', function(req, res) {
- db.collection('suggest').find().toArray(function(err, result) {
- if (err) throw err;
-res.jsonp(result);
- });
-});
+/* -----NAVIGATION-----*/
 app.get('/Suggest', function(req, res) {
  res.render('pages/Suggest');
 });
@@ -44,13 +39,24 @@ app.get('/Admin', function(req, res) {
 app.get('/Mobile-index', function(req, res) {
  res.render('pages/Mobile-index');
 });
+/*-----AJAX-REQUEST-HANDLING-BY-PAGE-----*/
+/*-----INDEX-----*/
+/*-----LOGIN-----*/
+/*-----REGISTER-----*/
+/*-----ADMIN-----*/
+/*-----SUGGEST-----*/
 app.get('/Countries', function(req, res) {
  db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
 res.jsonp(result);
  });
 });
-
+app.get('/all', function(req, res) {
+ db.collection('suggest').find().toArray(function(err, result) {
+ if (err) throw err;
+res.jsonp(result);
+ });
+});
 
 app.post('/Suggestion', function(req, res) {
   console.log(JSON.stringify(req.body));
@@ -60,16 +66,6 @@ console.log(result);
 res.jsonp(result);
  });
 });
-
-/*app.post('/quotes', function (req, res) {
-  console.log(req.body);
- db.collection('quotes').save(req.body, function(err, result) {
- if (err) throw err;
- console.log('saved to database')
- res.redirect('/')
- })
-})*/
-
 app.post('/delete', function(req, res) {
   console.log(req.body._id);
 //  console.log(query);
