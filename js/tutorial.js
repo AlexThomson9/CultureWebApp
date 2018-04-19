@@ -132,7 +132,7 @@ function updateCssOfTutorialDiv(){
 //Recursive function which is making run the tutorial//
 function tutorial(){
 
-	updateCssOfTutorialDiv();
+	
 
 	detachAll();
 
@@ -147,6 +147,8 @@ function tutorial(){
 		popUp = createPopUpBy();
 		attachPopUp(popUp);
 
+		updateCssOfTutorialDiv();
+		
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 			tutorial_current_step++;
