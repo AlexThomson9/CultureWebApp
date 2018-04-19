@@ -7,7 +7,7 @@ var text_step_5 = "Here's the Register button, it will allow to create an accoun
 var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
 var text_step_7 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
 var text_step_8 = "You can select a country's informations by click on the marker in the country you want, try it!";
-var text_step_9 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws";
+var text_step_9 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws...";
 
 var tutorial_current_step;
 var last_step;
