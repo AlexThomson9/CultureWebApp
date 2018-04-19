@@ -5,9 +5,8 @@ var text_step_3 = "Here's the Home page button, it will get where we are now.";
 var text_step_4 = "Here's the Login button, where you can Log to your account.";
 var text_step_5 = "Here's the Register button, it will allow to create an account.";
 var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
-var text_step_7 = "Here's the Suggest button, through it you will be allowed to improve my knowledge.";
-var text_step_8 = "You can select a country's informations by click on the marker in the country you want, try it!";
-var text_step_9 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws...";
+var text_step_7 = "You can select a country's informations by click on the marker in the country you want, try it!";
+var text_step_8 = "So there is the information panel, about the country you've selected.\nYou can choose between 4 rubrics, Customs, Gestures, Culture, Laws...";
 
 var tutorial_current_step;
 var last_step;
@@ -92,38 +91,41 @@ function createPopUpBy(){
 function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
 		case 2:
-
-			$('#tutorial-skipButton').css('left', '55%');
+			$('#tutorial-skipButton').css('left', '9%');
 			$('#tutorial-skipButton').css('bottom', '0%');
 
 			$('#tutorial-text').css('left', '9%');
 			$('#tutorial-text').css('bottom', '15%');
-
 			break;
 
 		case 3:
-			$('#tutorial').css();
+			$('#tutorial-skipButton').css('left', '9%');
+			$('#tutorial-skipButton').css('bottom', '0%');
+
+			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('bottom', '20%');
 			break;
+
 		case 4:
-			$('#tutorial').css();
+			
 			break;
 		case 5:
-			$('#tutorial').css();
+			
 			break;
 		case 6:
-			$('#tutorial').css();
+			
 			break;
 		case 7:
-			$('#tutorial').css();
+			
 			break;
 		case 8:
-			$('#tutorial').css();
+			
 			break;
 		case 9:
-			$('#tutorial').css();
+			
 			break;
 		case 10:
-			$('#tutorial').css();
+			
 			break;
 	}
 }
@@ -148,12 +150,12 @@ function tutorial(){
 		attachPopUp(popUp);
 
 		updateCssOfTutorialDiv();
-		
+
 		//If sprite is clicked (mean that the tutorial need to go to the next step)
 		$('#sprite_' + tutorial_current_step).click(function(){
 			tutorial_current_step++;
 
-			if(tutorial_current_step < 10){
+			if(tutorial_current_step < 9){
 				tutorial();
 			}
 			else{
