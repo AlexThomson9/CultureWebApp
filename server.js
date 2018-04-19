@@ -22,6 +22,7 @@ res.jsonp(result);
  });
 });
 
+
 app.post('/country', function(req, res) {
   console.log(JSON.stringify(req.body));
  db.collection('culturewebapp').find(req.body).toArray(function(err, result) {
