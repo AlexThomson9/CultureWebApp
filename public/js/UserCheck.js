@@ -19,7 +19,6 @@ if (localStorage.getItem("user_id") == null){
 
 
 $('#Logout').click(function(){
-
   localStorage.clear();
   $('#LoggedIn').show();
   $('#LoggedIn1').show();
@@ -27,6 +26,7 @@ $('#Logout').click(function(){
   $('#Suggest').hide();
     $('#Admin').hide();
 
+window.location.replace("/");
 
 });
 });
