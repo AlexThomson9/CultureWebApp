@@ -3,11 +3,16 @@ $("#logForm").validate({
   rules: {
     username: "required",
     password: "required",
-  }
+  },
+  messages: {
+     username: "Please specify your name",
+     password: "Please enter a password"
+   }
 })
 
 $('#submitBtn').click(function(){
-/*Why o why kill me now */
+  $("#logForm").valid();
+
   var obj = {};
   var form = document.getElementById("regForm");
   user = $('#userField').val();
