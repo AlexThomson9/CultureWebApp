@@ -6,7 +6,7 @@ $("#logForm").validate({
   },
   messages: {
      username: "Please enter your username",
-     password: "Please enter a password"
+     password: "Please enter your password"
    }
 })
 

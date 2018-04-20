@@ -17,8 +17,8 @@ $("#regForm").validate({
     },
   },
   messages: {
-     username: "Please enter a username",
-     password: "Please enter a password",
+     username: "Please enter a username that is between 5-14 characters long",
+     password: "Please enter a password that is between 8-15 characters long",
      email: "Please enter a valid email address"
    }
 })
