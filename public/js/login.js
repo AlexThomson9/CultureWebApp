@@ -16,6 +16,11 @@ $('#submitBtn').click(function(){
   obj.username = user;
   obj.password = password;
 
+  if(obj.username == NULL or obj.password == NULL){
+    break;
+  }
+
+  else{
 
 
   $.ajax({
@@ -62,4 +67,5 @@ $('#submitBtn').click(function(){
           }
         }
   });
+ }
 });
