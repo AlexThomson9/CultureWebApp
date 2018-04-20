@@ -16,7 +16,7 @@ $('#submitBtn').click(function(){
   obj.username = user;
   obj.password = password;
 
-  if(obj.username == NULL || obj.password == NULL){
+  if(obj.username == "" || obj.password == ""){
     return;
   }
 
