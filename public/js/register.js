@@ -1,3 +1,16 @@
+//JQuery Validate library
+$("#regForm").validate({
+  rules: {
+    username: "required",
+    password: "required",
+    email: {
+      required: true,
+      email: true
+    },
+  }
+})
+
+
 $('#submitBtn').click(function(){
 /* Why me */
   var obj = {};
@@ -10,19 +23,6 @@ $('#submitBtn').click(function(){
   obj.email = email;
   obj.username = user;
   obj.password = password
-
-  //JQuery Validate library
-  $("#regForm").validate({
-    rules: {
-      username: "required",
-      password: "required",
-      email: {
-        required: true,
-        email: true
-      },
-    }
-  })
-
 
   $.ajax({
       type: "GET",
