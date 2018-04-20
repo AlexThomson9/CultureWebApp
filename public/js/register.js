@@ -9,7 +9,19 @@ $('#submitBtn').click(function(){
 
   obj.email = email;
   obj.username = user;
-  obj.password = password;
+  obj.password = password
+
+
+  $.ajax({
+      type: "GET",
+      url: "https://trumail.io/json/"+email +"";
+      success: function(data){
+        console.log("success", data);
+
+
+      }
+
+  });
 
   $.ajax({
         type: "POST",
