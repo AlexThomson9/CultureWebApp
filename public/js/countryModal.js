@@ -19,13 +19,17 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
-
-  if(testArray[0].customs == undefined){
+  try{
+    $('.serverContent').empty().append(testArray[0].customs);
+  }
+  catch{
     $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
   }
-  else{
-  $('.serverContent').empty().append(testArray[0].customs);
- }
+
+//  if(testArray[0].customs == undefined){
+  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+//  }
+
 });
 
 $('#gesturesClick').click(function(event){
