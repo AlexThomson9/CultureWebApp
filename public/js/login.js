@@ -1,17 +1,17 @@
+//JQuery Validate library
+$("#logForm").validate({
+  rules: {
+    username: "required",
+    password: "required",
+  }
+})
+
 $('#submitBtn').click(function(){
 /*Why o why kill me now */
   var obj = {};
   var form = document.getElementById("regForm");
   user = $('#userField').val();
   password = $('#passField').val();
-
-  //JQuery Validate library
-  $("#logForm").validate({
-    rules: {
-      username: "required",
-      password: "required",
-    }
-  })
 
   obj.username = user;
   obj.password = password;
