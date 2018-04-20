@@ -88,7 +88,7 @@ $(".serverContent").empty().append(testArray[0].customs);
             }
             console.log(c);
             $(".restName").empty().append(result[c].name);
-            $(".restLanguage").empty().append(result[c].languages[0].name);
+            $(".restLanguage").empty().append("Main Language: ", result[c].languages[0].name);
             $(".restCurrency").empty().append("Currency: ", result[0].currencies[0].symbol, " ", result[c].currencies[0].name);
             $(".flagImage").attr("src", result[c].flag);
             console.log(result[c].capital);
