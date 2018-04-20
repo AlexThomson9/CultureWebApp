@@ -24,6 +24,11 @@ $('#submitBtn').click(function(){
   obj.username = user;
   obj.password = password
 
+  if(obj.email == null || obj.username == null || obj.password == null){
+    return;
+  }
+  else{
+
   $.ajax({
       type: "GET",
       url: "https://trumail.io/json/"+email +"",
@@ -65,4 +70,5 @@ $('#submitBtn').click(function(){
           }
         }
   });
+ }
 });
