@@ -5,10 +5,18 @@ $('#submitBtn').click(function(){
   user = $('#userField').val();
   password = $('#passField').val();
 
-
+  //JQuery Validate library
+  $("#logForm").validate({
+    rules: {
+      username: "required",
+      password: "required",
+    }
+  })
 
   obj.username = user;
   obj.password = password;
+
+
 
   $.ajax({
         type: "POST",

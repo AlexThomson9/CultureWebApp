@@ -11,6 +11,18 @@ $('#submitBtn').click(function(){
   obj.username = user;
   obj.password = password
 
+  //JQuery Validate library
+  $("#regForm").validate({
+    rules: {
+      username: "required",
+      password: "required",
+      email: {
+        required: true,
+        email: true
+      },
+    }
+  })
+
 
   $.ajax({
       type: "GET",
