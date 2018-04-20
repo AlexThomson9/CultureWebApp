@@ -13,6 +13,11 @@ $("#logForm").validate({
 $('#submitBtn').click(function(){
   $("#logForm").valid();
 
+  if($("#logForm").valid() == false){
+    return;
+  }
+
+
   var obj = {};
   var form = document.getElementById("regForm");
   user = $('#userField').val();
