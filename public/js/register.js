@@ -30,21 +30,6 @@ $('#submitBtn').click(function(){
   else{
 
   $.ajax({
-      type: "GET",
-<<<<<<< HEAD
-      url: "https://trumail.io/json/"+email +"",
-=======
-      url: "https://trumail.io/json/"+email+"",
->>>>>>> 63d7e82dfdd295a1b137ef47182dafb8c55221b3
-      success: function(data){
-        console.log("success", data);
-
-
-      }
-
-  });
-
-  $.ajax({
         type: "POST",
         data: JSON.stringify(obj),
         contentType: "application/json",
