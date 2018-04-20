@@ -14,7 +14,7 @@ $('#submitBtn').click(function(){
 
   $.ajax({
       type: "GET",
-      url: "https://trumail.io/json/"+email +"";
+      url: "https://trumail.io/json/"+email+"",
       success: function(data){
         console.log("success", data);
 
