@@ -51,6 +51,14 @@ app.get('/Countries', function(req, res) {
 res.jsonp(result);
  });
 });
+app.post('/country', function(req, res) {
+  console.log(JSON.stringify(req.body));
+ db.collection('Country_Info').find(req.body).toArray(function(err, result) {
+ if (err) throw err;
+console.log(result);
+res.jsonp(result);
+ });
+});
 app.get('/all', function(req, res) {
  db.collection('suggest').find().toArray(function(err, result) {
  if (err) throw err;
