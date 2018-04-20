@@ -62,8 +62,8 @@ $('#submitBtn').click(function(){
             $('.login-box').find("h5").remove();
             $('.login-box').append("<h5>User details entered incorrect, please try again!</h5>");
                 //set the var to 2 sectons
-            $('#userField').empty();
-            $('#passField').empty();
+            $('#userField').val("");
+            $('#passField').val("");
 
           }
         }
