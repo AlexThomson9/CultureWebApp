@@ -1,4 +1,4 @@
-
+$(function() {
 //localStorage.setItem("user_id", user_id);
 //localStorage.setItem("User_Permission", User_Permission);
 if (localStorage.getItem("user_id") == ""){
@@ -18,3 +18,4 @@ if (localStorage.getItem("user_id") == ""){
     $('#Admin').show();
   }
 }
+});
