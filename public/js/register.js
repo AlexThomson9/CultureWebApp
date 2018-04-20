@@ -23,9 +23,12 @@ $("#regForm").validate({
    }
 })
 
-
 $('#submitBtn').click(function(){
   $("#regForm").valid();
+
+  if($("#regForm").valid() == false){
+    return;
+  }
 
   var obj = {};
   var form = document.getElementById("logForm");
