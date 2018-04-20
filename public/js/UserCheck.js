@@ -10,9 +10,23 @@ if (localStorage.getItem("user_id") == ""){
   console.log(localStorage.getItem("username"));
   $('#LoggedIn').hide();
   $('#LoggedIn1').hide();
+  $('#Logout').show();
   $('#Suggest').show();
   if(localStorage.getItem("User_Permission") == "Admin" ){
     $('#Admin').show();
   }
 }
+
+
+$('#Logout').click(function(){
+
+  localStorage.clear();
+  $('#LoggedIn').show();
+  $('#LoggedIn1').show();
+  $('#Logout').hide();
+  $('#Suggest').hide();
+    $('#Admin').hide();
+
+
+});
 });

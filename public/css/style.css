@@ -287,6 +287,12 @@ overflow: hidden;
 
 
 }
+#Logout{
+
+display: none;
+color: white;
+
+}
 #Admin{
 
   display: none;
