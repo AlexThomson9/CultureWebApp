@@ -89,7 +89,7 @@ $(".serverContent").empty().append(testArray[0].customs);
             console.log(c);
             $(".restName").empty().append(result[c].name);
             $(".restLanguage").empty().append(result[c].languages[0].name);
-            $(".restCurrency").empty().append(result[c].currencies[0].name, "referred to as: ",result[0].currencies[0].code, "and with the symbol as: ", result[0].currencies[0].symbol);
+            $(".restCurrency").empty().append(result[c].currencies[0].name, " ",result[0].currencies[0].code, " ", result[0].currencies[0].symbol);
             $(".flagImage").attr("src", result[c].flag);
             console.log(result[c].capital);
             //Calll for openModal function
