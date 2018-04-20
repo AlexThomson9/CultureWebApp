@@ -9,7 +9,7 @@ if (localStorage.getItem("user_id") == ""){
   console.log(localStorage.getItem("User_Permission"));
   console.log(localStorage.getItem("username"));
   $('#LoggedIn').hide();
-  $('#Suggest').show();
+  $('#Suggest').css("display", "block");
   if(localStorage.getItem("User_Permission") == "Admin" ){
     $('#Admin').show();
   }
