@@ -1,18 +1,32 @@
 //JQuery Validate library
 $("#regForm").validate({
   rules: {
-    username: "required",
-    password: "required",
+    username:{
+      required: true,
+      minlength: 5,
+      maxlength: 14
+    },
+    password:{
+     required: true,
+     minlength: 8,
+     maxlength: 15,
+   },
     email: {
       required: true,
       email: true
     },
-  }
+  },
+  messages: {
+     username: "Please enter a username",
+     password: "Please enter a password",
+     email: "Please enter a valid email address"
+   }
 })
 
 
 $('#submitBtn').click(function(){
-/* Why me */
+  $("#regForm").valid();
+
   var obj = {};
   var form = document.getElementById("logForm");
   user = $('#userField').val();
