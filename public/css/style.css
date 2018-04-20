@@ -287,10 +287,10 @@ overflow: hidden;
 
 
 }
-.Admin{
+#Admin{
 
   display: none;
 }
-.Suggest{
+#Suggest{
   display: none;
 }
