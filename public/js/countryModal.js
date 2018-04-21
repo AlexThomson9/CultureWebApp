@@ -92,6 +92,15 @@ $('.serverContent').empty().append(testArray[0].customs);
   });
     console.log(testArray);
     console.log(testArray[0]);
+    if(testArray.length == 0){
+
+
+      console.log("no data retrieved");
+    }else {
+
+      console.log("data", testArray);
+    }
+
 
 
     map.closePopup();
