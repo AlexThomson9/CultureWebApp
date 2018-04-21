@@ -20,7 +20,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
   console.log(typeof testArray[0].customs == 0);
-   if(typeof testArray[0].customs.length != 0){
+   if(testArray[0].customs.length != 0){
       $('.serverContent').empty().append(testArray[0].customs);
       console.log("hi");
     }
