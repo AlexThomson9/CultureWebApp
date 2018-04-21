@@ -19,28 +19,17 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
-  console.log(typeof testArray[0].customs === "undefined");
-//  if(typeof testArray[0].customs != 'undefined'){
-try{
+  console.log(typeof testArray[0].customs == 0);
+   if(typeof testArray[0].customs.length != 0){
       $('.serverContent').empty().append(testArray[0].customs);
       console.log("hi");
-    }catch(e){
-      if(e){
-            $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-      }
     }
-//  }
-//  else{
-  //  console.log("I got here wahoo");
+   else{
+    console.log("I got here wahoo");
 
-  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-
-//}
-//  if(testArray[0].customs == undefined){
-  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-//  }
-
-});
+    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+    }
+ });
 
 $('#gesturesClick').click(function(event){
   serverContent.style.display = "block";
