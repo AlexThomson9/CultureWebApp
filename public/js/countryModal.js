@@ -30,12 +30,12 @@ try{
       }
     }
 //  }
-  else{
-    console.log("I got here wahoo");
+//  else{
+  //  console.log("I got here wahoo");
 
-    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
 
-  }
+//}
 //  if(testArray[0].customs == undefined){
   //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
 //  }
