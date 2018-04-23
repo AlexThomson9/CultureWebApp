@@ -180,11 +180,11 @@ $('#back').click(function(){
         //get the id for the database
         var c_id = $('#country_id').text();
         //set the id to the json object
-
+        var ident = $('#Identifier').text();
         var c_verified = {};
         c_verified._id = c_id;
         c_verified.name = $('#CountryTitle').text();
-        c_verified[$('#Identifier').text();] =   $('.textArea').text();
+        c_verified[ident] =  $('.textArea').text();
 
       /*  var c_name = $('#CountryTitle').text();
         var Suggestion = $('.textArea').text();
