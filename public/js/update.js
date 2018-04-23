@@ -38,8 +38,13 @@ console.log(Country);
           //Log already exists
           console.log("Country already exists");
         }else{
+          var c_nowhitespace = encodeURIComponent(Country.trim()); //"Test%20-%20Text"
           //if the country doesn't aleady exist then set url to contain the selected country
-                var countryPicked = 'https://restcountries.eu/rest/v2/name/' + Country+ '?fields=name;capital;';
+          if(c_nowhitespace.indexOf("Congo") != -1){
+
+            c_nowhitespace = "Congo";
+          }
+                var countryPicked = 'https://restcountries.eu/rest/v2/name/' + c_nowhitespace+ '?fields=name;capital;';
                 //perform an ajax request to the url above to get
                 //the country capital from the restcountries API
               $.ajax({
@@ -49,6 +54,7 @@ console.log(Country);
                     success: function(result, data){
                       //Capital = capital retrieved
                       var capital  = result[0].capital;
+
                       //Set url to contain capital recieved
                       var capital_URL = "https://nominatim.OpenStreetMap.org/?format=json&addressdetails=1&q=" + capital + "&format=json&limit=1";
                       //Log to ensure its not null
