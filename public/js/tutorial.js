@@ -132,8 +132,6 @@ function updateCssOfTutorialDiv(){
 		case 1:
 			$('#tutorial').css('height', '90%');
 			$('#tutorial').css('width', '100%');
-
-			$('#tutorial-text').css('bottom', '62%');
 			break;
 
 		case 2:
@@ -191,6 +189,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial').css('height', '385px');
 			$('#tutorial').css('width', '373px');
 
+			$('#tutorial-text').css('left', '29%');
 			$('#tutorial-text').css('bottom', '62%');
 
 			$('#tutorial-skipButton').css('left', '74%');
