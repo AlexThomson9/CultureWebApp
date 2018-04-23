@@ -40,6 +40,10 @@ console.log(Country);
         }else{
           var c_nowhitespace = encodeURIComponent(Country.trim()); //"Test%20-%20Text"
           //if the country doesn't aleady exist then set url to contain the selected country
+          if(c_nowhitespace.indexOf("Congo") != -1){
+
+            c_nowhitespace = "Congo";
+          }
                 var countryPicked = 'https://restcountries.eu/rest/v2/name/' + c_nowhitespace+ '?fields=name;capital;';
                 //perform an ajax request to the url above to get
                 //the country capital from the restcountries API
