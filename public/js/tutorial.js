@@ -1,4 +1,4 @@
-//GLOBAL VARIABLE//
+//-------GLOBAL VARIABLE-------//
 var text_step_1 = "Let's go for a short Tutorial, to teach you how I work !";
 var text_step_2 = "Here you can choose a continent, then the map will move on the part of the world you've selected.";
 var text_step_3 = "Here's the Home page button, it will get where we are now.";
@@ -11,20 +11,37 @@ var text_step_8 = "So there is the information panel about the country you've se
 var tutorial_current_step;
 var last_step;
 var popUp;
-//---------------//
+//-----------------------------//
 
 $(function(){
 	defautPopUp();
 })
 
-//OTHER FUNCTIONS//
+//-------ATTACH/DETACH FUNCTIONS-------//
+
+/**
+* This function add the created pop-up in the div #tutorial
+* var popUp is the html text 
+*/
 function attachPopUp(popUp){ $('#tutorial').append(popUp); }
 
+/**
+* This function is detaching every div inside the div #tutorial
+*/
 function detachAll(){ $('#tutorial').find('div').detach(); }
-//---------------//
 
-//Functions for creating the pop ups of the tutorial//
-function createTutotialPopUp(text){
+//-------------------------------------//
+
+
+
+//-------CREATING POP-UP OF THE TUTORIAL-------//
+
+/**
+* This function is create the html text of the pop-up and return it
+* The current step of the tutorial is take in count during the creation of the pop-up
+* var text is the text we want to put inside the pop-up
+*/
+function createTutorialPopUp(text){
 
 	var popUp_temp = "<div class=\"div-tuto-step_" + tutorial_current_step + "\">";
 
@@ -46,48 +63,60 @@ function createTutotialPopUp(text){
 	return popUp_temp;
 }
 
+/**
+* This function is called the one above it
+* Switching on the value of var tutorial_current_step the function will put the text corresponding to the current step
+*/
 function createPopUpBy(){
 
 	var local_popUp;
 
 	switch(tutorial_current_step){
 		case 1:
-			local_popUp = createTutotialPopUp(text_step_1);
+			local_popUp = createTutorialPopUp(text_step_1);
 			break;
 		case 2:
-			local_popUp = createTutotialPopUp(text_step_2);
+			local_popUp = createTutorialPopUp(text_step_2);
 			break;
 		case 3:
-			local_popUp = createTutotialPopUp(text_step_3);
+			local_popUp = createTutorialPopUp(text_step_3);
 			break;
 		case 4:
-			local_popUp = createTutotialPopUp(text_step_4);
+			local_popUp = createTutorialPopUp(text_step_4);
 			break;
 		case 5:
-			local_popUp = createTutotialPopUp(text_step_5);
+			local_popUp = createTutorialPopUp(text_step_5);
 			break;
 		case 6:
-			local_popUp = createTutotialPopUp(text_step_6);
+			local_popUp = createTutorialPopUp(text_step_6);
 			break;
 		case 7:
-			local_popUp = createTutotialPopUp(text_step_7);
+			local_popUp = createTutorialPopUp(text_step_7);
 			break;
 		case 8:
-			local_popUp = createTutotialPopUp(text_step_8);
+			local_popUp = createTutorialPopUp(text_step_8);
 			break;
 		case 9:
-			local_popUp = createTutotialPopUp(text_step_9);
+			local_popUp = createTutorialPopUp(text_step_9);
 			break;
 		case 10:
-			local_popUp = createTutotialPopUp(text_step_10);
+			local_popUp = createTutorialPopUp(text_step_10);
 			break;
 	}
 
 	return local_popUp;
 }
-//-------------------------------------------------//
 
-//If the name isn't obvious enough, this function update de css of the div #tutorial for each step//
+//---------------------------------------------//
+
+
+
+//-------CSS UPDATING-------//
+
+/**
+* This function is update the css of the nodes inside the div #tutorial and the css of this div as well for each step of the tutorial
+* In other word this function make move the sprite, set position of the text and the position of the <a> node
+*/
 function updateCssOfTutorialDiv(){
 	switch(tutorial_current_step){
 		case 0:
@@ -169,9 +198,19 @@ function updateCssOfTutorialDiv(){
 
 	}
 }
-//------------------------------------------------------------------------------------------------//
 
-//Recursive function which is making run the tutorial//
+//--------------------------//
+
+
+
+//---------TUTORIAL---------//
+
+/**
+* This the function which is making run the tutorial
+* It will create the pop-up correspondind to the current step of the tutorial
+* Then if you click on "Skip tutorial" defaultPopUp(); will be called
+* if you click on the image the tutorial will continue until you reach he end of the tutorial, then defaultPopUp(); will be called
+*/
 function tutorial(){
 
 
@@ -206,9 +245,17 @@ function tutorial(){
 
 	return;
 }
-//---------------------------------------------------//
 
-//Function for default pop up//
+//--------------------------//
+
+
+
+//-------DEFAULT POP-UP-------//
+
+/**
+* This function is call by default, it create and attach to the page the default pop-up
+* If the img is clicked this function will call tutorial();
+*/
 function defautPopUp(){
 
 	detachAll();
@@ -238,10 +285,14 @@ function defautPopUp(){
 	});
 }
 
+/**
+* This function is creating the html text of the default pop-up which is just an image
+*/
 function createDefaultPopUp(){
 
 	var defaultPopUp = "<img id=\"default_sprite\" src=\"images/sprite_1.png\" height=\"174\" width=\"171\">";
 
 	return defaultPopUp;
 }
-//--------------------------//
+
+//----------------------------//
