@@ -178,13 +178,20 @@ $('#back').click(function(){
       //If submission is approved
       $('#Accept').click(function(){
         //get the id for the database
+        var c_country = $('#CountryTitle').text();
+
+        if(c_country.indexOf("Congo") != -1){
+
+
+          c_country = "Congo"
+        }
         var c_id = $('#country_id').text();
         //set the id to the json object
         var ident = $('#Identifier').text();
         var identt = ident.toLowerCase();
         var c_verified = {};
         c_verified._id = c_id;
-        c_verified.name = $('#CountryTitle').text();
+        c_verified.name = c_country
         c_verified[identt] =  $('.textArea').text();
 
       /*  var c_name = $('#CountryTitle').text();
