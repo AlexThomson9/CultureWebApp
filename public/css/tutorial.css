@@ -1,0 +1,111 @@
+#tutorial{
+	height: 174px;
+	width : 171px;
+
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+    
+    z-index: 4001;
+}
+
+#default_sprite{
+	height: 174px;
+	width : 171px;
+
+	left: 0%;
+	bottom: 0%;
+}
+
+#tutorial-skipButton{
+	position: absolute;
+	left: 30%;
+	bottom: 55%;
+
+	color: darkblue;
+
+	font-style: italic;
+
+	z-index: 42;
+}
+
+#tutorial-text{
+	width: 249px;
+
+	position: absolute;
+	left: 30%;
+	bottom: 75%; /*60% to be on the middle of the bubble*/
+
+	font-size: 20px;
+
+	z-index: 42;
+}
+
+.div-tuto-step_1{
+	height: 385px;
+	width : 373px;
+
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+}
+
+.div-tuto-step_2{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left: 15%;
+	top: 0%;
+}
+
+.div-tuto-step_3{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left:58%;
+}
+
+.div-tuto-step_4{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left:64%;
+}
+
+.div-tuto-step_5{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left:70%;
+}
+
+.div-tuto-step_6{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left:76%;
+}
+
+.div-tuto-step_7{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left: 0%;
+	bottom: 0%;
+}
+
+.div-tuto-step_8{
+	height: 385px;
+	width : 373px;
+
+	position: relative;
+	left: 0%;
+	bottom: 0%;
+}
+
