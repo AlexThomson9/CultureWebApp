@@ -38,7 +38,7 @@ console.log(Country);
           //Log already exists
           console.log("Country already exists");
         }else{
-          var c_nowhitespace = encodeURIComponent(Country.trim()) //"Test%20-%20Text"
+          var c_nowhitespace = encodeURIComponent(Country.trim()); //"Test%20-%20Text"
           //if the country doesn't aleady exist then set url to contain the selected country
                 var countryPicked = 'https://restcountries.eu/rest/v2/name/' + c_nowhitespace+ '?fields=name;capital;';
                 //perform an ajax request to the url above to get
