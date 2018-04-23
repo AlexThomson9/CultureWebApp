@@ -146,7 +146,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
           }
 
 });
-
+});
 //Listen for open click
 //modalBtn.addEventListener('click', openModal); - For testing the modal
 //Listen for close click
