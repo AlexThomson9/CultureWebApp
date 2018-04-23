@@ -19,7 +19,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
-
+  console.log(testArray);
    if(testArray.length == 0 || testArray.customs == null ){
     $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
     }
@@ -92,7 +92,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
        testArray.push(v);
      });
 
-     console.log(testArray[0]);
+     console.log(testArray);
      serverContent.style.display = "block";
      if(testArray.length == 0 || testArray.customs == null ){
        $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
