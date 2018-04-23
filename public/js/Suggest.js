@@ -14,7 +14,7 @@ $(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
     //Set country to mme split the title part from it
     var country = mme.split(":");
     //set crty to the text gotten above
-    var ctry= country[1];
+    var ctry= country[1].trim();
 
     //set variable id to the id of the
 	var id = $(this).attr('id');
