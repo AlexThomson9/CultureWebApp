@@ -14,7 +14,8 @@ $(document).on('click', "#Customs, #Gestures, #Cultures, #Laws",function()
     //Set country to mme split the title part from it
     var country = mme.split(":");
     //set crty to the text gotten above
-    var ctry = country[1];
+    var ctry= country[1];
+
     //set variable id to the id of the
 	var id = $(this).attr('id');
     //Log all the variables to the console to check they are working
@@ -94,7 +95,7 @@ $(this).find('textarea').attr("placeholder", "Input must not be null");
             //log content for testing
            var title = $("#title").text();
            var title_split = title.split(':');
-           var Country = title_split[1].replace(/\s+/g, '');
+           var Country = title_split[1];
            console.log(Country);
            console.log("Textarea value is " + Suggestion);
            console.log("Section Identifier is " + Class_Name);
