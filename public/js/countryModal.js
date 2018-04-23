@@ -20,7 +20,10 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
   console.log(typeof testArray[0].customs === "undefined");
-//  if(typeof testArray[0].customs != 'undefined'){
+  if(testArray[0].customs == null){
+
+    console.log("no customs");
+  }
 try{
       $('.serverContent').empty().append(testArray[0].customs);
       console.log("hi");
