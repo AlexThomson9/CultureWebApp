@@ -132,8 +132,6 @@ function updateCssOfTutorialDiv(){
 		case 1:
 			$('#tutorial').css('height', '90%');
 			$('#tutorial').css('width', '100%');
-
-			$('#tutorial-text').css('bottom', '62%');
 			break;
 
 		case 2:
