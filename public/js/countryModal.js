@@ -32,7 +32,7 @@ $('#customsClick').click(function(event){
 
 $('#gesturesClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray.gestures == null ){
+  if(testArray.length == 0 || testArray[0].gestures == null ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
@@ -44,7 +44,7 @@ $('#gesturesClick').click(function(event){
 
 $('#cultureClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray.traditions == null ){
+  if(testArray.length == 0 || testArray[0].traditions == null ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
@@ -54,7 +54,7 @@ $('#cultureClick').click(function(event){
 
 $('#lawClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray.laws == null ){
+  if(testArray.length == 0 || testArray[0].laws == null ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
@@ -94,7 +94,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
      console.log(testArray);
      serverContent.style.display = "block";
-     if(testArray.length == 0 || testArray.customs == null ){
+     if(testArray.length == 0 || testArray[0].customs == null ){
        $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
      }
      else{
