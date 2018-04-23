@@ -70,7 +70,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     //Sets the hidden tag to the name of the country for the modal to use
     $('#Country').text(ctry);
 
-    if(ctry.indexOf("Congo")){
+    if(ctry.indexOf("Congo") != -1){
 
 
       ctry = "Congo";
