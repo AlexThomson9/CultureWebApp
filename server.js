@@ -86,17 +86,13 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
-  db.collection('suggest').find(req.body).toArray(function(err, result) {
-  if (err) throw err;
- console.log(result);
-  db.collection('Country_Info').save(result, function(err, result){
+  db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
     console.log('saved to database')
     db.collection('suggest').deleteOne({_id: ObjectId(req.body._id)}, function(err, result) {
     if (err) throw err;
     console.log("delete ffs");
     });
-  });
   });
 
 });
