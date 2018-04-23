@@ -180,18 +180,17 @@ $('#back').click(function(){
         //get the id for the database
         var c_id = $('#country_id').text();
         //set the id to the json object
-/*
+
         var c_verified = {};
         c_verified._id = c_id;
         c_verified.name = $('#CountryTitle').text();
-        c_verified.Identifier =   $('#Identifier').text();
-        c_verified.Suggestion =   $('.textArea').text();
-        */
-        var c_name = $('#CountryTitle').text();
+        c_verified[$('#Identifier').text();] =   $('.textArea').text();
+
+      /*  var c_name = $('#CountryTitle').text();
         var Suggestion = $('.textArea').text();
          var Identifier = $('#Identifier').text();
 
-        var c_verified = {"_id":c_id, "name":c_name, ""Identifier"":Suggestion};
+        var c_verified = {"_id":c_id, "name":c_name, :Suggestion};*/
         //Yet another ajax request to the verified
         $.ajax({
               type: "POST",
