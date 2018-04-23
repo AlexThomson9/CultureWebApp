@@ -111,7 +111,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
      console.log(testArray);
      serverContent.style.display = "block";
-});
+}});
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
