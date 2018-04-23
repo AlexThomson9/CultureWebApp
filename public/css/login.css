@@ -248,7 +248,7 @@ html{
     background: #39dc79;
     color: #000;
   }
-  .login-box #r_submitBtn
+  #r_submitBtn
   {
     border: none;
     outline: none;
@@ -258,7 +258,7 @@ html{
     font-size: 45px;
     border-radius: 20px;
   }
-  .login-box #r_submitBtn:hover
+  #r_submitBtn:hover
   {
     cursor: pointer;
     background: #39dc79;
