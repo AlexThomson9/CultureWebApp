@@ -20,23 +20,23 @@ var my_image_5 = new Image();
 //Load law image for the mobile modal
 my_image_5.src = '../images/law.jpeg';
 
-my_image_6.src = '../images/pop-up_bubble_1.jpg';
 var my_image_6 = new Image();
+my_image_6.src = '../images/pop-up_bubble_1.jpg';
 
+var my_image_7 = new Image();
 my_image_7.src = '../images/pop-up_bubble_2.jpg';
-my_image_7 = new Image();
 
+var my_image_8 = new Image();
 my_image_8.src = '../images/sprite_1_talking.png';
-my_image_8 = new Image();
 
+var my_image_9 = new Image();
 my_image_9.src = '../images/sprite_1.png';
-my_image_9 = new Image();
 
+var my_image_10 = new Image();
 my_image_10.src = '../images/sprite_2_talking_2.png';
-my_image_10 = new Image();
 
+var my_image_11 = new Image();
 my_image_11.src = '../images/sprite_2_talking.png';
-my_image_11 = new Image();
 
+var my_image_12 = new Image();
 my_image_12.src = '../images/sprite_2.png';
-my_image_12 = new Image();
