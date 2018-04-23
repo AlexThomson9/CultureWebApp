@@ -3,6 +3,7 @@ console.log(window.location.href);
 
 var url = window.location.href;
 //If the window url (page) is equal to the home page or index then continue
+console.log(url.endsWith("/"));
 if(url.endsWith("/") == 0){
   console.log("plswork");
 
