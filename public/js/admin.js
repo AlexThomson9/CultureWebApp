@@ -181,10 +181,11 @@ $('#back').click(function(){
         var c_id = $('#country_id').text();
         //set the id to the json object
         var ident = $('#Identifier').text();
+        var identt = ident.toLowerCase();
         var c_verified = {};
         c_verified._id = c_id;
         c_verified.name = $('#CountryTitle').text();
-        c_verified[ident] =  $('.textArea').text();
+        c_verified[identt] =  $('.textArea').text();
 
       /*  var c_name = $('#CountryTitle').text();
         var Suggestion = $('.textArea').text();
