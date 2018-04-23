@@ -114,7 +114,7 @@ html{
   border-radius: 20px;
 }
 
-.login-box #submitBtn, #r_submitBtn:hover
+.login-box #submitBtn:hover, #r_submitBtn:hover
 {
   cursor: pointer;
   background: #39dc79;
