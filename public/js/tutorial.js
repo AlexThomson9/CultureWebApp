@@ -5,7 +5,7 @@ var text_step_3 = "Here's the Home page button, it will get where we are now.";
 var text_step_4 = "Here's the Login button, where you can Log to your account.";
 var text_step_5 = "Here's the Register button, it will allow to create an account.";
 var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
-var text_step_7 = "<br> Now click on one of the marker on the map, an information window will appear. Click when you've done it. </br>";
+var text_step_7 = "Now click on one of the marker on the map, an information window will appear. Click when you've done it.";
 var text_step_8 = "So there is the information panel about the country you've selected. You can choose between 4 rubrics, Customs, Gestures, Culture and Laws";
 
 var tutorial_current_step;
