@@ -180,7 +180,12 @@ $('#back').click(function(){
         //get the id for the database
         var c_id = $('#country_id').text();
         //set the id to the json object
-        var c_verified = {"_id":c_id};
+
+        var c_verified = {};
+        c_verified._id = c_id;
+        c_verified.name = $('#CountryTitle').text();
+        c_verified.Identifier =   $('#Identifier').text();
+        c_verified.Suggestion =   $('.textArea').text();
         //Yet another ajax request to the verified
         $.ajax({
               type: "POST",
@@ -232,12 +237,7 @@ $('#back').click(function(){
         //get the country _id
         var c_id = $('#country_id').text();
         //put variable into json format
-        var c_delete = {};
-        c_delete._id = c_id;
-        c_delete.name = $('#CountryTitle').text();
-        c_delete.Identifier =   $('#Identifier').text();
-        c_delete.Suggestion =   $('.textArea').text();
-
+        var c_delete = {"_id":c_id};
         //oh whats this? your right another ajax request, but this time its to delete
         //the rejected suggestion
         $.ajax({
