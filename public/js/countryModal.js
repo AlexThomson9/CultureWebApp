@@ -72,6 +72,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
    // alert($('#Country').text());
    var country = {};
    country.name = ctry;
+
    $.ajax({
      type: "POST",
      data: JSON.stringify(country),
@@ -90,10 +91,16 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
 
        testArray.push(v);
      });
-console.log(testArray[0]);
-serverContent.style.display = "block";
-$('.serverContent').empty().append(testArray[0].customs);
-  }
+
+     console.log(testArray[0]);
+     serverContent.style.display = "block";
+     if(testArray.length == 0 || testArray.customs == null ){
+       $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+     }
+     else{
+       $('.serverContent').empty().append(testArray[0].customs);
+     }
+   }
   });
     console.log(testArray);
     console.log(testArray[0]);
