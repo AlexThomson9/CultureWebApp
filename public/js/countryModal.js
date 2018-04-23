@@ -114,7 +114,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             success: function(result, data){
 
             var c = 0 ;
-            if(ctry =="India"){
+            if(ctry =="India" || ctry="Korea"){
                c++
             }
             console.log(c);
