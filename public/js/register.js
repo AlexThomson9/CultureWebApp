@@ -56,7 +56,7 @@ $('#submitBtn').click(function(){
         console.log(user)
           if(data.length > 0){
             $('.login-box').find("h5").remove();
-            $('.login-box').append("<h5>Username or Email already in use : <h5>");
+            $('.login-box').append("<h5>Username or Email already in use <h5>");
 
           }else{
             $('.login-box').find("h5").remove();
