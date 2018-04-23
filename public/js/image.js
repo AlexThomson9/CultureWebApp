@@ -21,10 +21,10 @@ var my_image_5 = new Image();
 my_image_5.src = '../images/law.jpeg';
 
 var my_image_6 = new Image();
-my_image_6.src = '../images/pop-up_bubble_1.jpg';
+my_image_6.src = '../images/pop-up_bubble_1.png';
 
 var my_image_7 = new Image();
-my_image_7.src = '../images/pop-up_bubble_2.jpg';
+my_image_7.src = '../images/pop-up_bubble_2.png';
 
 var my_image_8 = new Image();
 my_image_8.src = '../images/sprite_1_talking.png';
