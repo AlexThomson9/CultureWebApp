@@ -20,7 +20,7 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
   console.log(testArray);
-   if(testArray.length == 0 || testArray[0].customs == null ){
+   if(testArray.length == 0 || testArray[0].customs == null || testArray[0].customs == "" ){
     $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
     }
    else{
