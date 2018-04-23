@@ -86,12 +86,12 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
-  db.collection('Country_Info').find(req.body.name, function(err, result){
+/*  db.collection('Country_Info').find(req.body.name, function(err, result){
   if (err) throw err;
 
 
 
-  });
+});*/
 
 
 
