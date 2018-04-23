@@ -116,6 +116,7 @@ $(".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive").click(functi
      }
      else{
        $('.serverContent').empty().append(testArray[0].customs);
+       returnToPopupMenu.style.display = "block";
      }
    }
   });
