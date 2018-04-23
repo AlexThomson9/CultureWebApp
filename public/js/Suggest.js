@@ -95,7 +95,7 @@ $(this).find('textarea').attr("placeholder", "Input must not be null");
             //log content for testing
            var title = $("#title").text();
            var title_split = title.split(':');
-           var Country = title_split[1].replace(/\s+/g, '');
+           var Country = title_split[1]);
            console.log(Country);
            console.log("Textarea value is " + Suggestion);
            console.log("Section Identifier is " + Class_Name);
