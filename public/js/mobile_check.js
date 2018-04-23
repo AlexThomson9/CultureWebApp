@@ -3,7 +3,7 @@ console.log(window.location.href);
 
 var url = window.location.href;
 //If the window url (page) is equal to the home page or index then continue
-if(url.indexOf("Admin", "Login", "Register", "Suggest", "Contact") == -1){
+if(url.endsWith("/") == 0){
   console.log("plswork");
 
 //if the device is mobile then continue
