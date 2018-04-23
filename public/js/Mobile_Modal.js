@@ -79,7 +79,7 @@ $('#lawClick').click(function(event){
 });
 
 //When the user clicks on a country on the map the following occurs
-$(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
+$(".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive").click(function(){
     //Sets variable to the name of the country clicked on
     var ctry = $(".leaflet-popup-content").text();
     console.log(ctry);
