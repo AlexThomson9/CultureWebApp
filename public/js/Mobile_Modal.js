@@ -144,7 +144,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
           {
             alert("Something went wrong, Please Try Again!");
           }
-        
+
 });
 
 //Listen for open click
@@ -177,4 +177,5 @@ function closeInfo(){
 //Function to close modal
 function closeModal(){
   modal.style.display = "none";
+}
 }
