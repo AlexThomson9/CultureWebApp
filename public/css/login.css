@@ -248,6 +248,22 @@ html{
     background: #39dc79;
     color: #000;
   }
+  .login-box #r_submitBtn
+  {
+    border: none;
+    outline: none;
+    height:70px;
+    background: #7DF9FF;
+    color: #000;
+    font-size: 45px;
+    border-radius: 20px;
+  }
+  .login-box #r_submitBtn:hover
+  {
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+  }
 
   .login-box a
   {
