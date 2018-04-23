@@ -1,12 +1,12 @@
 //-------GLOBAL VARIABLE-------//
-var text_step_1 = "Let's go for a short Tutorial, to teach you how I work ! Please <b>click me</b> to run the tutorial until the end";
+var text_step_1 = "Let's go for a short Tutorial, to teach you how I work ! Please <b>click me</b> to run the tutorial until the end.";
 var text_step_2 = "Here you can choose a continent, then the map will move on the part of the world you've selected.";
 var text_step_3 = "Here's the Home page button, it will get where we are now.";
 var text_step_4 = "Here's the Login button, where you can Log to your account.";
-var text_step_5 = "Here's the Register button, it will allow to create an account.";
-var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
+var text_step_5 = "Here's the Register button, it will make you create an account.";
+var text_step_6 = "Here's the Contact button, it allow you to contact my devellopers for any questions or anything else.";
 var text_step_7 = "Now please click on one of the marker on the map, an information panel will appear. <b>Click me</b> when you've done it.";
-var text_step_8 = "So here are several informations, as you can see you can choose between 4 rubrics: Customs, Gestures, Culture and Laws";
+var text_step_8 = "So here are several informations about the country you've selected. <b>Click me</b> to end the tutorial.";
 
 var tutorial_current_step;
 var last_step;
@@ -132,6 +132,8 @@ function updateCssOfTutorialDiv(){
 		case 1:
 			$('#tutorial').css('height', '90%');
 			$('#tutorial').css('width', '100%');
+
+			$('#tutorial-text').css('bottom', '62%');
 			break;
 
 		case 2:
