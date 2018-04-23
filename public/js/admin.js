@@ -191,7 +191,7 @@ $('#back').click(function(){
         var Suggestion = $('.textArea').text();
          var Identifier = $('#Identifier').text();
 
-        var c_verified = {"_id":c_id, "name":c_name, JSON.stringify(Identifier):Suggestion};
+        var c_verified = {"_id":c_id, "name":c_name, ""Identifier"":Suggestion};
         //Yet another ajax request to the verified
         $.ajax({
               type: "POST",
