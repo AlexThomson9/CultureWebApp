@@ -23,6 +23,7 @@ $('#customsClick').click(function(event){
   if(testArray[0].customs == null){
 
     console.log("no customs");
+    console.log(testArray);
   }
 try{
       $('.serverContent').empty().append(testArray[0].customs);
