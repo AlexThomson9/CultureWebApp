@@ -19,46 +19,47 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
 
 $('#customsClick').click(function(event){
   serverContent.style.display = "block";
-  console.log(typeof testArray[0].customs === "undefined");
-  if(testArray[0].customs == null){
 
-    console.log("no customs");
-    console.log(testArray);
-  }
-try{
-      $('.serverContent').empty().append(testArray[0].customs);
-      console.log("hi");
-    }catch(e){
-      if(e){
-            $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-      }
+   if(testArray.length == 0 || testArray.customs == null ){
+    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
     }
-//  }
-//  else{
-  //  console.log("I got here wahoo");
-
-  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-
-//}
-//  if(testArray[0].customs == undefined){
-  //  $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
-//  }
-
-});
+   else{
+    console.log("I got here wahoo");
+    $('.serverContent').empty().append(testArray[0].customs);
+    console.log("hi");
+  }
+ });
 
 $('#gesturesClick').click(function(event){
   serverContent.style.display = "block";
-  $('.serverContent').empty().append(testArray[0].gestures);
+  if(testArray.length == 0 || testArray.gestures == null ){
+   $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+   }
+  else{
+   $('.serverContent').empty().append(testArray[0].gestures);
+ }
+
+
 });
 
 $('#cultureClick').click(function(event){
   serverContent.style.display = "block";
-  $('.serverContent').empty().append(testArray[0].traditions);
+  if(testArray.length == 0 || testArray.traditions == null ){
+   $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+   }
+  else{
+   $('.serverContent').empty().append(testArray[0].traditions);
+ }
 });
 
 $('#lawClick').click(function(event){
   serverContent.style.display = "block";
-  $('.serverContent').empty().append(testArray[0].laws);
+  if(testArray.length == 0 || testArray.laws == null ){
+   $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+   }
+  else{
+   $('.serverContent').empty().append(testArray[0].laws);
+ }
 });
 //When the user clicks on a country on the map the following occurs
 $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive", function(){
@@ -71,6 +72,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
    // alert($('#Country').text());
    var country = {};
    country.name = ctry;
+
    $.ajax({
      type: "POST",
      data: JSON.stringify(country),
@@ -90,22 +92,16 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
        testArray.push(v);
 
      });
-console.log(testArray[0]);
-serverContent.style.display = "block";
-$('.serverContent').empty().append(testArray[0].customs);
 
-  console.log(testArray);
-  console.log(testArray[0]);
-  if(testArray.length == 0){
-
-
-    console.log("no data retrieved");
-  }else {
-
-    console.log("data", testArray);
-  }
-
-}
+     console.log(testArray[0]);
+     serverContent.style.display = "block";
+     if(testArray.length == 0 || testArray.customs == null ){
+       $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
+     }
+     else{
+       $('.serverContent').empty().append(testArray[0].customs);
+     }
+   }
   });
 
 
