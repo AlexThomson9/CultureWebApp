@@ -41,4 +41,4 @@
           30.047699084516957
         ]
       }
-    },{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","Country":"South Korea"},"geometry":{"type":"Point","coordinates":[126.97860717773436,37.56662335853239]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","Country":"Thailand"},"geometry":{"type":"Point","coordinates":[100.49331665039062,13.754225319377445]}}]}
+    },{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","Country":"Korea"},"geometry":{"type":"Point","coordinates":[126.97860717773436,37.56662335853239]}},{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"","Country":"Thailand"},"geometry":{"type":"Point","coordinates":[100.49331665039062,13.754225319377445]}}]}
