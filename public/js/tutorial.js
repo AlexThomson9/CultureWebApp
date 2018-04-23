@@ -6,7 +6,7 @@ var text_step_4 = "Here's the Login button, where you can Log to your account.";
 var text_step_5 = "Here's the Register button, it will allow to create an account.";
 var text_step_6 = "Here's the Contact button, it will allow to contact my devellopers for any questions or anything else.";
 var text_step_7 = "Now click on one of the marker on the map, an information window will appear. Click when you've done it.";
-var text_step_8 = "So there is the information panel about the country you've selected. You can choose between 4 rubrics, Customs, Gestures, Culture and Laws";
+var text_step_8 = "So there's the informations about the country you've selected. You can choose between 4 rubrics: Customs, Gestures, Culture and Laws";
 
 var tutorial_current_step;
 var last_step;
@@ -139,7 +139,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial-skipButton').css('bottom', '0%');
 
 			$('#tutorial-text').css('left', '9%');
-			$('#tutorial-text').css('bottom', '15%');
+			$('#tutorial-text').css('bottom', '7%');
 			break;
 
 		case 3:
@@ -147,7 +147,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial-skipButton').css('bottom', '0%');
 
 			$('#tutorial-text').css('left', '9%');
-			$('#tutorial-text').css('bottom', '20%');
+			$('#tutorial-text').css('bottom', '13%');
 			break;
 
 		case 4:
@@ -155,7 +155,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial-skipButton').css('bottom', '0%');
 
 			$('#tutorial-text').css('left', '9%');
-			$('#tutorial-text').css('bottom', '20%');
+			$('#tutorial-text').css('bottom', '13%');
 			break;
 
 		case 5:
@@ -163,22 +163,22 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial-skipButton').css('bottom', '0%');
 
 			$('#tutorial-text').css('left', '8%');
-			$('#tutorial-text').css('bottom', '20%');
+			$('#tutorial-text').css('bottom', '13%');
 			break;
 
 		case 6:
 			$('#tutorial-skipButton').css('left', '8%');
 			$('#tutorial-skipButton').css('bottom', '0%');
 
-			$('#tutorial-text').css('left', '8%');
-			$('#tutorial-text').css('bottom', '15%');
+			$('#tutorial-text').css('left', '7%');
+			$('#tutorial-text').css('bottom', '7%');
 			break;
 
 		case 7:
 			$('#tutorial').css('height', '385px');
 			$('#tutorial').css('width', '373px');
 
-			$('#tutorial-text').css('bottom', '60%');
+			$('#tutorial-text').css('bottom', '55%');
 
 			$('#tutorial-skipButton').css('left', '74%');
 
