@@ -23,7 +23,7 @@ $("#regForm").validate({
    }
 });
 
-$('#submitBtn').click(function(){
+$('#r_submitBtn').click(function(){
   $("#regForm").valid();
 
   if($("#regForm").valid() == false){
