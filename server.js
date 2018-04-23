@@ -86,6 +86,16 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
+  db.collection('Country_Info').find(req.body.name, function(err, result){
+  if (err) throw err;
+
+
+
+  });
+
+
+
+
   db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
     console.log('saved to database')
@@ -96,6 +106,7 @@ app.post('/verified', function(req, res) {
   });
 
 });
+
 
 
 app.post('/suggest', function(req, res){
