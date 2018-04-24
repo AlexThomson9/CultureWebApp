@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const link = "mongodb://localhost:27017/cultureWebApp"
+const link = "mongodb://localhost:27017/CultureWebApp"
 const express = require('express');
 const url = require('url');
 const fs = require('fs');
