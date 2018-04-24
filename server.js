@@ -93,7 +93,7 @@ app.post('/verified', function(req, res) {
   if(result.laws == null){
 
 
-    console.log(laws is null);
+    console.log("laws is null");
   }
 
 
