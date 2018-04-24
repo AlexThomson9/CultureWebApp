@@ -91,7 +91,7 @@ app.post('/verified', function(req, res) {
   if (err) throw err;
   console.log(result);
   var test = res.jsonp(result);
-  console.log("im test", test.data);
+  console.log("im test",test);
 
 console.log("im result customs", result.customs);
   if(req.body.customs != null){
