@@ -97,16 +97,16 @@ console.log("im result customs", result[0].customs);
   if(req.body.customs != null){
     if(result[0].customs == null){
       //var query = { _id: ObjectId(req.body._id) };
-      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result[0].gestures, laws: result[0].laws, traditions: result[0].traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result[0].gestures, laws: result[0].laws, culture: result[0].culture} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
     }else {
       var cust_1 = req.body.customs;
       var cust_2 = result[0].customs;
-      var cust = cust_1 + " " + cust_2;
+      var cust = cust_1 + "New Custom:" + cust_2;
       //var cust = cust_1.concat(cust_2);
-      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, traditions: result[0].traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, culture: result[0].culture} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
@@ -114,23 +114,50 @@ console.log("im result customs", result[0].customs);
 
   }else if(req.body.gestures != null){
     if(result.gestures == null){
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: req.body.gestures, laws: result[0].laws, culture: result[0].culture} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
 
     }else {
 
+      var gest_1 = req.body.gestures;
+      var gest_2 = result[0].gestures;
+      var gest = gest_1 + "New Gesture:" + gest_2;
+      //var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: gest, laws: result[0].laws, culture: result[0].culture} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
     }
 
   }else if(req.body.laws != null){
     if(result.laws == null){
-
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: req.body.laws, culture: result[0].culture} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
     }else {
+      var laws_1 = req.body.laws;
+      var laws_2 = result[0].laws;
+      var laws = laws_1 + "New Laws:" + laws_2;
+      //var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: laws, culture: result[0].culture} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
 
     }
 
   }else if(req.body.traditons != null)
-  if(result.traditions == null){
-
+  if(result.culture == null){
+    var newvalues = { $set: {name: req.body.name, customs: result[0].customs , gestures: result[0].gestures, laws: result[0].laws, culture: req.body.culture} };
+    db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+    });
   }else {
-
+    var trad_1 = req.body.laws;
+    var trad_2 = result[0].laws;
+    var trad = trad_1 + "New Traditons:" + trad_2;
+    //var cust = cust_1.concat(cust_2);
+    var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: result[0].laws, culture: trad} };
+    db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+    });
   }
 
 
