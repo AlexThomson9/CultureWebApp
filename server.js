@@ -208,8 +208,6 @@ if(result.length != 0){
     if (err) throw err;
     console.log('cyka i work');
   });
-
-
 }
 });
 /*
