@@ -146,14 +146,14 @@ db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
 });
 */
 
-  db.collection('Country_Info').save(req.body, function(err, result){
+  /*db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
-    console.log('saved to database')
+    console.log('saved to database')*/
     db.collection('suggest').deleteOne({_id: ObjectId(req.body._id)}, function(err, result) {
     if (err) throw err;
     console.log("delete ffs");
     });
-  });
+//  });
 });
 
 
