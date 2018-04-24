@@ -90,7 +90,8 @@ app.post('/verified', function(req, res) {
   db.collection('Country_Info').find(query).toArray(function(err, result){
   if (err) throw err;
   console.log(result);
-//  var test = res.jsonp(result);
+  var test = res.jsonp(result);
+  console.log("im test", test);
 
 console.log("im result customs", result.customs);
   if(req.body.customs != null){
