@@ -91,12 +91,45 @@ app.post('/verified', function(req, res) {
   if (err) throw err;
   console.log(result);
   var test = res.jsonp(result);
-  if(result.laws == null){
-
-
-    console.log("laws is null");
   }
 
+  if(req.body.customs != null){
+    if(result.customs == null){
+      //var query = { _id: ObjectId(req.body._id) };
+      var newvalues = { $set: {name: result.name, customs: req.body.customs, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }else {
+      var cust_1 = req.body.customs;
+      var cust_2 = result.customs;
+      var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: result.name, customs: cust, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }
+
+  }else if(req.body.gestures != null){
+    if(result.gestures == null){
+
+    }else {
+
+    }
+
+  }else if(req.body.laws != null){
+    if(result.laws == null){
+
+    }else {
+
+    }
+
+  }else if(req.body.traditons != null)
+  if(result.traditions == null){
+
+  }else {
+
+  }
 
 });
 /*
