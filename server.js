@@ -96,7 +96,7 @@ app.post('/verified', function(req, res) {
   if(req.body.customs != null){
     if(result.customs == null){
       //var query = { _id: ObjectId(req.body._id) };
-      var newvalues = { $set: {name: result.name, customs: req.body.customs, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
@@ -104,7 +104,7 @@ app.post('/verified', function(req, res) {
       var cust_1 = req.body.customs;
       var cust_2 = result.customs;
       var cust = cust_1.concat(cust_2);
-      var newvalues = { $set: {name: result.name, customs: cust, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
