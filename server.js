@@ -91,13 +91,13 @@ app.post('/verified', function(req, res) {
   if (err) throw err;
   console.log(result);
   var test = res.jsonp(result);
-  console.log("im test",test);
+  console.log("im test",test.body);
 
 console.log("im result customs", result.customs);
   if(req.body.customs != null){
     if(result.customs == null){
       //var query = { _id: ObjectId(req.body._id) };
-      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result.body.gestures, laws: result.body.laws, traditions: result.body.traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
@@ -105,7 +105,7 @@ console.log("im result customs", result.customs);
       var cust_1 = req.body.customs;
       var cust_2 = result.customs;
       var cust = cust_1.concat(cust_2);
-      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result.gestures, laws: result.laws, traditions: result.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result.body.gestures, laws: result.body.laws, traditions: result.body.traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
