@@ -92,7 +92,7 @@ app.post('/verified', function(req, res) {
   console.log(result);
 //  var test = res.jsonp(result);
 
-console.log("im result customs" result.customs);
+console.log("im result customs", result.customs);
   if(req.body.customs != null){
     if(result.customs == null){
       //var query = { _id: ObjectId(req.body._id) };
