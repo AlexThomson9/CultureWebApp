@@ -41,15 +41,20 @@ app.get('/Mobile-index', function(req, res) {
 });
 /*-----AJAX-REQUEST-HANDLING-BY-PAGE-----*/
 /*-----INDEX-----*/
-/*-----LOGIN-----*/
-/*-----REGISTER-----*/
-/*-----ADMIN-----*/
-/*-----SUGGEST-----*/
-app.get('/Countries', function(req, res) {
- db.collection('suggest').distinct('Country', function(err, result) {
- if (err) throw err;
+app.get('/mapinfo', function (req, res) {
+db.collection('MapInfo').find().toArray(function(err,result){
+   if(result)
+   {
+      res.jsonp(result);
+      console.log(result);
+   }
+});
+});
+app.get('/Country_Map', function(req, res) {
+db.collection('MapInfo').distinct('properties', function(err, result) {
+if (err) throw err;
 res.jsonp(result);
- });
+});
 });
 app.post('/country', function(req, res) {
   console.log(JSON.stringify(req.body));
@@ -59,13 +64,51 @@ console.log(result);
 res.jsonp(result);
  });
 });
-app.get('/all', function(req, res) {
- db.collection('suggest').find().toArray(function(err, result) {
+/*-----LOGIN-----*/
+app.post("/login", function(req, res){
+  console.log(req.body);
+  db.collection("userdetails").find( { $and: [ {"username": req.body.username},{"password": req.body.password}]}).toArray(function(err, result) {
+    if (err) throw err;
+      res.jsonp(result);
+      console.log(result);
+
+      if (result.length > 0){
+        console.log("logged in");
+      }
+      else{
+        console.log("log in unsuccesfull");
+      }
+      //squiggly boi
+});
+});
+/*-----REGISTER-----*/
+app.post('/register', function(req, res){
+console.log(req.body);
+//db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+  db.collection("userdetails").find( { $or: [ {"username": req.body.username},{"email": req.body.email}]}).toArray(function(err, result) {
+    if (err) throw err;
+      res.jsonp(result);
+      console.log(result);
+
+      if (result.length > 0){
+        console.log("username taken gadjee");
+      }
+      else{
+        db.collection('userdetails').save(req.body, function(err, result) {
+        if (err) throw err;
+        console.log('saved to database');
+        })
+      }
+
+  });
+});
+/*-----ADMIN-----*/
+app.get('/Countries', function(req, res) {
+ db.collection('suggest').distinct('Country', function(err, result) {
  if (err) throw err;
 res.jsonp(result);
  });
 });
-
 app.post('/Suggestion', function(req, res) {
   console.log(JSON.stringify(req.body));
  db.collection('suggest').find(req.body).toArray(function(err, result) {
@@ -83,7 +126,6 @@ app.post('/delete', function(req, res) {
  res.jsonp("deleted");
  });
 });
-
 app.post('/verified', function(req, res) {
   console.log(req.body);
   var query = {"name":req.body.name};
@@ -159,21 +201,13 @@ console.log("im result customs", result[0].customs);
     db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     });
   }
-
-
 });
-
 /*
 var query = { _id: ObjectId(req.body._id) };
 var newvalues = { $set: {name: result.name, quote: req.body.newquote } };
 db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
-
-
-
-
 });
 */
-
   /*db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
     console.log('saved to database')*/
@@ -183,9 +217,16 @@ db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     });
 //  });
 });
-
-
-
+app.post('/savefile', function(req, res){
+	console.log(JSON.stringify(req.body));
+  db.collection('MapInfo').save(req.body, function(err, result) {
+  if (err) throw err;
+  console.log('saved to database')
+  res.redirect('/')
+});
+        console.log("wot");
+    });
+/*-----SUGGEST-----*/
 app.post('/suggest', function(req, res){
 	console.log('body: ' + JSON.stringify(req.body));
 	//res.send(req.body);
@@ -194,69 +235,4 @@ app.post('/suggest', function(req, res){
   console.log('saved to database')
   res.redirect('/')
   })
-});
-app.post('/savefile', function(req, res){
-	console.log(JSON.stringify(req.body));
-  db.collection('MapInfo').save(req.body, function(err, result) {
-  if (err) throw err;
-  console.log('saved to database')
-  res.redirect('/')
-});
-
-        console.log("wot");
-    });
-  app.get('/mapinfo', function (req, res) {
-  db.collection('MapInfo').find().toArray(function(err,result){
-     if(result)
-     {
-        res.jsonp(result);
-        console.log(result);
-     }
-  });
-});
-app.get('/Country_Map', function(req, res) {
- db.collection('MapInfo').distinct('properties', function(err, result) {
- if (err) throw err;
-res.jsonp(result);
- });
-});
-
-
-
-app.post('/register', function(req, res){
-console.log(req.body);
-//db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
-  db.collection("userdetails").find( { $or: [ {"username": req.body.username},{"email": req.body.email}]}).toArray(function(err, result) {
-    if (err) throw err;
-      res.jsonp(result);
-      console.log(result);
-
-      if (result.length > 0){
-        console.log("username taken gadjee");
-      }
-      else{
-        db.collection('userdetails').save(req.body, function(err, result) {
-        if (err) throw err;
-        console.log('saved to database');
-        })
-      }
-
-  });
-});
-
-  app.post("/login", function(req, res){
-    console.log(req.body);
-    db.collection("userdetails").find( { $and: [ {"username": req.body.username},{"password": req.body.password}]}).toArray(function(err, result) {
-      if (err) throw err;
-        res.jsonp(result);
-        console.log(result);
-
-        if (result.length > 0){
-          console.log("logged in");
-        }
-        else{
-          console.log("log in unsuccesfull");
-        }
-        //squiggly boi
-  });
 });
