@@ -86,25 +86,102 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
-  db.collection('Country_Info').find(req.body.name, function(err, result){
+  var query = {"name":req.body.name};
+  db.collection('Country_Info').find(query).toArray(function(err, result){
   if (err) throw err;
+  console.log(result);
+  var test = res.jsonp(result);
+  console.log("im test",test.body);
+
+console.log("im result customs", result[0].customs);
+  if(req.body.customs != null){
+    if(result[0].customs == null){
+      //var query = { _id: ObjectId(req.body._id) };
+      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result[0].gestures, laws: result[0].laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }else {
+      var cust_1 = req.body.customs;
+      var cust_2 = result[0].customs;
+      var cust = cust_2 + "New Custom:" + cust_1;
+      //var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }
+
+  }else if(req.body.gestures != null){
+    if(result[0].gestures == null){
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: req.body.gestures, laws: result[0].laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }else {
+
+      var gest_1 = req.body.gestures;
+      var gest_2 = result[0].gestures;
+      var gest = gest_2 + "New Gesture:" + gest_1;
+      //var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: gest, laws: result[0].laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+    }
+
+  }else if(req.body.laws != null){
+    if(result[0].laws == null){
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: req.body.laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+    }else {
+      var laws_1 = req.body.laws;
+      var laws_2 = result[0].laws;
+      var laws = laws_2 + "New Laws:" + laws_1;
+      //var cust = cust_1.concat(cust_2);
+      var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: laws, cultures: result[0].cultures} };
+      db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+      });
+
+    }
+
+  }else if(req.body.cultures != null)
+  if(result[0].cultures == null){
+    var newvalues = { $set: {name: req.body.name, customs: result[0].customs , gestures: result[0].gestures, laws: result[0].laws, cultures: req.body.cultures} };
+    db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+    });
+  }else {
+    var trad_1 = req.body.cultures;
+    var trad_2 = result[0].cultures;
+    var trad = trad_2 + "New Traditons:" + trad_1;
+    //var cust = cust_1.concat(cust_2);
+    var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: result[0].laws, cultures: trad} };
+    db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
+    });
+  }
+
+
+});
+
+/*
+var query = { _id: ObjectId(req.body._id) };
+var newvalues = { $set: {name: result.name, quote: req.body.newquote } };
+db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
 
 
 
-  });
 
+});
+*/
 
-
-
-  db.collection('Country_Info').save(req.body, function(err, result){
+  /*db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
-    console.log('saved to database')
+    console.log('saved to database')*/
     db.collection('suggest').deleteOne({_id: ObjectId(req.body._id)}, function(err, result) {
     if (err) throw err;
     console.log("delete ffs");
     });
-  });
-
+//  });
 });
 
 

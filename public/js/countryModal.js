@@ -32,7 +32,7 @@ $('#customsClick').click(function(event){
 
 $('#gesturesClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray[0].gestures == null ){
+  if(testArray.length == 0 || testArray[0].gestures == null || testArray[0].gestures == "" ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
@@ -44,17 +44,17 @@ $('#gesturesClick').click(function(event){
 
 $('#cultureClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray[0].traditions == null ){
+  if(testArray.length == 0 || testArray[0].cultures == null || testArray[0].cultures == ""  ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
-   $('.serverContent').empty().append(testArray[0].traditions);
+   $('.serverContent').empty().append(testArray[0].cultures);
  }
 });
 
 $('#lawClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray[0].laws == null ){
+  if(testArray.length == 0 || testArray[0].laws == null || testArray[0].laws == ""  ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
@@ -69,6 +69,12 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
     console.log(ctry);
     //Sets the hidden tag to the name of the country for the modal to use
     $('#Country').text(ctry);
+
+    if(ctry.indexOf("Congo") != -1){
+
+
+      ctry = "Congo";
+    }
    // alert($('#Country').text());
    var country = {};
    country.name = ctry;
@@ -114,7 +120,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             success: function(result, data){
 
             var c = 0 ;
-            if(ctry =="India"){
+            if(ctry =="India" || ctry == "Korea"){
                c++
             }
             console.log(c);

@@ -21,9 +21,9 @@ $("#regForm").validate({
      password: "Please enter a password that is between 8-15 characters long",
      email: "Please enter a valid email address"
    }
-})
+});
 
-$('#submitBtn').click(function(){
+$('#r_submitBtn').click(function(){
   $("#regForm").valid();
 
   if($("#regForm").valid() == false){
