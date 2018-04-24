@@ -104,7 +104,7 @@ console.log("im result customs", result[0].customs);
     }else {
       var cust_1 = req.body.customs;
       var cust_2 = result[0].customs;
-      var cust = cust_1 + "New Custom:" + cust_2;
+      var cust = cust_2 + "New Custom:" + cust_1;
       //var cust = cust_1.concat(cust_2);
       var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, cultures: result[0].cultures} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
@@ -122,7 +122,7 @@ console.log("im result customs", result[0].customs);
 
       var gest_1 = req.body.gestures;
       var gest_2 = result[0].gestures;
-      var gest = gest_1 + "New Gesture:" + gest_2;
+      var gest = gest_2 + "New Gesture:" + gest_1;
       //var cust = cust_1.concat(cust_2);
       var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: gest, laws: result[0].laws, cultures: result[0].cultures} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
@@ -137,7 +137,7 @@ console.log("im result customs", result[0].customs);
     }else {
       var laws_1 = req.body.laws;
       var laws_2 = result[0].laws;
-      var laws = laws_1 + "New Laws:" + laws_2;
+      var laws = laws_2 + "New Laws:" + laws_1;
       //var cust = cust_1.concat(cust_2);
       var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: laws, cultures: result[0].cultures} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
@@ -151,9 +151,9 @@ console.log("im result customs", result[0].customs);
     db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     });
   }else {
-    var trad_1 = req.body.laws;
-    var trad_2 = result[0].laws;
-    var trad = trad_1 + "New Traditons:" + trad_2;
+    var trad_1 = req.body.cultures;
+    var trad_2 = result[0].cultures;
+    var trad = trad_2 + "New Traditons:" + trad_1;
     //var cust = cust_1.concat(cust_2);
     var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: result[0].laws, cultures: trad} };
     db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
