@@ -44,11 +44,11 @@ $('#gesturesClick').click(function(event){
 
 $('#cultureClick').click(function(event){
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray[0].culture == null || testArray[0].culture == ""  ){
+  if(testArray.length == 0 || testArray[0].cultures == null || testArray[0].cultures == ""  ){
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
   else{
-   $('.serverContent').empty().append(testArray[0].culture);
+   $('.serverContent').empty().append(testArray[0].cultures);
  }
 });
 
