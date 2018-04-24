@@ -86,15 +86,28 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
-/*  db.collection('Country_Info').find(req.body.name, function(err, result){
+  db.collection('Country_Info').find(req.body.name).toArray(function(err, result){
   if (err) throw err;
+  console.log(result);
+  var test = jsonp(result);
+  if(result.laws == null){
+
+
+    console.log(laws is null);
+  }
+
+
+});
+/*
+var query = { _id: ObjectId(req.body._id) };
+var newvalues = { $set: {name: result.name, quote: req.body.newquote } };
+db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
 
 
 
-});*/
 
-
-
+});
+*/
 
   db.collection('Country_Info').save(req.body, function(err, result){
     if (err) throw err;
