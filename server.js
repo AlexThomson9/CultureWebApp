@@ -113,7 +113,7 @@ console.log("im result customs", result[0].customs);
     }
 
   }else if(req.body.gestures != null){
-    if(result.gestures == null){
+    if(result[0].gestures == null){
       var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: req.body.gestures, laws: result[0].laws, cultures: result[0].cultures} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
@@ -130,7 +130,7 @@ console.log("im result customs", result[0].customs);
     }
 
   }else if(req.body.laws != null){
-    if(result.laws == null){
+    if(result[0].laws == null){
       var newvalues = { $set: {name: req.body.name, customs: result[0].customs, gestures: result[0].gestures, laws: req.body.laws, cultures: result[0].cultures} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
@@ -146,7 +146,7 @@ console.log("im result customs", result[0].customs);
     }
 
   }else if(req.body.cultures != null)
-  if(result.cultures == null){
+  if(result[0].cultures == null){
     var newvalues = { $set: {name: req.body.name, customs: result[0].customs , gestures: result[0].gestures, laws: result[0].laws, cultures: req.body.cultures} };
     db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     });
