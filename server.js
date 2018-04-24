@@ -93,19 +93,19 @@ app.post('/verified', function(req, res) {
   var test = res.jsonp(result);
   console.log("im test",test.body);
 
-console.log("im result customs", result.customs);
+console.log("im result customs", result[0].customs);
   if(req.body.customs != null){
-    if(result.customs == null){
+    if(result[0].customs == null){
       //var query = { _id: ObjectId(req.body._id) };
-      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result.body.gestures, laws: result.body.laws, traditions: result.body.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: req.body.customs, gestures: result[0].gestures, laws: result[0].laws, traditions: result[0].traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
     }else {
       var cust_1 = req.body.customs;
-      var cust_2 = result.customs;
+      var cust_2 = result[0].customs;
       var cust = cust_1.concat(cust_2);
-      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result.body.gestures, laws: result.body.laws, traditions: result.body.traditions} };
+      var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, traditions: result[0].traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
 
