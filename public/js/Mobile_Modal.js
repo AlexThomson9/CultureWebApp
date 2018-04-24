@@ -155,6 +155,7 @@ closeBtn.addEventListener('click', closeModal);
 //Function to open modal
 function openModal(){
   modal.style.display = "block";
+  serverContent.style.display = "none";
 }
 
 
