@@ -136,6 +136,7 @@ app.post('/verified', function(req, res) {
   console.log("im test",test.body);
 
 //console.log("im result customs", result[0].customs);
+if(result.length != 0){
   if(req.body.customs != null){
     if(result[0].customs == null){
       //var query = { _id: ObjectId(req.body._id) };
@@ -201,6 +202,15 @@ app.post('/verified', function(req, res) {
     db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     });
   }
+}else if(result.length == 0){
+  console.log("im the data from the admin page", req.body);
+  db.collection('Country_Info').save(req.body, function(err, result){
+    if (err) throw err;
+    console.log('cyka i work');
+  });
+
+
+}
 });
 /*
 var query = { _id: ObjectId(req.body._id) };
