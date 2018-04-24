@@ -131,7 +131,7 @@ app.post('/verified', function(req, res) {
 
   }
 
-});
+
 /*
 var query = { _id: ObjectId(req.body._id) };
 var newvalues = { $set: {name: result.name, quote: req.body.newquote } };
@@ -151,7 +151,6 @@ db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
     console.log("delete ffs");
     });
   });
-
 });
 
 
