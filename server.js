@@ -104,7 +104,8 @@ console.log("im result customs", result[0].customs);
     }else {
       var cust_1 = req.body.customs;
       var cust_2 = result[0].customs;
-      var cust = cust_1.concat(cust_2);
+      var cust = cust_1 + " " + cust_2;
+      //var cust = cust_1.concat(cust_2);
       var newvalues = { $set: {name: req.body.name, customs: cust, gestures: result[0].gestures, laws: result[0].laws, traditions: result[0].traditions} };
       db.collection('Country_Info').updateOne(query,newvalues, function(err, result){
       });
