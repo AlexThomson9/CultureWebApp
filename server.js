@@ -86,7 +86,8 @@ app.post('/delete', function(req, res) {
 
 app.post('/verified', function(req, res) {
   console.log(req.body);
-  db.collection('Country_Info').find(JSON.parse(req.body.name)).toArray(function(err, result){
+  var query = {"name":req.body.name};
+  db.collection('Country_Info').find(query).toArray(function(err, result){
   if (err) throw err;
   console.log(result);
   var test = jsonp(result);
