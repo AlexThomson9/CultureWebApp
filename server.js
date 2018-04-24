@@ -5,7 +5,9 @@ const url = require('url');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const app = express();
+//Need this variable so that you can delete and find by Object _id
 var ObjectId = require('mongodb').ObjectID;
+//This is required if you want to use the files within the public folder
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser());
@@ -15,32 +17,42 @@ MongoClient.connect(link, function(err, database){
  db = database;
  app.listen(8080);
 });
+//Set the Engine to use the ejs format which is installed on the server
 app.set('view engine', 'ejs');
+//when the Default codio url for the server is used then render to index page
 app.get('/', function(req, res) {
  res.render('pages/Index');
 });
-
 /* -----NAVIGATION-----*/
+//When /Suggest is used then render the suggest page
 app.get('/Suggest', function(req, res) {
  res.render('pages/Suggest');
 });
+//When /Login is used then render the Login page
 app.get('/Login', function(req, res) {
  res.render('pages/Login');
 });
+//When /Register is used then render the Register page
 app.get('/Register', function(req, res) {
  res.render('pages/Register');
 });
+//When /Contact is used then render the Contact page
 app.get('/Contact', function(req, res) {
  res.render('pages/Contact');
 });
+//When /Admin is used then render the Admin page
 app.get('/Admin', function(req, res) {
  res.render('pages/Admin');
 });
+//When /Mobile-index is used then render the Mobile page
 app.get('/Mobile-index', function(req, res) {
  res.render('pages/Mobile-index');
 });
 /*-----AJAX-REQUEST-HANDLING-BY-PAGE-----*/
 /*-----INDEX-----*/
+//This request is a get , which is used by the map.js file to get the geojson information
+//that is stored in here when a suggestion is apporved to add a new country to the map if
+//applicable.
 app.get('/mapinfo', function (req, res) {
 db.collection('MapInfo').find().toArray(function(err,result){
    if(result)
@@ -50,12 +62,16 @@ db.collection('MapInfo').find().toArray(function(err,result){
    }
 });
 });
+//Not used i think
 app.get('/Country_Map', function(req, res) {
 db.collection('MapInfo').distinct('properties', function(err, result) {
 if (err) throw err;
 res.jsonp(result);
 });
 });
+//This request is used when the user clicks a marker to load the modal the country
+//is fed into the request to get the relevent country information that is stored
+//within the mongo db
 app.post('/country', function(req, res) {
   console.log(JSON.stringify(req.body));
  db.collection('Country_Info').find(req.body).toArray(function(err, result) {
