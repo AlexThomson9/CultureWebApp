@@ -91,7 +91,7 @@ app.post('/verified', function(req, res) {
   if (err) throw err;
   console.log(result);
 //  var test = res.jsonp(result);
-});
+
 
   if(req.body.customs != null){
     if(result.customs == null){
@@ -131,6 +131,8 @@ app.post('/verified', function(req, res) {
 
   }
 
+
+});
 
 /*
 var query = { _id: ObjectId(req.body._id) };
