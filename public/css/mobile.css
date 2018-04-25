@@ -303,13 +303,13 @@ border-radius: 20px;
 .popReturn{
   display: none;
   width: 100%;
-  height: 10%;
+  height: 15%;
   text-align: center;
   float: none;
   background-color: transparent;
   border: 2px solid red;
   color: red;
-  
+
 }
 
 /*Styling for the return button*/
@@ -317,7 +317,7 @@ border-radius: 20px;
   display: inline;
   float: none;
   width: 100%;
-  height: 10%;
+  height: 15%;
   text-align: center;
     background-color: transparent;
     border: 2px solid red;
