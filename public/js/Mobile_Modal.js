@@ -110,7 +110,7 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      });
 
      console.log(testArray);
-     serverContent.style.display = "block";
+
 }});
     map.closePopup();
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
@@ -156,6 +156,9 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(){
   modal.style.display = "block";
   serverContent.style.display = "none";
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+
 }
 
 
@@ -177,5 +180,10 @@ function closeInfo(){
 
 //Function to close modal
 function closeModal(){
+  serverContent.style.display = "none";
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+  returnToMapButton.style.display = "block";
   modal.style.display = "none";
+
 }
