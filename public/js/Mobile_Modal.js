@@ -156,6 +156,9 @@ closeBtn.addEventListener('click', closeModal);
 function openModal(){
   modal.style.display = "block";
   serverContent.style.display = "none";
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+
 }
 
 
