@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<!-- Title of the page, so Admin for admin etc.-->
   <title id="header">Culture!-Admin</title>
+  <!-- Load the partial for the head, to load the css, javascript and to set the meta tags-->
   <% include ../partials/head %>
 </head>
 
 <!-- Navigation Bar-->
 <body>
     <header>
+      <!--Include the header so the navigation bar is functional -->
       <% include ../partials/header %>
     </header>
 
     <div id="body">
       <div class="contentContainer">
-        <!-- Category select tabs-->
-
-          <!--  <button class="tablinks" onclick="category(event, 'Customs')" id="defaultOpen">Customs</button>
-            <button class="tablinks" onclick="category(event, 'Gestures')">Gestures</button>
-            <button class="tablinks" onclick="category(event, 'Culture')">Culture</button>
-            <button class="tablinks" onclick="category(event, 'Laws')">Laws</button>
-    -->
-
-
         <!--Display the currently selected country-->
         <div id="CountryTitle">
             Country
@@ -44,26 +37,30 @@
               <br />
           <p>
           Number of Suggestions for this Country:
+          <!-- output the number of enteries in the array for the country chosen-->
           <p id="Suggest_Number"></p>
           </p>
           <br />
           <p>
           Identifier for Suggestion:
+          <!--To show the Identifier for the suggestion so either customs, gestures, laws or cultures -->
           <p id="Identifier"></p>
           </p>
           <br />
+          <!-- To display the suggestion within this textarea-->
           <textarea class="textArea">This will display the Customs text retrieved from the database
           </textarea>
           <br />
             <p id="Author"></p>
-
+            <!-- To Store the country_id of the suggestion-->
             <p id="country_id" type="text" >
             </p>
         </div>
 
 
 
-    <!--Submit and Cancel buttons-->
+    <!--Back, Accept, Reject and Next buttons back and next used to cycle through the
+  suggestions if more than 1 , approve and reject used to approve or reject the suggestion-->
       <div class="Buttons">
         <a id="back">back</a>
         <button id="Accept">Approve</button>
@@ -77,6 +74,8 @@
 <!--Validation script -->
 
 <footer>
+  <!--Include the footer partials so the js whithin the footer can run
+and also so the footer appears on the site -->
 <% include ../partials/footer %>
 
 </footer>

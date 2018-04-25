@@ -1,0 +1,23 @@
+.leaflet-popup.leaflet-zoom-animated
+{
+    display:none;
+}
+.navbar{
+    margin-bottom: 0px;
+    border: none;
+}
+.container-fluid{
+    background-color:#322f30;
+}
+#Continent{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.navbar-default .navbar-brand{
+
+  color: white;
+}
+.navbar-default .navbar-nav>li>a{
+
+  color: white;
+}
