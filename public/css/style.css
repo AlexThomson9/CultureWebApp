@@ -185,9 +185,8 @@ height:29.5%;
 .extImg{
 display: inline-block;
 position:absolute;
-/*width: 30%;*/
-width:281px;
-height: 117px;
+width: 30%;
+width: 30vw;
 padding-left: 40;
 }
 
