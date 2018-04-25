@@ -309,7 +309,7 @@ border-radius: 20px;
   background-color: transparent;
   border: 2px solid red;
   color: red;
-  position: fixed;
+  
 }
 
 /*Styling for the return button*/
@@ -322,7 +322,6 @@ border-radius: 20px;
     background-color: transparent;
     border: 2px solid red;
     color: red;
-  position: fixed;
 }
 
 
