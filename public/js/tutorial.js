@@ -170,7 +170,7 @@ function updateCssOfTutorialDiv(){
 			$('#tutorial-skipButton').css('left', '9%');
 			$('#tutorial-skipButton').css('bottom', '5%');
 
-			$('#tutorial-text').css('left', '9%');
+			$('#tutorial-text').css('left', '8.5%');
 			$('#tutorial-text').css('bottom', '12%');
 			break;
 
