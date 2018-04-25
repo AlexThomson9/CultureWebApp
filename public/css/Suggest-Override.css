@@ -1,0 +1,42 @@
+.leaflet-popup-content-wrapper {
+    background-color:#322f30;
+    color: white;
+    font-size: 15px;
+}
+.leaflet-popup-content-wrapper textarea{
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+.leaflet-popup-content-wrapper button{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.navbar{
+    margin-bottom: 0px;
+    border: none;
+}
+.navbar-default .navbar-brand{
+
+  color: white;
+}
+.navbar-default .navbar-nav>li>a{
+
+  color: white;
+}
+.container-fluid{
+    background-color:#322f30;
+}
+#Continent{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+#Popup *{
+    -webkit-box-sizing: none;
+    box-sizing: none;
+}
+#Popup textarea, button{
+  color: black;
+
+}
