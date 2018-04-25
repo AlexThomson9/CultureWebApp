@@ -9,6 +9,20 @@
   border-bottom: 1px solid black;
 
 }
+#Logout{
+
+display: none;
+color: white;
+cursor: pointer;
+
+}
+#Admin{
+
+  display: none;
+}
+#Suggest{
+  display: none;
+}
 
 /*Setting the interactive maps dimensions */
     #map { height:100%;
