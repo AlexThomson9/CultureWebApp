@@ -118,7 +118,11 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
             url:countryPicked,
             dataType:'json',
             success: function(result, data){
-
+            /*here we have a little bug fix, basically for the rest api, if you search india and Korea
+            the first resonse so 0 is not what we want for idnia its a territory and for korea it brings
+            the north back so this little ingenious counter fixes that by if country is india or Korea
+            then count ++ so it = 1 then it will take the result[c] which is the count number.
+            Alex 1 API 0*/
             var c = 0 ;
             if(ctry =="India" || ctry == "Korea"){
                c++

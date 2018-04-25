@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<!--Set the Title for the Page -->
   <title id="header">Culture!-Contact</title>
+  <!-- Include the partials for the meta tags and all of the css and js -->
   <% include ../partials/head %>
 </head>
 
 <!-- Navigation Bar-->
 <body>
     <header>
+      <!-- Include the partial for the navigation bar for each page-->
       <% include ../partials/header %>
     </header>
 
@@ -42,12 +44,14 @@
 
               </div>
               <div  id="Country-Issue">
+                <!-- Will open input for typing in country of issue-->
                   <button id="Ctry-Issue" type="button">Country of Issue</button>
               </div>
 
-
+              <!-- Textarea to type the specific issue -->
               <textarea id="Subject-Text" name="subject" placeholder="Please provide a description of the issue.."></textarea>
               <div id = "button-padding">
+                <!-- Button so when submitted it will work-->
                       <input type="button" name="submit" value="Submit" id="contact-Button">
               </div>
         </form>
