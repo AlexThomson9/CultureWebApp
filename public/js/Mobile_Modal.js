@@ -17,6 +17,7 @@ var serverContent = document.getElementsByClassName('serverContent')[0];
 var returnToMapButton = document.getElementsByClassName('returnBtn')[0];
 var returnToPopupMenu = document.getElementsByClassName('popReturn')[0];
 
+//Array that will store the information of country retreived from database
 var testArray = [];
 
 //When one of the images is clicked on, the following occurs
@@ -32,48 +33,69 @@ $('#customsClick, #gesturesClick, #cultureClick, #lawClick').click(function(even
   serverContent.style.display = "block";
 });
 
-
+//On click event for when the customs image is clicked by the user
 $('#customsClick').click(function(event){
+  //The server content div can now be seen again
   serverContent.style.display = "block";
   console.log(testArray);
+  //Checks whether the array is empty or null: Means there is no customs info on the specified country
    if(testArray.length == 0 || testArray[0].customs == null ){
+    //Message displayed to user to inform them what has happened
     $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
     }
+   //If something has been retrieved the following occurs
    else{
     console.log("I got here wahoo");
+    //Displays the customs info retrieved from the database
     $('.serverContent').empty().append(testArray[0].customs);
     console.log("hi");
   }
  });
 
+//On click event for when the gestures image is clicked by the user
 $('#gesturesClick').click(function(event){
+  //The server content div can now be seen again
   serverContent.style.display = "block";
+  //Checks whether the array is empty or null: Means there is no gestures info on the specified country
   if(testArray.length == 0 || testArray[0].gestures == null ){
+    //Message displayed to the user to inform them what has happened
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
+   //IF something has been retrived, the following occurs
   else{
+    //Displays the gestures info retrieved from the database
    $('.serverContent').empty().append(testArray[0].gestures);
  }
-
-
 });
 
+//On click event for when the culture image is clicked by the user
 $('#cultureClick').click(function(event){
+  //The server content div can now be seen again
   serverContent.style.display = "block";
-  if(testArray.length == 0 || testArray[0].traditions == null ){
+  //Checks whether the array is empty or null: Means there is no culture info on the specified country
+  if(testArray.length == 0 || testArray[0].cultures == null ){
+   //Message displayed to the user to inform them what has happened
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
+  //If something has been retrieved, the following occurs
   else{
-   $('.serverContent').empty().append(testArray[0].traditions);
+    //Displays the culture info retrieved from the database
+   $('.serverContent').empty().append(testArray[0].cultures);
  }
 });
 
+//On click event for when the law image is clicked by the user
 $('#lawClick').click(function(event){
+  //The server content div can now be seen again
   serverContent.style.display = "block";
+  //Checks whether the array is empty or null: Means there is no law info on the specified country
   if(testArray.length == 0 || testArray[0].laws == null ){
+   //Message displayed to the user to inform them what has happened
    $('.serverContent').empty().append("We are sorry we do not have the information that you are looking for. If you would like to help us and fellow visitors, please login and provide us with new information by going to the Suggest page");
    }
+   //If something has been retrieved, the following occurs
   else{
+   //Displays the law info retrieved from the database
    $('.serverContent').empty().append(testArray[0].laws);
  }
 });
@@ -89,11 +111,13 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
    var country = {};
    country.name = ctry;
 
+//AJAX request that gets the country information from the database
    $.ajax({
      type: "POST",
      data: JSON.stringify(country),
      contentType: "application/json",
      url: "/country",
+     //If successful, the data retrieved is inserted into the testArray variable
      success: function(result){
        testArray = [];
        console.log(result);
@@ -112,22 +136,32 @@ $(document).on("click", ".leaflet-marker-icon.leaflet-zoom-animated.leaflet-inte
      console.log(testArray);
 
 }});
+    //Closes popup to prevent the information being carried over to the next one
     map.closePopup();
+    //Variable that stores the url request for the REST COUNTRIES API
     var countryPicked = 'https://restcountries.eu/rest/v2/name/' + ctry + '?fields=name;capital;languages;currencies;flag';
 
+    //AJAX request to retrieve data from the external API
     $.ajax({
             url:countryPicked,
             dataType:'json',
+
+            //If something is returned, the following occurs
             success: function(result, data){
 
+            //Workaround as the API returns India as a overseas territory
             var c = 0 ;
             if(ctry =="India"){
                c++
             }
             console.log(c);
+            //Appends the country name retrieved from the API
             $(".restName").empty().append(result[c].name);
+            //Appends the language retrieved from API
             $(".restLanguage").empty().append("Official Language: ", result[c].languages[0].name);
+            //Appends the currency used by the country from the API
             $(".restCurrency").empty().append("Currency: ", result[0].currencies[0].symbol, " ", result[c].currencies[0].name);
+            //Changes the stock image to the image of the country selected via the API
             $(".flagImage").attr("src", result[c].flag);
             console.log(result[c].capital);
             //Calll for openModal function
@@ -155,6 +189,9 @@ closeBtn.addEventListener('click', closeModal);
 //Function to open modal
 function openModal(){
   modal.style.display = "block";
+  //This is done in the event that an error occured
+  //So that every time the modal opens, you will only see
+  //the images of culture, laws, etc...
   serverContent.style.display = "none";
   hideTop.style.display = "block";
   hideMiddle.style.display = "block";
