@@ -180,6 +180,10 @@ function closeInfo(){
 
 //Function to close modal
 function closeModal(){
-  modal.style.display = "none";
   serverContent.style.display = "none";
+  hideTop.style.display = "block";
+  hideMiddle.style.display = "block";
+  returnToMapButton.style.display = "block";  
+  modal.style.display = "none";
+
 }
