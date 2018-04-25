@@ -186,7 +186,6 @@ height:29.5%;
 display: inline-block;
 position:absolute;
 width: 30%;
-width: 30vw;
 padding-left: 40;
 }
 
@@ -194,7 +193,6 @@ padding-left: 40;
 .extImg img{
 /*width: 100%;*/
 height: 15.5%;
-height: 16vw
 border-radius: 20px;
 }
 
