@@ -78,7 +78,7 @@ $('#r_submitBtn').click(function(){
                     {
                     //after delay remove the feedback and redirect to the login page
                     $('.login-box').find("h5").remove();
-                    window.location.replace("login.html");
+                    window.location.replace("/Login");
                     //set the timeout to use the 2 second's defined previously
                   }, delayInMilliseconds);
                   //clear the form
